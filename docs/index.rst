@@ -25,3 +25,7 @@
    ./c4
    ./c5
    ./c6
+   ./appendix_a
+   ./appendix_b
+   ./license
+   ./history
