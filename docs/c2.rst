@@ -1266,651 +1266,462 @@ so upon taking square roots we get
 
 Heron's formula is useful for theoretical purposes (e.g. in deriving other formulas). However, it is not well-suited for calculator use, exhibiting what is called *numerical instability* for "extreme" triangles, as in the following example.
 
-\begin{exmp}\label{exmp:heronfail}
- Find the area of the triangle :math:`\triangle ABC` given $a=1000000$, $b=999999.9999979$, and
- $c = 0.0000029$.\vspace{1mm}
- \textbf{Solution:} To use Heron's formula, we need to calculate
- $s = \frac{1}{2}\,(a+b+c)$. Notice that the actual value of $a+b+c$ is $2000000.0000008$, which
- has $14$ digits. Most calculators can store $12$-$14$ digits internally (even if they display
- less), and hence may round off that value of $a+b+c$ to $2000000$. When we then divide that
- rounded value for $a+b+c$ by $2$ to get $s$, some calculators (e.g. the TI-83 Plus) will give a
- rounded down value of $1000000$.
- 
- This is a problem because $a=1000000$, and so we would get $s-a=0$, causing Heron's formula to
- give us an area of $0$ for the triangle! And this is indeed the incorrect answer that the TI-83
- Plus returns. Other calculators may give some other inaccurate
- answer, depending on how they store values internally. The actual area - accurate to $15$
- decimal places - is $K = 0.99999999999895$, i.e. it is basically $1$.
-\end{exmp}\vspace{-3mm}
-\divider
-\vspace{1mm}
+.. _Example 2.16
 
-The above example shows how problematic \emph{floating-point arithmetic} can be.\footnote{This is
-an issue even on modern computers. There is an
-excellent overview of this important subject in the article \emph{What Every Computer
-Scientist Should Know About Floating-Point Arithmetic} by D. Goldberg, available at
-\url{http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html}} Luckily there is a better
-formula\footnote{Due to W. Kahan: \url{http://www.eecs.berkeley.edu/~wkahan/Triangle.pdf}} for
-the area of a triangle when the three sides are known:
+.. _exmp:heronfail:
 
-\begin{center}\statecomment{For a triangle :math:`\triangle ABC` with sides $a \ge b \ge c$, the area is:
-\begin{equation}\label{eqn:kahan}
-  \text{Area} ~=~ K ~=~ \tfrac{1}{4}\,\sqrt{(a + (b+c))\,(c - (a-b))\,(c + (a-b))\,(a + (b-c))}
-\end{equation}}\end{center}
+.. admonition:: Example 2.16
 
-To use this formula, sort the names of the sides so that
-$a \ge b \ge c$. Then perform the operations inside the square root \emph{in the exact order in
-which they appear in the formula, including the use of parentheses}. Then take the square root and
-divide by $4$. For the triangle in Example \ref{exmp:heronfail}, the above formula gives an
-answer of exactly $K = 1$ on the same TI-83 Plus calculator that failed with Heron's
-formula.
-What is amazing about this formula is that it is just Heron's formula rewritten! The use of
-parentheses is what forces the correct order of operations for numerical stability.
-\newpage
-Another formula\footnote{Due to the Chinese mathematician Qiu Jiushao (ca. 1202-1261).} for the
-area of a triangle given its three sides is given below:
+    Find the area of the triangle :math:`\triangle ABC` given $a=1000000$, $b=999999.9999979$, and $c = 0.0000029$.
 
-\begin{center}\statecomment{For a triangle :math:`\triangle ABC` with sides $a \ge b \ge c$, the area is:
-\begin{equation}\label{eqn:jiushao}
-  \text{Area} ~=~ K ~=~ \tfrac{1}{2}\,\sqrt{a^2 c^2 ~-~ \left( \tfrac{a^2 + c^2 - b^2}{2} \right)^2}
-\end{equation}}\end{center}
+    **Solution:** To use Heron's formula, we need to calculate :math:`s = \frac{1}{2}\,(a+b+c)`. Notice that the actual value of $a+b+c$ is $2000000.0000008$, which has $14$ digits. Most calculators can store $12$-$14$ digits internally (even if they display less), and hence may round off that value of $a+b+c$ to $2000000$. When we then divide that rounded value for $a+b+c$ by $2$ to get $s$, some calculators (e.g. the TI-83 Plus) will give a rounded down value of $1000000$.
 
-For the triangle in Example \ref{exmp:heronfail}, the above formula gives an answer of
-exactly $K = 1$ on the same TI-83 Plus calculator that failed with Heron's formula.
+    This is a problem because $a=1000000$, and so we would get $s-a=0$, causing Heron's formula to give us an area of $0$ for the triangle! And this is indeed the incorrect answer that the TI-83 Plus returns. Other calculators may give some other inaccurate answer, depending on how they store values internally. The actual area - accurate to $15$ decimal places - is $K = 0.99999999999895$, i.e. it is basically $1$.
 
-\divider
-\vspace{2mm}
+The above example shows how problematic *floating-point arithmetic* can be. [9]_ Luckily there is a better formula [10]_ for the area of a triangle when the three sides are known:
 
-\startexercises\label{sec2dot4}
-\vspace{5mm}
-{\small
- For Exercises 1-6, find the area of the triangle :math:`\triangle ABC`.
-\begin{enumerate}[\bfseries 1.]
- \begin{multicols}{2}
-  \item $A = 70^\circ$, $b = 4$, $c = 12$
-  \item $a = 10$, $B = 95^\circ$, $c = 35$
- \end{multicols}
- \begin{multicols}{2}
-  \item $A = 10^\circ$, $B = 48^\circ$, $C = 122^\circ$, $c = 11$
-  \item $A = 171^\circ$, $B = 1^\circ$, $C = 8^\circ$, $b = 2$
- \end{multicols}
- \begin{multicols}{2}
-  \item $a = 2$, $b = 3$, $c = 4$
-  \item $a = 5$, $b=6$, $c = 5$
- \end{multicols}
- \item\label{exer:areaquad} Find the area of the quadrilateral in Figure \ref{fig:areaquad}
-  below.\vspace{-2mm}
-\begin{figure}[h]
-\begin{minipage}[t]{7.5cm}
- \begin{center}
-  \begin{tikzpicture}[scale=1.2,every node/.style={font=\small}]
-   \filldraw [linecolor,fill=fillcolor,line width=1.5pt] (0,0) -- (-0.5,1)
-    node[black,pos=0.7,below left] {$2$} -- (2,2) node[black,midway,above] {$4$} -- (4,1)
-    node[black,pos=0.4,above right] {$3.5$} -- cycle;
-   \draw [dashed,latex-latex] (-0.47,1) -- (3.93,1) node[pos=0.5,fill=fillcolor] {$6$};
-   \node [below] at (2,0.5) {$5.5$};
-  \end{tikzpicture}\vspace{-5mm}
- \end{center}
- \caption[]{\quad Exercise \ref{exer:areaquad}}
- \label{fig:areaquad}
-\end{minipage}
-\begin{minipage}[t]{7.5cm}
- \begin{center}
-  \begin{tikzpicture}[every node/.style={font=\small}]
-   \fill [fillcolor] (0,0) -- (-0.5,1) -- (2,2) -- (4,1) -- cycle;
-   \draw [name path=d1] (0,0) -- (2,2);
-   \draw [name path=d2] (-0.5,1) -- (4,1);
-   \draw [linecolor,line width=1.5pt] node[black,left] {$A$} (0,0) -- (-0.5,1) 
-    node[black,left] {$B$} -- (2,2) node[black,above] {$C$} -- (4,1) node[black,right] {$D$}
-	-- cycle;
-   \draw [name intersections={of=d1 and d2}] ([shift={(intersection-1)}] 0:0.4) arc (0:45:0.4);
-   \node [above] at (1.6,1) {$\theta$};
-  \end{tikzpicture}\vspace{-5mm}
- \end{center}
- \caption[]{\quad Exercise \ref{exer:areaquaddiag}}
- \label{fig:areaquaddiag}
-\end{minipage}
-\end{figure}\vspace{-2mm}
- \item\label{exer:areaquaddiag} Let $ABCD$ be a quadrilateral which completely contains its two
-  diagonals,
-  as in Figure \ref{fig:areaquaddiag} above. Show that the area $K$ of $ABCD$ is equal to half the
-  product of its diagonals and the sine of the angle they form, i.e. $K =
-  \frac{1}{2}\,AC\,\cdot\,BD\;\sin\;\theta\;$.
- \item From formula (\ref{eqn:areacase2a}) derive the following formula for the area of a triangle
-  :math:`\triangle ABC`:
-  \begin{displaymath}
-   \text{Area} ~=~ K ~=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;(B+C)}
-  \end{displaymath}
- \item Show that the triangle area formula
-  \begin{displaymath}
-   \text{Area} ~=~ K ~=~ \tfrac{1}{4}\,\sqrt{(a + (b+c))\,(c - (a-b))\,(c + (a-b))\,(a + (b-c))}
-  \end{displaymath}
-  is equivalent to Heron's formula. (\emph{Hint: In Heron's formula replace $s$ by
-  $\frac{1}{2}(a+b+c)$.})
- \item\label{exmp:jiushao} Show that the triangle area formula (\ref{eqn:jiushao})
-  is equivalent to Heron's formula. (\emph{Hint: Factor the expression inside the square root.})
- \item Find the angle $A$ in Example \ref{exmp:heronfail}, then use formula (\ref{eqn:areacase1a})
-  to find the area. Did it work?
-\end{enumerate}}
-\newpage
-%Begin Section 2.5
-\section{Circumscribed and Inscribed Circles}
+    For a triangle :math:`\triangle ABC` with sides :math:`a \ge b \ge c`, the area is :
+    
+    .. _equation 2.33
+
+    .. math::
+        :label: eqn:kahan
+
+        \text{Area} ~=~ K ~=~ \tfrac{1}{4}\,\sqrt{(a + (b+c))\,(c - (a-b))\,(c + (a-b))\,(a + (b-c))}
+
+.. [9] This is an issue even on modern computers. There is an excellent overview of this important subject in the article *What Every Computer Scientist Should Know About Floating-Point Arithmetic* by D. Goldberg, available at http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+
+.. [10] Due to W. Kahan: http://www.eecs.berkeley.edu/~wkahan/Triangle.pdf
+
+To use this formula, sort the names of the sides so that :math:`a \ge b \ge c`. Then perform the operations inside the square root *in the exact order in which they appear in the formula, including the use of parentheses*. Then take the square root and divide by $4$. For the triangle in Example :ref:`2.16 <exmp:heronfail>`, the above formula gives an answer of exactly $K = 1$ on the same TI-83 Plus calculator that failed with Heron's formula. What is amazing about this formula is that it is just Heron's formula rewritten! The use of parentheses is what forces the correct order of operations for numerical stability.
+
+Another formula [11]_ for the area of a triangle given its three sides is given below:
+
+.. [11] Due to the Chinese mathematician Qiu Jiushao (ca. 1202-1261).
+
+For a triangle :math:`\triangle ABC` with sides $a \ge b \ge c$, the area is:
+
+    .. _equation 2.34
+
+    .. math::
+        :label: eqn:jiushao
+
+        \text{Area} ~=~ K ~=~ \tfrac{1}{2}\,\sqrt{a^2 c^2 ~-~ \left( \tfrac{a^2 + c^2 - b^2}{2} \right)^2}
+
+For the triangle in Example :ref:`2.16 <exmp:heronfail>`, the above formula gives an answer of exactly $K = 1$ on the same TI-83 Plus calculator that failed with Heron's formula.
+
+Exercises
+~~~~~~~~~~~
+
+.. _sec2dot4:
+
+For Exercises 1-6, find the area of the triangle :math:`\triangle ABC`.
+
+1. :math:`A = 70^\circ`, $b = 4$, $c = 12$
+2. $a = 10$, :math:`B = 95^\circ`, $c = 35$
+3. :math:`A = 10^\circ`, :math:`B = 48^\circ`, :math:`C = 122^\circ`, $c = 11$
+4. :math:`A = 171^\circ`, :math:`B = 1^\circ`, :math:`C = 8^\circ`, $b = 2$
+5. $a = 2$, $b = 3$, $c = 4$
+6. $a = 5$, $b=6$, $c = 5$
+
+.. _exer:areaquad:
+
+7. Find the area of the quadrilateral in Figure :ref:`2.4.3 <fig:areaquad>` below.
+
+.. _fig:areaquad:
+
+.. _Figure 2.4.3:
+
+.. figure:: ./img/f2.4.3.png
+    :align: left
+    :scale: 50%
+
+    **Fiugre 2.4.3 Exercise** :ref:`7 <exer:areaquad>`
+
+.. _fig:areaquaddiag:
+
+.. _Figure 2.4.4:
+
+.. figure:: ./img/f2.4.4.png
+    :align: center
+    :scale: 50%
+
+    **Fiugre 2.4.4 Exercise** :ref:`8 <exer:areaquaddiag>`
+
+.. _exer:areaquaddiag:
+
+8. Let $ABCD$ be a quadrilateral which completely contains its two diagonals, as in Figure :ref:`2.4.4 <fig:areaquaddiag>` above. Show that the area $K$ of $ABCD$ is equal to half the product of its diagonals and the sine of the angle they form, i.e. :math:`K = \frac{1}{2}\,AC\,\cdot\,BD\;\sin\;\theta\;`.
+
+9. From formula :eq:`2.26 <eqn:areacase2a>` derive the following formula for the area of a triangle :math:`\triangle ABC`:
+
+    .. math::
+
+        \text{Area} ~=~ K ~=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;(B+C)}
+
+10. Show that the triangle area formula
+
+    .. math::
+
+        \text{Area} ~=~ K ~=~ \tfrac{1}{4}\,\sqrt{(a + (b+c))\,(c - (a-b))\,(c + (a-b))\,(a + (b-c))}
+
+    is equivalent to Heron's formula. (*Hint: In Heron's formula replace* $s$ by :math:`\frac{1}{2}(a+b+c)`.)
+
+.. _exmp:jiushao:
+
+11. Show that the triangle area formula :eq:`2.34 <eqn:jiushao>` is equivalent to Heron's formula. (*Hint: Factor the expression inside the square root.*)
+12. Find the angle $A$ in Example :ref:`2.16 <exmp:heronfail>`, then use formula :eq:`2.23 <eqn:areacase1a>` to find the area. Did it work?
+
+Circumscribed and Inscribed Circles
+-------------------------------------
+
 Recall from the Law of Sines that any triangle :math:`\triangle ABC` has a common ratio of sides to
 sines of opposite angles, namely
-\begin{displaymath}
- \frac{a}{\sin\;A} ~=~ \frac{b}{\sin\;B} ~=~ \frac{c}{\sin\;C} ~.
-\end{displaymath}
-This common ratio has a geometric meaning: it is the
-diameter (i.e. twice the radius) of the unique circle in which :math:`\triangle ABC` can be
-inscribed,\index{inscribed triangle} called the\index{triangle!inscribed}
-\textbf{circumscribed circle}\index{circumscribed circle}\index{circle!circumscribed} of the
-triangle. Before proving this, we need to review some elementary geometry.
 
-A \textbf{central angle}\index{central angle}\index{angle!central} of a circle is an angle whose
-vertex is the center $O$ of the circle and whose sides (called \textbf{radii})\index{radius}
-are line segments from $O$ to two points on the circle.
-In Figure \ref{fig:angletypes}(a), $\angle\,O$ is a central angle and we say that it
-\emph{intercepts the arc} $\wideparen{BC}$.\index{arc}
+.. math::
 
-\begin{figure}[h]
- \centering
- \subfloat[][ Central angle $\angle\,O$]{
-  \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
-   \draw (0,0) circle (1.5);
-   \fill (0,0) circle (2pt);
-   \node [above] at (0,0) {$O$};
-   \draw (0,0) -- (-140:1.5);
-   \node [below left] at (-140:1.5) {$B$};
-   \draw (0,0) -- (-50:1.5);
-   \node [below right] at (-50:1.5) {$C$};
-   \draw [white] (1.5,1.5) -- (1.9,1.5);
-  \end{tikzpicture}}
- \qquad\qquad
- \subfloat[][ Inscribed angle $\angle\,A$]{
-  \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
-   \draw (0,0) circle (1.5);
-   \node [above] at (100:1.5) {$A$};
-   \draw (100:1.5) -- (-140:1.5);
-   \node [below left] at (-140:1.5) {$B$};
-   \draw (100:1.5) -- (-50:1.5);
-   \node [below right] at (-50:1.5) {$C$};
-   \draw [white] (1.5,1.5) -- (1.9,1.5);
-  \end{tikzpicture}}
- \qquad\qquad
- \subfloat[][ $\angle\,A = \angle\,D = \frac{1}{2}\,\angle\,O$]{
-  \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
-   \fill (0,0) circle (2pt);
-   \node [above] at (0,0) {$O$};
-   \draw (0,0) -- (-140:1.5);
-   \node [below left] at (-140:1.5) {$B$};
-   \draw (0,0) -- (-50:1.5);
-   \node [below right] at (-50:1.5) {$C$};
-   \node [above] at (100:1.5) {$A$};
-   \draw [red] (100:1.5) -- (-140:1.5);
-   \draw [red] (100:1.5) -- (-50:1.5);
-   \node [right] at (10:1.5) {$D$};
-   \draw [green!60!black] (10:1.5) -- (-140:1.5);
-   \draw [green!60!black] (10:1.5) -- (-50:1.5);
-   \draw (0,0) circle (1.5);
-  \end{tikzpicture}}\vspace{-2mm}
- \caption[]{\quad Types of angles in a circle}
- \label{fig:angletypes}
-\end{figure}
+    \frac{a}{\sin\;A} ~=~ \frac{b}{\sin\;B} ~=~ \frac{c}{\sin\;C} ~.
 
-An \textbf{inscribed angle}\index{inscribed angle}\index{angle!inscribed} of a circle is an angle
-whose vertex is a point $A$ on the circle and whose sides are line segments (called \textbf{chords})
-from $A$ to two other points on the circle. In Figure \ref{fig:angletypes}(b),\index{chord}
-$\angle\,A$ is an inscribed angle that intercepts the arc $\wideparen{BC}$. We state here without
-proof\footnote{For a proof, see pp. 210-211 in \textsc{R.A. Avery}, \emph{Plane Geometry}, Boston:
-Allyn \& Bacon, 1950.} a useful relation between inscribed and central angles:
+This common ratio has a geometric meaning: it is the diameter (i.e. twice the radius) of the unique circle in which :math:`\triangle ABC` can be inscribed, called the **circumscribed circle** of the triangle. Before proving this, we need to review some elementary geometry.
 
-\statethm{thm:centralangle}{If an inscribed angle $\angle\,A$ and a central angle $\angle\,O$
-intercept the same arc, then $\angle\,A = \frac{1}{2}\,\angle\,O\,$. Thus, inscribed
-angles which intercept the same arc are equal.}
+A **central angle** of a circle is an angle whose vertex is the center $O$ of the circle and whose sides (called **radii** are line segments from $O$ to two points on the circle. In Figure :ref:`2.5.1 <fig:angletypes>` (a), :math:`\angle\,O` is a central angle and we say that it *intercepts the arc* :math:`\stackrel\frown{BC}`.
 
-Figure \ref{fig:angletypes}(c) shows two inscribed angles, $\angle\,A$ and $\angle\,D$, which
-intercept the same arc $\wideparen{BC}$ as the central angle $\angle\,O$, and hence
-$\angle\,A = \angle\,D = \frac{1}{2}\,\angle\,O$ (so $\;\angle\,O = 2\,\angle\,A =
-2\,\angle\,D\,)$.
+.. _Figure 2.5.1:
+
+.. _fig:angletypes:
+
+.. figure:: ./img/f2.5.1.png
+    :align: center 
+    
+    **Figure 2.5.1 Types of angles in a circle**
+
+An **inscribed angle** of a circle is an angle whose vertex is a point $A$ on the circle and whose sides are line segments (called **chords**)
+from $A$ to two other points on the circle. In Figure :ref:`2.5.1 <fig:angletypes>` (b), :math:`\angle\,A` is an inscribed angle that intercepts the arc :math:`\stackrel\frown{BC}`. We state here without proof [12]_ a useful relation between inscribed and central angles:
+
+.. _thm:centralangle:
+
+    **Theorem 2.4.** If an inscribed angle :math:`\angle\,A` and a central angle :math:`\angle\,O` intercept the same arc, then :math:`\angle\,A = \frac{1}{2}\,\angle\,O\,`. Thus, inscribed angles which intercept the same arc are equal.
+
+.. [12] For a proof, see pp. 210-211 in *R.A. Avery*, *Plane Geometry*, Boston: Allyn \& Bacon, 1950.
+
+Figure :ref:`2.5.1 <fig:angletypes>` (c) shows two inscribed angles, :math:`\angle\,A` and :math:`\angle\,D`, which intercept the same arc :math:`\stackrel\frown{BC}` as the central angle :math:`\angle\,O`, and hence :math:`\angle\,A = \angle\,D = \frac{1}{2}\,\angle\,O` (so :math:`\;\angle\,O = 2\,\angle\,A = 2\,\angle\,D\,`).
 
 We will now prove our assertion about the common ratio in the Law of Sines:
 
-\statethm{thm:circumscribedradius}{For any triangle :math:`\triangle ABC`, the radius $R$ of its
-circumscribed circle is given by:
-\begin{equation}\label{eqn:circumscribedradius}
- 2\,R ~=~ \frac{a}{\sin\;A} ~=~ \frac{b}{\sin\;B} ~=~ \frac{c}{\sin\;C}
-\end{equation}}
+.. _thm:circumscribedradius:
 
-(Note: For a circle of diameter $1$, this means $a=\sin\;A$, $b=\sin\;B$, and
-$c=\sin\;C$.)
-\newpage
-To prove this, let $O$ be the center of the circumscribed circle for a triangle :math:`\triangle ABC`.
-Then $O$ can be either inside, outside, or on the triangle, as in Figure
-\ref{fig:circumscribedradius} below. In the first two cases, draw a perpendicular line segment
-from $O$ to :math:`\overline{AB}` at the point $D$.
+    **Theorem 2.5.** For any triangle :math:`\triangle ABC`, the radius $R$ of its circumscribed circle is given by:
 
-\begin{figure}[h]
- \centering
- \subfloat[][ $O$ inside :math:`\triangle ABC`]{
-  \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
-   \fill [fillcolor] (-40:2) -- (100:2) -- (220:2) -- (-40:2);
-   \draw [dashed] (0,-1.285) -- (0,0);
-   \node [below] at (0,-1.285) {$D$};
-   \draw (0.2,-1.285) -- (0.2,-1.085) -- (0,-1.085);
-   \fill (0,0) circle (2pt);
-   \node [above] at (0,0) {$O$};
-   \draw [linecolor,line width=1.5pt] (100:2) -- (220:2) node[black,midway,left] {$b$};
-   \node [above] at (100:2) {$C$};
-   \draw [linecolor,line width=1.5pt] (100:2) -- (-40:2) node[black,midway,right] {$a$};
-   \node [below right] at (-40:2) {$B$};
-   \node [below left] at (220:2) {$A$};
-   \draw [linecolor,line width=1.5pt] (220:2) -- (-40:2) node[black,pos=0.3,below] {$\frac{c}{2}$}
-    node[black,pos=0.7,below] {$\frac{c}{2}$};
-   \draw [dashed] (0,0) -- (220:2) node[midway,above] {$R$};
-   \draw [dashed] (0,0) -- (-40:2) node[midway,above] {$R$};
-   \draw [line width=1pt] (0,0) circle (2);
-  \end{tikzpicture}}
- \enskip
- \subfloat[][ $O$ outside :math:`\triangle ABC`]{
-  \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
-   \fill [fillcolor] (20:2) -- (100:2) -- (160:2) -- (20:2);
-   \draw [dashed] (0,0.684) -- (0,0);
-   \node [above] at (0,0.684) {$D$};
-   \draw (0.2,0.684) -- (0.2,0.484) -- (0,0.484);
-   \fill (0,0) circle (2pt);
-   \node [below] at (0,0) {$O$};
-   \draw [linecolor,line width=1.5pt] (100:2) -- (160:2) node[black,pos=0.4,right] {$b$};
-   \node [above] at (100:2) {$C$};
-   \draw [linecolor,line width=1.5pt] (100:2) -- (20:2) node[black,midway,above] {$a$};
-   \node [right] at (20:2) {$B$};
-   \node [left] at (160:2) {$A$};
-   \draw [linecolor,line width=1.5pt] (160:2) -- (20:2) node[black,pos=0.35,above] {$\frac{c}{2}$}
-    node[black,pos=0.65,above] {$\frac{c}{2}$};
-   \draw [dashed] (0,0) -- (160:2) node[midway,below] {$R$};
-   \draw [dashed] (0,0) -- (20:2) node[midway,below] {$R$};
-   \draw [line width=1pt] (0,0) circle (2);
-  \end{tikzpicture}}
- \enskip
- \subfloat[][ $O$ on :math:`\triangle ABC`]{
-  \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
-   \fill [fillcolor] (0:2) -- (100:2) -- (180:2) -- (0:2);
-   \node [below] at (0,0) {$O$};
-   \draw [linecolor,line width=1.5pt] (100:2) -- (180:2) node[black,pos=0.4,left] {$b$};
-   \node [above] at (100:2) {$C$};
-   \draw [linecolor,line width=1.5pt] (100:2) -- (0:2) node[black,midway,above] {$a$};
-   \node [right] at (0:2) {$B$};
-   \node [left] at (180:2) {$A$};
-   \draw [linecolor,line width=1.5pt] (180:2) -- (0:2) node[black,pos=0.45,above] {$c$};
-   \node [below] at (-1,0) {$R$};
-   \node [below] at (1,0) {$R$};
-   \draw [line width=1pt] (0,0) circle (2);
-   \fill (0,0) circle (2pt);
-  \end{tikzpicture}}\vspace{-2mm}
- \caption[]{\quad Circumscribed circle for :math:`\triangle ABC`}
- \label{fig:circumscribedradius}
-\end{figure}
+    .. _equation 2.35:
 
-The radii $\overline{OA}$ and $\overline{OB}$ have the same length $R$, so $\triangle\,AOB$ is an
-isosceles triangle. Thus, from elementary geometry we know that $\overline{OD}$ bisects both the
-angle $\angle\,AOB$ and the side :math:`\overline{AB}`. So $\angle\,AOD = \frac{1}{2}\,\angle\,AOB$
-and $AD = \frac{c}{2}$. But since the inscribed angle $\angle\,ACB$ and the central angle
-$\angle\,AOB$ intercept the same arc $\wideparen{AB}$, we know from Theorem \ref{thm:centralangle}
-that $\angle\,ACB = \frac{1}{2}\,\angle\,AOB$. Hence, $\angle\,ACB = \angle\,AOD$. So since $C =
-\angle\,ACB$, we have
-\begin{displaymath}
- \sin\;C ~=~ \sin\;\angle\,AOD ~=~ \frac{AD}{OA} ~=~ \frac{\frac{c}{2}}{R} ~=~ \frac{c}{2R}
- \quad\Rightarrow\quad 2\,R ~=~ \frac{c}{\sin\;C} ~,
-\end{displaymath}
+    .. math::
+        :label: eqn:circumscribedradius
+
+        2\,R ~=~ \frac{a}{\sin\;A} ~=~ \frac{b}{\sin\;B} ~=~ \frac{c}{\sin\;C}
+
+
+(Note: For a circle of diameter $1$, this means :math:`a=\sin\;A`, :math:`b=\sin\;B`, and :math:`c=\sin\;C`.)
+
+To prove this, let $O$ be the center of the circumscribed circle for a triangle :math:`\triangle ABC`. Then $O$ can be either inside, outside, or on the triangle, as in Figure :ref:`2.5.2 <fig:circumscribedradius>` below. In the first two cases, draw a perpendicular line segment from $O$ to :math:`\overline{AB}` at the point $D$.
+
+.. _Figure 2.5.2:
+
+.. _fig:circumscribedradius:
+
+.. figure:: ./img/f2.5.2.png
+    :align: center 
+
+    **Fiugre 2.5.2 Circumscribed circle for** :math:`\triangle ABC`
+
+The radii :math:`\overline{OA}` and :math:`\overline{OB}` have the same length $R$, so :math:`\triangle\,AOB` is an
+isosceles triangle. Thus, from elementary geometry we know that :math:`\overline{OD}` bisects both the
+angle :math:`\angle\,AOB` and the side :math:`\overline{AB}`. So :math:`\angle\,AOD = \frac{1}{2}\,\angle\,AOB`
+and :math:`AD = \frac{c}{2}`. But since the inscribed angle :math:`\angle\,ACB` and the central angle
+:math:`\angle\,AOB` intercept the same arc :math:`\stackrel\frown{AB}`, we know from Theorem :ref:`2.4 <thm:centralangle>`
+that :math:`\angle\,ACB = \frac{1}{2}\,\angle\,AOB`. Hence, :math:`\angle\,ACB = \angle\,AOD`. So since :math:`C = \angle\,ACB`, we have
+
+.. math::
+
+    \sin\;C ~=~ \sin\;\angle\,AOD ~=~ \frac{AD}{OA} ~=~ \frac{\frac{c}{2}}{R} ~=~ \frac{c}{2R}
+    \quad\Rightarrow\quad 2\,R ~=~ \frac{c}{\sin\;C} ~,
+
 so by the Law of Sines the result follows if $O$ is inside or outside :math:`\triangle ABC`.
 
-Now suppose that $O$ is on :math:`\triangle ABC`, say, on the side :math:`\overline{AB}`, as in
-Figure \ref{fig:circumscribedradius}(c). Then :math:`\overline{AB}` is a diameter of the circle, so
-$C = 90^\circ$ by Thales' Theorem. Hence, $\sin\;C = 1$, and so
-$2\,R = AB = c = \frac{c}{1} = \frac{c}{\sin\;C}\;$,
-and the result again follows by the Law of Sines. $\qed$\vspace{-1mm}
+Now suppose that $O$ is on :math:`\triangle ABC`, say, on the side :math:`\overline{AB}`, as in Figure :ref:`2.5.2 <fig:circumscribedradius>` (c). Then :math:`\overline{AB}` is a diameter of the circle, so :math:`C = 90^\circ` by Thales' Theorem. Hence, :math:`\sin\;C = 1`, and so :math:`2\,R = AB = c = \frac{c}{1} = \frac{c}{\sin\;C}\;`, and the result again follows by the Law of Sines. [qed]
 
-\begin{exmp}
-\piccaption[]{\label{fig:circum345}}\parpic[r]{\begin{tikzpicture}[every node/.style={font=\small}]
- \fill [fillcolor] (0,0) -- (2,0) -- (2,1.5) -- (0,0);
- \draw (1.8,0) -- (1.8,0.2) -- (2,0.2);
- \draw [linecolor,line width=1.5pt] (0,0) -- (2,0) node[black,midway,below] {$4$};
- \draw [linecolor,line width=1.5pt] (0,0) -- (2,1.5) node[black,pos=0.5,above] {$5$};
- \draw [linecolor,line width=1.5pt] (2,0) -- (2,1.5) node[black,pos=0.4,left] {$3$};
- \draw [line width=1pt] (1,0.75) circle (1.25);
- \fill (1,0.75) circle (2pt);
- \node [below] at (1,0.75) {$O$};
- \node [left] at (0,0) {$A$};
- \node [right] at (2,1.5) {$B$};
- \node [right] at (2,0) {$C$};
-\end{tikzpicture}}
-Find the radius $R$ of the circumscribed circle for the triangle :math:`\triangle ABC` whose sides are
- $a=3$, $b=4$, and $c=5$.\vspace{1mm}
- \textbf{Solution:} We know that :math:`\triangle ABC` is a right triangle. So as we see from
- Figure \ref{fig:circum345}, $\sin\;A = 3/5$. Thus,
- \begin{displaymath}
-  2\,R ~=~ \frac{a}{\sin\;A} ~=~ \frac{3}{\frac{3}{5}} ~=~ 5 \quad\Rightarrow\quad
-   \boxed{R ~=~ 2.5} ~.
- \end{displaymath}
+.. _Example 2.17
 
-Note that since $R =2.5$, the diameter of the circle is $5$, which is the same as
- $AB$. Thus, :math:`\overline{AB}` must be a diameter of the circle, and so the center
- $O$ of the circle is the midpoint of :math:`\overline{AB}`.
-\end{exmp}\vspace{-3mm}
-\divider
+.. _exmp:heronfail:
 
-\statecor{cor:circumscribedright}{For any right triangle, the hypotenuse is a diameter of the
-circumscribed circle, i.e. the center of the circle is the midpoint of the hypotenuse.}
-\newpage
-For the right triangle in the above example, the circumscribed circle is simple to draw; its
-center can be found by measuring a distance of $2.5$ units from $A$ along :math:`\overline{AB}`.
+.. admonition:: Example 2.17
 
-We need a different procedure for acute and obtuse triangles, since for
-an acute triangle the center of the circumscribed circle will be inside the triangle, and it
-will be outside for an obtuse triangle. Notice from the proof of Theorem
-\ref{thm:circumscribedradius} that the center $O$ was on the perpendicular bisector of one of the
-sides (:math:`\overline{AB}`). Similar arguments for the other sides would show that $O$ is on the
-perpendicular bisectors for those sides:
+    .. _fig:circum345:
 
-\statecor{cor:circumscribedcenter}{For any triangle, the center of its circumscribed circle is the
-intersection of the perpendicular bisectors of the sides.}
+    .. _Figure 2.5.3:
 
-\piccaption[]{\label{fig:perpbisect}}\parpic[r]{\begin{tikzpicture}[every node/.style={font=\small}]
- \draw [linecolor,line width=1.5pt] (0,0) -- (3,0);
- \fill (0,0) circle (2pt);
- \fill (3,0) circle (2pt);
- \node [left] at (0,0) {$A$};
- \node [right] at (3,0) {$B$};
- \draw [line width=1pt,dashed,red,name path=arca] (60:1.8) arc (60:-60:1.8);
- \draw [line width=1pt,dashed,green!60!black,name path=arcb] ([shift={(3,0)}] 120:1.8) arc
-  (120:240:1.8);
- \fill [name intersections={of=arca and arcb}] (intersection-1) circle (2pt);
- \fill (intersection-2) circle (2pt);
- \draw (1.5,1.5) -- (1.5,-1.5);
- \draw [dashed,-latex] (0,0) -- (50:1.8) node[midway,above left] {$d$};
- \draw [dashed,-latex] (3,0) -- ([shift={(3,0)}] 130:1.8) node[midway,above right] {$d$};
-\end{tikzpicture}}
-\picskip{8}
-Recall from geometry how to create the\index{perpendicular bisector}
-perpendicular bisector of a line segment: at each endpoint use a compass to draw an arc
-with the same radius. Pick the radius large enough so that the arcs intersect at two points, as in
-Figure \ref{fig:perpbisect}. The line through those two points is the perpendicular bisector of the
-line segment. For the circumscribed circle of a triangle, you need the perpendicular bisectors of
-only \emph{two} of the sides; their intersection will be the center of the circle.
+    .. figure:: ./img/f2.5.3.png 
+        :align: right
 
-\begin{exmp}
- Find the radius $R$ of the circumscribed circle for the triangle :math:`\triangle ABC` from Example
- \ref{exmp:case4cosine} in Section 2.2: $a = 2$, $b = 3$, and $c = 4$. Then draw the triangle and
- the circle.\vspace{1mm}
- \textbf{Solution:} In Example \ref{exmp:case4cosine} we found $A=28.9^\circ$, so
- $2\,R = \frac{a}{\sin\;A} = \frac{2}{\sin\;28.9^\circ} = 4.14$, so
- $\boxed{R = 2.07}\;$.\vspace{1mm}\\In Figure \ref{fig:circum234}(a) we show how to draw
- :math:`\triangle ABC`: use a ruler to draw the longest side :math:`\overline{AB}` of length $c=4$, then use a
- compass to draw arcs of radius $3$ and $2$ centered at $A$ and $B$, respectively. The intersection
- of the arcs is the vertex $C$.\vspace{-2mm}
+        **Figure 2.5.3**
 
-\begin{figure}[h]
- \centering
- \subfloat[][ Drawing :math:`\triangle ABC`]{
-  \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
-   \draw [linecolor,line width=1.5pt] (0,0) -- (5.2,0) node[black,midway,below] {$c=4$};
-   \node [left] at (0,0) {$A$};
-   \node [right] at (5.2,0) {$B$};
-   \draw [line width=1pt,red,dashed,name path=arca] (60:3.9) arc (60:10:3.9);
-   \draw [line width=1pt,green!60!black,dashed,name path=arcb] ([shift={(5.2,0)}] 100:2.6) arc
-    (100:160:2.6);
-   \node [name intersections={of=arca and arcb},above] at (intersection-1) {$C$};
-   \draw [dashed,linecolor,line width=1.5pt] (0,0) -- (intersection-1);
-   \draw [dashed,linecolor,line width=1.5pt] (intersection-1) -- (5.2,0);
-   \draw [dashed,-latex] (0,0) -- (50:3.9) node[midway,above left] {$3$};
-   \draw [dashed,-latex] (5.2,0) -- ([shift={(5.2,0)}] 110:2.6) node[midway,above right] {$2$};
-   \fill (0,0) circle (2pt);
-   \fill (5.2,0) circle (2pt);
-   \fill (intersection-1) circle (2pt);
-  \end{tikzpicture}}
- \qquad\qquad
- \subfloat[][ Circumscribed circle]{
-  \begin{tikzpicture}[scale=1,every node/.style={font=\small}]
-   \node [below left] at (0,0) {$O$};
-   \fill [fillcolor] (166:2.07) -- ++(28.9:3) -- ++(-46.6:2) -- ++(-4,0);
-   \draw [linecolor,line width=1.5pt] (166:2.07) -- ++(28.9:3)
-    node[black,pos=0.0,left] {$A$} node[black,pos=1.0,above] {$C$} -- ++(-46.6:2);
-   \draw [linecolor,line width=1.5pt] (166:2.07) -- ++(4,0) node[black,pos=1.0,right] {$B$};
-   \draw [line width=1pt] (0,0) circle (2.07);
-   \draw [red] ([shift={(14:2.07)}] 145:2.2) arc (145:215:2.2);
-   \draw [red] ([shift={(166:2.07)}] 35:2.2) arc (35:-35:2.2);
-   \draw [red] (0,1.7) -- (0,-0.7);
-   \draw [green!60!black] ([shift={(71.8:2.07)}] 173.9:1.7) arc (173.9:243.9:1.7);
-   \draw [green!60!black] ([shift={(166:2.07)}] 63.9:1.7) arc (63.9:-6.1:1.7);
-   \coordinate (m) at ($ (166:2.07)!.5!(71.8:2.07) $);
-   \draw [green!60!black] (0,0) -- (m) -- ++(118.9:1.1);
-   \draw [green!60!black] (0,0) -- ++(-61.1:0.7);
-   \fill (0,0) circle (1.5pt);
-  \end{tikzpicture}}\vspace{-2mm}
- \caption[]{}
- \label{fig:circum234}
-\end{figure}
+    Find the radius $R$ of the circumscribed circle for the triangle :math:`\triangle ABC` whose sides are $a=3$, $b=4$, and $c=5$.
 
- In Figure \ref{fig:circum234}(b) we show how to draw the circumscribed circle: draw the
- perpendicular bisectors of :math:`\overline{AB}` and $\overline{AC}$; their intersection is the center
- $O$ of the circle. Use a compass to draw the circle centered at $O$ which passes through $A$.
-\end{exmp}\vspace{-2mm}
-\divider\vspace{-2mm}
-\newpage
-Theorem \ref{thm:circumscribedradius} can be used to derive another formula for the
-area of a triangle:
+    **Solution:** We know that :math:`\triangle ABC` is a right triangle. So as we see from Figure :ref:`2.5.3 <fig:circum345>`, :math:`\sin\;A = 3/5`. Thus,
 
-\statethm{thm:areacircumradius}{For a triangle :math:`\triangle ABC`, let $K$ be its area and let $R$ be
-the radius of its circumscribed circle. Then
-\begin{equation}\label{eqn:areacircumradius}
- K ~=~ \frac{abc}{4\,R} \quad ( \text{and hence }\; R ~=~ \frac{abc}{4\,K} ~) ~.
-\end{equation}}
+    .. math::
 
-To prove this, note that by Theorem \ref{thm:circumscribedradius} we have
-\begin{displaymath}
- 2\,R ~=~ \frac{a}{\sin\;A} ~=~ \frac{b}{\sin\;B} ~=~ \frac{c}{\sin\;C} \quad\Rightarrow\quad
-  \sin\;A ~=~ \frac{a}{2\,R} ~,~~ \sin\;B ~=~ \frac{b}{2\,R} ~,~~ \sin\;C ~=~ \frac{c}{2\,R} ~.
-\end{displaymath}
-Substitute those expressions into formula (\ref{eqn:areacase2a}) from Section 2.4 for the area $K$:
-\begin{displaymath}
- K ~=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;A} ~=~
-  \frac{a^2 \;\cdot\; \frac{b}{2\,R} \;\cdot\; \frac{c}{2\,R}}{2\;\cdot\; \frac{a}{2\,R}}
-  ~=~ \frac{abc}{4\,R}  \qquad\qed
-\end{displaymath}
+        2\,R ~=~ \frac{a}{\sin\;A} ~=~ \frac{3}{\frac{3}{5}} ~=~ 5 \quad\Rightarrow\quad
+        \boxed{R ~=~ 2.5} ~.
 
-Combining Theorem \ref{thm:areacircumradius} with Heron's formula for the area of a
-triangle, we get:
+    Note that since $R =2.5$, the diameter of the circle is $5$, which is the same as $AB$. Thus, :math:`\overline{AB}` must be a diameter of the circle, and so the center $O$ of the circle is the midpoint of :math:`\overline{AB}`.
 
-\statecor{cor:circumradiusheron}{For a triangle :math:`\triangle ABC`, let $s = \frac{1}{2}(a+b+c)$.
-Then the radius $R$ of its circumscribed circle is
-\begin{equation}\label{eqn:circumradiusheron}
- R ~=~ \frac{abc}{4\,\sqrt{s\,(s-a)\,(s-b)\,(s-c)}} ~~.
-\end{equation}}
+.. _cor:circumscribedright:
 
-In addition to a circumscribed circle, every triangle has an \textbf{inscribed circle}, i.e. a
-circle\index{inscribed circle}\index{circle!inscribed} to which the sides of the triangle are
-tangent, as in Figure \ref{fig:inscribed}.
+    **Corollary 2.6.** For any right triangle, the hypotenuse is a diameter of the circumscribed circle, i.e. the center of the circle is the midpoint of the hypotenuse.
 
-\begin{figure}[h]
- \begin{center}
-  \begin{tikzpicture}[every node/.style={font=\small}]
-   \fill [fillcolor] (0,0) -- (60:3) -- (6,0) -- cycle;
-   \coordinate (o) at (1.902,1.098);
-   \draw [dashed] (0,0) -- (o);
-   \draw [dashed] (60:3) -- (o);
-   \draw [dashed] (6,0) -- (o);
-   \draw [linecolor,line width=1.5pt] (0,0) -- (60:3) node[black,pos=0.4,above left]
-    {$b$} -- (6,0) node[black,midway,above right] {$a$} -- cycle;
-   \node [below] at (3,0) {$c$};
-   \node [left] at (0,0) {$A$};
-   \node [right] at (6,0) {$B$};
-   \node [above] at (60:3) {$C$};
-   \fill (o) circle (2pt);
-   \node [right] at (1.95,1.2) {$O$};
-   \draw [line width=1pt] (o) circle (1.098);
-   \node [below] at (1.902,0) {$D$};
-   \draw [dashed] (1.902,0) -- (o) node[right,midway] {$r$};
-   \draw [dashed] ([shift={(o)}] 60:1.098) -- (o) node[pos=0.0,above right] {$E$};
-   \draw [dashed] ([shift={(o)}] 150:1.098) -- (o) node[pos=0.0,above left] {$F$};
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad Inscribed circle for :math:`\triangle ABC`}
- \label{fig:inscribed}
-\end{figure}
+For the right triangle in the above example, the circumscribed circle is simple to draw; its center can be found by measuring a distance of $2.5$ units from $A$ along :math:`\overline{AB}`.
 
-Let $r$ be the radius of the inscribed circle, and let $D$, $E$, and $F$ be the points on
-:math:`\overline{AB}`, $\overline{BC}$, and $\overline{AC}$, respectively, at which the circle is tangent.
-Then $\overline{OD} \perp \overline{AB}$, $\overline{OE} \perp \overline{BC}$, and $\overline{OF}
-\perp \overline{AC}$. Thus, $\triangle\,OAD$ and $\triangle\,OAF$ are equivalent triangles,
-since they are right triangles with the same hypotenuse $\overline{OA}$ and with corresponding legs
-$\overline{OD}$ and $\overline{OF}$ of the same length $r$. Hence, $\angle\,OAD =\angle\,OAF$, which
-means that $\overline{OA}$ bisects the angle $A$. Similarly, $\overline{OB}$ bisects $B$ and
-$\overline{OC}$ bisects $C$. We have thus shown:\vspace{2mm}
+We need a different procedure for acute and obtuse triangles, since for an acute triangle the center of the circumscribed circle will be inside the triangle, and it will be outside for an obtuse triangle. Notice from the proof of Theorem :ref:`2.5 <thm:circumscribedradius>` that the center $O$ was on the perpendicular bisector of one of the sides (:math:`\overline{AB}`). Similar arguments for the other sides would show that $O$ is on the perpendicular bisectors for those sides:
 
-\statecomment{For any triangle, the center of its inscribed circle is the
-intersection of the bisectors of the angles.}
-\newpage
-We will use Figure \ref{fig:inscribed} to find the radius $r$ of the inscribed circle. 
-Since $\overline{OA}$ bisects $A$, we see that $\tan\;\frac{1}{2}A = \frac{r}{AD}$, and so
-$r = AD \,\cdot\, \tan\;\frac{1}{2}A$. Now,
-$\triangle\,OAD$ and $\triangle\,OAF$ are equivalent triangles, so $AD =
-AF$. Similarly, $DB = EB$ and $FC = CE$. Thus, if we let $s=\frac{1}{2}(a+b+c)$, we see that
-\begin{align*}
- 2\,s ~&=~ a ~+~ b ~+~ c ~=~ (AD + DB ) ~+~ (CE + EB) ~+~ (AF + FC)\\
- &=~ AD ~+~ EB ~+~ CE ~+~ EB ~+~ AD ~+~ CE ~=~ 2\,(AD + EB + CE)\\
- s ~&=~ AD ~+~ EB ~+~ CE ~=~ AD ~+~ a\\
- AD ~&=~ s - a ~.
-\end{align*}
-Hence, $r = (s-a)\,\tan\;\frac{1}{2}A$. Similar arguments for the angles $B$ and $C$ give us:
+.. _cor:circumscribedcenter:
 
-\statethm{thm:inscribedradius}{For any triangle :math:`\triangle ABC`, let $s = \frac{1}{2}(a+b+c)$.
-Then the radius $r$ of its inscribed circle is
-\begin{equation}\label{eqn:inscribedradius}
- r ~=~ (s-a)\,\tan\;\tfrac{1}{2}A ~=~ (s-b)\,\tan\;\tfrac{1}{2}B ~=~
-  (s-c)\,\tan\;\tfrac{1}{2}C ~.
-\end{equation}}
+    **Corollary 2.7.** For any triangle, the center of its circumscribed circle is the intersection of the perpendicular bisectors of the sides.
 
-We also see from Figure \ref{fig:inscribed} that the area of the triangle $\triangle\,AOB$ is
-\begin{displaymath}
- \text{Area}(\triangle\,AOB) ~=~ \tfrac{1}{2}\,\text{base} \times \text{height} ~=~
-  \tfrac{1}{2}\,c\,r ~.
-\end{displaymath}
-Similarly, $\text{Area}(\triangle\,BOC) = \frac{1}{2}\,a\,r$ and
-$\text{Area}(\triangle\,AOC) = \frac{1}{2}\,b\,r$.
-Thus, the area $K$ of :math:`\triangle ABC` is
-\begin{align*}
- K ~&=~ \text{Area}(\triangle\,AOB) ~+~\text{Area}(\triangle\,BOC) ~+~ \text{Area}(\triangle\,AOC)
-  ~=~ \tfrac{1}{2}\,c\,r ~+~ \tfrac{1}{2}\,a\,r ~+~ \tfrac{1}{2}\,b\,r\\
- &=~ \tfrac{1}{2}\,(a+b+c)\,r ~=~ sr ~,~\text{so by Heron's formula we get}\\
- r ~&=~ \frac{K}{s} ~=~ \frac{\sqrt{s\,(s-a)\,(s-b)\,(s-c)}}{s} ~=~
-  \sqrt{\frac{s\,(s-a)\,(s-b)\,(s-c)}{s^2}} ~=~ \sqrt{\frac{(s-a)\,(s-b)\,(s-c)}{s}} ~~.
-\end{align*}
+.. _Figure 2.5.4:
+
+.. _fig:perpbisect:
+
+.. figure:: ./img/f2.5.4.png
+    :align: right 
+
+    **Figure 2.5.4**
+
+Recall from geometry how to create the perpendicular bisector of a line segment: at each endpoint use a compass to draw an arc with the same radius. Pick the radius large enough so that the arcs intersect at two points, as in Figure :ref:`2.5.4 <fig:perpbisect>`. The line through those two points is the perpendicular bisector of the line segment. For the circumscribed circle of a triangle, you need the perpendicular bisectors of only *two* of the sides; their intersection will be the center of the circle.
+
+|
+
+.. _Example 2.18
+
+.. _exmp:heronfail:
+
+.. admonition:: Example 2.18
+
+    Find the radius $R$ of the circumscribed circle for the triangle :math:`\triangle ABC` from Example
+    :ref:`2.6 <exmp:case4cosine>` in Section 2.2: $a = 2$, $b = 3$, and $c = 4$. Then draw the triangle and
+    the circle.
+
+    **Solution:** In Example :ref:`2.6 <exmp:case4cosine>` we found :math:`A=28.9^\circ`, so :math:`2\,R = \frac{a}{\sin\;A} = \frac{2}{\sin\;28.9^\circ} = 4.14`, so :math:`\boxed{R = 2.07}\;`. In Figure :ref:`2.5.5 <fig:circum234>` (a) we show how to draw :math:`\triangle ABC`: use a ruler to draw the longest side :math:`\overline{AB}` of length $c=4$, then use a compass to draw arcs of radius $3$ and $2$ centered at $A$ and $B$, respectively. The intersection of the arcs is the vertex $C$.
+
+    .. _Figure 2.5.5:
+
+    .. _fig:circum234:
+
+    .. figure:: ./img/f2.5.5.png
+        :align: center 
+
+        **Figure 2.5.5**
+
+    In Figure :ref:`2.5.5 <fig:circum234>` (b) we show how to draw the circumscribed circle: draw the perpendicular bisectors of :math:`\overline{AB}` and :math:`\overline{AC}`; their intersection is the center $O$ of the circle. Use a compass to draw the circle centered at $O$ which passes through $A$.
+
+
+Theorem :ref:`2.5 <thm:circumscribedradius>` can be used to derive another formula for the area of a triangle:
+
+.. _thm:areacircumradius:
+
+    **Theorem 2.8.** For a triangle :math:`\triangle ABC`, let $K$ be its area and let $R$ be the radius of its circumscribed circle. Then
+
+    .. _equation 2.36
+
+    .. math::
+        :label: eqn:areacircumradius
+
+        K ~=~ \frac{abc}{4\,R} \quad ( \text{and hence }\; R ~=~ \frac{abc}{4\,K} ~) ~.
+
+
+To prove this, note that by Theorem :ref:`2.5 <thm:circumscribedradius>` we have
+
+.. math::
+
+    2\,R ~=~ \frac{a}{\sin\;A} ~=~ \frac{b}{\sin\;B} ~=~ \frac{c}{\sin\;C} \quad\Rightarrow\quad
+    \sin\;A ~=~ \frac{a}{2\,R} ~,~~ \sin\;B ~=~ \frac{b}{2\,R} ~,~~ \sin\;C ~=~ \frac{c}{2\,R} ~.
+
+Substitute those expressions into formula :eq:`2.26 <eqn:areacase2a>` from Section 2.4 for the area $K$:
+
+.. math::
+
+    K ~=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;A} ~=~
+    \frac{a^2 \;\cdot\; \frac{b}{2\,R} \;\cdot\; \frac{c}{2\,R}}{2\;\cdot\; \frac{a}{2\,R}}
+    ~=~ \frac{abc}{4\,R}  \qquad
+
+Combining Theorem :ref:`2.8 <thm:areacircumradius>` with Heron's formula for the area of a triangle, we get:
+
+.. _cor:circumradiusheron:
+
+    **Theorem 2.9.** For a triangle :math:`\triangle ABC`, let :math:`s = \frac{1}{2}(a+b+c)`. Then the radius $R$ of its circumscribed circle is
+
+    .. equation: 2.37
+
+    .. math::
+        :label: eqn:circumradiusheron
+
+        R ~=~ \frac{abc}{4\,\sqrt{s\,(s-a)\,(s-b)\,(s-c)}} ~~.
+
+In addition to a circumscribed circle, every triangle has an **inscribed circle**, i.e. a circle to which the sides of the triangle are tangent, as in Figure :ref:`2.5.6 <fig:inscribed>`.
+
+.. _fig:inscribed:
+
+.. _Figure 2.5.6:
+
+.. figure:: ./img/f2.5.6.png
+    :align: center 
+
+    **Fiugre 2.5.6 Inscribed circle for** :math:`\triangle ABC`
+
+Let $r$ be the radius of the inscribed circle, and let $D$, $E$, and $F$ be the points on :math:`\overline{AB}`, :math:`\overline{BC}`, and :math:`\overline{AC}`, respectively, at which the circle is tangent. Then :math:`\overline{OD} \perp \overline{AB}`, :math:`\overline{OE} \perp \overline{BC}`, and :math:`\overline{OF} \perp \overline{AC}`. Thus, :math:`\triangle\,OAD` and :math:`\triangle\,OAF` are equivalent triangles, since they are right triangles with the same hypotenuse :math:`\overline{OA}` and with corresponding legs :math:`\overline{OD}` and :math:`\overline{OF}` of the same length $r$. Hence, :math:`\angle\,OAD =\angle\,OAF`, which means that :math:`\overline{OA}` bisects the angle $A$. Similarly, :math:`\overline{OB}` bisects $B$ and :math:`\overline{OC}` bisects $C$. We have thus shown:
+
+.. note::
+    
+    For any triangle, the center of its inscribed circle is the intersection of the bisectors of the angles.
+
+We will use Figure :ref:`2.5.6 <fig:inscribed>` to find the radius $r$ of the inscribed circle. Since :math:`\overline{OA}` bisects $A$, we see that :math:`\tan\;\frac{1}{2}A = \frac{r}{AD}`, and so :math:`r = AD \,\cdot\, \tan\;\frac{1}{2}A`. Now, :math:`\triangle\,OAD` and :math:`\triangle\,OAF` are equivalent triangles, so $AD = AF$. Similarly, $DB = EB$ and $FC = CE$. Thus, if we let :math:`s=\frac{1}{2}(a+b+c)`, we see that
+
+.. math::
+
+    \begin{align*}
+    2\,s ~&=~ a ~+~ b ~+~ c ~=~ (AD + DB ) ~+~ (CE + EB) ~+~ (AF + FC)\\
+    &=~ AD ~+~ EB ~+~ CE ~+~ EB ~+~ AD ~+~ CE ~=~ 2\,(AD + EB + CE)\\
+    s ~&=~ AD ~+~ EB ~+~ CE ~=~ AD ~+~ a\\
+    AD ~&=~ s - a ~.
+    \end{align*}
+
+Hence, :math:`r = (s-a)\,\tan\;\frac{1}{2}A`. Similar arguments for the angles $B$ and $C$ give us:
+
+.. _thm:inscribedradius:
+
+**Theorem 2.10.** For any triangle :math:`\triangle ABC`, let :math:`s = \frac{1}{2}(a+b+c)`. Then the radius $r$ of its inscribed circle is
+
+.. _Figure 2.38:
+
+.. math::
+    :label: eqn:inscribedradius
+
+    r ~=~ (s-a)\,\tan\;\tfrac{1}{2}A ~=~ (s-b)\,\tan\;\tfrac{1}{2}B ~=~
+    (s-c)\,\tan\;\tfrac{1}{2}C ~.
+
+
+We also see from Figure :ref:`2.5.6 <fig:inscribed>` that the area of the triangle :math:`\triangle\,AOB` is
+
+.. math::
+
+    \text{Area}(\triangle\,AOB) ~=~ \tfrac{1}{2}\,\text{base} \times \text{height} ~=~
+    \tfrac{1}{2}\,c\,r ~.
+
+Similarly, :math:`\text{Area}(\triangle\,BOC) = \frac{1}{2}\,a\,r` and :math:`\text{Area}(\triangle\,AOC) = \frac{1}{2}\,b\,r`. Thus, the area $K$ of :math:`\triangle ABC` is
+
+.. math::
+
+    \begin{align*}
+    K ~&=~ \text{Area}(\triangle\,AOB) ~+~\text{Area}(\triangle\,BOC) ~+~ \text{Area}(\triangle\,AOC)
+    ~=~ \tfrac{1}{2}\,c\,r ~+~ \tfrac{1}{2}\,a\,r ~+~ \tfrac{1}{2}\,b\,r\\
+    &=~ \tfrac{1}{2}\,(a+b+c)\,r ~=~ sr ~,~\text{so by Heron's formula we get}\\
+    r ~&=~ \frac{K}{s} ~=~ \frac{\sqrt{s\,(s-a)\,(s-b)\,(s-c)}}{s} ~=~
+    \sqrt{\frac{s\,(s-a)\,(s-b)\,(s-c)}{s^2}} ~=~ \sqrt{\frac{(s-a)\,(s-b)\,(s-c)}{s}} ~~.
+    \end{align*}
+
 We have thus proved the following theorem:
 
-\statethm{thm:inscribedarea}{For any triangle :math:`\triangle ABC`, let $s = \frac{1}{2}(a+b+c)$.
-Then the radius $r$ of its inscribed circle is
-\begin{equation}\label{eqn:inscribedarea}
- r ~=~ \frac{K}{s} ~=~ \sqrt{\frac{(s-a)\,(s-b)\,(s-c)}{s}} ~~.
-\end{equation}}
+.. _thm:inscribedarea:
 
-\piccaption[]{\label{fig:angbisect}}\parpic[r]{\begin{tikzpicture}[every node/.style={font=\small}]
- \draw (0,0) -- (20:2.8);
- \draw [linecolor,line width=1.5pt] (40:3) -- (0,0) -- (3,0);
- \fill (0,0) circle (2pt);
- \draw [red,dashed,line width=1pt] (55:1.2) arc (55:-15:1.2);
- \draw [,line width=1pt,green!60!black,dashed,name path=arc1] ([shift={(40:1.2)}] (50:1.3) arc
-  (50:-12:1.3);
- \draw [,line width=1pt,green!60!black,dashed,name path=arc2] ([shift={(1.2,0)}] (50:1.3) arc
-  (50:-10:1.3);
- \fill [green!60!black,name intersections={of=arc1 and arc2}] (intersection-1) circle (1.5pt);
- \node [left] at (0,0) {$A$};
- \draw [green!60!black,dashed,-latex] (40:1.2) -- ++(30:1.3) node[black,pos=0.6,below] {$d$};
- \draw [green!60!black,dashed,-latex] (1.2,0) -- ++(10:1.3) node[black,pos=0.5,above] {$d$};
- \fill [red] (40:1.2) circle (1.5pt);
- \fill [red] (1.2,0) circle (1.5pt);
-\end{tikzpicture}}
-Recall from geometry how to bisect an angle: use a compass centered at the vertex to
-draw an arc that intersects the sides of the angle at two points. At those two points use a
-compass to draw an arc with the same radius, large enough so that the two arcs intersect at a point,
-as in Figure \ref{fig:angbisect}. The line through that point and the vertex is the bisector of the
-angle. For the inscribed circle of a triangle, you need only \emph{two} angle bisectors; their
-intersection will be the center of the circle.
-\newpage
-\begin{exmp}
- Find the radius $r$ of the inscribed circle for the triangle :math:`\triangle ABC` from Example
- \ref{exmp:case4cosine} in Section 2.2: $a = 2$, $b = 3$, and $c = 4$. Draw the circle.
+**Theorem 2.11.** For any triangle :math:`\triangle ABC`, let :math:`s = \frac{1}{2}(a+b+c)`. Then the radius $r$ of its inscribed circle is
+ 
+.. _equation 2.39:
 
-\piccaption[]{\label{fig:inscrib234}}\parpic[r]{\begin{tikzpicture}[every node/.style={font=\small}]
- \fill [fillcolor] (0,0) -- (28.9:3.6) -- (4.8,0) -- cycle;
- \draw [dashed,name path=bisa] (0,0) -- (14.45:3.5);
- \draw [dashed,name path=bisb] (4.8,0) -- ++(156.7:2.4);
- \fill [name intersections={of=bisa and bisb}] (intersection-1) circle (1.5pt);
- \node [below] at (intersection-1) {$O$};
- \draw [linecolor,line width=1.5pt] (0,0) -- (28.9:3.6) -- (4.8,0) -- cycle;
- \draw [line width=1pt] (intersection-1) circle (0.7746);
- \node [below] at (0,0) {$A$};
- \node [below] at (4.8,0) {$B$};
- \node [above] at (28.9:3.6) {$C$};
-\end{tikzpicture}}
- \textbf{Solution:} Using Theorem \ref{thm:inscribedarea} with\\$s = \frac{1}{2}(a+b+c) =
- \frac{1}{2}(2+3+4) = \frac{9}{2}$, we have
- \begin{displaymath}
-  r ~=~ \sqrt{\frac{(s-a)\,(s-b)\,(s-c)}{s}} ~=~
-   \sqrt{\frac{\left(\frac{9}{2}-2\right)\,\left(\frac{9}{2}-3\right)\,\left(\frac{9}{2}-
-   4\right)}{\frac{9}{2}}} ~=~ \sqrt{\frac{5}{12}}~.
- \end{displaymath}
-  Figure \ref{fig:inscrib234} shows how to draw the inscribed circle: draw the
- bisectors of $A$ and $B$, then at their intersection use a compass to draw a circle of radius
- $r = \sqrt{5/12} \approx 0.645$.
-\end{exmp}\vspace{-2mm}
-\divider
-\vspace{2mm}
+.. math::
+    :label: eqn:inscribedarea
 
-\startexercises\label{sec2dot5}
-\vspace{5mm}
-{\small
- For Exercises 1-6, find the radii $R$ and $r$ of the circumscribed and inscribed
-circles, respectively, of the triangle :math:`\triangle ABC`.
-\begin{enumerate}[\bfseries 1.]
- \begin{multicols}{3}
-  \item $a = 2$, $b = 4$, $c = 5$
-  \item $a = 6$, $b = 8$, $c = 8$
-  \item $a = 5$, $b = 7$, $C = 40^\circ$
- \end{multicols}
- \begin{multicols}{3}
-  \item $A = 170^\circ$, $b = 100$, $c = 300$
-  \item $a = 10$, $b = 11$, $c = 20.5$
-  \item $a = 5$, $b = 12$, $c = 13$
- \end{multicols}
- \suspend{enumerate}
- For Exercises 7 and 8, draw the triangle :math:`\triangle ABC` and its circumscribed and inscribed
- circles accurately, using a ruler and compass (or computer software).
- \resume{enumerate}[{[\bfseries 1.]}]
- \begin{multicols}{2}
-  \item $a = 2$ in, $b = 4$ in, $c = 5$ in
-  \item $a = 5$ in, $b = 6$ in, $c = 7$ in
- \end{multicols}
- \item For any triangle :math:`\triangle ABC`, let $s = \frac{1}{2}(a+b+c)$. Show that
-  \begin{displaymath}
-   \tan\;\tfrac{1}{2}A ~=~ \sqrt{\frac{(s-b)\,(s-c)}{s\,(s-a)}} ~~,~~~
-   \tan\;\tfrac{1}{2}B ~=~ \sqrt{\frac{(s-a)\,(s-c)}{s\,(s-b)}} ~~,~~~
-   \tan\;\tfrac{1}{2}C ~=~ \sqrt{\frac{(s-a)\,(s-b)}{s\,(s-c)}} ~~.
-  \end{displaymath}
- \item Show that for any triangle :math:`\triangle ABC`, the radius $R$ of its circumscribed circle is
-  \begin{displaymath}
-   R ~=~ \frac{abc}{\sqrt{(a+b+c)\,(b+c-a)\,(a-b+c)\,(a+b-c)}} ~~.
-  \end{displaymath}
- \item Show that for any triangle :math:`\triangle ABC`, the radius $R$ of its circumscribed circle and
-  the radius $r$ of its inscribed circle satisfy the relation
-  \begin{displaymath}
-   rR ~=~ \frac{abc}{2\,(a+b+c)} ~~.
-  \end{displaymath}
- \item Let :math:`\triangle ABC` be an equilateral triangle whose sides are of length $a$.
-  \begin{enumerate}[\bfseries (a)]
-   \item Find the exact value of the radius $R$ of the circumscribed circle of :math:`\triangle ABC`.
-   \item Find the exact value of the radius $r$ of the inscribed circle of :math:`\triangle ABC`.
-   \item How much larger is $R$ than $r$?
-   \item Show that the circumscribed and inscribed circles of :math:`\triangle ABC` have the same center.
-  \end{enumerate}
- \item Let :math:`\triangle ABC` be a right triangle with $C=90^\circ$. Show that
-  $\;\tan\;\tfrac{1}{2}A = \sqrt{\frac{c-b}{c+b}}~$.
-\end{enumerate}}
+    r ~=~ \frac{K}{s} ~=~ \sqrt{\frac{(s-a)\,(s-b)\,(s-c)}{s}} ~~.
+
+.. _fig:angbisect:
+
+.. _Figure 2.5.7:
+
+.. figure:: ./img/f2.5.7.png 
+    :align: right 
+
+    **Figure 2.5.7**
+
+Recall from geometry how to bisect an angle: use a compass centered at the vertex to draw an arc that intersects the sides of the angle at two points. At those two points use a compass to draw an arc with the same radius, large enough so that the two arcs intersect at a point, as in Figure :ref:`2.5.7 <fig:angbisect>`. The line through that point and the vertex is the bisector of the angle. For the inscribed circle of a triangle, you need only *two* angle bisectors; their intersection will be the center of the circle.
+
+.. _Example 2.19
+
+.. _exmp:heronfail:
+
+.. admonition:: Example 2.19
+
+    Find the radius $r$ of the inscribed circle for the triangle :math:`\triangle ABC` from Example :ref:`2.6 <exmp:case4cosine>` in Section 2.2: $a = 2$, $b = 3$, and $c = 4$. Draw the circle.
+
+    .. _fig:inscrib234:
+
+    .. _Figure 2.5.8:
+
+    .. figure:: ./img/f2.5.8.png
+        :align: right 
+
+        **Figure 2.5.8**
+
+    **Solution:** Using Theorem :ref:`2.11 <thm:inscribedarea>` with :math:`s = \frac{1}{2}(a+b+c) = \frac{1}{2}(2+3+4) = \frac{9}{2}`, we have
+
+    .. math::
+
+        r ~=~ \sqrt{\frac{(s-a)\,(s-b)\,(s-c)}{s}} ~=~
+        \sqrt{\frac{\left(\frac{9}{2}-2\right)\,\left(\frac{9}{2}-3\right)\,\left(\frac{9}{2}-
+        4\right)}{\frac{9}{2}}} ~=~ \sqrt{\frac{5}{12}}~.
+
+    Figure :ref:`2.5.8 <fig:inscrib234>` shows how to draw the inscribed circle: draw the bisectors of $A$ and $B$, then at their intersection use a compass to draw a circle of radius :math:`r = \sqrt{5/12} \approx 0.645`.
+
+Exercises
+~~~~~~~~~~~
+
+.. _sec2dot5:
+
+For Exercises 1-6, find the radii $R$ and $r$ of the circumscribed and inscribed circles, respectively, of the triangle :math:`\triangle ABC`.
+
+1. $a = 2$, $b = 4$, $c = 5$
+2. $a = 6$, $b = 8$, $c = 8$
+3. $a = 5$, $b = 7$, :math:`C = 40^\circ`
+4. :math:`A = 170^\circ`, $b = 100$, $c = 300$
+5. $a = 10$, $b = 11$, $c = 20.5$
+6. $a = 5$, $b = 12$, $c = 13$
+
+For Exercises 7 and 8, draw the triangle :math:`\triangle ABC` and its circumscribed and inscribed circles accurately, using a ruler and compass (or computer software).
+ 
+7. $a = 2$ in, $b = 4$ in, $c = 5$ in
+8. $a = 5$ in, $b = 6$ in, $c = 7$ in
+
+9. For any triangle :math:`\triangle ABC`, let $s = \frac{1}{2}(a+b+c)$. Show that
+
+   .. math::
+   
+       \tan\;\tfrac{1}{2}A ~=~ \sqrt{\frac{(s-b)\,(s-c)}{s\,(s-a)}} ~~,~~~
+       \tan\;\tfrac{1}{2}B ~=~ \sqrt{\frac{(s-a)\,(s-c)}{s\,(s-b)}} ~~,~~~
+       \tan\;\tfrac{1}{2}C ~=~ \sqrt{\frac{(s-a)\,(s-b)}{s\,(s-c)}} ~~.
+
+10. Show that for any triangle :math:`\triangle ABC`, the radius $R$ of its circumscribed circle is
+
+    .. math::
+    
+        R ~=~ \frac{abc}{\sqrt{(a+b+c)\,(b+c-a)\,(a-b+c)\,(a+b-c)}} ~~.
+
+11. Show that for any triangle :math:`\triangle ABC`, the radius $R$ of its circumscribed circle and the radius $r$ of its inscribed circle satisfy the relation
+
+    .. math::
+    
+        rR ~=~ \frac{abc}{2\,(a+b+c)} ~~.
+
+12. Let :math:`\triangle ABC` be an equilateral triangle whose sides are of length $a$.
+
+13. Find the exact value of the radius $R$ of the circumscribed circle of :math:`\triangle ABC`.
+14. Find the exact value of the radius $r$ of the inscribed circle of :math:`\triangle ABC`.
+15. How much larger is $R$ than $r$?
+16. Show that the circumscribed and inscribed circles of :math:`\triangle ABC` have the same center.
+17. Let :math:`\triangle ABC` be a right triangle with :math:`C=90^\circ`. Show that :math:`\;\tan\;\tfrac{1}{2}A = \sqrt{\frac{c-b}{c+b}}~`.
+
