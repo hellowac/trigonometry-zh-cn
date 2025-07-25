@@ -340,630 +340,380 @@ Not all periodic curves have an amplitude. For example, :math:`\tan\;x` has neit
 
 		Figure 5.2.5 :math:`y=2-3\,\sin\;\frac{2\pi}{3}x`
 
-\begin{exmp}\label{exmp:2sinx2}
- Find the amplitude and period of $y=2\,\sin\;( x^2 )$.\vspace{1mm}
+.. _exmp:2sinx2:
+
+.. admonition:: Example 5.8
+
+	Find the amplitude and period of :math:`y=2\,\sin\;( x^2 )`.
+
+	**Solution:** This is not a periodic function, since the angle that we are taking the sine of, $x^2$, is not a *linear* function of $x$, i.e. is not of the form $ax+b$ for some constants $a$ and $b$. Recall how we argued that :math:`\sin\;2x` was "twice as fast" as :math:`\sin\;x`, so that its period was :math:`\pi` instead of :math:`2\pi`. Can we say that :math:`\sin\;( x^2 )` is some "constant" times as fast as :math:`\sin\;x\,`? No. In fact, we see that the "speed" of the curve keeps increasing as $x$ gets larger, since $x^2$ grows at a variable rate, not a constant rate. This can be seen in the graph of :math:`y=2\,\sin\;( x^2 )`, shown in Figure :ref:`5.2.6 <fig:exmp2sinx2>`: [2]_
+
+	.. [2] This graph was created using Gnuplot, an open-source graphing program which is freely available at http://gnuplot.info. See Appendix B for a brief tutorial on how to use Gnuplot.
+
+	.. _fig:exmp2sinx2:
+
+	.. _Figure 5.2.6:
+
+	.. figure:: ./img/f5.2.6.png 
+		:align: center 
+
+		Figure 5.2.6 :math:`y=2\,\sin\;( x^2 )`
+
+	Notice how the curve "speeds up" as $x$ gets larger, making the "waves" narrower and narrower. Thus, :math:`y=2\,\sin\;( x^2 )` has no period. Despite this, it appears that the function does have an amplitude, namely $2$. To see why, note that since :math:`|\sin\;\theta| \le 1` for all :math:`\theta`, we have
+
+	.. math::
+
+		|2\,\sin\;( x^2 )| ~=~ |2| \;\cdot\; |\sin\;( x^2 )| ~\le~ 2 \;\cdot\; 1 ~=~ 2 ~.
+
+	In the exercises you will be asked to find values of $x$ such that :math:`2\,\sin\;( x^2 )` reaches the maximum value $2$ and the minimum value $-2$. Thus, the amplitude is indeed $2$. Note: This curve is still sinusoidal despite not being periodic, since the general shape is still that of a "sine wave", albeit one with variable *cycles*.
+
+So far in our examples we have been able to determine the amplitudes of sinusoidal curves fairly easily. This will not always be the case.
+
+
+.. _exmp:3sinx4cosx:
+
+.. admonition:: Example 5.9
+
+	Find the amplitude and period of :math:`y=3\,\sin\;x + 4\,\cos\;x`.
+	
+	**Solution:** This is sometimes called a *combination* sinusoidal curve, since it is the sum of two such curves. The period is still simple to determine: since :math:`\sin\;x` and :math:`\cos\;x` each repeat every :math:`2\pi` radians, then so does the combination :math:`3\,\sin\;x + 4\,\cos\;x`. Thus, :math:`y=3\,\sin\;x + 4\,\cos\;x` has period :math:`2\pi`. We can see this in the graph, shown in Figure :ref:`5.2.7 <fig:exmp3sinx4cosx>`:
+
+	.. _fig:exmp3sinx4cosx:
+
+	.. _Figure 5.2.7:
+
+	.. figure:: ./img/f5.2.7.png 
+		:align: center 
+
+		Figure 5.2.7 :math:`y=3\,\sin\;x + 4\,\cos\;x`
+
+	The graph suggests that the amplitude is $5$, which may not be immediately obvious just by looking at how the function is defined. In fact, the definition :math:`y=3\,\sin\;x + 4\,\cos\;x` may tempt you to think that the amplitude is $7$, since the largest that :math:`3\,\sin\;x` could be is $3$ and the largest that :math:`4\,\cos\;x` could be is $4$, so that the largest their sum could be is $3+4=7$. However, :math:`3\,\sin\;x` can never equal $3$ for the same $x$ that makes :math:`4\,\cos\;x` equal to $4$ (why?).
+
+	.. _fig:tri345:
+
+	.. _Figure 5.2.8:
+
+	.. figure:: ./img/f5.2.8.png 
+		:align: right 
+
+		Figure 5.2.8
+
+	There is a useful technique (which we will discuss further in :ref:`Chapter 6 <c6>`) for showing that the amplitude of :math:`y=3\,\sin\;x + 4\,\cos\;x` is $5$. Let :math:`\theta` be the angle shown in the right triangle in Figure :ref:`5.2.8 <fig:tri345>`. Then :math:`\cos\;\theta = \frac{3}{5}` and :math:`\sin\;\theta = \frac{4}{5}`. We can use this as follows:
+
+	.. math::
+
+		\begin{align*}
+		y ~&=~ 3\,\sin\;x ~+~ 4\,\cos\;x\\
+		&=~ 5\,\left( \tfrac{3}{5}\,\sin\;x ~+~ \tfrac{4}{5}\,\cos\;x \right)\\
+		&=~ 5\,( \cos\;\theta\;\sin\;x ~+~ \sin\;\theta\;\cos\;x )\\
+		&=~ 5\,\sin\;(x+\theta)\quad\text{(by the sine addition formula)}
+		\end{align*}
+
+	Thus, :math:`|y| = |5\,\sin\;(x+\theta)| = |5| \cdot\, |\sin\;(x+\theta)| \le (5)(1) = 5`, so the amplitude of :math:`y=3\,\sin\;x + 4\,\cos\;x` is $5$.
+
+
+
+In general, a combination of sines and cosines will have a period equal to the *lowest common multiple* of the periods of the sines and cosines being added. In Example :ref:`5.9 <exmp:3sinx4cosx>`, :math:`\sin\;x` and :math:`\cos\;x` each have period :math:`2\pi`, so the lowest common multiple (which is always an *integer* multiple) is :math:`1 \,\cdot\, 2\pi = 2\pi`.
+
+
+.. _exmp:cos6xsin4x:
+
+.. admonition:: Example 5.10
+
+	Find the period of :math:`y=\cos\;6x + \sin\;4x`.
  
-**Solution:** This is not a periodic function, since the angle that we are taking
- the sine of, $x^2$, is not a \emph{linear} function of $x$, i.e. is not of the form $ax+b$ for some
- constants $a$ and $b$. Recall how we argued that :math:`\sin\;2x` was ``twice as fast'' as :math:`\sin\;x`, so
- that its period was :math:`\pi` instead of :math:`2\pi`. Can we say that $\sin\;( x^2 )$ is some
- \emph{constant}
- times as fast as $\sin\;x\,$? No. In fact, we see that the ``speed'' of the curve keeps increasing
- as $x$ gets larger, since $x^2$ grows at a variable rate, not a constant rate. This can be seen in
- the graph of $y=2\,\sin\;( x^2 )$, shown in Figure \ref{fig:exmp2sinx2}:\footnote{This graph was
- created using Gnuplot, an open-source graphing program which is freely available at
- \url{http://gnuplot.info}. See Appendix B for a brief tutorial on how to use Gnuplot.}\vspace{-1mm}
- 
-\begin{figure}[h]
- \begin{center}
-  \input{sinx2.tex}\vspace{-6mm}
- \end{center}
- \caption[]{\quad $y=2\,\sin\;( x^2 )$}
- \label{fig:exmp2sinx2}
-\end{figure}
+	**Solution:** The period of :math:`\cos\;6x` is :math:`\frac{2\pi}{6} = \frac{\pi}{3}`, and the period of :math:`\sin\;4x$ is $\frac{2\pi}{4} = \frac{\pi}{2}`. The lowest common multiple of :math:`\frac{\pi}{3}` and :math:`\frac{\pi}{2}` is :math:`\pi`:
+	
+	.. math::
 
- Notice how the curve ``speeds up'' as $x$ gets larger, making the ``waves'' narrower and narrower.
- Thus, $y=2\,\sin\;( x^2 )$ has no period. Despite this, it appears that the function does have an
- amplitude, namely $2$. To see why, note that since $\abs{\sin\;\theta} \le 1$ for all :math:`\theta`, we
- have
- \begin{displaymath}
-  \abs{2\,\sin\;( x^2 )} ~=~ \abs{2} \;\cdot\; \abs{\sin\;( x^2 )} ~\le~ 2 \;\cdot\; 1 ~=~ 2 ~.
- \end{displaymath}
- In the exercises you will be asked to find values of $x$ such that $2\,\sin\;( x^2 )$ reaches the
- maximum value $2$ and the minimum value $-2$. Thus, the amplitude is indeed $2$.\\Note: This curve
- is still sinusoidal despite not being periodic, since the general shape is still that of a ``sine
- wave'', albeit one with variable \emph{cycles}.
-\end{exmp}\vspace{-3mm}
-\divider
-\vspace{1mm}
+		\begin{align}
+		1 \;\cdot\; \tfrac{\pi}{3} ~&=~ \tfrac{\pi}{3} \quad\quad\quad
+		&1 \;&\cdot\; \tfrac{\pi}{2} ~&=~ \tfrac{\pi}{2}\\
+		2 \;\cdot\; \tfrac{\pi}{3} ~&=~ \tfrac{2\pi}{3} \quad\quad\quad
+		&2 \;&\cdot\; \tfrac{\pi}{2} ~&=~ \pi\\
+		3 \;\cdot\; \tfrac{\pi}{3} ~&=~ \pi \quad\quad\quad &{} &{}\\
+		\end{align}
 
-So far in our examples we have been able to determine the amplitudes of sinusoidal curves fairly
-easily. This will not always be the case.
-\newpage
-\begin{exmp}\label{exmp:3sinx4cosx}
-  Find the amplitude and period of $y=3\,\sin\;x + 4\,\cos\;x$.\vspace{1mm}
- 
-**Solution:** This is sometimes called a \emph{combination} sinusoidal curve, since
- it is the sum of two such curves. The period is still simple to determine: since
- :math:`\sin\;x` and :math:`\cos\;x` each repeat every :math:`2\pi` radians, then so does the combination
- $3\,\sin\;x + 4\,\cos\;x$. Thus, $y=3\,\sin\;x + 4\,\cos\;x$ has period :math:`2\pi`. We can see this in
- the graph, shown in Figure \ref{fig:exmp3sinx4cosx}:\vspace{-1mm}
+	Thus, the period of :math:`y=\cos\;6x + \sin\;4x` is :math:`\pi`. We can see this from its graph in Figure :ref:`5.2.9 <fig:exmpcos6xsin4x>`:
+	
+	.. _fig:exmpcos6xsin4x:
 
-\begin{figure}[h]
- \begin{center}
-  \input{3sinx4cosx.tex}\vspace{-6mm}
- \end{center}
- \caption[]{\quad $y=3\,\sin\;x + 4\,\cos\;x$}
- \label{fig:exmp3sinx4cosx}
-\end{figure}
+	.. _Figure 5.2.9:
 
-The graph suggests that the amplitude is $5$, which may not be immediately obvious just by looking at
-how the function is defined. In fact, the definition $y=3\,\sin\;x + 4\,\cos\;x$ may tempt you to
-think that the amplitude is $7$, since the largest that $3\,\sin\;x$ could be is $3$ and the largest
-that $4\,\cos\;x$ could be is $4$, so that the largest their sum could be is $3+4=7$. However,
-$3\,\sin\;x$ can never equal $3$ for the same $x$ that makes $4\,\cos\;x$ equal to $4$ (why?).
+	.. figure:: ./img/f5.2.9.png 
+		:align: right 
 
-\piccaption[]{\label{fig:tri345}}\parpic[r]{\begin{tikzpicture}[scale=0.5,
- every node/.style={font=\small}]
- \fill [fill=fillcolor] (0,0) -- (3,0) -- (3,4) -- (0,0);
- \draw (0:1.5) arc (0:53.13:1.5);
- \draw [line width=0.5pt] (2.625,0) -- (2.625,0.375) -- (3,0.375);
- \draw [linecolor,line width=1.5pt] (0,0) -- (3,0) -- (3,4) -- cycle;
- \node [below] at (1.5,0) {$3$};
- \node [right] at (3,2) {$4$};
- \node [above left] at (1.5,2) {$5$};
- \node at (0.9,0.4) {:math:`\theta`};
-\end{tikzpicture}}
-\picskip{4}
-There is a useful technique (which we will discuss further in Chapter 6) for showing that the
-amplitude of $y=3\,\sin\;x + 4\,\cos\;x$ is $5$. Let :math:`\theta` be the angle shown in the right
-triangle in Figure \ref{fig:tri345}. Then $\cos\;\theta = \frac{3}{5}$ and $\sin\;\theta =
-\frac{4}{5}$. We can use this as follows:
-\begin{align*}
- y ~&=~ 3\,\sin\;x ~+~ 4\,\cos\;x\\
- &=~ 5\,\left( \tfrac{3}{5}\,\sin\;x ~+~ \tfrac{4}{5}\,\cos\;x \right)\\
- &=~ 5\,( \cos\;\theta\;\sin\;x ~+~ \sin\;\theta\;\cos\;x )\\
- &=~ 5\,\sin\;(x+\theta)\quad\text{(by the sine addition formula)}
-\end{align*}
-Thus, $\abs{y} = \abs{5\,\sin\;(x+\theta)} = \abs{5}\,\cdot\,\abs{\sin\;(x+\theta)} \le (5)(1) = 5$,
-so the amplitude of $y=3\,\sin\;x + 4\,\cos\;x$ is $5$.
-\end{exmp}\vspace{-3mm}
-\divider\vspace{-2mm}
-\newpage
-In general, a combination of sines and cosines will have a period equal to the \emph{lowest common
-multiple} of the periods of the sines and cosines being added. In Example \ref{exmp:3sinx4cosx},
-:math:`\sin\;x` and :math:`\cos\;x` each have period :math:`2\pi`, so the lowest common multiple (which is always an
-\emph{integer} multiple) is $1 \,\cdot\, 2\pi = 2\pi$.
+		Figure 5.2.9
 
-\begin{exmp}\label{exmp:cos6xsin4x}
- Find the period of $y=\cos\;6x + \sin\;4x$.\vspace{1mm}
- 
-**Solution:** The period of $\cos\;6x$ is $\frac{2\pi}{6} = \frac{\pi}{3}$, and the
- period of $\sin\;4x$ is $\frac{2\pi}{4} = \frac{\pi}{2}$. The lowest common multiple of
- $\frac{\pi}{3}$ and :math:`\frac{\pi}{2}` is :math:`\pi`:
- \begin{alignat*}{4}
-  1 \;\cdot\; \tfrac{\pi}{3} ~&=~ \tfrac{\pi}{3} \quad\quad\quad
-   &1 \;&\cdot\; \tfrac{\pi}{2} ~&=~ \tfrac{\pi}{2}\\
-  2 \;\cdot\; \tfrac{\pi}{3} ~&=~ \tfrac{2\pi}{3} \quad\quad\quad
-   &2 \;&\cdot\; \tfrac{\pi}{2} ~&=~ \pi\\
-  3 \;\cdot\; \tfrac{\pi}{3} ~&=~ \pi \quad\quad\quad &{} &{}\\
- \end{alignat*}
- Thus, the period of $y=\cos\;6x + \sin\;4x$ is :math:`\pi`. We can see this from its graph in Figure
- \ref{fig:exmpcos6xsin4x}:
- 
-\begin{figure}[h]
- \begin{center}
-  \input{cos6xsin4x.tex}\vspace{-6mm}
- \end{center}
- \caption[]{\quad $y=\cos\;6x + \sin\;4x$}
- \label{fig:exmpcos6xsin4x}
-\end{figure}
+	What about the amplitude? Unfortunately we can not use the technique from Example :ref:`5.9 <exmp:3sinx4cosx>`, since we are not taking the cosine and sine of the same angle; we are  taking the cosine of $6x$ but the sine of $4x$. In this case, it appears from the graph that the maximum is close to $2$ and the minimum is close to $-2$. In Chapter 6, we will describe how to use a numerical computation program to show that the maximum and minimum are :math:`\pm\,1.90596111871578`, respectively (accurate to within :math:`\approx 2.2204 \times 10^{-16}`). Hence, the amplitude is $1.90596111871578$.
 
- What about the amplitude? Unfortunately we can not use the technique from Example
- \ref{exmp:3sinx4cosx}, since we are not taking the cosine and sine of the same angle; we are
- taking the cosine of $6x$ but the sine of $4x$. In this case, it appears from the graph that the
- maximum is close to $2$ and the minimum is close to $-2$. In Chapter 6, we will describe how to
- use a numerical computation program to show that the maximum and minimum are
- $\pm\,1.90596111871578$, respectively (accurate to within $\approx 2.2204 \times 10^{-16}$). Hence,
- the amplitude is $1.90596111871578$.
-\end{exmp}\vspace{-3mm}
-\divider\vspace{-2mm}
-\newpage
-Generalizing Example \ref{exmp:3sinx4cosx}, an expression of the form
-$a\,\sin\;\omega x \;+\; b\,\cos\;\omega x$ is equivalent to
-$\sqrt{a^2 + b^2}\;\sin\;(x+\theta)$, where :math:`\theta` is an angle such that
-$\cos\;\theta = \frac{a}{\sqrt{a^2 + b^2}}$ and $\sin\;\theta = \frac{b}{\sqrt{a^2 + b^2}}$. So
-$y=a\,\sin\;\omega x \;+\; b\,\cos\;\omega x$ will have amplitude $\sqrt{a^2 + b^2}$. Note that this
-method only works when the angle $\omega x$ is the same in both the sine and cosine terms.
+Generalizing Example :ref:`5.9 <exmp:3sinx4cosx>`, an expression of the form :math:`a\,\sin\;\omega x \;+\; b\,\cos\;\omega x` is equivalent to :math:`\sqrt{a^2 + b^2}\;\sin\;(x+\theta)`, where :math:`\theta` is an angle such that :math:`\cos\;\theta = \frac{a}{\sqrt{a^2 + b^2}}` and :math:`\sin\;\theta = \frac{b}{\sqrt{a^2 + b^2}}`. So :math:`y=a\,\sin\;\omega x \;+\; b\,\cos\;\omega x` will have amplitude :math:`\sqrt{a^2 + b^2}`. Note that this method only works when the angle :math:`\omega x` is the same in both the sine and cosine terms.
 
-We have seen how adding a constant to a function shifts the entire graph vertically. We will now see
-how to shift the entire graph of a periodic curve horizontally.
+We have seen how adding a constant to a function shifts the entire graph vertically. We will now see how to shift the entire graph of a periodic curve horizontally.
 
-\piccaption[]{\enskip $y=A\,\sin\;\omega x$\label{fig:phasenone}}\parpic[r]{\begin{tikzpicture}[scale=1.2,
- every node/.style={font=\small}]
- \begin{scope}[shift={(0,0)},color=linecolor,line width=1.5pt,x=3cm/360]
-  \draw[black!60,line width=0.3pt,dotted] (0,-1) grid[xstep=90,ystep=1] (360,1);
-  \draw[black!60,line width=0.3pt,-latex] (0,0) -- (380,0) node[right] {$x$};
-  \draw[black!60,line width=0.3pt,-latex] (0,-1.2) -- (0,1.6) node[above] {$y$};
-  \pgfplothandlerlineto
-  \pgfplotfunction{\x}{0,5,...,360}{\pgfpointxy{\x}{sin(\x)}}
-  \pgfusepath{stroke}
-  \node[black,left] at (0,0) {$0$};
-  \foreach \pos in {90,180,270,360}
-   \draw[black!60,line width=0.3pt,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-  \foreach \pos in {-1,1}
-   \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt);
-  \node[black,left] at (0,1) {$A$};
-  \node[black,left] at (0,-1) {$-A$};
-  \node[black,below] at (180,-0.1) {$\tfrac{\pi}{\omega}$};
-  \node[black,below] at (360,-0.1) {$\tfrac{2\pi}{\omega}$};
- \end{scope}
- \begin{scope}[>=latex]
-  \draw [<->|] (0,1.3) -- (3,1.3) node[midway,fill=white] {period $= \tfrac{2\pi}{\omega}$};
- \end{scope}
-\end{tikzpicture}}
-Consider a function of the form $y=A\,\sin\;\omega x$, where $A$ and :math:`\omega` are nonzero constants.
-For simplicity we will assume that $A >0$ and $\omega > 0$ (in general either one could be
-negative). Then the amplitude is $A$ and the period is $\frac{2\pi}{\omega}$. The graph is shown in
-Figure \ref{fig:phasenone}.
+.. _fig:phasenone:
 
-Now consider the function $y=A\,\sin\;(\omega x - \phi)$, where $\phi$ is some constant. The
-amplitude is still $A$, and the period is still $\frac{2\pi}{\omega}$, since $\omega x - \phi$ is a
-linear function of $x$. Also, we know that the sine function goes through an entire cycle when its
-angle goes from $0$ to :math:`2\pi`. Here, we are taking the sine of the angle $\omega x - \phi$. So as
-$\omega x - \phi$ goes from $0$ to :math:`2\pi`, an entire cycle of the function
-$y=A\,\sin\;(\omega x - \phi)$ will be traced out. That cycle starts when
-\begin{align*}
- \omega x - \phi ~=~ 0 \quad&\Rightarrow\quad x ~=~ \frac{\phi}{\omega}\\
-\intertext{and ends when}
- \omega x - \phi ~=~ 2\pi \quad&\Rightarrow\quad x ~=~ \frac{2\pi}{\omega}\;+\;\frac{\phi}{\omega}~.
-\end{align*}
-Thus, the graph of $y=A\,\sin\;(\omega x - \phi)$ is just the graph of $y=A\,\sin\;\omega x$
-shifted horizontally by $\frac{\phi}{\omega}$, as in Figure \ref{fig:phaseshift}. The graph is
-shifted to the right when $\phi >0$, and to the left when $\phi <0$. The amount
-$\frac{\phi}{\omega}$ of the shift is called the \textbf{phase shift}\index{phase shift} of the
-graph.
+.. _Figure 5.2.10:
 
-\begin{figure}[h]
- \centering
- \subfloat[][ $\phi >0$: right shift]{
-  \begin{tikzpicture}[scale=1.2,every node/.style={font=\small}]
-   \begin{scope}[shift={(0,0)},color=linecolor,line width=1.5pt,x=3cm/360]
-	\draw[black!60,line width=0.3pt,-latex] (0,0) -- (500,0) node[right] {$x$};
-	\draw[black!60,line width=0.3pt,-latex] (0,-1.2) -- (0,1.7) node[above] {$y$};
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{90,95,...,450}{\pgfpointxy{\x}{sin(-90+\x)}}
-	\pgfusepath{stroke}
-	\node[black,left] at (0,0) {$0$};
-	\foreach \pos in {90,180,270,360,450}
-	 \draw[black!60,line width=0.3pt,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {-1,1}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt);
-	\node[black,left] at (0,1) {$A$};
-	\node[black,left] at (0,-1) {$-A$};
-	\node[black,below right] at (425,-0.1) {$\tfrac{2\pi}{\omega}+\tfrac{\phi}{\omega}$};
-	\node[black,below] at (90,-0.1) {$\tfrac{\phi}{\omega}$};
-   \end{scope}
-   \begin{scope}[>=latex]
-    \draw [|<->|] (0.75,1.4) -- (3.75,1.4) node[midway,fill=white]
-	 {period $= \tfrac{2\pi}{\omega}$};
-    \draw [<->|] (0,-0.9) -- (0.75,-0.9);
-	\node[below right] at (0,-0.9) {phase shift};
-   \end{scope}
-  \end{tikzpicture}}
- \qquad\qquad
- \subfloat[][ $\phi <0$: left shift]{
-  \begin{tikzpicture}[scale=1.2,every node/.style={font=\small}]
-   \begin{scope}[shift={(0,0)},color=linecolor,line width=1.5pt,x=3cm/360]
-	\draw[black!60,line width=0.3pt,-latex] (-120,0) -- (320,0) node[right] {$x$};
-	\draw[black!60,line width=0.3pt,-latex] (0,-1.2) -- (0,1.7) node[above] {$y$};
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-90,-85,...,270}{\pgfpointxy{\x}{sin(90+\x)}}
-	\pgfusepath{stroke}
-	\node[black,below right] at (0,0) {$0$};
-	\foreach \pos in {-90,90,180,270}
-	 \draw[black!60,line width=0.3pt,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {-1,1}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt);
-	\node[black,left] at (0,1.1) {$A$};
-	\node[black,right] at (0,-1) {$-A$};
-	\node[black,below right] at (245,-0.1) {$\tfrac{2\pi}{\omega}+\tfrac{\phi}{\omega}$};
-	\node[black,below] at (-90,-0.1) {$\tfrac{\phi}{\omega}$};
-   \end{scope}
-   \begin{scope}[>=latex]
-    \draw [|<->|] (-0.75,1.4) -- (2.25,1.4) node[pos=0.6,fill=white]
-	 {period $= \tfrac{2\pi}{\omega}$};
-    \draw [|<->] (-0.75,-0.9) -- (0,-0.9);
-	\node[below left] at (0,-0.9) {phase shift};
-   \end{scope}
-  \end{tikzpicture}}\vspace{-2mm}
- \caption[]{\quad Phase shift for $y=A\,\sin\;(\omega x - \phi)$}
- \label{fig:phaseshift}
-\end{figure}
-\newpage
+.. figure:: ./img/f5.2.10.png 
+	:align: right 
+
+	Figure 5.2.10 :math:`y = A \sin \omega x`
+
+Consider a function of the form :math:`y=A\,\sin\;\omega x`, where $A$ and :math:`\omega` are nonzero constants. For simplicity we will assume that $A >0$ and :math:`\omega > 0` (in general either one could be negative). Then the amplitude is $A$ and the period is :math:`\frac{2\pi}{\omega}`. The graph is shown in Figure :ref:`5.2.10 <fig:phasenone>`.
+
+Now consider the function :math:`y=A\,\sin\;(\omega x - \phi)`, where $\phi$ is some constant. The amplitude is still $A$, and the period is still :math:`\frac{2\pi}{\omega}`, since :math:`\omega x - \phi` is a linear function of $x$. Also, we know that the sine function goes through an entire cycle when its angle goes from $0$ to :math:`2\pi`. Here, we are taking the sine of the angle :math:`\omega x - \phi`. So as :math:`\omega x - \phi` goes from $0$ to :math:`2\pi`, an entire cycle of the function :math:`y=A\,\sin\;(\omega x - \phi)` will be traced out. That cycle starts when
+
+.. math::
+
+	\begin{align*}
+	\omega x - \phi ~=~ 0 \quad&\Rightarrow\quad x ~=~ \frac{\phi}{\omega}\\
+	\text{and ends when}
+	\omega x - \phi ~=~ 2\pi \quad&\Rightarrow\quad x ~=~ \frac{2\pi}{\omega}\;+\;\frac{\phi}{\omega}~.
+	\end{align*}
+
+Thus, the graph of :math:`y=A\,\sin\;(\omega x - \phi)` is just the graph of :math:`y=A\,\sin\;\omega x` shifted horizontally by :math:`\frac{\phi}{\omega}`, as in Figure :ref:`5.2.11 <fig:phaseshift>`. The graph is shifted to the right when :math:`\phi >0`, and to the left when :math:`\phi <0`. The amount :math:`\frac{\phi}{\omega}` of the shift is called the **phase shift** of the graph.
+
+
+.. _fig:phaseshift:
+
+.. _Figure 5.2.11:
+
+.. figure:: ./img/f5.2.11.png 
+	:align: center 
+
+	Figure 5.2.11 Phase shift for :math:`y=A\,\sin\;(\omega x - \phi)`
+
 The phase shift is defined similarly for the other trigonometric functions.
 
-\begin{exmp}
- Find the amplitude, period, and phase shift of $y=3\,\cos\;(2x - \pi)$.\vspace{1mm}
- 
-**Solution:** The amplitude is $3$, the period is $\frac{2\pi}{2} = \pi$, and the
- phase shift is :math:`\frac{\pi}{2}`. The graph is shown in Figure \ref{fig:exmp3cos2mpi}:\vspace{-1mm}
 
-\begin{figure}[h]
- \begin{center}
-  \begin{tikzpicture}[scale=1.2,every node/.style={font=\small}]
-   \begin{scope}[shift={(0,0)},color=linecolor,line width=1.5pt,x=8cm/360,y=1.5cm/3]
-    \draw[black!60,line width=0.3pt,dotted] (0,-3) grid[xstep=90,ystep=1] (360,3);
-	\draw[black!60,line width=0.3pt,-latex] (0,0) -- (380,0) node[right] {$x$};
-	\draw[black!60,line width=0.3pt,-latex] (0,-3.8) -- (0,3.8) node[above] {$y$};
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{0,5,...,360}{\pgfpointxy{\x}{3*cos(-180+2*\x)}}
-	\pgfusepath{stroke}
-	\node[black,left] at (0,0) {$0$};
-	\foreach \pos in {90,180,270,360}
-	 \draw[black!60,line width=0.3pt,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {-3,-2,-1,1,2,3}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt) node[black,left]
-	  {$\pos$};
-	\node[black,below] at (90,-0.1) {$\tfrac{\pi}{2}$};
-	\node[black,below] at (180,-0.1) {:math:`\pi`};
-	\node[black,below] at (270,-0.1) {$\tfrac{3\pi}{2}$};
-	\node[black,below] at (360,-0.1) {:math:`2\pi`};
-   \end{scope}
-   \begin{scope}[>=latex]
-    \draw [|<->|] (2,1.9) -- (6,1.9) node[midway,fill=white] {period $= \pi$};
-    \draw [<->|] (0,-1.7) -- (2,-1.7);
-	\node[below right] at (0,-1.7) {phase shift $= \tfrac{\pi}{2}$};
-    \draw [|<->|] (-0.9,0) -- (-0.9,1.5) node[midway,left] {amplitude $= 3$};
-   \end{scope}
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad $y=3\,\cos\;(2x - \pi)$}
- \label{fig:exmp3cos2mpi}
-\end{figure}
+.. admonition:: Example 5.11
 
-Notice that the graph is the same as the graph of $y=3\,\cos\;2x$ shifted to the right by
-:math:`\frac{\pi}{2}`, the amount of the phase shift.
-\end{exmp}
-\begin{exmp}
- Find the amplitude, period, and phase shift of $y=-2\,\sin\;\left(3x +
- \frac{\pi}{2}\right)$.\vspace{1mm}
- 
-**Solution:** The amplitude is $2$, the period is $\frac{2\pi}{3}$, and the
- phase shift is $\frac{-\frac{\pi}{2}}{3} = -\frac{\pi}{6}$. Notice the negative sign in the phase
- shift, since $3x+\pi=3x-(-\pi)$ is in the form $\omega x - \phi$. The graph is shown in Figure
- \ref{fig:exmpm2sin3ppi2}:\vspace{-1mm}
+	Find the amplitude, period, and phase shift of :math:`y=3\,\cos\;(2x - \pi)`.
+	
+	**Solution:** The amplitude is $3$, the period is :math:`\frac{2\pi}{2} = \pi`, and the phase shift is :math:`\frac{\pi}{2}`. The graph is shown in Figure :ref:`5.2.12 <fig:exmp3cos2mpi>`:
 
-\begin{figure}[h]
- \begin{center}
-  \begin{tikzpicture}[scale=1.1,every node/.style={font=\small}]
-   \begin{scope}[shift={(0,0)},color=linecolor,line width=1.5pt,x=8cm/240,y=1.5cm/2]
-    \draw[black!60,line width=0.3pt,dotted] (-30,-2) grid[xstep=30,ystep=1] (240,2);
-	\draw[black!60,line width=0.3pt,-latex] (-50,0) -- (250,0) node[right] {$x$};
-	\draw[black!60,line width=0.3pt,-latex] (0,-2.8) -- (0,2.8) node[above] {$y$};
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-30,-25,...,240}{\pgfpointxy{\x}{-2*sin(90+3*\x)}}
-	\pgfusepath{stroke}
-	\node[black,below left] at (0,0) {$0$};
-	\foreach \pos in {-30,30,60,90,120,150,180,210,240}
-	 \draw[black!60,line width=0.3pt,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {-2,-1,1,2}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt) node[black,left]
-	  {$\pos$};
-	\node[black,below] at (-35,-0.1) {$-\tfrac{\pi}{6}$};
-	\node[black,below] at (30,-0.1) {$\tfrac{\pi}{6}$};
-	\node[black,below] at (60,-0.1) {$\tfrac{\pi}{3}$};
-	\node[black,below] at (90,-0.1) {$\tfrac{\pi}{2}$};
-	\node[black,below] at (120,-0.1) {$\tfrac{2\pi}{3}$};
-	\node[black,below] at (150,-0.1) {$\tfrac{5\pi}{6}$};
-	\node[black,below] at (180,-0.1) {:math:`\pi`};
-	\node[black,below] at (210,-0.1) {$\tfrac{7\pi}{6}$};
-	\node[black,below] at (240,-0.1) {$\tfrac{4\pi}{3}$};
-   \end{scope}
-   \begin{scope}[>=latex]
-    \draw [|<->|] (-1,1.9) -- (3,1.9) node[pos=0.55,fill=white] {period $= \frac{2\pi}{3}$};
-    \draw [|<->] (-1,-1.7) -- (0,-1.7);
-	\node[below left] at (0,-1.75) {phase shift $= -\tfrac{\pi}{6}$};
-    \draw [|<->|] (-1.1,0) -- (-1.1,1.5) node[midway,left] {amplitude $= 2$};
-   \end{scope}
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad $y=-2\,\sin\;\left( 3x + \frac{\pi}{2} \right)$}
- \label{fig:exmpm2sin3ppi2}
-\end{figure}
-\end{exmp}\vspace{-4mm}
-\divider\vspace{-2mm}
-\newpage
-In engineering two periodic functions with the same period are said to be \emph{out of
-phase} if their phase shifts differ. For example, $\sin\;\left( x -
-\frac{\pi}{6} \right)$ and :math:`\sin\;x` would be $\frac{\pi}{6}$ radians (or $30^\circ$) out of
-phase, and :math:`\sin\;x` would be said to \emph{lag} $\sin\;\left( x - \frac{\pi}{6} \right)$ by
-$\frac{\pi}{6}$ radians, while $\sin\;\left( x - \frac{\pi}{6} \right)$ \emph{leads}
-:math:`\sin\;x` by $\frac{\pi}{6}$ radians. Periodic functions with the same period and the same phase
-shift are \emph{in phase}.\index{phase, out of or in}
+	.. _fig:exmp3cos2mpi:
+
+	.. _Figure 5.2.12:
+
+	.. figure:: ./img/f5.2.12.png 
+		:align: center 
+
+		Figure 5.2.12 :math:`y=3\,\cos\;(2x - \pi)`
+
+
+	Notice that the graph is the same as the graph of :math:`y=3\,\cos\;2x` shifted to the right by :math:`\frac{\pi}{2}`, the amount of the phase shift.
+
+.. admonition:: Example 5.12
+
+	Find the amplitude, period, and phase shift of :math:`y=-2\,\sin\;\left(3x + \frac{\pi}{2}\right)`.
+
+	**Solution:** The amplitude is $2$, the period is :math:`\frac{2\pi}{3}`, and the phase shift is :math:`\frac{-\frac{\pi}{2}}{3} = -\frac{\pi}{6}`. Notice the negative sign in the phase shift, since :math:`3x+\pi=3x-(-\pi)` is in the form :math:`\omega x - \phi`. The graph is shown in Figure :ref:`5.2.13 <fig:exmpm2sin3ppi2>`:
+
+	.. _fig:exmpm2sin3ppi2:
+
+	.. _Figure 5.2.13:
+
+	.. figure:: ./img/f5.2.13.png 
+		:align: center 
+
+		Figure 5.2.13 :math:`y=-2\,\sin\;\left( 3x + \frac{\pi}{2} \right)`
+
+In engineering two periodic functions with the same period are said to be *out of phase* if their phase shifts differ. For example, :math:`\sin\;\left( x - \frac{\pi}{6} \right)` and :math:`\sin\;x` would be :math:`\frac{\pi}{6}` radians (or :math:`30^\circ`) out of phase, and :math:`\sin\;x` would be said to *lag* :math:`\sin\;\left( x - \frac{\pi}{6} \right)` by :math:`\frac{\pi}{6}` radians, while :math:`\sin\;\left( x - \frac{\pi}{6} \right)` *leads* :math:`\sin\;x` by :math:`\frac{\pi}{6}` radians. Periodic functions with the same period and the same phase shift are *in phase*.
 
 The following is a summary of the properties of trigonometric graphs:
 
-\begin{center}\statecomment{For any constants $A \ne 0$, $\omega \ne 0$, and $\phi$:
-\begin{align*}
- y = A\,\sin\;(\omega x - \phi) ~~&\text{has amplitude $|A|$, period $\tfrac{2\pi}{\omega}$, and
-  phase shift $\tfrac{\phi}{\omega}$}\\
- y = A\,\cos\;(\omega x - \phi) ~~&\text{has amplitude $|A|$, period $\tfrac{2\pi}{\omega}$, and
-  phase shift $\tfrac{\phi}{\omega}$}\\
- y = A\,\tan\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{\pi}{\omega}$, and
-  phase shift $\tfrac{\phi}{\omega}$}\\
- y = A\,\csc\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{2\pi}{\omega}$, and
-  phase shift $\tfrac{\phi}{\omega}$}\\
- y = A\,\sec\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{2\pi}{\omega}$, and
-  phase shift $\tfrac{\phi}{\omega}$}\\
- y = A\,\cot\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{\pi}{\omega}$, and
-  phase shift $\tfrac{\phi}{\omega}$}
-\end{align*}}\end{center}\vspace{-4mm}
+.. admonition:: For any constants :math:`A \ne 0`, :math:`\omega \ne 0`, and :math:`\phi`:
 
-\divider
-\vspace{2mm}
+	.. math::
 
-\startexercises\label{sec5dot2}
-\vspace{5mm}
-{\small
-\parFor Exercises 1-12, find the amplitude, period, and phase shift of the given function.
-Then graph one cycle of the function, either by hand or by using Gnuplot (see Appendix B).
-\begin{enumerate}[\bfseries 1.]
-\begin{multicols}{4}
- \item $y=3\,\cos\;\pi x$
- \item $y=\sin\;(2\pi x - \pi)$
- \item $y=-\sin\;(5x + 3)$
- \item $y=1+8\,\cos\;(6x- \pi)$
-\end{multicols}
-\begin{multicols}{4}
- \item $y=2+\cos\;(5x + \pi)$
- \item $y=1-\sin\;(3\pi - 2x)$
- \item $y=1-\cos\;(3\pi - 2x)$
- \item $y=2\,\tan\;(x - 1)$
-\end{multicols}
-\begin{multicols}{4}
- \item $y=1-\tan\;(3\pi - 2x)$
- \item $y=\sec\;(2x + 1)$
- \item $y=2\csc\;(2x - 1)$
- \item $y=2+4\,\cot\;(1-x)$
-\end{multicols}
- \item For the function $y=2\,\sin\;( x^2 )$ in Example \ref{exmp:2sinx2}, for which values of $x$
-  does the function reach its maximum value $2$, and for which values of $x$ does it reach
-  its minimum value $-2\,$?
- \item For the function $y=3\,\sin\;x + 4\,\cos\;x$ in Example \ref{exmp:3sinx4cosx}, for which
-  values of $x$ does the function reach its maximum value $5$, and for which values of $x$ does it
-  reach its minimum value $-5\,$? You can restrict your answers to be between $0$ and :math:`2\pi`.
- \item Graph the function $y=\sin^2 \,x$ from $x=0$ to $x=2\pi$, either by hand or by using Gnuplot.
-  What are the amplitude and period of this function?
- \item\label{exer:circuitphase}
-  The current $i(t)$ in an AC electrical circuit at time $t\ge 0$ is given by
-  $i(t) = I_m \,\sin\;\omega t$, and the voltage $v(t)$ is given by $v(t) = V_m \,\sin\;\omega t$,
-  where $V_m > I_m > 0$ and $\omega > 0$ are constants.
-  Sketch one cycle of both $i(t)$ and $v(t)$ \emph{together on the same graph} (i.e. on the same set
-  of axes). Are the current and voltage in phase or out of phase?
- \item Repeat Exercise \ref{exer:circuitphase} with $i(t)$ the same as before but with $v(t)=
-  V_m \,\sin\;\left(\omega t + \frac{\pi}{4}\right)$.
- \item Repeat Exercise \ref{exer:circuitphase} with
-  $i(t)=-I_m \,\cos\;\left(\omega t - \frac{\pi}{3}\right)$ and $v(t)=
-  V_m \,\sin\;\left(\omega t - \frac{5\pi}{6}\right)$.
-\suspend{enumerate}
- For Exercises \ref{exer:ampcombostart}-\ref{exer:ampcomboend}, find the amplitude and period of
- the given function. Then graph one cycle of the function, either by hand or by using Gnuplot.
-\resume{enumerate}[{[\bfseries 1.]}]
-\begin{multicols}{3}
- \item\label{exer:ampcombostart} $y=3\,\sin\;\pi x \;-\; 5\,\cos\;\pi x$
- \item $y=-5\,\sin\;3x \;+\; 12\,\cos\;3x$
- \item\label{exer:ampcomboend} $y=2\,\cos\;x \;+\; 2\,\sin\;x$
-\end{multicols}
- \item Find the amplitude of the function $y=2\,\sin\;( x^2 ) \;+\; \cos\;( x^2 )$.
-\suspend{enumerate}
- For Exercises \ref{exer:percombostart}-\ref{exer:percomboend}, find the period of the given
- function. Graph one cycle using Gnuplot.
-\resume{enumerate}[{[\bfseries 1.]}]
-\begin{multicols}{3}
- \item\label{exer:percombostart} $y=\sin\;3x \;-\; \cos\;5x$
- \item $y=\sin\;\frac{x}{3} \;+\; 2\,\cos\;\frac{3x}{4}$
- \item\label{exer:percomboend} $y=2\,\sin\;\pi x \;+\; 3\,\cos\;\frac{\pi}{3}x$
-\end{multicols}
- \item Let $y = 0.5\,\sin\;x ~\sin\;12x\,$. Its graph for $x$ from $0$ to $4\pi$ is shown in
-  Figure \ref{fig:modulated}:
+		\begin{align*}
+		y = A\,\sin\;(\omega x - \phi) ~~&\text{has amplitude $|A|$, period $\tfrac{2\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}\\
+		y = A\,\cos\;(\omega x - \phi) ~~&\text{has amplitude $|A|$, period $\tfrac{2\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}\\
+		y = A\,\tan\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}\\
+		y = A\,\csc\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{2\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}\\
+		y = A\,\sec\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{2\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}\\
+		y = A\,\cot\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}
+		\end{align*}
 
-\begin{figure}[h]
- \begin{center}
-  \input{modulated.tex}\vspace{-6mm}
- \end{center}
- \caption[]{\quad Modulated wave $y=0.5\,\sin\;x ~\sin\;12x$}
- \label{fig:modulated}
-\end{figure}
+Exercises
+~~~~~~~~~~~~~
 
-  You can think of this function as $\sin\;12x$ with a sinusoidally varying ``amplitude''of
-  $0.5\,\sin\;x$. What is the period of this function?
-  From the graph it looks like the amplitude may be $0.5$.
-  Without finding the exact amplitude, explain why the amplitude is in fact \emph{less} than $0.5$.
-  The function above is known as a \emph{modulated wave}\index{modulated wave}, and the functions
-  $\pm\,0.5\,\sin\;x$ form an \emph{amplitude envelope}\index{amplitude envelope} for the wave (i.e.
-  they enclose the wave). Use an identity from Section 3.4 to write this function as a sum of
-  sinusoidal curves.
- \item Use Gnuplot to graph the function $y= x^2 \,\sin\;10x$ from $x = -2\pi$ to $x=2\pi$. What
-  functions form its amplitude envelope? (Note: Use \texttt{set samples 500} in Gnuplot.)
- \item Use Gnuplot to graph the function $y= \frac{1}{x^2} \,\sin\;80x$ from $x = 0.2$ to $x=\pi$.
-  What functions form its amplitude envelope? (Note: Use \texttt{set samples 500} in Gnuplot.)
- \item Does the function $y=\sin\;\pi x \;+\; \cos\;x$ have a period? Explain your answer.
- \item Use Gnuplot to graph the function $y=\frac{\sin\;x}{x}$ from $x=-4\pi$ to $x=4\pi$. What
-  happens at $x=0$?
-\end{enumerate}}
-\newpage
-%Begin Section 5.3
-\section{Inverse Trigonometric Functions}
-We have briefly mentioned the inverse trigonometric functions before, for example in Section 1.3
-when we discussed how to use the {\setlength\fboxsep{1pt}\ovalbox{\footnotesize $\sin^{-1}$}},
-{\setlength\fboxsep{1pt}\ovalbox{\footnotesize $\cos^{-1}$}}, and
-{\setlength\fboxsep{1pt}\ovalbox{\footnotesize $\tan^{-1}$}} buttons on a calculator to find
-an angle that has a certain trigonometric function value. We will now define those inverse
-functions and determine their graphs.\index{inverse trigonometric functions}
+For Exercises 1-12, find the amplitude, period, and phase shift of the given function. Then graph one cycle of the function, either by hand or by using Gnuplot (see :ref:`Appendix B <appendix b>`).
 
-\piccaption[]{\label{fig:function}}\parpic[r]{\begin{tikzpicture}[every node/.style={font=\small}]
- \draw [line width=1pt] (0,0) ellipse (0.8 and 0.5);
- \fill (0,0) circle (2pt);
- \node [below] at (0,0) {$x$};
- \node [above] at (0,0.6) {Domain};
- \draw [line width=1pt] (3,0) ellipse (0.8 and 0.5);
- \fill (3,0) circle (2pt);
- \node [below] at (3,0) {$y$};
- \node [above] at (3,0.53) {Range};
- \draw [-latex,line width=1.5pt] (1,0) -- (2,0) node[midway,above] {$f$}
-  node[midway,below] {$y=f(x)$};
-\end{tikzpicture}}
-Recall that a \textbf{function}\index{function} is a rule that assigns a single object $y$ from one
-set (the \textbf{range})\index{range} to each object $x$ from another set (the
-\textbf{domain}).\index{domain} We can write that rule as $y = f(x)$, where $f$ is the function (see
-Figure \ref{fig:function}). There is a simple \emph{vertical rule} for determining whether a rule
-$y=f(x)$ is a function: $f$ is a function if and only if every vertical line intersects the graph of
-$y=f(x)$ in the $xy$-coordinate plane at most once (see  Figure \ref{fig:verticalrule}).
+1. :math:`y=3\,\cos\;\pi x`
+2. :math:`y=\sin\;(2\pi x - \pi)`
+3. :math:`y=-\sin\;(5x + 3)`
+4. :math:`y=1+8\,\cos\;(6x- \pi)`
+5. :math:`y=2+\cos\;(5x + \pi)`
+6. :math:`y=1-\sin\;(3\pi - 2x)`
+7. :math:`y=1-\cos\;(3\pi - 2x)`
+8. :math:`y=2\,\tan\;(x - 1)`
+9. :math:`y=1-\tan\;(3\pi - 2x)`
+10. :math:`y=\sec\;(2x + 1)`
+11. :math:`y=2\csc\;(2x - 1)`
+12. :math:`y=2+4\,\cot\;(1-x)`
 
-\begin{figure}[h]
- \centering
- \subfloat[][ $f$ is a function]{
-  \begin{tikzpicture}[every node/.style={font=\small}]
-   \draw[latex-latex,black!60,line width=0.3pt] (0,2) node[above] {$y$} |- (4,0) node[right] {$x$};
-   \draw [linecolor,line width=1.5pt] (0.5,0.5) parabola[bend at end] (3.5,1.5);
-   \node[above] at (3.5,1.5) {$y=f(x)$};
-   \draw (1.5,0.5) -- (1.5,2);
-  \end{tikzpicture}}
- \qquad\qquad
- \subfloat[][ $f$ is not a function]{
-  \begin{tikzpicture}[every node/.style={font=\small}]
-   \draw[latex-latex,black!60,line width=0.3pt] (0,2) node[above] {$y$} |- (4,0) node[right] {$x$};
-   \draw [linecolor,line width=1.5pt] (0.5,1.5) parabola bend  (3.5,1) (2.5,0.5);
-   \node[above] at (1.5,1.5) {$y=f(x)$};
-   \draw (2.8,0.2) -- (2.8,2);
-  \end{tikzpicture}}\vspace{-2mm}
- \caption[]{\quad Vertical rule for functions}
- \label{fig:verticalrule}
-\end{figure}
+13. For the function :math:`y=2\,\sin\;( x^2 )` in Example :ref:`5.8 <exmp:2sinx2>`, for which values of $x$ does the function reach its maximum value $2$, and for which values of $x$ does it reach its minimum value ``-2``?
+14. For the function :math:`y=3\,\sin\;x + 4\,\cos\;x` in Example :ref:`5.9 <exmp:3sinx4cosx>`, for which values of $x$ does the function reach its maximum value $5$, and for which values of $x$ does it reach its minimum value ``-5`` ? You can restrict your answers to be between $0$ and :math:`2\pi`.
+15. Graph the function :math:`y=\sin^2 \,x` from $x=0$ to :math:`x=2\pi`, either by hand or by using Gnuplot. What are the amplitude and period of this function?
 
-Recall that a function $f$ is \textbf{one-to-one}\index{one-to-one} (often written as $1-1$) if
-it assigns distinct values of $y$ to distinct values of $x$. In other words, if $x_1 \ne x_2$ then
-$f(x_1 ) \ne f(x_2 )$. Equivalently, $f$ is one-to-one if $f(x_1 ) = f(x_2 )$ implies $x_1 = x_2$.
-There is a simple \emph{horizontal rule} for determining whether a function $y=f(x)$ is one-to-one:
-$f$ is one-to-one if and only if every horizontal line intersects the graph of $y=f(x)$ in the
-$xy$-coordinate plane at most once (see Figure \ref{fig:horizontalrule}).
+.. _exer:circuitphase:
 
-\begin{figure}[h]
- \centering
- \subfloat[][ $f$ is one-to-one]{
-  \begin{tikzpicture}[every node/.style={font=\small}]
-   \draw[latex-latex,black!60,line width=0.3pt] (0,2) node[above] {$y$} |- (4,0) node[right] {$x$};
-   \draw [linecolor,line width=1.5pt] (0.5,0.5) parabola[bend at end] (3.5,1.5);
-   \node[above] at (3.5,1.5) {$y=f(x)$};
-   \draw (0.5,1) -- (2.5,1);
-  \end{tikzpicture}}
- \qquad\qquad
- \subfloat[][ $f$ is not one-to-one]{
-  \begin{tikzpicture}[every node/.style={font=\small}]
-   \draw[latex-latex,black!60,line width=0.3pt] (0,2) node[above] {$y$} |- (4,0) node[right] {$x$};
-   \draw [linecolor,line width=1.5pt] (0.5,0.5) parabola bend  (2,1.5) (3.5,0.5);
-   \node[above] at (2,1.5) {$y=f(x)$};
-   \draw (0.5,1) -- (3.5,1);
-  \end{tikzpicture}}\vspace{-2mm}
- \caption[]{\quad Horizontal rule for one-to-one functions}
- \label{fig:horizontalrule}
-\end{figure}
+16. The current :math:`i(t)` in an AC electrical circuit at time :math:`t\ge 0` is given by :math:`i(t) = I_m \,\sin\;\omega t`, and the voltage :math:`v(t)` is given by :math:`v(t) = V_m \,\sin\;\omega t`, where :math:`V_m > I_m > 0` and :math:`\omega > 0` are constants. Sketch one cycle of both :math:`i(t)` and :math:`v(t)` *together on the same graph* (i.e. on the same set of axes). Are the current and voltage in phase or out of phase?
 
-If a function $f$ is one-to-one on its domain, then $f$ has an \textbf{inverse function}, denoted
-by $f^{-1}$, such that $y=f(x)$ if and only if $f^{-1}(y) = x$. The domain of $f^{-1}$ is the
-range of $f$.
+17. Repeat Exercise :ref:`16 <exer:circuitphase>` with :math:`i(t)` the same as before but with :math:`v(t)= V_m \,\sin\;\left(\omega t + \frac{\pi}{4}\right)`.
+18. Repeat Exercise :ref:`16 <exer:circuitphase>` with :math:`i(t)=-I_m \,\cos\;\left(\omega t - \frac{\pi}{3}\right)` and :math:`v(t)= V_m \,\sin\;\left(\omega t - \frac{5\pi}{6}\right)`.
 
-The basic idea is that $f^{-1}$ ``undoes'' what $f$ does, and vice versa. In other words,
-\begin{alignat*}{3}
- f^{-1}(f(x)) ~&=~ x \quad&&\text{for all $x$ in the domain of $f$, and}\\
- f(f^{-1}(y)) ~&=~ y \quad&&\text{for all $y$ in the range of $f$.}
-\end{alignat*}
+For Exercises :ref:`19 <exer:ampcombostart>`-:ref:`21 <exer:ampcomboend>`, find the amplitude and period of the given function. Then graph one cycle of the function, either by hand or by using Gnuplot.
 
-We know from their graphs that none of the trigonometric functions are one-to-one over their entire
-domains. However, we can restrict those functions to \emph{subsets} of their domains where they
-\emph{are} one-to-one. For example, :math:`y=\sin\;x` is one-to-one over the interval
-$\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]$, as we see in the graph below:
+.. _exer:ampcombostart:
 
-\begin{figure}[h]
- \begin{center}
-  \begin{tikzpicture}[scale=1.2,every node/.style={font=\small}]
-   \begin{scope}[dashed,line width=1pt,x=6cm/360]
-	\draw[black!60,solid,line width=0.3pt,-latex] (-200,0) -- (220,0) node[right] {$x$};
-	\draw[black!60,solid,line width=0.3pt,-latex] (0,-1.5) -- (0,1.5) node[above] {$y$};
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-180,-175,...,180}{\pgfpointxy{\x}{sin(\x)}}
-	\pgfusepath{stroke}
-	\node[black,below right] at (0,0) {$0$};
-	\foreach \pos in {-180,-90,90,180}
-	 \draw[black!60,line width=0.3pt,solid,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {-1,1}
-	 \draw[black!60,line width=0.3pt,solid,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$\pos$};
-	\node[black,below] at (90,-0.1) {$\tfrac{\pi}{2}$};
-	\node[black,below] at (180,-0.1) {:math:`\pi`};
-	\node[black,below] at (-90,-0.1) {$-\tfrac{\pi}{2}$};
-	\node[black,below] at (-180,-0.1) {$-\pi$};
-	\node[black,above] at (180,1) {:math:`y=\sin\;x`};
-   \end{scope}
-   \begin{scope}[color=linecolor,line width=1.5pt,x=6cm/360]
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-90,-85,...,90}{\pgfpointxy{\x}{sin(\x)}}
-	\pgfusepath{stroke}
-	\fill (-90,-1) circle (2pt);
-	\fill (90,1) circle (2pt);
-   \end{scope}
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad :math:`y=\sin\;x` with $x$ restricted to $\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]$}
- \label{fig:sinerestricted}
-\end{figure}
+19. :math:`y=3\,\sin\;\pi x \;-\; 5\,\cos\;\pi x`
+20. :math:`y=-5\,\sin\;3x \;+\; 12\,\cos\;3x`
 
-For $-\frac{\pi}{2} \le x \le \frac{\pi}{2}$ we have $-1 \le \sin\;x \le 1$, so we can define the
-\textbf{inverse sine}\index{inverse sine} function $y=\sin^{-1} x$ (sometimes called the \textbf{arc
-sine}\index{arc sine} and denoted by $y=\arcsin\;x$) whose domain is the interval $\ival{-1}{1}$ and
-whose range is the interval $\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]$. In other words:
+.. _exer:ampcomboend:
 
-\begin{center}\statecomment{\vspace{-4mm}\begin{alignat}{3}
- \sin^{-1} (\sin\;y) ~&=~ y \quad&&\text{for $-\tfrac{\pi}{2} \le y \le
-  \tfrac{\pi}{2}$}\label{eqn:arcsin1}\\
- \sin\;(\sin^{-1} x) ~&=~ x \quad&&\text{for $-1 \le x \le 1$}\label{eqn:arcsin2}
-\end{alignat}}\end{center}
+21. :math:`y=2\,\cos\;x \;+\; 2\,\sin\;x`
 
-\begin{exmp}
- Find $\sin^{-1} \left(\sin\;\frac{\pi}{4}\right)$.\vspace{1mm}
+22. Find the amplitude of the function :math:`y=2\,\sin\;( x^2 ) \;+\; \cos\;( x^2 )`.
+
+For Exercises :ref:`23 <exer:percombostart>`-:ref:`25 <exer:percomboend>`, find the period of the given function. Graph one cycle using Gnuplot.
+
+.. _exer:percombostart:
+
+23. :math:`y=\sin\;3x \;-\; \cos\;5x`
+24. :math:`y=\sin\;\frac{x}{3} \;+\; 2\,\cos\;\frac{3x}{4}`
+
+.. _exer:percomboend:
+
+25. :math:`y=2\,\sin\;\pi x \;+\; 3\,\cos\;\frac{\pi}{3}x`
+26. Let :math:`y = 0.5\,\sin\;x ~\sin\;12x\,`. Its graph for $x$ from $0$ to :math:`4\pi` is shown in Figure :ref:`5.2.14 <fig:modulated>`:
+
+    .. _fig:modulated:
+    
+    .. _Figure 5.2.14:
+    
+    .. figure:: ./img/f5.2.14.png 
+    	:align: center 
+    
+    	Figure 5.2.14 Modulated wave :math:`y=0.5\,\sin\;x ~\sin\;12x`
+
+
+    You can think of this function as :math:`\sin\;12x` with a sinusoidally varying "amplitude" of :math:`0.5\,\sin\;x`. What is the period of this function? From the graph it looks like the amplitude may be $0.5$. Without finding the exact amplitude, explain why the amplitude is in fact *less* than $0.5$. The function above is known as a *modulated wave*, and the functions :math:`\pm\,0.5\,\sin\;x` form an *amplitude envelope* for the wave (i.e. they enclose the wave). Use an identity from Section 3.4 to write this function as a sum of sinusoidal curves.
+
+27. Use Gnuplot to graph the function :math:`y= x^2 \,\sin\;10x` from :math:`x = -2\pi` to :math:`x=2\pi`. What functions form its amplitude envelope? (Note: Use *set samples 500* in Gnuplot.)
+28. Use Gnuplot to graph the function :math:`y= \frac{1}{x^2} \,\sin\;80x` from $x = 0.2$ to :math:`x=\pi`. What functions form its amplitude envelope? (Note: Use *set samples 500* in Gnuplot.)
+29. Does the function :math:`y=\sin\;\pi x \;+\; \cos\;x` have a period? Explain your answer.
+30. Use Gnuplot to graph the function :math:`y=\frac{\sin\;x}{x}` from :math:`x=-4\pi` to :math:`x=4\pi`. What happens at $x=0$?
+
+Inverse Trigonometric Functions
+-----------------------------------
+
+We have briefly mentioned the inverse trigonometric functions before, for example in Section 1.3 when we discussed how to use the :math:`\boxed{\sin^{-1}}`, :math:`\boxed{\cos^{-1}}`, and :math:`\boxed{\tan^{-1}}` buttons on a calculator to find an angle that has a certain trigonometric function value. We will now define those inverse functions and determine their graphs.
+
+.. _fig:function:
+
+.. _Figure 5.3.1:
+
+.. figure:: ./img/f5.3.1.png 
+	:align: right 
+
+	Figure 5.3.1
+
+Recall that a **function** is a rule that assigns a single object $y$ from one set (the **range**) to each object $x$ from another set (the **domain**). We can write that rule as :math:`y = f(x)`, where $f$ is the function (see Figure :ref:`5.3.1 <fig:function>`). There is a simple *vertical rule* for determining whether a rule $y=f(x)$ is a function: $f$ is a function if and only if every vertical line intersects the graph of $y=f(x)$ in the $xy$-coordinate plane at most once (see  Figure :ref:`5.3.2 <fig:verticalrule>`).
+
+
+.. _fig:verticalrule:
+
+.. _Figure 5.3.2:
+
+.. figure:: ./img/f5.3.2.png 
+	:align: center 
+
+	Figure 5.3.2 Vertical rule for functions
+
+Recall that a function $f$ is **one-to-one** (often written as $1-1$) if it assigns distinct values of $y$ to distinct values of $x$. In other words, if :math:`x_1 \ne x_2` then :math:`f(x_1 ) \ne f(x_2 )`. Equivalently, $f$ is one-to-one if :math:`f(x_1 ) = f(x_2 )` implies :math:`x_1 = x_2`. There is a simple *horizontal rule* for determining whether a function $y=f(x)$ is one-to-one: $f$ is one-to-one if and only if every horizontal line intersects the graph of $y=f(x)$ in the $xy$-coordinate plane at most once (see Figure :ref:`5.3.3 <fig:horizontalrule>`).
+
+.. _fig:horizontalrule:
+
+.. _Figure 5.3.3:
+
+.. figure:: ./img/f5.3.3.png 
+	:align: center 
+
+	Figure 5.3.3 Horizontal rule for one-to-one functions
+
+If a function $f$ is one-to-one on its domain, then $f$ has an **inverse function**, denoted by $f^{-1}$, such that :math:`y=f(x)` if and only if :math:`f^{-1}(y) = x`. The domain of :math:`f^{-1}` is the range of $f$.
+
+The basic idea is that $f^{-1}$ "undoes" what $f$ does, and vice versa. In other words,
+
+.. math::
+
+	\begin{align}
+	f^{-1}(f(x)) ~&=~ x \quad&&\text{for all $x$ in the domain of $f$, and}\\
+	f(f^{-1}(y)) ~&=~ y \quad&&\text{for all $y$ in the range of $f$.}
+	\end{align}
+
+We know from their graphs that none of the trigonometric functions are one-to-one over their entire domains. However, we can restrict those functions to *subsets* of their domains where they *are* one-to-one. For example, :math:`y=\sin\;x` is one-to-one over the interval :math:`\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]`, as we see in the graph below:
+
+.. _fig:sinerestricted:
+
+.. _Figure 5.3.4:
+
+.. figure:: ./img/f5.3.4.png 
+	:align: center 
+
+	Figure 5.3.4 :math:`y=\sin\;x` with $x$ restricted to :math:`\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]`
+
+For :math:`-\frac{\pi}{2} \le x \le \frac{\pi}{2}` we have :math:`-1 \le \sin\;x \le 1`, so we can define the **inverse sine** function $y=\sin^{-1} x$ (sometimes called the **arc sine** and denoted by :math:`y=\arcsin\;x`) whose domain is the interval :math:`[-1, 1]` and whose range is the interval :math:`\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]`. In other words:
+
+.. equation 5.2:
+
+.. math::
+	:label: eqn:arcsin1
+
+	\sin^{-1} (\sin\;y) ~=~ y \quad\text{for $-\tfrac{\pi}{2} \le y \le \tfrac{\pi}{2}$}
+
+.. equation 5.3:
+
+.. math::
+	:label: eqn:arcsin2
+
+	\sin\;(\sin^{-1} x) ~=~ x \quad\text{for $-1 \le x \le 1$}
+
+
+.. admonition:: Example 5.13
+
+	Find :math:`\sin^{-1} \left(\sin\;\frac{\pi}{4}\right)`.
  
-**Solution:** Since $-\frac{\pi}{2} \le \frac{\pi}{4} \le \frac{\pi}{2}$, we know
- that $\sin^{-1} \left(\sin\;\frac{\pi}{4}\right) = \boxed{\frac{\pi}{4}}\;$, by formula
- (\ref{eqn:arcsin1}).
-\end{exmp}
-\begin{exmp}\label{exmp:arcsin5pi4}
- Find $\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right)$.\vspace{1mm}
- 
-**Solution:** Since $\frac{5\pi}{4} > \frac{\pi}{2}$, we can not use formula
- (\ref{eqn:arcsin1}). But we know that $\sin\;\frac{5\pi}{4} = -\frac{1}{\sqrt{2}}$. Thus,
- $\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right) = \sin^{-1} \left( -\frac{1}{\sqrt{2}} \right)$ is, by
- definition, the angle $y$ such that $-\frac{\pi}{2} \le y \le \frac{\pi}{2}$ and $\sin\;y =
- -\frac{1}{\sqrt{2}}$. That angle is $y=-\frac{\pi}{4}$, since
- \begin{displaymath}
-  \sin\;\left( -\tfrac{\pi}{4} \right) ~=~ -\sin\;\left( \tfrac{\pi}{4} \right) ~=~
-  -\tfrac{1}{\sqrt{2}} ~.
- \end{displaymath}
- Thus, $\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right) = \boxed{-\tfrac{\pi}{4}}\;$.
-\end{exmp}
-\divider
-\newpage
-Example \ref{exmp:arcsin5pi4} illustrates an important point: $\sin^{-1} x$ should \emph{always}
-be a number between $-\frac{\pi}{2}$ and :math:`\frac{\pi}{2}`. If you get a number outside that range,
-then you made a mistake somewhere. This why in Example \ref{exmp:sinneg0682} in Section 1.5 we got
-$\sin^{-1}(-0.682) = -43^\circ$ when using the
-{\setlength\fboxsep{1pt}\ovalbox{\footnotesize $\sin^{-1}$}} button on a calculator. Instead of
-an angle between $0^\circ$ and :math:`360^\circ` (i.e. $0$ to :math:`2\pi` radians) we got an angle
-between $-90^\circ$ and $90^\circ$ (i.e. $-\frac{\pi}{2}$ to :math:`\frac{\pi}{2}` radians).
+	**Solution:** Since :math:`-\frac{\pi}{2} \le \frac{\pi}{4} \le \frac{\pi}{2}`, we know that :math:`\sin^{-1} \left(\sin\;\frac{\pi}{4}\right) = \boxed{\frac{\pi}{4}}\;`, by formula :eq:`5.2 <eqn:arcsin1>`.
 
-In general, the graph of an inverse function $f^{-1}$ is the reflection of the graph of $f$ around
-the line $y=x$. The graph of $y=\sin^{-1} x$ is shown in Figure \ref{fig:arcsine}. Notice the
-symmetry about the line $y=x$ with the graph of :math:`y=\sin\;x`.
+.. _exmp:arcsin5pi4:
+
+.. admonition:: Example 5.14
+ 
+	Find :math:`\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right)`.
+ 
+	**Solution:** Since :math:`\frac{5\pi}{4} > \frac{\pi}{2}`, we can not use formula :eq:`5.2 <eqn:arcsin1>`. But we know that :math:`\sin\;\frac{5\pi}{4} = -\frac{1}{\sqrt{2}}`. Thus, :math:`\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right) = \sin^{-1} \left( -\frac{1}{\sqrt{2}} \right)` is, by definition, the angle $y$ such that :math:`-\frac{\pi}{2} \le y \le \frac{\pi}{2}` and :math:`\sin\;y = -\frac{1}{\sqrt{2}}`. That angle is :math:`y=-\frac{\pi}{4}`, since
+ 
+	.. math::
+
+		\sin\;\left( -\tfrac{\pi}{4} \right) ~=~ -\sin\;\left( \tfrac{\pi}{4} \right) ~=~ -\tfrac{1}{\sqrt{2}} ~.
+ 
+	Thus, :math:`\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right) = \boxed{-\tfrac{\pi}{4}}\;`.
+
+
+Example :ref:`5.14 <exmp:arcsin5pi4>` illustrates an important point: :math:`\sin^{-1} x` should *always* be a number between :math:`-\frac{\pi}{2}` and :math:`\frac{\pi}{2}`. If you get a number outside that range, then you made a mistake somewhere. This why in Example :ref:`1.27 <exmp:sinneg0682>` in Section 1.5 we got :math:`\sin^{-1}(-0.682) = -43^\circ` when using the :math:`\boxed{\sin^{-1}}` button on a calculator. Instead of an angle between :math:`0^\circ` and :math:`360^\circ` (i.e. $0$ to :math:`2\pi` radians) we got an angle between :math:`-90^\circ` and :math:`90^\circ` (i.e. :math:`-\frac{\pi}{2}` to :math:`\frac{\pi}{2}` radians).
+
+In general, the graph of an inverse function $f^{-1}$ is the reflection of the graph of $f$ around the line $y=x$. The graph of :math:`y=\sin^{-1} x` is shown in Figure :ref:`5.3.5 <fig:arcsine>`. Notice the symmetry about the line $y=x$ with the graph of :math:`y=\sin\;x`.
 
 \begin{figure}[h]
  \begin{center}
@@ -1279,7 +1029,7 @@ the interval $\left( -\frac{\pi}{2},\frac{\pi}{2} \right)$. In other words:
 \begin{exmp}\label{exmp:tanarcsin}
  Show that $\tan\;(\sin^{-1} x) = \dfrac{x}{\sqrt{1 - x^2}}$ for $-1 < x < 1$.
 
-\piccaption[]{\label{fig:tanarcsin}}\parpic[r]{\begin{tikzpicture}[scale=0.5,
+\piccaption[]{\label{fig:tanarcsin}}pic[r]{\begin{tikzpicture}[scale=0.5,
  every node/.style={font=\small}]
  \fill [fill=fillcolor] (0,0) -- (3,0) -- (3,4) -- (0,0);
  \draw (0:1.5) arc (0:53.13:1.5);
@@ -1488,7 +1238,7 @@ $y=\sec^{-1} x$ are shown in Figure \ref{fig:arccscsec}:
 \startexercises\label{sec5dot3}
 \vspace{5mm}
 {\small
-\parFor Exercises 1-25, find the exact value of the given expression in radians.
+For Exercises 1-25, find the exact value of the given expression in radians.
 \begin{enumerate}[\bfseries 1.]
 \begin{multicols}{5}
  \item $\tan^{-1} 1$
