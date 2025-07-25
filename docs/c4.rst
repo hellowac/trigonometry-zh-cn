@@ -774,7 +774,7 @@ For Exercises :ref:`10 <exer:segstart>`-:ref:`12 <exer:segend>`, find the area o
 .. _fig:exerinsareaout:
 
 .. figure:: ./img/f4.3.8.png 
-    :align: left
+    :align: center
 
     **Figure 4.3.8** Exercise :ref:`14 <exer:insareaout>`
 
@@ -783,7 +783,7 @@ For Exercises :ref:`10 <exer:segstart>`-:ref:`12 <exer:segend>`, find the area o
 .. _fig:exerinsareaon:
 
 .. figure:: ./img/f4.3.9.png 
-    :align: left
+    :align: center
 
     **Figure 4.3.9** Exercise :ref:`15 <exer:insareaon>`
 
@@ -828,178 +828,165 @@ For Exercises :ref:`10 <exer:segstart>`-:ref:`12 <exer:segend>`, find the area o
 Circular Motion: Linear and Angular Speed
 --------------------------------------------
 
-\piccaption[]{\label{fig:circmotion}}pic[r]{\begin{tikzpicture}[every node/.style={font=\small}]
- \draw [line width=1pt] (40:1.5) arc (40:340:1.5);
- \node [right] at (10:1.5) {distance $s$};
- \draw [dashed] (0,0) -- (-20:1.5) node[black,midway,below] {$r$};
- \draw [dashed] (0,0) -- (40:1.5);
- \draw [-latex,dashed] (-20:0.7) arc (-20:40:0.7);
- \draw [linecolor,-latex,line width=1.5pt] (-20:1.5) arc (-20:39:1.5);
- \fill (0,0) circle (2pt);
- \fill (-20:1.5) circle (2pt);
- \fill (40:1.5) circle (2pt);
- \node at (10:0.5) {:math:`\theta`};
- \node [below right] at (-20:1.5) {time $t=0$};
- \node [above right] at (40:1.5) {time $t>0$};
-\end{tikzpicture}}
-Radian measure and arc length can be applied to the study of \emph{circular
-motion}\index{circular motion}. In physics the \emph{average speed} of an object
-is defined as:\index{average speed}
-\begin{displaymath}
- \text{average speed} ~=~ \frac{\text{distance traveled}}{\text{time elapsed}}
-\end{displaymath}
-So suppose that an object moves along a circle of radius $r$, traveling
-a distance $s$ over a period of time $t$, as in Figure \ref{fig:circmotion}. Then it makes sense to
-define the (average) \textbf{linear speed}\index{linear speed} $\nu$ of the object as:
+.. _fig:circmotion:
 
-\begin{center}\statecomment{\begin{equation}
- \nu ~=~ \frac{s}{t}\label{eqn:linspeed}
-\end{equation}}\end{center}
+.. _Figure 4.4.1:
 
-Let :math:`\theta` be the angle swept out by the object in that period of time. Then we define the
-(average) \textbf{angular speed}\index{angular speed} $\omega$ of the object as:
+.. figure:: ./img/f4.4.1.png
+    :align: right
 
-\begin{center}\statecomment{\begin{equation}
- \omega ~=~ \frac{\theta}{t}\label{eqn:angspeed}
-\end{equation}}\end{center}
+    **Figure 4.4.1**
 
-Angular speed gives the rate at which the central angle swept out by the object changes as the
-object moves around the circle, and it is thus measured in radians per unit time. Linear speed is
-measured in distance units per unit time (e.g. feet per second). The word linear is used because
-straightening out the arc traveled by the object along the circle results in a line of the same
-length, so that the usual definition of speed as distance over time can be used. We will usually
-omit the word average when discussing linear and angular speed here.\footnote{Many trigonometry
-texts assume \emph{uniform} motion, i.e. constant speeds. We do not make that assumption. Also, many
-texts use the word \emph{velocity} instead of speed. Technically they are not the same; velocity has
-a direction and a magnitude, whereas speed is just a magnitude.}
+Radian measure and arc length can be applied to the study of *circular motion*. In physics the *average speed* of an object is defined as:
 
-Since the length $s$ of the arc cut off by a central angle :math:`\theta` in a circle of radius $r$ is
-$s=r\,\theta$, we see that
-\begin{displaymath}
- \nu ~=~ \frac{s}{t} ~=~ \frac{r\,\theta}{t} ~=~ \frac{\theta}{t} \;\cdot\; r ~,
-\end{displaymath}
+.. math::
+ 
+    \text{average speed} ~=~ \frac{\text{distance traveled}}{\text{time elapsed}}
+
+So suppose that an object moves along a circle of radius $r$, traveling a distance $s$ over a period of time $t$, as in Figure :ref:`4.4.1 <fig:circmotion>`. Then it makes sense to define the (average) **linear speed** :math:`\nu` of the object as:
+
+.. _equation 4.8:
+
+.. math::
+    :label: eqn:linspeed
+
+    \nu ~=~ \frac{s}{t}
+
+
+Let :math:`\theta` be the angle swept out by the object in that period of time. Then we define the (average) **angular speed** :math:`\omega` of the object as:
+
+.. _equation 4.9:
+
+.. math::
+    :label: eqn:angspeed
+
+    \omega ~=~ \frac{\theta}{t}
+
+
+Angular speed gives the rate at which the central angle swept out by the object changes as the object moves around the circle, and it is thus measured in radians per unit time. Linear speed is measured in distance units per unit time (e.g. feet per second). The word linear is used because straightening out the arc traveled by the object along the circle results in a line of the same length, so that the usual definition of speed as distance over time can be used. We will usually omit the word average when discussing linear and angular speed here. [4]_ 
+
+.. [4] Many trigonometry texts assume *uniform* motion, i.e. constant speeds. We do not make that assumption. Also, many texts use the word *velocity* instead of speed. Technically they are not the same; velocity has a direction and a magnitude, whereas speed is just a magnitude.
+
+Since the length $s$ of the arc cut off by a central angle :math:`\theta` in a circle of radius $r$ is :math:`s=r\,\theta`, we see that
+
+.. math::
+
+    \nu ~=~ \frac{s}{t} ~=~ \frac{r\,\theta}{t} ~=~ \frac{\theta}{t} \;\cdot\; r ~,
+
 so that we get the following relation between linear and angular speed:
 
-\begin{center}\statecomment{\begin{equation}
- \nu ~=~ \omega\,r\label{eqn:linang}
-\end{equation}}\end{center}
-\newpage
-\begin{exmp}\label{exmp:linang}
- An object sweeps out a central angle of $\frac{\pi}{3}$ radians in $0.5$ seconds as it moves along
- a circle of radius $3$ m. Find its linear and angular speed over that time period.
- **Solution:} Here we have $t=0.5$ sec, $r=3$ m, and $\theta = \frac{\pi}{3}$ rad.
- So the angular speed $\omega$ is
- \begin{displaymath}
-  \omega ~=~ \frac{\theta}{t} ~=~ \frac{\dfrac{\pi}{3}~\text{rad}}{0.5~\text{sec}}
-   \quad\Rightarrow\quad \boxed{\omega ~=~ \frac{2\pi}{3}~\text{rad/sec}} ~,
- \end{displaymath}
- and thus the linear speed $\nu$ is
- \begin{displaymath}
-  \nu ~=~ \omega\,r ~=~ \left( \frac{2\pi}{3}~\text{rad/sec} \right) \,(3~\text{m})
-   \quad\Rightarrow\quad \boxed{\nu ~=~ 2\pi~\text{m/sec}} ~.
- \end{displaymath}
- Note that the units for $\omega$ are rad/sec and the units of $\nu$ are m/sec. Recall that radians
- are actually unitless, which is why in the formula $\nu=\omega\,r$ the radian units disappear.
-\end{exmp}
-\begin{exmp}
- An object travels a distance of $35$ ft in $2.7$ seconds as it moves along
- a circle of radius $2$ ft. Find its linear and angular speed over that time period.
- **Solution:} Here we have $t=2.7$ sec, $r=2$ ft, and $s=35$ ft. So the linear
- speed $\nu$ is
- \begin{displaymath}
-  \nu ~=~ \frac{s}{t} ~=~ \frac{35~\text{feet}}{2.7~\text{sec}} \quad\Rightarrow\quad
-   \boxed{\nu ~=~ 12.96~\text{ft/sec}} ~,
- \end{displaymath}
- and thus the angular speed $\omega$ is given by
- \begin{displaymath}
-  \nu ~=~ \omega\,r \quad\Rightarrow\quad 12.96~\text{ft/sec} ~=~ \omega\,(2~\text{ft})
-   \quad\Rightarrow\quad \boxed{\omega ~=~ 6.48~\text{rad/sec}} ~.
- \end{displaymath} 
-\end{exmp}
-\begin{exmp}
- An object moves at a constant linear speed of $10$ m/sec around a circle of radius $4$ m. How large
- of a central angle does it sweep out in $3.1$ seconds?
- **Solution:} Here we have $t=3.1$ sec, $\nu=10$ m/sec, and $r=4$ m. Thus, the
- angle :math:`\theta` is given by
- \begin{displaymath}
-  s ~=~ r\,\theta \quad\Rightarrow\quad \theta ~=~ \frac{s}{r} ~=~ \frac{\nu\,t}{r} ~=~
-   \frac{(10~\text{m/sec})\,(3.1~\text{sec})}{4~\text{m}} ~=~ \boxed{7.75~\text{rad}} ~.
- \end{displaymath}
-\end{exmp}
-\divider
+.. _equation 4.10:
+
+.. math::
+    :label: eqn:linang
+    
+    \nu ~=~ \omega\,r
+
+.. _exmp:linang:
+
+.. admonition:: Example 4.14
+
+    An object sweeps out a central angle of :math:`\frac{\pi}{3}` radians in $0.5$ seconds as it moves along a circle of radius $3$ m. Find its linear and angular speed over that time period.
+
+    **Solution:** Here we have $t=0.5$ sec, $r=3$ m, and $\theta = \frac{\pi}{3}$ rad. So the angular speed :math:`\omega` is
+
+    .. math::
+            
+        \omega ~=~ \frac{\theta}{t} ~=~ \frac{\dfrac{\pi}{3}~\text{rad}}{0.5~\text{sec}}
+        \quad\Rightarrow\quad \boxed{\omega ~=~ \frac{2\pi}{3}~\text{rad/sec}} ~,
+
+    and thus the linear speed :math:`\nu` is
+
+    .. math::
+
+        \nu ~=~ \omega\,r ~=~ \left( \frac{2\pi}{3}~\text{rad/sec} \right) \,(3~\text{m})
+        \quad\Rightarrow\quad \boxed{\nu ~=~ 2\pi~\text{m/sec}} ~.
+
+    Note that the units for :math:`\omega` are rad/sec and the units of :math:`\nu` are m/sec. Recall that radians are actually unitless, which is why in the formula :math:`\nu=\omega\,r` the radian units disappear.
+
+.. admonition:: Example 4.15
+
+    An object travels a distance of $35$ ft in $2.7$ seconds as it moves along a circle of radius $2$ ft. Find its linear and angular speed over that time period.
+
+    **Solution:** Here we have $t=2.7$ sec, $r=2$ ft, and $s=35$ ft. So the linear speed :math:`\nu` is
+
+    .. math::
+
+        \nu ~=~ \frac{s}{t} ~=~ \frac{35~\text{feet}}{2.7~\text{sec}} \quad\Rightarrow\quad
+        \boxed{\nu ~=~ 12.96~\text{ft/sec}} ~,
+
+    and thus the angular speed :math:`\omega` is given by
+
+    .. math::
+
+        \nu ~=~ \omega\,r \quad\Rightarrow\quad 12.96~\text{ft/sec} ~=~ \omega\,(2~\text{ft})
+        \quad\Rightarrow\quad \boxed{\omega ~=~ 6.48~\text{rad/sec}} ~.
+
+.. admonition:: Example 4.16
+
+    An object moves at a constant linear speed of $10$ m/sec around a circle of radius $4$ m. How large of a central angle does it sweep out in $3.1$ seconds?
+
+    **Solution:** Here we have $t=3.1$ sec, :math:`\nu=10` m/sec, and $r=4$ m. Thus, the angle :math:`\theta` is given by
+
+    .. math::
+
+        s ~=~ r\,\theta \quad\Rightarrow\quad \theta ~=~ \frac{s}{r} ~=~ \frac{\nu\,t}{r} ~=~
+        \frac{(10~\text{m/sec})\,(3.1~\text{sec})}{4~\text{m}} ~=~ \boxed{7.75~\text{rad}} ~.
 
 
-In many physical applications angular speed is given in \emph{revolutions per minute}, abbreviated
-as \emph{rpm}.\index{rpm} To convert from rpm to, say, radians per second, notice that since there
-are :math:`2\pi` radians in one revolution and $60$ seconds in one minute, we can convert $N$ rpm to
-radians per second by ``canceling the units'' as follows:
-\begin{displaymath}
- N~\text{rpm} ~=~ N~\frac{\cancel{\text{rev}}}{\cancel{\text{min}}} \;\cdot\;
-  \frac{2\pi~\text{rad}}{1~\cancel{\text{rev}}}
-  \;\cdot\; \frac{1~\cancel{\text{min}}}{60~\text{sec}} ~=~ \frac{N \cdot 2\pi}{60}~\text{rad/sec}
-\end{displaymath}
-This works because all we did was multiply by $1$ twice. Converting to other units for angular
-speed works in a similar way. Going in the opposite direction, say, from rad/sec to rpm, gives:
-\begin{displaymath}
- N~\text{rad/sec} ~=~ \frac{N \cdot 60}{2\pi}~\text{rpm}
-\end{displaymath}
-\newpage
-\begin{exmp}\label{exmp:gears}
- A gear with an outer radius of $r_1 = 5$ cm moves in the clockwise direction, causing an
- interlocking gear with an outer radius of $r_2 = 4$ cm to move in the counterclockwise direction
- at an angular speed of $\omega_2 = 25$ rpm. What is the angular speed $\omega_1$ of the larger
- gear?\index{gears}
+In many physical applications angular speed is given in *revolutions per minute*, abbreviated as *rpm*. To convert from rpm to, say, radians per second, notice that since there are :math:`2\pi` radians in one revolution and $60$ seconds in one minute, we can convert $N$ rpm to radians per second by "canceling the units" as follows:
 
-\piccaption[]{\label{fig:gears}}pic[r]{\begin{tikzpicture}[every node/.style={font=\small}]
- \foreach \i in {1,...,10}
-  \draw [fill=black,rounded corners=0.25ex,rotate around={18*\i:(0,0)}]
-   (-10ex,-0.6ex) -- (10ex,-0.6ex) -- (10ex,0.6ex) -- (-10ex,0.6ex) -- cycle;
- \draw [fill=black] (0,0) circle (8ex);
- \draw [fill=white] (0,0) circle (6ex);
- \foreach \j in {1,...,4}
-  \draw [fill=black,rotate around={90*\j:(0,0)}] (-6ex,0.8ex) .. controls (-4ex,0.2ex) ..
-  (0ex,0.8ex) -- (0ex,-0.8ex) .. controls (-4ex,-0.2ex) .. (-6ex,-0.8ex) -- (-6ex,0.8ex);
- \draw [fill=black] (0,0) circle (2ex);
- \draw [fill=white] (0,0) circle (0.8ex);
- \draw [-latex] (135:12ex) arc (135:70:12ex);
- \node [above] at (90:12.5ex) {$r_1 = 5$ cm};
- \begin{scope}[scale=0.8,shift={(3.32,-0.9)}]
-  \foreach \i in {1,...,8}
-   \draw [fill=black,rounded corners=0.25ex,rotate around={22.5*\i:(0,0)}]
-   (-10ex,-0.6ex) -- (10ex,-0.6ex) -- (10ex,0.6ex) -- (-10ex,0.6ex) -- cycle;
-  \draw [fill=black] (0,0) circle (8ex);
-  \draw [fill=white] (0,0) circle (6ex);
-  \foreach \j in {1,...,4}
-   \draw [fill=black,rotate around={90*\j:(0,0)}] (-6ex,0.8ex) .. controls (-4ex,0.2ex) ..
-    (0ex,0.8ex) -- (0ex,-0.8ex) .. controls (-4ex,-0.2ex) .. (-6ex,-0.8ex) -- (-6ex,0.8ex);
-  \draw [fill=black] (0,0) circle (2ex);
-  \draw [fill=white] (0,0) circle (0.8ex);
-  \draw [-latex] (45:12ex) arc (45:110:12ex);
-  \node [above] at (90:12.5ex) {$r_2 = 4$ cm};
-  \node [above] at (90:15ex) {$\omega_2 = 25$ rpm};
- \end{scope}
-\end{tikzpicture}}
- **Solution:} Imagine a particle on the outer radius of each gear. After the gears
- have rotated for a period of time $t>0$, the circular displacement of each particle will be the
- same. In other words, $s_1 = s_2$, where $s_1$ and $s_2$ are the distances traveled by the particles
- on the gears with radii $r_1$ and $r_2$, respectively.
+.. math::
 
- But $s_1 = \nu_1 \,t$ and $s_2 = \nu_2 \,t$, where $\nu_1$ and $\nu_2$ are the linear speeds of the
- gears with radii $r_1$ and $r_2$, respectively. Thus,
- \begin{displaymath}
-  \nu_1 \,t = \nu_2 \,t \quad\Rightarrow\quad \nu_1 = \nu_2 ~, 
- \end{displaymath}
- so by formula (\ref{eqn:linang}) we get the fundamental relation between the two gears:
- \begin{equation}
-  \boxed{\omega_1 \,r_1 ~=~ \omega_2 \,r_2}\label{eqn:gears}
- \end{equation}
- Note that this holds for any two gears. So in our case, we have
- \begin{displaymath}
-  \omega_1 \,(5) ~=~ (25) \,(4) \quad\Rightarrow\quad \boxed{\omega_1 ~=~ 20~\text{rpm}} ~.
- \end{displaymath}
-\end{exmp}
-\divider
-\vspace{2mm}
+    N~\text{rpm} ~=~ N~\frac{\cancel{\text{rev}}}{\cancel{\text{min}}} \;\cdot\;
+    \frac{2\pi~\text{rad}}{1~\cancel{\text{rev}}}
+    \;\cdot\; \frac{1~\cancel{\text{min}}}{60~\text{sec}} ~=~ \frac{N \cdot 2\pi}{60}~\text{rad/sec}
+
+This works because all we did was multiply by $1$ twice. Converting to other units for angular speed works in a similar way. Going in the opposite direction, say, from rad/sec to rpm, gives:
+
+.. math::
+
+    N~\text{rad/sec} ~=~ \frac{N \cdot 60}{2\pi}~\text{rpm}
+
+.. _exmp:gears:
+
+.. admonition:: Example 4.17
+
+    A gear with an outer radius of $r_1 = 5$ cm moves in the clockwise direction, causing an interlocking gear with an outer radius of $r_2 = 4$ cm to move in the counterclockwise direction at an angular speed of :math:`\omega_2 = 25` rpm. What is the angular speed :math:`\omega_1` of the larger gear?
+
+    .. _fig:gears:
+
+    .. _Fiugre 4.4.2:
+
+    .. figure:: ./img/f4.4.2.png 
+        :align: right
+
+        **Figure 4.4.2**
+
+    **Solution:** Imagine a particle on the outer radius of each gear. After the gears have rotated for a period of time $t>0$, the circular displacement of each particle will be the same. In other words, :math:`s_1 = s_2`, where $s_1$ and $s_2$ are the distances traveled by the particles on the gears with radii $r_1$ and $r_2$, respectively.
+
+    But :math:`s_1 = \nu_1 \,t` and :math:`s_2 = \nu_2 \,t`, where :math:`\nu_1` and :math:`\nu_2` are the linear speeds of the gears with radii $r_1$ and $r_2$, respectively. Thus,
+
+    .. math::
+
+        \nu_1 \,t = \nu_2 \,t \quad\Rightarrow\quad \nu_1 = \nu_2 ~, 
+
+
+    so by formula :eq:`4.10 <eqn:linang>` we get the fundamental relation between the two gears:
+
+    .. _equation 4.11:
+
+    .. math::
+        :label: eqn:gears
+
+        \boxed{\omega_1 \,r_1 ~=~ \omega_2 \,r_2}
+
+    Note that this holds for any two gears. So in our case, we have
+
+    .. math::
+
+        \omega_1 \,(5) ~=~ (25) \,(4) \quad\Rightarrow\quad \boxed{\omega_1 ~=~ 20~\text{rpm}} ~.
+
 
 .. _sec4dot4:
 
