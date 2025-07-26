@@ -715,623 +715,333 @@ Example :ref:`5.14 <exmp:arcsin5pi4>` illustrates an important point: :math:`\si
 
 In general, the graph of an inverse function $f^{-1}$ is the reflection of the graph of $f$ around the line $y=x$. The graph of :math:`y=\sin^{-1} x` is shown in Figure :ref:`5.3.5 <fig:arcsine>`. Notice the symmetry about the line $y=x$ with the graph of :math:`y=\sin\;x`.
 
-\begin{figure}[h]
- \begin{center}
-  \begin{tikzpicture}[scale=1.2,every node/.style={font=\small}]
-   \begin{scope}[dashed,line width=1pt,x=6cm/360]
-	\draw[black!60,solid,line width=0.3pt,-latex] (-110,0) -- (110,0) node[right] {$x$};
-	\draw[black!60,solid,line width=0.3pt,-latex] (0,-2) -- (0,2) node[above] {$y$};
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-90,-85,...,90}{\pgfpointxy{\x}{sin(\x)}}
-	\pgfusepath{stroke}
-	\node[black,below right] at (0,0) {$0$};
-	\foreach \pos in {-90,-57.3,57.3,90}
-	 \draw[black!60,line width=0.3pt,solid,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {-1,1}
-	 \draw[black!60,line width=0.3pt,solid,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$\pos$};
-	\foreach \pos in {-1.57}
-	 \draw[black!60,line width=0.3pt,solid,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$-\tfrac{\pi}{2}$};
-	\foreach \pos in {1.57}
-	 \draw[black!60,line width=0.3pt,solid,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$\tfrac{\pi}{2}$};
-	\node[black,below] at (90,-0.1) {$\tfrac{\pi}{2}$};
-	\node[black,below] at (57.3,-0.1) {$1$};
-	\node[black,below] at (-90,-0.1) {$-\tfrac{\pi}{2}$};
-	\node[black,below] at (-57.3,-0.1) {$-1$};
-	\node[linecolor,above] at (57.3,1.58) {$y=\sin^{-1} x$};
-	\node[black,right] at (90,1) {:math:`y=\sin\;x`};
-	\draw[black!60] (-90,-1.57) -- (90,1.57) node[pos=0.0,left] {$y=x$};
-   \end{scope}
-   \begin{scope}[color=linecolor,line width=1.5pt,x=6cm/360,cm={0,1,1,0,(0,0)}]
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-90,-85,...,90}{\pgfpointxy{\x}{sin(\x)}}
-	\pgfusepath{stroke}
-	\fill (-90,-1) circle (2pt);
-	\fill (90,1) circle (2pt);
-   \end{scope}
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad Graph of $y=\sin^{-1} x$}
- \label{fig:arcsine}
-\end{figure}
+.. _fig:arcsine:
 
-The \textbf{inverse cosine}\index{inverse cosine} function $y=\cos^{-1} x$ (sometimes called the
-\textbf{arc cosine}\index{arc cosine} and denoted by $y=\arccos\;x$) can be determined in a similar
-fashion. The function :math:`y=\cos\;x` is one-to-one over the interval $\ival{0}{\pi}$, as we see in the
-graph below:
+.. _Figure 5.3.5:
 
-\begin{figure}[h]
- \begin{center}
-  \begin{tikzpicture}[scale=1.2,every node/.style={font=\small}]
-   \begin{scope}[dashed,line width=1pt,x=6cm/360]
-	\draw[black!60,solid,line width=0.3pt,-latex] (-110,0) -- (290,0) node[right] {$x$};
-	\draw[black!60,solid,line width=0.3pt,-latex] (0,-1.5) -- (0,1.5) node[above] {$y$};
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-90,-85,...,270}{\pgfpointxy{\x}{cos(\x)}}
-	\pgfusepath{stroke}
-	\node[black,below right] at (0,0) {$0$};
-	\foreach \pos in {-90,90,180,270}
-	 \draw[black!60,line width=0.3pt,solid,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {-1,1}
-	 \draw[black!60,line width=0.3pt,solid,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$\pos$};
-	\node[black,below] at (90,-0.1) {$\tfrac{\pi}{2}$};
-	\node[black,below] at (180,-0.1) {:math:`\pi`};
-	\node[black,below] at (-90,-0.1) {$-\tfrac{\pi}{2}$};
-	\node[black,below] at (270,-0.1) {$\tfrac{3\pi}{2}$};
-	\node[black,above] at (90,1) {:math:`y=\cos\;x`};
-   \end{scope}
-   \begin{scope}[color=linecolor,line width=1.5pt,x=6cm/360]
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{0,5,...,180}{\pgfpointxy{\x}{cos(\x)}}
-	\pgfusepath{stroke}
-	\fill (0,1) circle (2pt);
-	\fill (180,-1) circle (2pt);
-   \end{scope}
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad :math:`y=\cos\;x` with $x$ restricted to $\ival{0}{\pi}$}
- \label{fig:cosinerestricted}
-\end{figure}
+.. figure:: ./img/f5.3.5.png 
+	:align: center 
 
-Thus, $y=\cos^{-1} x$ is a function whose domain is the interval $\ival{-1}{1}$ and whose range is
-the interval $\ival{0}{\pi}$. In other words:
-\newpage
-\begin{center}\statecomment{\vspace{-4mm}\begin{alignat}{3}
- \cos^{-1} (\cos\;y) ~&=~ y \quad&&\text{for $0 \le y \le \pi$}\label{eqn:arccos1}\\
- \cos\;(\cos^{-1} x) ~&=~ x \quad&&\text{for $-1 \le x \le 1$}\label{eqn:arccos2}
-\end{alignat}}\end{center}
+	Figure 5.3.5 Graph of :math:`y=\sin^{-1} x`
 
-The graph of $y=\cos^{-1} x$ is shown below in Figure \ref{fig:arccosine}. Notice the
-symmetry about the line $y=x$ with the graph of :math:`y=\cos\;x`.
 
-\begin{figure}[h]
- \begin{center}
-  \begin{tikzpicture}[scale=1.2,every node/.style={font=\small}]
-   \begin{scope}[dashed,line width=1pt,x=6cm/360]
-	\draw[black!60,solid,line width=0.3pt,-latex] (-110,0) -- (200,0) node[right] {$x$};
-	\draw[black!60,solid,line width=0.3pt,-latex] (0,-1.2) -- (0,3.5) node[above] {$y$};
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{0,5,...,180}{\pgfpointxy{\x}{cos(\x)}}
-	\pgfusepath{stroke}
-	\node[black,below right] at (0,0) {$0$};
-	\foreach \pos in {-90,-57.3,57.3,90,180}
-	 \draw[black!60,line width=0.3pt,solid,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {-1,1}
-	 \draw[black!60,line width=0.3pt,solid,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$\pos$};
-	\foreach \pos in {3.14}
-	 \draw[black!60,line width=0.3pt,solid,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {:math:`\pi`};
-	\node[black,below] at (90,-0.1) {$\tfrac{\pi}{2}$};
-	\node[black,below] at (57.3,-0.1) {$1$};
-	\node[black,below] at (180,-0.1) {:math:`\pi`};
-	\node[black,below] at (-90,-0.1) {$-\tfrac{\pi}{2}$};
-	\node[black,below] at (-57.3,-0.1) {$-1$};
-	\node[linecolor,above left] at (-57.3,3.14) {$y=\cos^{-1} x$};
-	\node[black,above right] at (90,0) {:math:`y=\cos\;x`};
-	\draw[black!60] (-57.3,-1) -- (90,1.57) node[pos=0.0,left] {$y=x$};
-   \end{scope}
-   \begin{scope}[color=linecolor,line width=1.5pt,x=6cm/360,cm={0,1,1,0,(0,0)}]
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{0,5,...,180}{\pgfpointxy{\x}{cos(\x)}}
-	\pgfusepath{stroke}
-	\fill (0,1) circle (2pt);
-	\fill (180,-1) circle (2pt);
-   \end{scope}
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad Graph of $y=\cos^{-1} x$}
- \label{fig:arccosine}
-\end{figure}
+The **inverse cosine** function :math:`y=\cos^{-1} x` (sometimes called the **arc cosine** and denoted by :math:`y=\arccos\;x`) can be determined in a similar fashion. The function :math:`y=\cos\;x` is one-to-one over the interval :math:`[0, \pi]`, as we see in the graph below:
 
-\begin{exmp}
- Find $\cos^{-1} \left(\cos\;\frac{\pi}{3}\right)$.\vspace{1mm}
+.. _fig:cosinerestricted:
+
+.. _Figure 5.3.6:
+
+.. figure:: ./img/f5.3.6.png 
+	:align: center 
+
+	Figure 5.3.6 :math:`y=\cos\;x` with $x$ restricted to :math:`[0, \pi]`
+
+
+Thus, :math:`y=\cos^{-1} x` is a function whose domain is the interval :math:`[-1, 1]` and whose range is the interval :math:`[0, \pi]`. In other words:
+
+.. _equation 5.4:
+
+.. math::
+	:label: eqn:arccos1
+
+ 	\cos^{-1} (\cos\;y) ~=~ y \quad\text{for $0 \le y \le \pi$}
+
+.. _equation 5.5:
+
+.. math::
+	:label: eqn:arccos2
+
+ 	\cos\;(\cos^{-1} x) ~=~ x \quad\text{for $-1 \le x \le 1$}
+
+
+The graph of :math:`y=\cos^{-1} x` is shown below in Figure :ref:`5.3.7 <fig:arccosine>`. Notice the symmetry about the line $y=x$ with the graph of :math:`y=\cos\;x`.
+
+.. _fig:arccosine:
+
+.. _Figure 5.3.7:
+
+.. figure:: ./img/f5.3.7.png 
+	:align: center 
+
+	Figure 5.3.7 Graph of :math:`y=\cos^{-1} x`
+
+
+.. admonition:: Example 5.15
+
+	Find :math:`\cos^{-1} \left(\cos\;\frac{\pi}{3}\right)`.
  
-**Solution:** Since $0 \le \frac{\pi}{3} \le \pi$, we know
- that $\cos^{-1} \left(\cos\;\frac{\pi}{3}\right) = \boxed{\frac{\pi}{3}}\;$, by formula
- (\ref{eqn:arccos1}).
-\end{exmp}
-\begin{exmp}\label{exmp:arccos4pi3}
- Find $\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right)$.\vspace{1mm}
+	**Solution:** Since :math:`0 \le \frac{\pi}{3} \le \pi`, we know that :math:`\cos^{-1} \left(\cos\;\frac{\pi}{3}\right) = \boxed{\frac{\pi}{3}}\;`, by formula :eq:`5.4 <eqn:arccos1>`.
+
+
+.. _exmp:arccos4pi3:
+
+.. admonition:: Example 5.16
+
+
+	Find $\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right)$.
+
  
-**Solution:** Since $\frac{4\pi}{3} > \pi$, we can not use formula
- (\ref{eqn:arccos1}). But we know that $\cos\;\frac{4\pi}{3} = -\frac{1}{2}$. Thus,
- $\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right) = \cos^{-1} \left( -\frac{1}{2} \right)$ is, by
- definition, the angle $y$ such that $0 \le y \le \pi$ and $\cos\;y =
- -\frac{1}{2}$. That angle is $y=\frac{2\pi}{3}$ (i.e. $120^\circ$).
- Thus, $\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right) = \boxed{\tfrac{2\pi}{3}}\;$.
-\end{exmp}
-\divider
-\vspace{1mm}
+	**Solution:** Since :math:`\frac{4\pi}{3} > \pi`, we can not use formula :eq:`5.4 <eqn:arccos1>`. But we know that :math:`\cos\;\frac{4\pi}{3} = -\frac{1}{2}`. Thus, :math:`\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right) = \cos^{-1} \left( -\frac{1}{2} \right)` is, by definition, the angle $y$ such that :math:`0 \le y \le \pi` and :math:`\cos\;y = -\frac{1}{2}`. That angle is :math:`y=\frac{2\pi}{3}` (i.e. :math:`120^\circ`). Thus, :math:`\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right) = \boxed{\tfrac{2\pi}{3}}\;`.
 
-Examples \ref{exmp:arcsin5pi4} and \ref{exmp:arccos4pi3} may be confusing, since they seem to
-violate the general rule for inverse functions that $f^{-1}(f(x)) = x$ for all $x$ in the domain of
-$f$. But that rule only applies when the function $f$ is one-to-one over its \emph{entire} domain.
-We had to restrict the sine and cosine functions to very small subsets of their entire domains in
-order for those functions to be one-to-one. That general rule, therefore, only holds for $x$ in
-those small subsets in the case of the inverse sine and inverse cosine.
-\newpage
-The \textbf{inverse tangent}\index{inverse tangent} function $y=\tan^{-1} x$ (sometimes called the
-\textbf{arc tangent}\index{arc tangent} and denoted by $y=\arctan\;x$) can be determined similarly.
-The function $y=\tan\;x$ is one-to-one over the interval $\left( -\frac{\pi}{2},\frac{\pi}{2}
-\right)$, as we see in Figure \ref{fig:tangentrestricted}:
+Examples :ref:`5.14 <exmp:arcsin5pi4>` and :ref:`5.16 <exmp:arccos4pi3>` may be confusing, since they seem to violate the general rule for inverse functions that :math:`f^{-1}(f(x)) = x` for all $x$ in the domain of $f$. But that rule only applies when the function $f$ is one-to-one over its *entire* domain. We had to restrict the sine and cosine functions to very small subsets of their entire domains in order for those functions to be one-to-one. That general rule, therefore, only holds for $x$ in those small subsets in the case of the inverse sine and inverse cosine.
 
-\begin{figure}[h]
- \begin{center}
-  \begin{tikzpicture}[scale=1.0,every node/.style={font=\small}]
-   \begin{scope}[shift={(3,0)},color=linecolor,line width=1.5pt,x=6cm/360,y=3cm/6]
-	\draw[black!60,line width=0.3pt,-latex] (-110,0) -- (110,0) node[right] {$x$};
-	\draw[black!60,line width=0.3pt,-latex] (0,-6) -- (0,6.5) node[above] {$y$};
-	\draw[linecolor,line width=0.5pt,dashed] (90,-6) -- (90,6);
-	\draw[linecolor,line width=0.5pt,dashed] (-90,-6) -- (-90,6);
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-70,-65,...,70}{\pgfpointxy{\x}{2*tan(\x)}}
-	\pgfusepath{stroke}
-	\node[black,below right] at (0,0) {$0$};
-	\foreach \pos in {-90,-45,45,90}
-	 \draw[black!60,line width=0.3pt,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {-6}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt) node[black,left]
-      {$-3$};
-	\foreach \pos in {-4}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt) node[black,left]
-      {$-2$};
-	\foreach \pos in {-2}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt) node[black,left]
-      {$-1$};
-	\foreach \pos in {2}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt) node[black,left]
-      {$1$};
-	\foreach \pos in {4}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt) node[black,left]
-      {$2$};
-	\foreach \pos in {6}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt) node[black,left]
-      {$3$};
-	\node[black,below] at (45,-0.1) {$\tfrac{\pi}{4}$};
-	\node[black,below right] at (90,-0.1) {$\tfrac{\pi}{2}$};
-	\node[black,below] at (-45,-0.1) {$-\tfrac{\pi}{4}$};
-	\node[black,below left] at (-90,-0.1) {$-\tfrac{\pi}{2}$};
-	\node[black,below] at (45,-1) {$y=\tan\;x$};
-   \end{scope}
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad $y=\tan\;x$ with $x$ restricted to $\left( -\frac{\pi}{2},\frac{\pi}{2} \right)$}
- \label{fig:tangentrestricted}
-\end{figure}
+The **inverse tangent** function :math:`y=\tan^{-1} x` (sometimes called the **arc tangent** and denoted by :math:`y=\arctan\;x`) can be determined similarly. The function :math:`y=\tan\;x` is one-to-one over the interval :math:`\left( -\frac{\pi}{2},\frac{\pi}{2} \right)`, as we see in Figure :ref:`5.3.8 <fig:tangentrestricted>`:
 
-The graph of $y=\tan^{-1} x$ is shown below in Figure \ref{fig:arctangent}. Notice that the vertical
-asymptotes for $y=\tan\;x$ become horizontal asymptotes for $y=\tan^{-1} x$.
-Note also the symmetry about the line $y=x$ with the graph of $y=\tan\;x$.\index{horizontal
-asymptote}\index{asymptote!horizontal}
+.. _fig:tangentrestricted:
 
-\begin{figure}[H]
- \begin{center}
-  \begin{tikzpicture}[scale=1.1,every node/.style={font=\small}]
-   \begin{scope}[dashed,line width=1pt,x=6cm/360,y=3cm/6]
-	\draw[black!60,solid,line width=0.3pt,-latex] (-180,0) -- (200,0) node[right] {$x$};
-	\draw[black!60,solid,line width=0.3pt,-latex] (0,-6) -- (0,6.5) node[above] {$y$};
-	\draw[line width=0.5pt] (90,-6) -- (90,6.5);
-	\draw[line width=0.5pt] (-90,-6) -- (-90,6.5);
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-70,-65,...,70}{\pgfpointxy{\x}{2*tan(\x)}}
-	\pgfusepath{stroke}
-	\node[black,below right] at (0,0) {$0$};
-	\foreach \pos in {-90,-45,45,90}
-	 \draw[black!60,solid,line width=0.3pt,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {-6}
-	 \draw[black!60,solid,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$-3$};
-	\foreach \pos in {-4}
-	 \draw[black!60,solid,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$-2$};
-	\foreach \pos in {-2}
-	 \draw[black!60,solid,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$-1$};
-	\foreach \pos in {2}
-	 \draw[black!60,solid,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$1$};
-	\foreach \pos in {4}
-	 \draw[black!60,solid,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$2$};
-	\foreach \pos in {6}
-	 \draw[black!60,solid,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$3$};
-	\foreach \pos in {3.14}
-	 \draw[black!60,solid,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$\tfrac{\pi}{2}$};
-	\foreach \pos in {-3.14}
-	 \draw[black!60,solid,line width=0.3pt,shift={(0,\pos)}] (3pt,0pt) -- (-3pt,0pt)
-	  node[black,left] {$-\tfrac{\pi}{2}$};
-	\node[black,below] at (45,-0.1) {$\tfrac{\pi}{4}$};
-	\node[black,below right] at (90,-0.1) {$\tfrac{\pi}{2}$};
-	\node[black,below] at (-45,-0.1) {$-\tfrac{\pi}{4}$};
-	\node[black,below left] at (-90,-0.1) {$-\tfrac{\pi}{2}$};
-	\node[black] at (45,6) {$y=\tan\;x$};
-	\node[linecolor,below] at (160,2.4) {$y=\tan^{-1} x$};
-	\draw[black!60] (-100,-3.49) -- (100,3.49) node[pos=0.0,below left] {$y=x$};
-	\draw[linecolor,line width=0.5pt] (-180,-3.14) -- (180,-3.14);
-	\draw[linecolor,line width=0.5pt] (-180,3.14) -- (180,3.14);
-   \end{scope}
-   \begin{scope}[color=linecolor,line width=1.5pt,x=6cm/360,y=3cm/6,cm={0,1,1,0,(0,0)}]
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-70,-65,...,70}{\pgfpointxy{\x}{2*tan(\x)}}
-	\pgfusepath{stroke}
-   \end{scope}
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad Graph of $y=\tan^{-1} x$}
- \label{fig:arctangent}
-\end{figure}
-\newpage
-Thus, $y=\tan^{-1} x$ is a function whose domain is the set of all real numbers and whose range is
-the interval $\left( -\frac{\pi}{2},\frac{\pi}{2} \right)$. In other words:
+.. _Figure 5.3.8:
 
-\begin{center}\statecomment{\vspace{-4mm}\begin{alignat}{3}
- \tan^{-1} (\tan\;y) ~&=~ y \quad&&\text{for $-\tfrac{\pi}{2} < y <
-  \tfrac{\pi}{2}$}\label{eqn:arctan1}\\
- \tan\;(\tan^{-1} x) ~&=~ x \quad&&\text{for all real $x$}\label{eqn:arctan2}
-\end{alignat}}\end{center}
+.. figure:: ./img/f5.3.8.png 
+	:align: center 
 
-\begin{exmp}
- Find $\tan^{-1} \left(\tan\;\frac{\pi}{4}\right)$.\vspace{1mm}
+	Figure 5.3.8 :math:`y=\tan\;x` with $x$ restricted to :math:`\left( -\frac{\pi}{2},\frac{\pi}{2} \right)`
+
+
+The graph of :math:`y=\tan^{-1} x` is shown below in Figure :ref:`5.3.9 <fig:arctangent>`. Notice that the vertical asymptotes for :math:`y=\tan\;x` become horizontal asymptotes for :math:`y=\tan^{-1} x`. Note also the symmetry about the line $y=x$ with the graph of :math:`y=\tan\;x`.
+
+.. _fig:arctangent:
+
+.. _Figure 5.3.9:
+
+.. figure:: ./img/f5.3.9.png 
+	:align: center 
+
+	Figure 5.3.9 Graph of :math:`y=\tan^{-1} x`
+
+
+Thus, :math:`y=\tan^{-1} x` is a function whose domain is the set of all real numbers and whose range is the interval :math:`\left( -\frac{\pi}{2},\frac{\pi}{2} \right)`. In other words:
+
+.. _equation 5.6:
+
+.. math::
+	:label: eqn:arctan1
+
+	\tan^{-1} (\tan\;y) ~=~ y \quad \text{for $-\tfrac{\pi}{2} < y < \tfrac{\pi}{2}$}
+
+.. _equation 5.7:
+
+.. math::
+	:label: eqn:arctan2
+
+	\tan\;(\tan^{-1} x) ~=~ x \quad \text{for all real $x$}
+
+.. admonition:: Example 5.17
+
+	Find :math:`\tan^{-1} \left(\tan\;\frac{\pi}{4}\right)`.
  
-**Solution:** Since $-\tfrac{\pi}{2} \le \tfrac{\pi}{4} \le \tfrac{\pi}{2}$, we
- know that $\tan^{-1} \left(\tan\;\frac{\pi}{4}\right) = \boxed{\frac{\pi}{4}}\;$, by formula
- (\ref{eqn:arctan1}).
-\end{exmp}
-\begin{exmp}\label{exmp:arctanpi}
- Find $\tan^{-1} \left(\tan\;\pi\right)$.\vspace{1mm}
+	**Solution:** Since :math:`-\tfrac{\pi}{2} \le \tfrac{\pi}{4} \le \tfrac{\pi}{2}`, we know that :math:`\tan^{-1} \left(\tan\;\frac{\pi}{4}\right) = \boxed{\frac{\pi}{4}}\;`, by formula :eq:`5.6 <eqn:arctan1>`.
+
+.. _exmp:arctanpi:
+
+.. admonition:: Example 5.18
+
+	Find :math:`\tan^{-1} \left(\tan\;\pi\right)`.
  
-**Solution:** Since $\pi > \tfrac{\pi}{2}$, we can not use formula
- (\ref{eqn:arctan1}). But we know that $\tan\;\pi = 0$. Thus,
- $\tan^{-1} \left(\tan\;\pi\right) = \tan^{-1} 0$ is, by
- definition, the angle $y$ such that $-\tfrac{\pi}{2} \le y \le \tfrac{\pi}{2}$ and $\tan\;y =
- 0$. That angle is $y=0$.
- Thus, $\tan^{-1} \left(\tan\;\pi \right) = \boxed{0}\;$.
-\end{exmp}
-\begin{exmp}
+	**Solution:** Since :math:`\pi > \tfrac{\pi}{2}`, we can not use formula :eq:`5.6 <eqn:arctan1>`. But we know that :math:`\tan\;\pi = 0`. Thus, :math:`\tan^{-1} \left(\tan\;\pi\right) = \tan^{-1} 0` is, by definition, the angle $y$ such that :mamth:`-\tfrac{\pi}{2} \le y \le \tfrac{\pi}{2}` and :math:`\tan\;y = 0`. That angle is $y=0$. Thus, :math:`\tan^{-1} \left(\tan\;\pi \right) = \boxed{0}\;`.
+
  Find the exact value of $\cos\;\left(\sin^{-1}\;\left(-\frac{1}{4}\right)\right)$.\vspace{1mm}
  
-**Solution:** Let $\theta = \sin^{-1}\;\left(-\frac{1}{4}\right)$. We know that
- $-\tfrac{\pi}{2} \le \theta \le \tfrac{\pi}{2}$, so since $\sin\;\theta = -\frac{1}{4} < 0$,
- :math:`\theta` must be in QIV. Hence $\cos\;\theta > 0$. Thus,
- \begin{displaymath}
-  \cos^2 \;\theta ~=~ 1 ~-~ \sin^2 \;\theta ~=~ 1 ~-~ \left( -\frac{1}{4} \right)^2 ~=~\frac{15}{16}
-   \quad\Rightarrow\quad \cos\;\theta ~=~ \frac{\sqrt{15}}{4} ~.
- \end{displaymath}
- Note that we took the positive square root above since $\cos\;\theta > 0$. Thus,
- $\cos\;\left(\sin^{-1}\;\left(-\frac{1}{4}\right)\right) = \boxed{\frac{\sqrt{15}}{4}}\;$.
-\end{exmp}
-\begin{exmp}\label{exmp:tanarcsin}
- Show that $\tan\;(\sin^{-1} x) = \dfrac{x}{\sqrt{1 - x^2}}$ for $-1 < x < 1$.
+.. admonition:: Example 5.19
 
-\piccaption[]{\label{fig:tanarcsin}}pic[r]{\begin{tikzpicture}[scale=0.5,
- every node/.style={font=\small}]
- \fill [fill=fillcolor] (0,0) -- (3,0) -- (3,4) -- (0,0);
- \draw (0:1.5) arc (0:53.13:1.5);
- \draw [line width=0.5pt] (2.625,0) -- (2.625,0.375) -- (3,0.375);
- \draw [linecolor,line width=1.5pt] (0,0) -- (3,0) -- (3,4) -- cycle;
- \node [below] at (1.5,0) {$\sqrt{1 - x^2}$};
- \node [right] at (3,2) {$x$};
- \node [above left] at (1.5,2) {$1$};
- \node at (0.9,0.4) {:math:`\theta`};
- \draw [white] (-0.2,0) -- (-1.2,0);
-\end{tikzpicture}}
+	**Solution:** Let :math:`\theta = \sin^{-1}\;\left(-\frac{1}{4}\right)`. We know that :math:`-\tfrac{\pi}{2} \le \theta \le \tfrac{\pi}{2}`, so since :math:`\sin\;\theta = -\frac{1}{4} < 0`, :math:`\theta` must be in QIV. Hence :math:`\cos\;\theta > 0`. Thus,
+
+	.. math::
+
+		\cos^2 \;\theta ~=~ 1 ~-~ \sin^2 \;\theta ~=~ 1 ~-~ \left( -\frac{1}{4} \right)^2 ~=~\frac{15}{16} \quad\Rightarrow\quad \cos\;\theta ~=~ \frac{\sqrt{15}}{4} ~.
  
-**Solution:** When $x=0$, the formula holds trivially, since
- \begin{displaymath}
-  \tan\;(\sin^{-1} 0) ~=~ \tan\;0 ~=~ 0 ~=~ \dfrac{0}{\sqrt{1 - 0^2}} ~.
- \end{displaymath}
- Now suppose that $0 < x < 1$.
- Let $\theta = \sin^{-1} x$. Then :math:`\theta` is in QI and $\sin\;\theta = x$. Draw a right
- triangle with an angle :math:`\theta` such that the opposite leg has length $x$ and the hypotenuse has
- length $1$, as in Figure \ref{fig:tanarcsin} (note that this is possible since $0 < x < 1$). Then
- $\sin\;\theta = \frac{x}{1} = x$. By the Pythagorean Theorem, the adjacent leg has length
- $\sqrt{1 - x^2}$. Thus, $\tan\;\theta = \frac{x}{\sqrt{1 - x^2}}$.
+	Note that we took the positive square root above since :math:`\cos\;\theta > 0`. Thus, :math:`\cos\;\left(\sin^{-1}\;\left(-\frac{1}{4}\right)\right) = \boxed{\frac{\sqrt{15}}{4}}\;`.
+
+.. _exmp:tanarcsin:
+
+.. admonition:: Example 5.20
+
+	Show that :math:`\tan\;(\sin^{-1} x) = \dfrac{x}{\sqrt{1 - x^2}}` for $-1 < x < 1$.
+
+	.. _fig:tanarcsin:
+
+	.. _Figure 5.3.10:
+
+	.. figure:: ./img/f5.3.10.png
+		:align: right
+
+		**Figure 5.3.10**
+
+	**Solution:** When $x=0$, the formula holds trivially, since
+
+	.. math::
+
+		\tan\;(\sin^{-1} 0) ~=~ \tan\;0 ~=~ 0 ~=~ \dfrac{0}{\sqrt{1 - 0^2}} ~.
+
+	Now suppose that $0 < x < 1$. Let :math:`\theta = \sin^{-1} x`. Then :math:`\theta` is in QI and :math:`\sin\;\theta = x`. Draw a right triangle with an angle :math:`\theta` such that the opposite leg has length $x$ and the hypotenuse has length $1$, as in Figure :ref:`5.3.10 <fig:tanarcsin>` (note that this is possible since $0 < x < 1$). Then :math:`\sin\;\theta = \frac{x}{1} = x`. By the Pythagorean Theorem, the adjacent leg has length :math:`\sqrt{1 - x^2}`. Thus, :math:`\tan\;\theta = \frac{x}{\sqrt{1 - x^2}}`.
+	
+	If $-1 < x < 0$ then :math:`\theta = \sin^{-1} x` is in QIV. So we can draw the same triangle except that it would be "upside down" and we would again have :math:`\tan\;\theta = \frac{x}{\sqrt{1 - x^2}}`, since the tangent and sine have the same sign (negative) in QIV. Thus, :math:`\tan\;(\sin^{-1} x) = \dfrac{x}{\sqrt{1 - x^2}}` for $-1 < x < 1$.
+
+The inverse functions for cotangent, cosecant, and secant can be determined by looking at their graphs. For example, the function :math:`y=\cot\;x` is one-to-one in the interval :math:`(0,\pi)`, where it has a range equal to the set of all real numbers. Thus, the **inverse cotangent** :math:`y=\cot^{-1} x` is a function whose domain is the set of all real numbers and whose range is the interval :math:`(0,\pi)`. In other words:
+
+.. _equation 5.8:
+
+.. math::
+	:label: eqn:arccot1
+
+ 	\cot^{-1} (\cot\;y) ~=~ y \quad \text{for $0 < y < \pi$}
+
+.. _equation 5.9:
+
+.. math::
+	:label: eqn:arccot2
+
+	\cot\;(\cot^{-1} x) ~=~ x \quad \text{for all real $x$}
+
+The graph of :math:`y=\cot^{-1} x` is shown below in Figure :ref:`5.3.11 <fig:arccotangent>`.
+
+.. _fig:arccotangent:
+
+.. _Figure 5.3.11:
+
+.. figure:: ./img/f5.3.11.png
+	:align: right
+
+	**Figure 5.3.11** Graph of :math:`y=\cot^{-1} x`
+
+Similarly, it can be shown that the **inverse cosecant** :math:`y=\csc^{-1} x` is a function whose domain is :math:`|x| \ge 1` and whose range is :math:`-\frac{\pi}{2} \le y \le \frac{\pi}{2}`, :math:`y \ne 0`. Likewise, the **inverse secant** :math:`y=\sec^{-1} x` is a function whose domain is :math:`|x| \ge 1` and whose range is :math:`0 \le y \le \pi`, :math:`y \ne \frac{\pi}{2}`.
+
+.. _equation 5.10:
+
+.. math::
+	:label: eqn:arccsc1
  
- If $-1 < x < 0$ then $\theta = \sin^{-1} x$ is in QIV. So we can draw the same triangle
- except that it would be ``upside down'' and we would again have $\tan\;\theta = \frac{x}{\sqrt{1 - x^2}}$,
- since the tangent and sine have the same sign (negative) in QIV. Thus,
- $\tan\;(\sin^{-1} x) = \dfrac{x}{\sqrt{1 - x^2}}$ for $-1 < x < 1$.
-\end{exmp}
-\divider
-\newpage
-The inverse functions for cotangent, cosecant, and secant can be determined by looking at their
-graphs. For example, the function :math:`y=\cot\;x` is one-to-one in the interval $(0,\pi)$, where it
-has a range equal to the set of all real numbers. Thus, the \textbf{inverse cotangent}\index{inverse
-cotangent} $y=\cot^{-1} x$ is a function whose domain
-is the set of all real numbers and whose range is the interval $(0,\pi)$. In other words:
+ 	\csc^{-1} (\csc\;y) ~=~ y \quad \text{for $-\frac{\pi}{2} \le y \le \frac{\pi}{2}$, $y \ne 0$}
 
-\begin{center}\statecomment{\vspace{-4mm}\begin{alignat}{3}
- \cot^{-1} (\cot\;y) ~&=~ y \quad&&\text{for $0 < y < \pi$}\label{eqn:arccot1}\\
- \cot\;(\cot^{-1} x) ~&=~ x \quad&&\text{for all real $x$}\label{eqn:arccot2}
-\end{alignat}}\end{center}
+.. _equation 5.11:
 
-The graph of $y=\cot^{-1} x$ is shown below in Figure \ref{fig:arccotangent}.
+.. math::
+	:label: eqn:arccsc2
 
-\begin{figure}[h]
- \begin{center}
-  \begin{tikzpicture}[scale=1.2,every node/.style={font=\small}]
-   \begin{scope}[line width=1pt,x=6cm/360,y=3cm/6]
-	\draw[black!60,solid,line width=0.3pt,-latex] (-180,0) -- (200,0) node[right] {$x$};
-	\draw[black!60,solid,line width=0.3pt,-latex] (0,-0.5) -- (0,7.2) node[above] {$y$};
-	\node[black,below left] at (0,0) {$0$};
-	\foreach \pos in {-135,-90,-45,45,90,135}
-	 \draw[black!60,line width=0.3pt,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {3.14}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (-3pt,0pt) -- (3pt,0pt) node[black,right]
-      {$\tfrac{\pi}{2}$};
-	\foreach \pos in {6.28}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (-3pt,0pt) -- (3pt,0pt)
-	  node[black,above right] {:math:`\pi`};
-	\node[black,below] at (45,-0.1) {$\tfrac{\pi}{4}$};
-	\node[black,below] at (90,-0.1) {$\tfrac{\pi}{2}$};
-	\node[black,below] at (135,-0.1) {$\tfrac{3\pi}{4}$};
-	\node[black,below] at (-135,-0.1) {$-\tfrac{3\pi}{4}$};
-	\node[black,below] at (-45,-0.1) {$-\tfrac{\pi}{4}$};
-	\node[black,below] at (-90,-0.1) {$-\tfrac{\pi}{2}$};
-	\node[linecolor,below] at (100,2.4) {$y=\cot^{-1} x$};
-	\draw[linecolor,dashed,line width=0.5pt] (-180,6.28) -- (180,6.28);
-   \end{scope}
-   \begin{scope}[color=linecolor,line width=1.5pt,x=6cm/360,y=3cm/6,cm={0,1,1,0,(0,0)}]
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{10,15,...,170}{\pgfpointxy{\x}{-tan(90+\x)}}
-	\pgfusepath{stroke}
-   \end{scope}
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad Graph of $y=\cot^{-1} x$}
- \label{fig:arccotangent}
-\end{figure}
+	\csc\;(\csc^{-1} x) ~=~ x \quad \text{for $|x| \ge 1$}
 
-Similarly, it can be shown that the \textbf{inverse cosecant}\index{inverse cosecant}
-$y=\csc^{-1} x$ is a function whose domain is $\abs{x} \ge 1$ and whose range is $-\frac{\pi}{2} \le
-y \le \frac{\pi}{2}$, $y \ne 0$. Likewise, the \textbf{inverse secant}\index{inverse secant}
-$y=\sec^{-1} x$ is a function whose domain is $\abs{x} \ge 1$ and whose range is $0 \le y \le \pi$,
-$y \ne \frac{\pi}{2}$.
+.. _equation 5.12:
 
-\begin{center}\statecomment{\vspace{-4mm}\begin{alignat}{3}
- \csc^{-1} (\csc\;y) ~&=~ y \quad&&\text{for $-\frac{\pi}{2} \le
-  y \le \frac{\pi}{2}$, $y \ne 0$}\label{eqn:arccsc1}\\
- \csc\;(\csc^{-1} x) ~&=~ x \quad&&\text{for $\abs{x} \ge 1$}\label{eqn:arccsc2}
-\end{alignat}}\end{center}
+.. math::
+	:label: eqn:arcsec1
 
-\begin{center}\statecomment{\vspace{-4mm}\begin{alignat}{3}
- \sec^{-1} (\sec\;y) ~&=~ y \quad&&\text{for $0 \le y \le \pi$, $y \ne
-  \frac{\pi}{2}$}\label{eqn:arcsec1}\\
- \sec\;(\sec^{-1} x) ~&=~ x \quad&&\text{for $\abs{x} \ge 1$}\label{eqn:arcsec2}
-\end{alignat}}\end{center}
+	\sec^{-1} (\sec\;y) ~=~ y \quad \text{for $0 \le y \le \pi$, $y \ne \frac{\pi}{2}$}
 
-It is also common to call $\cot^{-1} x$, $\csc^{-1} x$, and $\sec^{-1} x$ the \textbf{arc
-cotangent}\index{arc cotangent}, \textbf{arc cosecant}\index{arc cosecant}, and
-\textbf{arc secant}\index{arc secant}, respectively, of $x$. The graphs of $y=\csc^{-1} x$ and
-$y=\sec^{-1} x$ are shown in Figure \ref{fig:arccscsec}:
-\newpage
-\begin{figure}[h]
- \centering
- \subfloat[][ Graph of $y=\csc^{-1} x$]{
-  \begin{tikzpicture}[scale=0.8,every node/.style={font=\small}]
-   \begin{scope}[line width=1pt,x=6cm/360]
-	\draw[black!60,solid,line width=0.3pt,-latex] (-240,0) -- (250,0) node[right] {$x$};
-	\draw[black!60,solid,line width=0.3pt,-latex] (0,-2) -- (0,2.5) node[above] {$y$};
-	\node[black,below left] at (0,0) {$0$};
-	\foreach \pos in {-57.3,57.3}
-	 \draw[black!60,line width=0.3pt,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {1.57}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (-3pt,0pt) -- (3pt,0pt) node[black,left]
-      {$\tfrac{\pi}{2}$};
-	\foreach \pos in {-1.57}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (-3pt,0pt) -- (3pt,0pt) node[black,left]
-      {$-\tfrac{\pi}{2}$};
-	\node[black,below] at (57.3,-0.1) {$1$};
-	\node[black,below] at (-57.3,-0.1) {$-1$};
-	\node[linecolor] at (140,1.4) {$y=\csc^{-1} x$};
-   \end{scope}
-   \begin{scope}[color=linecolor,line width=1.5pt,x=6cm/360,cm={0,1,1,0,(0,0)}]
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{-90,-85,...,-15}{\pgfpointxy{\x}{1/sin(\x)}}
-	\pgfplotfunction{\x}{15,20,...,90}{\pgfpointxy{\x}{1/sin(\x)}}
-	\pgfusepath{stroke}
-    \fill (90,1) circle (2pt);
-    \fill (-90,-1) circle (2pt);
-   \end{scope}
-  \end{tikzpicture}}
- \quad
- \subfloat[][ Graph of $y=\sec^{-1} x$]{
-  \begin{tikzpicture}[scale=0.8,every node/.style={font=\small}]
-   \begin{scope}[line width=1pt,x=6cm/360]
-	\draw[black!60,solid,line width=0.3pt,-latex] (-240,0) -- (250,0) node[right] {$x$};
-	\draw[black!60,solid,line width=0.3pt,-latex] (0,-0.7) -- (0,3.8) node[above] {$y$};
-	\node[black,below left] at (0,0) {$0$};
-	\foreach \pos in {-57.3,57.3}
-	 \draw[black!60,line width=0.3pt,shift={(\pos,0)}] (0pt,3pt) -- (0pt,-3pt);
-	\foreach \pos in {1.57}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (-3pt,0pt) -- (3pt,0pt) node[black,left]
-      {$\tfrac{\pi}{2}$};
-	\foreach \pos in {3.14}
-	 \draw[black!60,line width=0.3pt,shift={(0,\pos)}] (-3pt,0pt) -- (3pt,0pt) node[black,left]
-      {:math:`\pi`};
-	\node[black,below] at (57.3,-0.1) {$1$};
-	\node[black,below] at (-57.3,-0.1) {$-1$};
-	\node[linecolor] at (140,2.3) {$y=\sec^{-1} x$};
-	\draw[linecolor,dashed,line width=0.5pt] (-240,1.57) -- (250,1.57);
-   \end{scope}
-   \begin{scope}[color=linecolor,line width=1.5pt,x=6cm/360,cm={0,1,1,0,(0,0)}]
-	\pgfplothandlerlineto
-	\pgfplotfunction{\x}{0,5,...,75}{\pgfpointxy{\x}{1/cos(\x)}}
-	\pgfplotfunction{\x}{105,110,...,180}{\pgfpointxy{\x}{1/cos(\x)}}
-	\pgfusepath{stroke}
-    \fill (0,1) circle (2pt);
-    \fill (180,-1) circle (2pt);
-   \end{scope}
-  \end{tikzpicture}}\vspace{-2mm}
- \caption[]{}
- \label{fig:arccscsec}
-\end{figure}
+.. _equation 5.13:
 
-\begin{exmp}
- Prove the identity $\tan^{-1} x \;+\; \cot^{-1} x ~=~ \frac{\pi}{2}$.\vspace{1mm}
+.. math::
+	:label: eqn:arcsec2
+
+	\sec\;(\sec^{-1} x) ~=~ x \quad \text{for $|x| \ge 1$}
+
+
+It is also common to call :math:`\cot^{-1} x`, :math:`\csc^{-1} x`, and :math:`\sec^{-1} x` the **arc cotangent**, **arc cosecant**, and **arc secant**, respectively, of $x$. The graphs of :math:`y=\csc^{-1} x` and :math:`y=\sec^{-1} x` are shown in Figure :ref:`5.3.12 <fig:arccscsec>`:
+
+.. _fig:arccscsec:
+
+.. _Figure 5.3.12:
+
+.. figure:: ./img/f5.3.12.png
+	:align: center
+
+	**Figure 5.3.12** Graph of :math:`y=\cot^{-1} x`
+
+.. admonition:: Example 5.21
+
+	Prove the identity $\tan^{-1} x \;+\; \cot^{-1} x ~=~ \frac{\pi}{2}$.
  
-**Solution:** Let $\theta = \cot^{-1} x$. Using relations from Section 1.5, we have
- \begin{displaymath}
-  \tan\;\left( \tfrac{\pi}{2} - \theta \right) ~=~ -\tan\;\left( \theta - \tfrac{\pi}{2} \right)
-   ~=~ \cot\;\theta ~=~ \cot\;(\cot^{-1} x) ~=~ x ~,
- \end{displaymath}
- by formula (\ref{eqn:arccot2}). So since $\tan\;(\tan^{-1} x) = x$ for all $x$, this means that
- $\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \theta \right)$. Thus,
- $\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \cot^{-1} x \right)$. Now, we know that
- $0 < \cot^{-1} x < \pi$, so $-\tfrac{\pi}{2} < \tfrac{\pi}{2} - \cot^{-1} x < \tfrac{\pi}{2}$, i.e.
- $\tfrac{\pi}{2} - \cot^{-1} x$ is in the restricted subset on which the tangent function is
- one-to-one. Hence, $\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \cot^{-1} x \right)$
- implies that $\tan^{-1} x = \tfrac{\pi}{2} - \cot^{-1} x$, which proves the identity.
-\end{exmp}
-\begin{exmp}\label{exmp:arctanab}
- Is $\;\tan^{-1} a \;+\; \tan^{-1} b ~=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)\;$ an
- identity?\vspace{1mm}
+	**Solution:** Let $\theta = \cot^{-1} x$. Using relations from Section 1.5, we have
+
+	.. math::
+
+		\tan\;\left( \tfrac{\pi}{2} - \theta \right) ~=~ -\tan\;\left( \theta - \tfrac{\pi}{2} \right) ~=~ \cot\;\theta ~=~ \cot\;(\cot^{-1} x) ~=~ x ~,
  
-**Solution:** In the tangent addition formula $\tan\;(A+B) = \dfrac{\tan\;A \;+\;
- \tan\;B}{1 \;-\; \tan\;A~\tan\;B}$, let $A = \tan^{-1} a$ and $B = \tan^{-1} b$. Then
- \begin{align*}
-  \tan\;(\tan^{-1} a \;+\; \tan^{-1} b ) ~&=~ \dfrac{\tan\;(\tan^{-1} a) \;+\; \tan\;(\tan^{-1}
-   b)}{1 \;-\; \tan\;(\tan^{-1} a)~\tan\;(\tan^{-1} b)}\\
-  &=~ \dfrac{a+b}{1-ab}\qquad\text{by formula (\ref{eqn:arctan2}), so it seems that we have}\\
-  \tan^{-1} a \;+\; \tan^{-1} b ~&=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)
- \end{align*}
- by definition of the inverse tangent. However, recall that
- $-\tfrac{\pi}{2} < \tan^{-1} x < \tfrac{\pi}{2}$ for all real numbers $x$. So in particular,
- we must have $-\tfrac{\pi}{2} < \tan^{-1} \left( \frac{a+b}{1-ab} \right) < \tfrac{\pi}{2}$. But
- it is possible that $\tan^{-1} a \;+\; \tan^{-1} b$ is \emph{not} in the interval
- $\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)$. For example,
- \begin{displaymath}
-  \tan^{-1} 1 \;+\; \tan^{-1} 2 ~=~ 1.892547 ~>~ \tfrac{\pi}{2} \approx 1.570796 ~.
- \end{displaymath}
- And we see that $\tan^{-1} \left( \frac{1+2}{1-(1)(2)} \right) = \tan^{-1} (-3) = -1.249045 \ne
- \tan^{-1} 1 \;+\; \tan^{-1} 2$. So the formula is only true when
- $-\tfrac{\pi}{2} < \tan^{-1} a \;+\; \tan^{-1} b < \tfrac{\pi}{2}$.
-\end{exmp}
-\divider
-\newpage
-\startexercises\label{sec5dot3}
-\vspace{5mm}
-{\small
+	by formula :eq:`5.9 <eqn:arccot2>`. So since :math:`\tan\;(\tan^{-1} x) = x` for all $x$, this means that :math:`\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \theta \right)`. Thus, :math:`\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \cot^{-1} x \right)`. Now, we know that :math:`0 < \cot^{-1} x < \pi$, so $-\tfrac{\pi}{2} < \tfrac{\pi}{2} - \cot^{-1} x < \tfrac{\pi}{2}`, i.e. :math:`\tfrac{\pi}{2} - \cot^{-1} x` is in the restricted subset on which the tangent function is one-to-one. Hence, :math:`\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \cot^{-1} x \right)` implies that :math:`\tan^{-1} x = \tfrac{\pi}{2} - \cot^{-1} x`, which proves the identity.
+
+.. _exmp:arctanab:
+
+.. admonition:: Example 5.22
+
+	Is $\;\tan^{-1} a \;+\; \tan^{-1} b ~=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)\;$ an identity?
+ 
+	**Solution:** In the tangent addition formula :math:`\tan\;(A+B) = \dfrac{\tan\;A \;+\; \tan\;B}{1 \;-\; \tan\;A~\tan\;B}`, let :math:`A = \tan^{-1} a` and :math:`B = \tan^{-1} b`. Then
+
+	.. math::
+
+		\begin{align*}
+		\tan\;(\tan^{-1} a \;+\; \tan^{-1} b ) ~&=~ \dfrac{\tan\;(\tan^{-1} a) \;+\; \tan\;(\tan^{-1}
+		b)}{1 \;-\; \tan\;(\tan^{-1} a)~\tan\;(\tan^{-1} b)}\\
+		&=~ \dfrac{a+b}{1-ab}\qquad\text{by formula 5.7, so it seems that we have}\\
+		\tan^{-1} a \;+\; \tan^{-1} b ~&=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)
+		\end{align*}
+
+	by definition of the inverse tangent. However, recall that :math:`-\tfrac{\pi}{2} < \tan^{-1} x < \tfrac{\pi}{2}` for all real numbers $x$. So in particular, we must have :math:`-\tfrac{\pi}{2} < \tan^{-1} \left( \frac{a+b}{1-ab} \right) < \tfrac{\pi}{2}`. But it is possible that :math:`\tan^{-1} a \;+\; \tan^{-1} b` is *not* in the interval :math:`\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)`. For example,
+
+	.. math::
+
+		\tan^{-1} 1 \;+\; \tan^{-1} 2 ~=~ 1.892547 ~>~ \tfrac{\pi}{2} \approx 1.570796 ~.
+
+	And we see that :math:`\tan^{-1} \left( \frac{1+2}{1-(1)(2)} \right) = \tan^{-1} (-3) = -1.249045 \ne \tan^{-1} 1 \;+\; \tan^{-1} 2`. So the formula is only true when :math:`-\tfrac{\pi}{2} < \tan^{-1} a \;+\; \tan^{-1} b < \tfrac{\pi}{2}`.
+
+.. _sec5dot3:
+
+Exercises
+~~~~~~~~~~~
+
 For Exercises 1-25, find the exact value of the given expression in radians.
-\begin{enumerate}[\bfseries 1.]
-\begin{multicols}{5}
- \item $\tan^{-1} 1$
- \item $\tan^{-1} \,(-1)$
- \item $\tan^{-1} 0$
- \item $\cos^{-1} 1$
- \item $\cos^{-1} \,(-1)$
-\end{multicols}
-\begin{multicols}{5}
- \item $\cos^{-1} 0$
- \item $\sin^{-1} 1$
- \item $\sin^{-1} \,(-1)$
- \item $\sin^{-1} 0$
- \item $\sin^{-1} \left(\sin\;\frac{\pi}{3}\right)$
-\end{multicols}
-\begin{multicols}{4}
- \item $\sin^{-1} \left(\sin\;\frac{4\pi}{3}\right)$
- \item $\sin^{-1} \left(\sin\;\left(-\frac{5\pi}{6}\right)\right)$
- \item $\cos^{-1} \left(\cos\;\frac{\pi}{7}\right)$
- \item $\cos^{-1} \left(\cos\;\left(-\frac{\pi}{10}\right)\right)$
-\end{multicols}
-\begin{multicols}{4}
- \item $\cos^{-1} \left(\cos\;\frac{6\pi}{5}\right)$
- \item $\tan^{-1} \left(\tan\;\frac{4\pi}{3}\right)$
- \item $\tan^{-1} \left(\tan\;\left(-\frac{5\pi}{6}\right)\right)$
- \item $\cot^{-1} \left(\cot\;\frac{4\pi}{3}\right)$
-\end{multicols}
-\begin{multicols}{4}
- \item $\csc^{-1} \left(\csc\;\left(-\frac{\pi}{9}\right)\right)$
- \item $\sec^{-1} \left(\sec\;\frac{6\pi}{5}\right)$
- \item $\cos\;\left(\sin^{-1}\;\left(\frac{5}{13}\right)\right)$
- \item $\cos\;\left(\sin^{-1}\;\left(-\frac{4}{5}\right)\right)$
-\end{multicols}
-\begin{multicols}{3}
- \item $\sin^{-1}\;\frac{3}{5} \;+\; \sin^{-1}\;\frac{4}{5}$
- \item $\sin^{-1}\;\frac{5}{13} \;+\; \cos^{-1}\;\frac{5}{13}$
- \item $\tan^{-1}\;\frac{3}{5} \;+\; \cot^{-1}\;\frac{3}{5}$
-\end{multicols}
-\suspend{enumerate}
- For Exercises 26-33, prove the given identity.
-\resume{enumerate}[{[\bfseries 1.]}]
-\begin{multicols}{2}
- \item $\cos\;(\sin^{-1} x) ~=~ \sqrt{1 - x^2}$
- \item $\sin\;(\cos^{-1} x) ~=~ \sqrt{1 - x^2}$
-\end{multicols}
-\begin{multicols}{2}
- \item $\sin^{-1} x \;+\; \cos^{-1} x ~=~ \frac{\pi}{2}$
- \item $\sec^{-1} x \;+\; \csc^{-1} x ~=~ \frac{\pi}{2}$
-\end{multicols}
-\begin{multicols}{2}
- \item $\sin^{-1} (-x) ~=~ -\sin^{-1} x$
- \item $\cos^{-1} (-x) \;+\; \cos^{-1} x ~=~ \pi$
-\end{multicols}
-\begin{multicols}{2}
- \item $\cot^{-1} x ~=~ \tan^{-1} \,\frac{1}{x}~$ for $x>0$
- \item $\tan^{-1} x \;+\; \tan^{-1} \,\frac{1}{x} ~=~ \frac{\pi}{2}~$ for $x>0$
-\end{multicols}
- \item In Example \ref{exmp:arctanab} we showed that the formula
-  $\;\tan^{-1} a \;+\; \tan^{-1} b ~=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)\;$ does not
-  always hold. Does the formula
-  $\tan\;(\tan^{-1} a \;+\; \tan^{-1} b ) ~=~ \dfrac{a+b}{1-ab}$, which was part of that example,
-  always hold? Explain your answer.
- \item Show that $\;\tan^{-1}\;\frac{1}{3}\;+\;\tan^{-1}\;\frac{1}{5} ~=~ \tan^{-1}\;\frac{4}{7}\;$.
- \item Show that $\;\tan^{-1}\;\frac{1}{4}\;+\;\tan^{-1}\;\frac{2}{9} ~=~ \tan^{-1}\;\frac{1}{2}\;$.
- \item\label{exer:3squares}
-  Figure \ref{fig:3squares} shows three equal squares lined up against each other. For the
-  angles :math:`\alpha`, $\beta$, and $\gamma$ in the picture, show that $\alpha = \beta + \gamma$.
-  (\emph{Hint: Consider the tangents of the angles.})
 
-\begin{figure}[h]
- \begin{center}
-  \begin{tikzpicture}[every node/.style={font=\small}]
-   \draw [line width=1pt] (0,0) rectangle (6,2);
-   \draw [line width=1pt] (2,0) -- (2,2);
-   \draw [line width=1pt] (4,0) -- (4,2);
-   \draw (0,0) -- (6,2);
-   \draw (2,0) -- (6,2);
-   \draw (4,0) -- (6,2);
-   \node at (4.5,0.2) {:math:`\alpha`};
-   \node at (2.9,0.2) {$\beta$};
-   \node at (1.15,0.2) {$\gamma$};
-   \draw ([shift={(4,0)}] 0:0.8) arc (0:45:0.8);
-   \draw ([shift={(2,0)}] 0:1.2) arc (0:26.565:1.2);
-   \draw (0:1.4) arc (0:18.435:1.4);
-  \end{tikzpicture}\vspace{-6mm}
- \end{center}
- \caption[]{\quad Exercise \ref{exer:3squares}}
- \label{fig:3squares}
-\end{figure}
- \item Sketch the graph of $y=\sin^{-1} 2x$.
- \item Write a computer program to solve a triangle in the case where you are given three sides.
-  Your program should read in the three sides as input parameters and print the three
-  angles in degrees as output if a solution exists. Note that since most computer languages use
-  radians for their inverse trigonometric functions, you will likely have to do the conversion from
-  radians to degrees yourself in the program.
-\end{enumerate}}
+1. :math:`\tan^{-1} 1`
+2. :math:`\tan^{-1} \,(-1)`
+3. :math:`\tan^{-1} 0`
+4. :math:`\cos^{-1} 1`
+5. :math:`\cos^{-1} \,(-1)`
+6. :math:`\cos^{-1} 0`
+7. :math:`\sin^{-1} 1`
+8. :math:`\sin^{-1} \,(-1)`
+9. :math:`\sin^{-1} 0`
+10. :math:`\sin^{-1} \left(\sin\;\frac{\pi}{3}\right)`
+11. :math:`\sin^{-1} \left(\sin\;\frac{4\pi}{3}\right)`
+12. :math:`\sin^{-1} \left(\sin\;\left(-\frac{5\pi}{6}\right)\right)`
+13. :math:`\cos^{-1} \left(\cos\;\frac{\pi}{7}\right)`
+14. :math:`\cos^{-1} \left(\cos\;\left(-\frac{\pi}{10}\right)\right)`
+15. :math:`\cos^{-1} \left(\cos\;\frac{6\pi}{5}\right)`
+16. :math:`\tan^{-1} \left(\tan\;\frac{4\pi}{3}\right)`
+17. :math:`\tan^{-1} \left(\tan\;\left(-\frac{5\pi}{6}\right)\right)`
+18. :math:`\cot^{-1} \left(\cot\;\frac{4\pi}{3}\right)`
+19. :math:`\csc^{-1} \left(\csc\;\left(-\frac{\pi}{9}\right)\right)`
+20. :math:`\sec^{-1} \left(\sec\;\frac{6\pi}{5}\right)`
+21. :math:`\cos\;\left(\sin^{-1}\;\left(\frac{5}{13}\right)\right)`
+22. :math:`\cos\;\left(\sin^{-1}\;\left(-\frac{4}{5}\right)\right)`
+23. :math:`\sin^{-1}\;\frac{3}{5} \;+\; \sin^{-1}\;\frac{4}{5}`
+24. :math:`\sin^{-1}\;\frac{5}{13} \;+\; \cos^{-1}\;\frac{5}{13}`
+25. :math:`\tan^{-1}\;\frac{3}{5} \;+\; \cot^{-1}\;\frac{3}{5}`
+
+For Exercises 26-33, prove the given identity.
+
+26. :math:`\cos\;(\sin^{-1} x) ~=~ \sqrt{1 - x^2}`
+27. :math:`\sin\;(\cos^{-1} x) ~=~ \sqrt{1 - x^2}`
+28. :math:`\sin^{-1} x \;+\; \cos^{-1} x ~=~ \frac{\pi}{2}`
+29. :math:`\sec^{-1} x \;+\; \csc^{-1} x ~=~ \frac{\pi}{2}`
+30. :math:`\sin^{-1} (-x) ~=~ -\sin^{-1} x`
+31. :math:`\cos^{-1} (-x) \;+\; \cos^{-1} x ~=~ \pi`
+32. :math:`\cot^{-1} x ~=~ \tan^{-1} \,\frac{1}{x}~` for $x>0$
+33. :math:`\tan^{-1} x \;+\; \tan^{-1} \,\frac{1}{x} ~=~ \frac{\pi}{2}~` for $x>0$
+34. In Example :ref:`5.32 <exmp:arctanab>` we showed that the formula :math:`\;\tan^{-1} a \;+\; \tan^{-1} b ~=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)\;` does not always hold. Does the formula :math:`\tan\;(\tan^{-1} a \;+\; \tan^{-1} b ) ~=~ \dfrac{a+b}{1-ab}`, which was part of that example, always hold? Explain your answer.
+35. Show that :math:`\;\tan^{-1}\;\frac{1}{3}\;+\;\tan^{-1}\;\frac{1}{5} ~=~ \tan^{-1}\;\frac{4}{7}\;`.
+36. Show that :math:`\;\tan^{-1}\;\frac{1}{4}\;+\;\tan^{-1}\;\frac{2}{9} ~=~ \tan^{-1}\;\frac{1}{2}\;`.
+
+.. _exer:3squares:
+
+37. Figure :ref:`5.3.13 <fig:3squares>` shows three equal squares lined up against each other. For the angles :math:`\alpha`, :math:`\beta`, and :math:`\gamma` in the picture, show that :math:`\alpha = \beta + \gamma`. (*Hint: Consider the tangents of the angles.*)
+
+    .. _fig:3squares:
+
+    .. _Figure 5.3.13:
+
+    .. figure:: ./img/f5.3.13.png
+        :align: center
+    
+        **Figure 5.3.13** Exercise :ref:`37 <exer:3squares>`
+
+38. Sketch the graph of :math:`y=\sin^{-1} 2x`.
+39. Write a computer program to solve a triangle in the case where you are given three sides. Your program should read in the three sides as input parameters and print the three angles in degrees as output if a solution exists. Note that since most computer languages use radians for their inverse trigonometric functions, you will likely have to do the conversion from radians to degrees yourself in the program.
+
