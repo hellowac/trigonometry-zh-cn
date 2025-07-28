@@ -1,10 +1,12 @@
 .. _c3:
 
-Chapter 3 Identities
+第 3 章 恒等式  
 ===========================================
+Chapter 3 Identities
 
-Basic Trigonometric Identities
+基本三角恒等式  
 -------------------------------
+Basic Trigonometric Identities
 
 So far we know a few relations between the trigonometric functions. For example, we know the
 reciprocal relations:
@@ -323,8 +325,9 @@ By :eq:`3.5 <eqn:idencossq>` both sides of the last equation are indeed equal. T
 
 .. _sec3dot1:
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~
 
 1. We showed that :math:`\;\sin\;\theta ~=~ \pm\,\sqrt{1 ~-~ \cos^2 \;\theta}\;` for all :math:`\theta`. Give an example of an angle :math:`\theta` such that :math:`\sin\;\theta ~=~ -\sqrt{1 ~-~ \cos^2 \;\theta}\;`.
 2. We showed that :math:`\;\cos\;\theta ~=~ \pm\,\sqrt{1 ~-~ \sin^2 \;\theta}\;` for all :math:`\theta`. Give an example of an angle :math:`\theta` such that :math:`\cos\;\theta ~=~ -\sqrt{1 ~-~ \sin^2 \;\theta}\;`.
@@ -385,8 +388,9 @@ For Exercises 4-16, prove the given identity.
 21. Show that each trigonometric function can be put in terms of the sine function.
 
 
-Sum and Difference Formulas
+和差公式  
 -----------------------------
+Sum and Difference Formulas
 
 We will now derive identities for the trigonometric functions of the sum and difference of two angles. For the sum of any two angles $A$ and $B$, we have the *addition formulas*: 
 
@@ -752,8 +756,9 @@ This, combined with replacing $B$ by $-B$ and using the relation :math:`\tan\;(-
 
 The last two examples demonstrate an important aspect of how identities are used in practice: recognizing terms which are part of known identities, so that they can be factored out. This is a common technique.
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~
 
 .. _exer:sumzero:
 
@@ -839,9 +844,11 @@ For Exercises \ref{exer:iden32start}-\ref{exer:iden32end}, prove the given ident
 
 .. figure:: ./img/85-1.png
     :align: center
-  
-Double-Angle and Half-Angle Formulas
+
+倍角与半角公式  
 --------------------------------------
+Double-Angle and Half-Angle Formulas
+
 
 A special case of the addition formulas is when the two angles being added are equal, resulting in the *double-angle formulas*:
 
@@ -1076,8 +1083,9 @@ Taking reciprocals in formulas :eq:`3.34 <eqn:halftanalt1>` and :eq:`3.35 <eqn:h
         ~=~ \frac{2}{1 \;+\; \cos\;\theta} \;\cdot\; \frac{\sec\;\theta}{\sec\;\theta}
         ~=~ \frac{2\;\sec\;\theta}{\sec\;\theta \;+\; 1} ~.
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~~
 
 
 For Exercises 1-8, prove the given identity.
@@ -1161,8 +1169,9 @@ For Exercises :ref:`12 <exer:rt33start>`- :ref:`17 <exer:rt33end>`, prove the gi
 
     where :math:`\theta` and :math:`\psi` are always in the same quadrant. Show that :math:`\;\tan\;\tfrac{1}{2}\theta ~=~ \sqrt{\frac{1 \;+\; \epsilon}{1 \;-\; \epsilon}}~ \tan\;\tfrac{1}{2}\psi\;`.
 
-Other Identities
+其他恒等式  
 ------------------
+Other Identities
 
 Though the identities in this section fall under the category of "other", they are perhaps (along with :math:`\cos^2 \;\theta + \sin^2 \;\theta = 1`) the most widely used identities in practice. It is very common to encounter terms such as :math:`\;\sin\;A + \sin\;B\;` or :math:`\;\sin\;A~\cos\;B\;` in calculations, so we will now derive identities for those expressions. First, we have what are often called the *product-to-sum formulas*:
 
@@ -1509,8 +1518,9 @@ The proofs of the other sum-to-product formulas are similar (see Exercises :ref:
 
 .. _sec3dot4:
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~~
 
 .. _exer:p2s1:
 

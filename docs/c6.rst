@@ -1,10 +1,14 @@
 .. _c6:
 
-Chapter 6 Additional Topics
-===============================
 
-Solving Trigonometric Equations
+第 6 章 附加主题  
+===============================
+Chapter 6 Additional Topics
+
+
+三角方程的求解  
 -------------------------------------
+Solving Trigonometric Equations
 
 An equation involving trigonometric functions is called a *trigonometric equation*. For example, an equation like
 
@@ -217,8 +221,9 @@ Note: In Example :ref:`6.8 <exmp:trigeqncombo>` if the equation had been :math:`
 
 .. _sec6dot1:
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~
 
 For Exercises 1-12, solve the given equation (in radians).
 
@@ -235,8 +240,9 @@ For Exercises 1-12, solve the given equation (in radians).
 11. :math:`\cos^2 \;3\theta \;-\; 5\,\cos\;3\theta \;+\; 4 ~=~ 0`
 12. :math:`3\,\sin\;\theta \;-\; 4\,\cos\;\theta ~=~ 1`
 
-Numerical Methods in Trigonometry
+三角学中的数值方法  
 ------------------------------------
+Numerical Methods in Trigonometry
 
 We were able to solve the trigonometric equations in the previous section fairly easily, which in general is not the case. For example, consider the equation
 
@@ -435,15 +441,17 @@ Click the **evaluate** link to display the answer: `0.7390851332151559`
 
 .. _sec6dot2:
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~
 
 1. One obvious solution to the equation :math:`2\,\sin\;x = x` is :math:`x=0`. Write a program to find the other solution(s), accurate to at least within :math:`1.0 \,\times\, 10^{-20}`. You can use any programming language, though you may find it easier to just modify the code in Listing :ref:`6.1 <lst:secant>` (only one line needs to be changed!). It may help to use Gnuplot to get an idea of where the graphs of :math:`y=2\,\sin\;x` and :math:`y=x` intersect.
 2. Repeat Exercise 1 for the equation :math:`\sin\;x = x^2`.
 3. Use Octave or some other program to find the maximum and minimum of :math:`y=\cos\;5x - \sin\;3x`.
 
-Complex Numbers
+复数  
 -----------------
+Complex Numbers
 
 There is no real number ``x`` such that :math:`x^2 = -1`. However, it turns out to be useful [6]_ to invent such a number, called the **imaginary unit** and denoted by the letter ``i``. Thus, :math:`i^2 = -1`, and hence :math:`i = \sqrt{-1}`. If ``a`` and ``b`` are real numbers, then a number of the form :math:`a + bi` is called a **complex number**, and if :math:`b \ne 0` then it is called an **imaginary number** (and **pure imaginary** if ``a=0`` and :math:`b \ne 0`). The real number ``a`` is called the **real part** of the complex number ``a+bi``, and ``bi`` is called its **imaginary part**.
 
@@ -803,8 +811,9 @@ In higher mathematics the *Fundamental Theorem of Algebra* states that every pol
 
 .. _sec6dot3:
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~~~
 
 For Exercises 1-16, calculate the given expression.
 
@@ -862,8 +871,9 @@ For Exercises 32-35, calculate the given number.
 43. Prove that if :math:`z` is an :math:`n^{th}` root of a real number ``a``, then so is :math:`\overline{z}`. (*Hint: Use Exercise 20.*)
 
 
-Polar Coordinates
+极坐标  
 ---------------------
+Polar Coordinates
 
 .. _Figure 6.4.1:
 
@@ -1145,8 +1155,9 @@ In Example :ref:`6.17 <exmp:polarcircle>` we saw that the equation :math:`x^2 + 
 
 .. _sec6dot4:
 
-Exercises
+练习
 ~~~~~~~~~~~~~~
+Exercises
 
 For Exercises 1-5, convert the given point from polar coordinates to Cartesian coordinates.
 

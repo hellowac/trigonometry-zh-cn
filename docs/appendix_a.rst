@@ -1,7 +1,8 @@
 .. _appendix a:
 
-Appendix A
+附录 A
 ===============
+Appendix A
 
 **Answers and Hints to Selected Exercises**
 

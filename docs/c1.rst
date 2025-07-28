@@ -102,21 +102,19 @@ Chapter 1 Right Triangle Trigonometry
 
     (c) Two angles between :math:`0^{\circ}` and :math:`360^{\circ}` are **conjugate** (or **explementary** ) if their sum equals :math:`360^{\circ}`. In other words, if :math:`0^{\circ} \le \angle\,A \,,\, \angle\,B \le 360^{\circ}` then :math:`\angle\,A` and :math:`\angle\,B` are conjugate if :math:`\angle\,A + \angle\,B = 360^{\circ}`.
 
+
 .. _Figure 1.1.2:
 
 .. figure:: ./img/f1.1.2.png
     :align: center 
 
-    **Figure 1.1.2 Types of pairs of angles**
+    **图 1.1.2 成对角的类型**
 
-Instead of using the angle notation :math:`\angle\,A` to denote an angle, we will sometimes use just a
-capital letter by itself (e.g. :math:`A`, :math:`B`, :math:`C`) or a lowercase variable name (e.g. :math:`x`, :math:`y`, :math:`t`).
-It is also common to use letters (either uppercase or lowercase) from the Greek alphabet, shown
-in the table below, to represent angles:
+我们有时不会使用角度符号 :math:`\angle\,A` 来表示一个角，而是直接使用一个大写字母（例如：:math:`A`、:math:`B`、:math:`C`）或一个小写变量名（例如：:math:`x`、:math:`y`、:math:`t`）来表示角。也常见使用下面表格中所示的希腊字母（大写或小写）来表示角度：
 
 .. _Table 1.1:
 
-**Table 1.1 The Greek alphabet**
+**表 1.1 希腊字母表**
 
 .. list-table::
 
@@ -175,133 +173,305 @@ in the table below, to represent angles:
       - :math:`\Omega` :math:`\quad \omega` 
       - omega
 
-In elementary geometry you learned that the sum of the angles in a triangle equals :math:`180^{\circ}`, and that an **isosceles triangle** is a triangle with two sides of equal length.
-Recall that in a **right triangle** one of the angles is a right angle. Thus, in a right triangle one of the angles is
-:math:`90^{\circ}` and the other two angles are acute angles whose sum is :math:`90^{\circ}` (i.e. the other two angles are complementary angles).
+在初等几何中你学过，一个三角形内角的总和为 :math:`180^{\circ}`，并且一个 **等腰三角形** 是指有两条边长度相等的三角形。回忆一下， **直角三角形** 中有一个角是直角，因此，在直角三角形中，有一个角是 :math:`90^{\circ}` ，其余两个角是锐角，并且它们的和是 :math:`90^{\circ}` （也就是说这两个角互为余角）。
 
-.. _Example 1.1:
+.. _例题 1.1:
 
-.. admonition:: Example 1.1
+.. admonition:: 例题 1.1
 
-    For each triangle below, determine the unknown angle(s):
+    对于下面的每个三角形，求出未知角的度数：
 
     .. figure:: ./img/e1.1.png
         :align: center
 
-    Note: We will sometimes refer to the angles of a triangle by their vertex points. For example, in the first triangle above we will simply refer to the angle :math:`\angle\,BAC` as angle :math:`A`.
+    注意：我们有时会根据三角形的顶点来表示角。例如，在上面第一个三角形中，我们会将角 :math:`\angle\,BAC` 简称为角 :math:`A`。
 
-    **Solution:** For triangle :math:`\triangle\,ABC`, :math:`A = 35^{\circ}` and :math:`C = 20^{\circ}`,
-    and we know that :math:`A + B + C = 180^{\circ}`, so
+    **解答：** 对于三角形 :math:`\triangle\,ABC`，:math:`A = 35^{\circ}` 且 :math:`C = 20^{\circ}`，我们知道 :math:`A + B + C = 180^{\circ}`，所以：
 
     .. math::
 
         35^{\circ} ~+~ B ~+~ 20^{\circ} ~=~ 180^{\circ} \quad\Rightarrow\quad B ~=~ 180^{\circ} ~-~
         35^{\circ} ~-~ 20^{\circ} \quad\Rightarrow\quad \boxed{B ~=~ 125^{\circ}} ~.
 
-    For the right triangle :math:`\triangle\,DEF`, :math:`E = 53^{\circ}` and :math:`F = 90^{\circ}`, and we know that
-    the two acute angles ``D`` and ``E`` are complementary, so
+    对于直角三角形 :math:`\triangle\,DEF`，:math:`E = 53^{\circ}` 且 :math:`F = 90^{\circ}`，我们知道两个锐角 ``D`` 和 ``E`` 是互余的，因此：
 
     .. math::
 
       D ~+~ E ~=~ 90^{\circ} \quad\Rightarrow\quad D ~=~ 90^{\circ} ~-~
       53^{\circ} \quad\Rightarrow\quad \boxed{D ~=~ 37^{\circ}} ~.
 
+    对于三角形 :math:`\triangle\,XYZ`，各角的度数都用未知数 :math:`\alpha` 表示，但我们知道 :math:`X + Y + Z = 180^{\circ}`，可以用此关系来求出 :math:`\alpha`，进而求出 :math:`x`、:math:`y` 和 ``Z``：
 
-    For triangle :math:`\triangle\,XYZ`, the angles are in terms of an unknown number :math:`\alpha`, but we do
-    know that :math:`X + Y + Z = 180^{\circ}`, which we can use to solve for :math:`\alpha` and then use that to
-    solve for :math:`x`, :math:`y`, and ``Z``:
-    
     .. math::
 
       \alpha ~+~ 3\alpha ~+~ \alpha ~=~ 180^{\circ} \quad\Rightarrow\quad 5\alpha ~=~ 180^{\circ}
       \quad\Rightarrow\quad \alpha ~=~ 36^{\circ} \quad\Rightarrow\quad \boxed{X = 36^{\circ} ~,~
       Y = 3 \times 36^{\circ} = 108^{\circ} ~,~ Z = 36^{\circ}}
 
+.. toggle::
+
+    .. figure:: ./img/f1.1.2.png
+        :align: center 
+
+        **Figure 1.1.2 Types of pairs of angles**
+
+    Instead of using the angle notation :math:`\angle\,A` to denote an angle, we will sometimes use just a
+    capital letter by itself (e.g. :math:`A`, :math:`B`, :math:`C`) or a lowercase variable name (e.g. :math:`x`, :math:`y`, :math:`t`).
+    It is also common to use letters (either uppercase or lowercase) from the Greek alphabet, shown
+    in the table below, to represent angles:
+
+    .. _Table 1.1:
+
+    **Table 1.1 The Greek alphabet**
+
+    .. list-table::
+
+        * - **字母**
+        - **名称**
+        - **字母**
+        - **名称**
+        - **字母**
+        - **名称**
+        * - A :math:`\quad \alpha`
+        - alpha
+        - I  :math:`\quad \iota`
+        - iota
+        - P :math:`\quad \rho`
+        - rho
+        * - B :math:`\quad \beta` 
+        - beta 
+        - K :math:`\quad \kappa`
+        - kappa  
+        - :math:`\Sigma` :math:`\quad \sigma` 
+        - sigma
+        * - :math:`\Gamma` :math:`\quad \gamma`
+        - gamma 
+        - :math:`\Lambda` :math:`\quad \lambda` 
+        - lambda 
+        - T :math:`\quad \tau` 
+        - tau
+        * - :math:`\Delta` :math:`\quad \delta` 
+        - delta 
+        - M :math:`\quad \mu` 
+        - mu 
+        - :math:`\Upsilon` :math:`\quad \upsilon` 
+        - upsilon
+        * - E  :math:`\quad \epsilon`
+        - epsilon
+        - N  :math:`\quad \nu`
+        - nu
+        - :math:`\Phi` :math:`\quad \phi`
+        - phi
+        * - Z  :math:`\quad \zeta`
+        - zeta
+        - :math:`\Xi` :math:`\quad \xi`
+        - xi
+        - X :math:`\quad \chi`
+        - chi
+        * - H  :math:`\quad \eta`
+        - eta
+        - O  :math:`\quad o`
+        - omicron
+        - :math:`\Psi`  :math:`\quad \psi`
+        - psi
+        * - :math:`\Theta`  :math:`\quad \theta` 
+        - theta 
+        - :math:`\Pi` :math:`\quad \pi` 
+        - pi 
+        - :math:`\Omega` :math:`\quad \omega` 
+        - omega
+
+    In elementary geometry you learned that the sum of the angles in a triangle equals :math:`180^{\circ}`, and that an **isosceles triangle** is a triangle with two sides of equal length.
+    Recall that in a **right triangle** one of the angles is a right angle. Thus, in a right triangle one of the angles is
+    :math:`90^{\circ}` and the other two angles are acute angles whose sum is :math:`90^{\circ}` (i.e. the other two angles are complementary angles).
+
+    .. _Example 1.1:
+
+    .. admonition:: Example 1.1
+
+        For each triangle below, determine the unknown angle(s):
+
+        .. figure:: ./img/e1.1.png
+            :align: center
+
+        Note: We will sometimes refer to the angles of a triangle by their vertex points. For example, in the first triangle above we will simply refer to the angle :math:`\angle\,BAC` as angle :math:`A`.
+
+        **Solution:** For triangle :math:`\triangle\,ABC`, :math:`A = 35^{\circ}` and :math:`C = 20^{\circ}`,
+        and we know that :math:`A + B + C = 180^{\circ}`, so
+
+        .. math::
+
+            35^{\circ} ~+~ B ~+~ 20^{\circ} ~=~ 180^{\circ} \quad\Rightarrow\quad B ~=~ 180^{\circ} ~-~
+            35^{\circ} ~-~ 20^{\circ} \quad\Rightarrow\quad \boxed{B ~=~ 125^{\circ}} ~.
+
+        For the right triangle :math:`\triangle\,DEF`, :math:`E = 53^{\circ}` and :math:`F = 90^{\circ}`, and we know that
+        the two acute angles ``D`` and ``E`` are complementary, so
+
+        .. math::
+
+        D ~+~ E ~=~ 90^{\circ} \quad\Rightarrow\quad D ~=~ 90^{\circ} ~-~
+        53^{\circ} \quad\Rightarrow\quad \boxed{D ~=~ 37^{\circ}} ~.
+
+
+        For triangle :math:`\triangle\,XYZ`, the angles are in terms of an unknown number :math:`\alpha`, but we do
+        know that :math:`X + Y + Z = 180^{\circ}`, which we can use to solve for :math:`\alpha` and then use that to
+        solve for :math:`x`, :math:`y`, and ``Z``:
+        
+        .. math::
+
+        \alpha ~+~ 3\alpha ~+~ \alpha ~=~ 180^{\circ} \quad\Rightarrow\quad 5\alpha ~=~ 180^{\circ}
+        \quad\Rightarrow\quad \alpha ~=~ 36^{\circ} \quad\Rightarrow\quad \boxed{X = 36^{\circ} ~,~
+        Y = 3 \times 36^{\circ} = 108^{\circ} ~,~ Z = 36^{\circ}}
+
 .. _Example 1.2:
 
 .. admonition:: Example 1.2
 
-    *Thales' Theorem* states that if :math:`A`, :math:`B`, and :math:`C` are (distinct) points on a circle such that
-    the line segment :math:`\overline{AB}` is a diameter of the circle, then the angle :math:`\angle\,ACB` is a
-    right angle (see Figure :ref:`Figure 1.1.3(a) <Figure 1.1.3>` ). In other words, the triangle :math:`\triangle\,ABC` is a
-    right triangle.\index{Thales' Theorem}
+    *泰勒斯定理(Thales' Theorem)* 指出，如果 :math:`A`、:math:`B` 和 :math:`C` 是同一圆上的（不同的）三点，且线段 :math:`\overline{AB}` 是该圆的直径，则角 :math:`\angle\,ACB` 是一个直角（见图 :ref:`图 1.1.3(a) <Figure 1.1.3>`）。换句话说，三角形 :math:`\triangle\,ABC` 是一个直角三角形。
 
     .. _Figure 1.1.3:
 
     .. figure:: ./img/f1.1.3.png
         :align: center 
 
-        **Figure 1.1.3 Thales' Theorem:** :math:`\angle\,ACB = 90^{\circ}`
+        **图 1.1.3 泰勒斯定理：** :math:`\angle\,ACB = 90^{\circ}`
+
+    为证明该定理，设 ``O`` 为圆心，并作线段 :math:`\overline{OC}`，如图 :ref:`图 1.1.3(b) <Figure 1.1.3>` 所示。设 :math:`\alpha = \angle\,BAC`，:math:`\beta = \angle\,ABC`。由于 :math:`\overline{AB}` 是该圆的直径，:math:`\overline{OA}` 与 :math:`\overline{OC}` 长度相同（即圆的半径）。因此三角形 :math:`\triangle\,OAC` 是等腰三角形，所以 :math:`\angle\,OCA = \angle\,OAC = \alpha`。同理，三角形 :math:`\triangle\,OBC` 也是等腰三角形，有 :math:`\angle\,OCB = \angle\,OBC = \beta`。因此可知角 :math:`\angle\,ACB = \alpha + \beta`。
+
+    又因为三角形 :math:`\triangle\,ABC` 的内角和为 :math:`180^{\circ}`，所以：
+
+    :math:`180^{\circ} = \alpha + ( \alpha + \beta ) + \beta = 2\,( \alpha + \beta )`，由此得出：:math:`\alpha + \beta = 90^{\circ}`。
+
+    因此，:math:`\angle\,ACB = 90^{\circ}`。【证毕】
     
-    To prove this, let ``O`` be the center of the circle and draw the line segment :math:`\overline{OC}`, as in
-    Figure :ref:`Figure 1.1.3(b) <Figure 1.1.3>`. Let :math:`\alpha = \angle\,BAC` and :math:`\beta = \angle\,ABC`. Since
-    :math:`\overline{AB}` is a diameter of the circle, :math:`\overline{OA}` and :math:`\overline{OC}` have the same
-    length (namely, the circle's radius). This means that :math:`\triangle\,OAC` is an isosceles triangle,
-    and so :math:`\angle\,OCA = \angle\,OAC = \alpha`. Likewise, :math:`\triangle\,OBC` is an
-    isosceles triangle and :math:`\angle\,OCB = \angle\,OBC = \beta`. So we see that :math:`\angle\,ACB = \alpha + \beta`. 
-    And since the angles of :math:`\triangle\,ABC` must add up to :math:`180^{\circ}`, we see that
-    :math:`180^{\circ} = \alpha + ( \alpha + \beta ) + \beta = 2\,( \alpha + \beta )`, so :math:`\alpha + \beta = 90^{\circ}`. Thus, :math:`\angle\,ACB = 90^{\circ}`. 【QED】
+    .. toggle::
+
+        *Thales' Theorem* states that if :math:`A`, :math:`B`, and :math:`C` are (distinct) points on a circle such that
+        the line segment :math:`\overline{AB}` is a diameter of the circle, then the angle :math:`\angle\,ACB` is a
+        right angle (see Figure :ref:`Figure 1.1.3(a) <Figure 1.1.3>` ). In other words, the triangle :math:`\triangle\,ABC` is a
+        right triangle.
+
+        .. figure:: ./img/f1.1.3.png
+            :align: center 
+
+            **Figure 1.1.3 Thales' Theorem:** :math:`\angle\,ACB = 90^{\circ}`
+        
+        To prove this, let ``O`` be the center of the circle and draw the line segment :math:`\overline{OC}`, as in
+        Figure :ref:`Figure 1.1.3(b) <Figure 1.1.3>`. Let :math:`\alpha = \angle\,BAC` and :math:`\beta = \angle\,ABC`. Since
+        :math:`\overline{AB}` is a diameter of the circle, :math:`\overline{OA}` and :math:`\overline{OC}` have the same
+        length (namely, the circle's radius). This means that :math:`\triangle\,OAC` is an isosceles triangle,
+        and so :math:`\angle\,OCA = \angle\,OAC = \alpha`. Likewise, :math:`\triangle\,OBC` is an
+        isosceles triangle and :math:`\angle\,OCB = \angle\,OBC = \beta`. So we see that :math:`\angle\,ACB = \alpha + \beta`. 
+        And since the angles of :math:`\triangle\,ABC` must add up to :math:`180^{\circ}`, we see that
+        :math:`180^{\circ} = \alpha + ( \alpha + \beta ) + \beta = 2\,( \alpha + \beta )`, so :math:`\alpha + \beta = 90^{\circ}`. Thus, :math:`\angle\,ACB = 90^{\circ}`. 【QED】
+
 
 .. _Figure 1.1.4:
 
 .. figure:: ./img/f1.1.4.png
     :align: right 
 
-    **Figure 1.1.4**
+    **图 1.1.4**
 
-In a right triangle, the side opposite the right angle is called the
-**hypotenuse**, and the other two sides are called its
-**legs**. For example, in :ref:`Figure 1.1.4 <Figure 1.1.4>` the right angle
-is :math:`C`, the hypotenuse is the line segment :math:`\overline{AB}`, which has length :math:`C`, and
-:math:`\overline{BC}` and :math:`\overline{AC}` are the legs, with lengths :math:`A` and :math:`B`, respectively. The
-hypotenuse is always the longest side of a right triangle (see :ref:`Exercise 11 <Exercise 11>` ).
+在一个直角三角形中，与直角相对的边称为 **斜边** ，其余两条边称为 **直角边** 。例如，在 :ref:`图 1.1.4 <Figure 1.1.4>` 中，直角为 :math:`C`，斜边是线段 :math:`\overline{AB}`，其长度为 :math:`C`，而 :math:`\overline{BC}` 与 :math:`\overline{AC}` 是直角边，长度分别为 :math:`A` 和 :math:`B`。斜边总是直角三角形中最长的一边（参见 :ref:`练习 11 <Exercise 11>`）。
 
-By knowing the lengths of two sides of a right triangle, the length of the third side can be
-determined by using the **Pythagorean Theorem**:
+当已知直角三角形中的两条边长度时，可以通过 **毕达哥拉斯定理** 求出第三边的长度：
 
-  **Pythagorean Theorem:** The square of the length of the hypotenuse of a right triangle is
-  equal to the sum of the squares of the lengths of its legs.
+  **毕达哥拉斯定理：** 直角三角形斜边的平方等于两条直角边的平方和。
 
-Thus, if a right triangle has a hypotenuse of length :math:`C` and legs of lengths :math:`A` and :math:`B`, as in
-Figure :ref:`Figure 1.1.4 <Figure 1.1.4>`, then the Pythagorean Theorem says:
+因此，如果一个直角三角形的斜边长为 :math:`C`，两条直角边长为 :math:`A` 和 :math:`B`，如图 :ref:`图 1.1.4 <Figure 1.1.4>` 所示，那么毕达哥拉斯定理表明：
 
 .. math::
    :label: equation 1.1
 
     \boxed{a^2 ~+~ b^2 ~=~ c^2}
 
-Let us prove this. In the right triangle :math:`\triangle\,ABC` in :ref:`Figure 1.1.5 (a) <Figure 1.1.5>` below, if we draw a line segment from the vertex :math:`C` to the point ``d`` on the hypotenuse such that :math:`\overline{CD}` is **perpendicular** to :math:`\overline{AB}` (that is, :math:`\overline{CD}` forms a right angle with :math:`\overline{AB}`), then this divides :math:`\triangle\,ABC` into two smaller triangles :math:`\triangle\,CBD` and :math:`\triangle\,ACD`, which are both similar to :math:`\triangle\,ABC`.
+我们来证明这个定理。如下图 :ref:`图 1.1.5 (a) <Figure 1.1.5>` 中的直角三角形 :math:`\triangle\,ABC`，若从顶点 :math:`C` 向斜边上的一点 ``d`` 作线段 :math:`\overline{CD}`，使得 :math:`\overline{CD}` **垂直于** :math:`\overline{AB}` （即 :math:`\overline{CD}` 与 :math:`\overline{AB}` 成直角），那么该线段将三角形 :math:`\triangle\,ABC` 分成两个较小的三角形 :math:`\triangle\,CBD` 和 :math:`\triangle\,ACD`，它们都与 :math:`\triangle\,ABC` 相似。
 
 .. _Figure 1.1.5:
 
 .. figure:: ./img/f1.1.5.png
     :align: center 
 
-    **Figure 1.1.5 Similar triangles** :math:`\triangle\,ABC`, :math:`\triangle\,CBD`, :math:`\triangle\,ACD`
+    **图 1.1.5 相似三角形** :math:`\triangle\,ABC`、:math:`\triangle\,CBD`、:math:`\triangle\,ACD`
 
-Recall that triangles are **similar** if their
-corresponding angles are equal, and that similarity implies that corresponding sides are
-proportional. Thus, since :math:`\triangle\,ABC` is similar to :math:`\triangle\,CBD`, by proportionality of
-corresponding sides we see that
+回顾一下，如果两个三角形的对应角相等，则称它们 **相似** ，而相似三角形的对应边成比例。因此，由于 :math:`\triangle\,ABC` 与 :math:`\triangle\,CBD` 相似，根据对应边成比例可得：
 
 .. math::
 
-    \overline{AB}~\text{is to}~\overline{CB}~\text{(hypotenuses)} \space \text{as} \space
-    \overline{BC}~\text{is to}~\overline{BD}~\text{(vertical legs)}
+    \overline{AB}~\text{对应}~\overline{CB}~\text{（斜边）} \space \text{就如同} \space
+    \overline{BC}~\text{对应}~\overline{BD}~\text{（垂直边）}
     \quad\Rightarrow\quad \frac{c}{a} ~=~ \frac{a}{d} \quad\Rightarrow\quad cd ~=~ a^2 ~.
 
-Since :math:`\triangle\,ABC` is similar to :math:`\triangle\,ACD`, comparing horizontal legs and hypotenuses
-gives
+又因为 :math:`\triangle\,ABC` 与 :math:`\triangle\,ACD` 相似，比较水平边和斜边可得：
 
 .. math::
 
     \frac{b}{c-d} ~=~ \frac{c}{b} \quad\Rightarrow\quad b^2 ~=~ c^2 ~-~ cd ~=~ c ^2 ~-~ a^2
-    \quad\Rightarrow\quad a^2 ~+~ b^2 ~=~ c^2 ~.  \text{【QED】}
+    \quad\Rightarrow\quad a^2 ~+~ b^2 ~=~ c^2 ~.  \text{【证毕】}
 
-Note: The symbols :math:`\perp`  and :math:`\sim` denote
-perpendicularity and similarity, respectively. For example, in the above
-proof we had :math:`\,\overline{CD} \perp \overline{AB}\,` and
-:math:`\,\triangle\,ABC \sim \triangle\,CBD \sim \triangle\,ACD`.
+注：符号 :math:`\perp` 和 :math:`\sim` 分别表示垂直与相似。例如，在上述证明中我们有 :math:`\,\overline{CD} \perp \overline{AB}\,` 且  
+:math:`\,\triangle\,ABC \sim \triangle\,CBD \sim \triangle\,ACD`。
+
+
+.. toggle::
+
+    .. figure:: ./img/f1.1.4.png
+        :align: right 
+
+        **Figure 1.1.4**
+
+    In a right triangle, the side opposite the right angle is called the
+    **hypotenuse**, and the other two sides are called its
+    **legs**. For example, in :ref:`Figure 1.1.4 <Figure 1.1.4>` the right angle
+    is :math:`C`, the hypotenuse is the line segment :math:`\overline{AB}`, which has length :math:`C`, and
+    :math:`\overline{BC}` and :math:`\overline{AC}` are the legs, with lengths :math:`A` and :math:`B`, respectively. The
+    hypotenuse is always the longest side of a right triangle (see :ref:`Exercise 11 <Exercise 11>` ).
+
+    By knowing the lengths of two sides of a right triangle, the length of the third side can be
+    determined by using the **Pythagorean Theorem**:
+
+    **Pythagorean Theorem:** The square of the length of the hypotenuse of a right triangle is
+    equal to the sum of the squares of the lengths of its legs.
+
+    Thus, if a right triangle has a hypotenuse of length :math:`C` and legs of lengths :math:`A` and :math:`B`, as in
+    Figure :ref:`Figure 1.1.4 <Figure 1.1.4>`, then the Pythagorean Theorem says:
+
+    .. math::
+    :label: equation 1.1
+
+        \boxed{a^2 ~+~ b^2 ~=~ c^2}
+
+    Let us prove this. In the right triangle :math:`\triangle\,ABC` in :ref:`Figure 1.1.5 (a) <Figure 1.1.5>` below, if we draw a line segment from the vertex :math:`C` to the point ``d`` on the hypotenuse such that :math:`\overline{CD}` is **perpendicular** to :math:`\overline{AB}` (that is, :math:`\overline{CD}` forms a right angle with :math:`\overline{AB}`), then this divides :math:`\triangle\,ABC` into two smaller triangles :math:`\triangle\,CBD` and :math:`\triangle\,ACD`, which are both similar to :math:`\triangle\,ABC`.
+
+    .. figure:: ./img/f1.1.5.png
+        :align: center 
+
+        **Figure 1.1.5 Similar triangles** :math:`\triangle\,ABC`, :math:`\triangle\,CBD`, :math:`\triangle\,ACD`
+
+    Recall that triangles are **similar** if their
+    corresponding angles are equal, and that similarity implies that corresponding sides are
+    proportional. Thus, since :math:`\triangle\,ABC` is similar to :math:`\triangle\,CBD`, by proportionality of
+    corresponding sides we see that
+
+    .. math::
+
+        \overline{AB}~\text{is to}~\overline{CB}~\text{(hypotenuses)} \space \text{as} \space
+        \overline{BC}~\text{is to}~\overline{BD}~\text{(vertical legs)}
+        \quad\Rightarrow\quad \frac{c}{a} ~=~ \frac{a}{d} \quad\Rightarrow\quad cd ~=~ a^2 ~.
+
+    Since :math:`\triangle\,ABC` is similar to :math:`\triangle\,ACD`, comparing horizontal legs and hypotenuses
+    gives
+
+    .. math::
+
+        \frac{b}{c-d} ~=~ \frac{c}{b} \quad\Rightarrow\quad b^2 ~=~ c^2 ~-~ cd ~=~ c ^2 ~-~ a^2
+        \quad\Rightarrow\quad a^2 ~+~ b^2 ~=~ c^2 ~.  \text{【QED】}
+
+    Note: The symbols :math:`\perp`  and :math:`\sim` denote
+    perpendicularity and similarity, respectively. For example, in the above
+    proof we had :math:`\,\overline{CD} \perp \overline{AB}\,` and
+    :math:`\,\triangle\,ABC \sim \triangle\,CBD \sim \triangle\,ACD`.
 
 --------------
 
@@ -309,31 +479,60 @@ proof we had :math:`\,\overline{CD} \perp \overline{AB}\,` and
 
 .. admonition:: Example 1.3
 
-    For each right triangle below, determine the length of the unknown side:
+    对于下列每一个直角三角形，求出未知边的长度：
 
     .. figure:: ./img/e1.3.png
         :align: center
-      
-    **Solution:** For triangle :math:`\triangle\,ABC`, the Pythagorean Theorem says that
+
+    **解答：** 对于三角形 :math:`\triangle\,ABC`，根据毕达哥拉斯定理可得：
 
     .. math::
 
         a^2 ~+~ 4^2 ~=~ 5^2 \quad\Rightarrow\quad a^2 ~=~ 25 ~-~ 16 ~=~ 9 \quad\Rightarrow\quad
         \boxed{a ~=~ 3} ~.
 
-    For triangle :math:`\triangle\,DEF`, the Pythagorean Theorem says that
-    
+    对于三角形 :math:`\triangle\,DEF`，根据毕达哥拉斯定理可得：
+
     .. math::
 
         e^2 ~+~ 1^2 ~=~ 2^2 \quad\Rightarrow\quad e^2 ~=~ 4 ~-~ 1 ~=~ 3 \quad\Rightarrow\quad
         \boxed{e ~=~ \sqrt{3}} ~.
 
-    For triangle :math:`\triangle\,XYZ`, the Pythagorean Theorem says that
+    对于三角形 :math:`\triangle\,XYZ`，根据毕达哥拉斯定理可得：
 
     .. math::
-      
+        
         1^2 ~+~ 1^2 ~=~ z^2 \quad\Rightarrow\quad z^2 ~=~ 2 \quad\Rightarrow\quad
         \boxed{z ~=~ \sqrt{2}} ~.
+
+
+    .. toggle::
+
+        For each right triangle below, determine the length of the unknown side:
+
+        .. figure:: ./img/e1.3.png
+            :align: center
+            
+        **Solution:** For triangle :math:`\triangle\,ABC`, the Pythagorean Theorem says that
+
+        .. math::
+
+            a^2 ~+~ 4^2 ~=~ 5^2 \quad\Rightarrow\quad a^2 ~=~ 25 ~-~ 16 ~=~ 9 \quad\Rightarrow\quad
+            \boxed{a ~=~ 3} ~.
+
+        For triangle :math:`\triangle\,DEF`, the Pythagorean Theorem says that
+
+        .. math::
+
+            e^2 ~+~ 1^2 ~=~ 2^2 \quad\Rightarrow\quad e^2 ~=~ 4 ~-~ 1 ~=~ 3 \quad\Rightarrow\quad
+            \boxed{e ~=~ \sqrt{3}} ~.
+
+        For triangle :math:`\triangle\,XYZ`, the Pythagorean Theorem says that
+
+        .. math::
+            
+            1^2 ~+~ 1^2 ~=~ z^2 \quad\Rightarrow\quad z^2 ~=~ 2 \quad\Rightarrow\quad
+            \boxed{z ~=~ \sqrt{2}} ~.
 
 .. _Example 1.4:
 
@@ -342,120 +541,185 @@ proof we had :math:`\,\overline{CD} \perp \overline{AB}\,` and
     .. figure:: ./img/e1.4.png
         :align: right
 
-    A 17 ft ladder leaning against a wall has its foot 8 ft from the base of the wall. At what height
-    is the top of the ladder touching the wall?
+    一架 17 英尺长的梯子倚靠在墙上，梯子的底端距离墙基 8 英尺。梯子的顶端接触墙面的高度是多少？
 
-    **Solution:** Let ``h`` be the height at which the ladder touches the wall. We can
-    assume that the ground makes a right angle with the wall, as in the picture on the right. Then we
-    see that the ladder, ground, and wall form a right triangle with a hypotenuse of length 17 ft (the
-    length of the ladder) and legs with lengths 8 ft and ``h`` ft. So by the Pythagorean Theorem, we have
+    **解答：** 设 ``h`` 为梯子接触墙面的高度。我们可以假设地面与墙壁成直角，如右图所示。那么我们可以看到，梯子、地面和墙壁构成了一个直角三角形，其斜边长为 17 英尺（即梯子的长度），两条直角边分别为 8 英尺和 ``h`` 英尺。因此，根据毕达哥拉斯定理，有：
 
     .. math::
 
         h^2 ~+~ 8^2 ~=~ 17^2 \quad\Rightarrow\quad h^2 ~=~ 289 ~-~ 64 ~=~ 225 \quad\Rightarrow\quad
-        \boxed{h ~=~ 15 ~\text{ft}} ~.
+        \boxed{h ~=~ 15 ~\text{英尺}} ~.
+
+    .. toggle::
+
+        .. figure:: ./img/e1.4.png
+            :align: right
+
+        A 17 ft ladder leaning against a wall has its foot 8 ft from the base of the wall. At what height
+        is the top of the ladder touching the wall?
+
+        **Solution:** Let ``h`` be the height at which the ladder touches the wall. We can
+        assume that the ground makes a right angle with the wall, as in the picture on the right. Then we
+        see that the ladder, ground, and wall form a right triangle with a hypotenuse of length 17 ft (the
+        length of the ladder) and legs with lengths 8 ft and ``h`` ft. So by the Pythagorean Theorem, we have
+
+        .. math::
+
+            h^2 ~+~ 8^2 ~=~ 17^2 \quad\Rightarrow\quad h^2 ~=~ 289 ~-~ 64 ~=~ 225 \quad\Rightarrow\quad
+            \boxed{h ~=~ 15 ~\text{ft}} ~.
 
 ------------
 
-Exercises
+练习
 ~~~~~~~~~~~~
+Exercises
 
-For Exercises 1-4, find the numeric value of the indicated angle(s) for the
-triangle :math:`\triangle\,ABC`.
+对于练习 1–4，求出三角形 :math:`\triangle\,ABC` 中所标角的数值：
 
-1. Find :math:`B` if :math:`A = 15^{\circ}` and :math:`C = 50^{\circ}`.
-2. Find :math:`C` if :math:`A = 110^{\circ}` and :math:`B = 31^{\circ}`.
-3. Find :math:`A` and :math:`B` if :math:`C = 24^{\circ}`, :math:`A = \alpha`, and :math:`B = 2\alpha`.
-4. Find :math:`A`, :math:`B`, and :math:`C` if :math:`A = \beta` and :math:`B = C = 4\beta`.
+1. 若 :math:`A = 15^{\circ}` 且 :math:`C = 50^{\circ}`，求 :math:`B`。
+2. 若 :math:`A = 110^{\circ}` 且 :math:`B = 31^{\circ}`，求 :math:`C`。
+3. 若 :math:`C = 24^{\circ}`、:math:`A = \alpha` 且 :math:`B = 2\alpha`，求 :math:`A` 和 :math:`B`。
+4. 若 :math:`A = \beta` 且 :math:`B = C = 4\beta`，求 :math:`A`、:math:`B` 和 :math:`C`。
 
-For Exercises 5-8, find the numeric value of the indicated angle(s) for the right
-triangle :math:`\triangle\,ABC`, with :math:`C` being the right angle.
+.. toggle::
 
-5. Find :math:`B` if :math:`A = 45^{\circ}`.
-6. Find :math:`A` and :math:`B` if :math:`A = \alpha` and :math:`B = 2\alpha`.
-7. Find :math:`A` and :math:`B` if :math:`A = \phi` and :math:`B = \phi^2`.
-8. Find :math:`A` and :math:`B` if :math:`A = \theta` and :math:`B = 1/\theta`.
- 
-9. A car goes 24 miles due north then 7 miles due east. What is the straight distance between the car's starting point and end point?
-10. One end of a rope is attached to the top of a pole 100 ft high. If the rope is 150 ft long, what is the maximum distance along the ground from the base of the pole to where the other end can be attached? You may assume that the pole is perpendicular to the ground.
+    For Exercises 1-4, find the numeric value of the indicated angle(s) for the
+    triangle :math:`\triangle\,ABC`.
+
+    1. Find :math:`B` if :math:`A = 15^{\circ}` and :math:`C = 50^{\circ}`.
+    2. Find :math:`C` if :math:`A = 110^{\circ}` and :math:`B = 31^{\circ}`.
+    3. Find :math:`A` and :math:`B` if :math:`C = 24^{\circ}`, :math:`A = \alpha`, and :math:`B = 2\alpha`.
+    4. Find :math:`A`, :math:`B`, and :math:`C` if :math:`A = \beta` and :math:`B = C = 4\beta`.
+
+
+对于练习 5–8，求出直角三角形 :math:`\triangle\,ABC` 中所标角的数值，设 :math:`C` 为直角。
+
+5. 若 :math:`A = 45^{\circ}`，求 :math:`B`。
+6. 若 :math:`A = \alpha` 且 :math:`B = 2\alpha`，求 :math:`A` 和 :math:`B`。
+7. 若 :math:`A = \phi` 且 :math:`B = \phi^2`，求 :math:`A` 和 :math:`B`。
+8. 若 :math:`A = \theta` 且 :math:`B = 1/\theta`，求 :math:`A` 和 :math:`B`。
+
+9. 一辆车先向正北行驶 24 英里，再向正东方向行驶 7 英里。问这辆车从起点到终点的直线距离是多少？
+
+10. 一端固定在 100 英尺高的杆顶的绳索，如果绳长为 150 英尺，那么它在地面上从杆底最多可以延伸到多远的距离？可以假设杆与地面垂直。
+
+.. toggle::
+
+    For Exercises 5-8, find the numeric value of the indicated angle(s) for the right
+    triangle :math:`\triangle\,ABC`, with :math:`C` being the right angle.
+
+    5. Find :math:`B` if :math:`A = 45^{\circ}`.
+    6. Find :math:`A` and :math:`B` if :math:`A = \alpha` and :math:`B = 2\alpha`.
+    7. Find :math:`A` and :math:`B` if :math:`A = \phi` and :math:`B = \phi^2`.
+    8. Find :math:`A` and :math:`B` if :math:`A = \theta` and :math:`B = 1/\theta`.
+    
+    9. A car goes 24 miles due north then 7 miles due east. What is the straight distance between the car's starting point and end point?
+    10. One end of a rope is attached to the top of a pole 100 ft high. If the rope is 150 ft long, what is the maximum distance along the ground from the base of the pole to where the other end can be attached? You may assume that the pole is perpendicular to the ground.
+
+
 
 .. _exercises 11:
 
-11. Prove that the hypotenuse is the longest side in every right triangle. (*Hint: Is* :math:`a^2 + b^2 > a^2` ? )
-12. Can a right triangle have sides with lengths 2, 5, and 6? Explain your answer. 
-13. If the lengths :math:`A`,  :math:`B` , and :math:`C` of the sides of a right triangle are positive integers, with :math:`a^2 + b^2 = c^2`, then they form what is called a **Pythagorean triple**. The triple is normally written as (:math:`A`, :math:`B`, :math:`C`). For example, (3,4,5) and (5,12,13) are well-known Pythagorean triples.
+11. 证明在每个直角三角形中，斜边是最长的一边。（*提示：是否有* :math:`a^2 + b^2 > a^2`？）
 
-    (a) Show that (6,8,10) is a Pythagorean triple.
-    (b) Show that if (:math:`A`, :math:`B`, :math:`C`) is a Pythagorean triple then so is :math:`(ka, kb, kc)` for any integer :math:`k >0`. How would you interpret this geometrically?
-    (c) Show that (``2mn``, :math:`m^2 - n^2` , :math:`m^2 + n^2`) is a Pythagorean triple for all integers ``m > n > 0``.
-    (d) The triple in part(c) is known as **Euclid's formula** for generating Pythagorean triples. Write down the first ten Pythagorean triples generated by this formula, i.e. use: ``m=2`` and ``n=1``; ``m=3`` and ``n=1``, ``2``; ``m=4`` and ``n=1``, ``2``, ``3``; ``m=5`` and ``n=1``, ``2``, ``3``, ``4``.
+12. 一个直角三角形能否具有边长为 2、5 和 6 的三边？解释你的答案。
+
+13. 如果直角三角形的三边长度 :math:`A`、:math:`B` 和 :math:`C` 是正整数，且满足 :math:`a^2 + b^2 = c^2`，那么它们构成所谓的 **勾股数（三元组）** 。这个三元组通常写作 (:math:`A`, :math:`B`, :math:`C`)。例如，(3,4,5) 和 (5,12,13) 是著名的勾股三元组。
+
+    (a) 说明 (6,8,10) 是一个勾股三元组。  
+    (b) 说明如果 (:math:`A`, :math:`B`, :math:`C`) 是一个勾股三元组，那么对于任意整数 :math:`k > 0`，:math:`(ka, kb, kc)` 也是勾股三元组。你如何从几何角度理解这一点？  
+    (c) 说明对任意满足 ``m > n > 0`` 的整数 ``m`` 与 ``n``，三元组 (``2mn``, :math:`m^2 - n^2`, :math:`m^2 + n^2`) 是勾股三元组。  
+    (d) 第 (c) 小题中的三元组是由 **欧几里得公式** 生成的勾股三元组。写出由该公式生成的前十组勾股三元组，即使用：``m=2`` 且 ``n=1``；``m=3`` 且 ``n=1``、``2``；``m=4`` 且 ``n=1``、``2``、``3``；``m=5`` 且 ``n=1``、``2``、``3``、``4``。
 
 .. _exer:tanline:
 
-14. This exercise will describe how to draw a line through any point outside a circle such that the line intersects the circle at only one point. This is called a *tangent line* **tangent line** to the circle (see the picture on the left in :ref:`Figure 1.1.6 <Figure 1.1.6>`), a notion which we will use throughout the text.
+14. 本练习将说明如何从圆外的一点作一条直线，使其仅与圆相交于一点。这种线称为该圆的 *切线* （ **tangent line** ，见 :ref:`图 1.1.6 <Figure 1.1.6>` 中左图），本书后续内容中将反复用到这一概念。
 
-    .. _Figure 1.1.6:
+    .. _图 1.1.6:
 
     .. figure:: ./img/f1.1.6.png
         :align: center 
 
-        **Figure 1.1.6**
+        **图 1.1.6**
  
-    On a sheet of paper draw a circle of radius 1 inch, and call the center of that circle ``O``. Pick a point ``P`` which is ``2.5`` inches away from ``O``. Draw the circle which has :math:`\overline{OP}` as a diameter, as in the picture on the right in :ref:`Figure 1.1.6 <Figure 1.1.6>`. Let :math:`A` be one of the points where this circle intersects the first circle. Draw the line through ``P`` and :math:`A`. In general the tangent line through a point on a circle is perpendicular to the line joining that point to the center of the circle (why?). Use this fact to explain why the line you drew is the tangent line through :math:`A` and to calculate the length of :math:`\overline{PA}`. Does it match the physical measurement of :math:`\overline{PA}`?
-
+    在一张纸上画一个半径为 1 英寸的圆，设该圆心为 ``O``。选取一点 ``P``，其与 ``O`` 的距离为 ``2.5`` 英寸。画以 :math:`\overline{OP}` 为直径的圆，如 :ref:`图 1.1.6 <Figure 1.1.6>` 右图所示。设 :math:`A` 为这个新圆与第一个圆的交点之一。作一条通过 ``P`` 和 :math:`A` 的直线。一般而言，圆上一点处的切线与该点到圆心的连线垂直（为什么？）。利用这个事实解释你所作的线为何是通过 :math:`A` 的切线，并计算线段 :math:`\overline{PA}` 的长度。它是否与物理测量值一致？
 
 .. figure:: ./img/e1.1.15.png
     :align: right
 
-15. Suppose that :math:`\triangle\,ABC` is a triangle with side :math:`\overline{AB}` a diameter of a circle with center ``O``, as in the picture on the right, and suppose that the vertex :math:`C` lies on the circle. Now imagine that you rotate the circle :math:`180^{\circ}` around its center, so that :math:`\triangle\,ABC` is in a new position, as indicated by the dashed lines in the picture. Explain how this picture proves Thales' Theorem.
+15. 假设三角形 :math:`\triangle\,ABC` 中的边 :math:`\overline{AB}` 是某个圆的直径，圆心为 ``O``，如右图所示，且顶点 :math:`C` 位于圆上。现在设想将圆绕其圆心旋转 :math:`180^{\circ}`，使三角形 :math:`\triangle\,ABC` 到达图中虚线所示的新位置。解释该图如何证明了泰勒斯定理。
+
+.. toggle::
+
+    11.  Prove that the hypotenuse is the longest side in every right triangle. (*Hint: Is* :math:`a^2 + b^2 > a^2` ? )
+    12.  Can a right triangle have sides with lengths 2, 5, and 6? Explain your answer. 
+    13.  If the lengths :math:`A`,  :math:`B` , and :math:`C` of the sides of a right triangle are positive integers, with :math:`a^2 + b^2 = c^2`, then they form what is called a **Pythagorean triple**. The triple is normally written as (:math:`A`, :math:`B`, :math:`C`). For example, (3,4,5) and (5,12,13) are well-known Pythagorean triples.
+
+        (a) Show that (6,8,10) is a Pythagorean triple.
+        (b) Show that if (:math:`A`, :math:`B`, :math:`C`) is a Pythagorean triple then so is :math:`(ka, kb, kc)` for any integer :math:`k >0`. How would you interpret this geometrically?
+        (c) Show that (``2mn``, :math:`m^2 - n^2` , :math:`m^2 + n^2`) is a Pythagorean triple for all integers ``m > n > 0``.
+        (d) The triple in part(c) is known as **Euclid's formula** for generating Pythagorean triples. Write down the first ten Pythagorean triples generated by this formula, i.e. use: ``m=2`` and ``n=1``; ``m=3`` and ``n=1``, ``2``; ``m=4`` and ``n=1``, ``2``, ``3``; ``m=5`` and ``n=1``, ``2``, ``3``, ``4``.
+
+
+    14. This exercise will describe how to draw a line through any point outside a circle such that the line intersects the circle at only one point. This is called a *tangent line* **tangent line** to the circle (see the picture on the left in :ref:`Figure 1.1.6 <Figure 1.1.6>`), a notion which we will use throughout the text.
+
+
+        .. figure:: ./img/f1.1.6.png
+            :align: center 
+
+            **Figure 1.1.6**
+    
+        On a sheet of paper draw a circle of radius 1 inch, and call the center of that circle ``O``. Pick a point ``P`` which is ``2.5`` inches away from ``O``. Draw the circle which has :math:`\overline{OP}` as a diameter, as in the picture on the right in :ref:`Figure 1.1.6 <Figure 1.1.6>`. Let :math:`A` be one of the points where this circle intersects the first circle. Draw the line through ``P`` and :math:`A`. In general the tangent line through a point on a circle is perpendicular to the line joining that point to the center of the circle (why?). Use this fact to explain why the line you drew is the tangent line through :math:`A` and to calculate the length of :math:`\overline{PA}`. Does it match the physical measurement of :math:`\overline{PA}`?
+
+
+    .. figure:: ./img/e1.1.15.png
+        :align: right
+
+    15. Suppose that :math:`\triangle\,ABC` is a triangle with side :math:`\overline{AB}` a diameter of a circle with center ``O``, as in the picture on the right, and suppose that the vertex :math:`C` lies on the circle. Now imagine that you rotate the circle :math:`180^{\circ}` around its center, so that :math:`\triangle\,ABC` is in a new position, as indicated by the dashed lines in the picture. Explain how this picture proves Thales' Theorem.
 
 ----------------
 
-1.2 Trigonometric Functions of an Acute Angle
+1.2 锐角的三角函数
 ------------------------------------------------
+1.2 Trigonometric Functions of an Acute Angle
 
 .. figure:: ./img/f1.2.0.png
     :align: right
     :scale: 70%
 
-Consider a right triangle :math:`\triangle\,ABC`, with the right angle at :math:`C` and with lengths :math:`A`, :math:`B`,
-and :math:`C`, as in the figure on the right. For the acute angle :math:`A`, call the leg :math:`\overline{BC}` its
-**opposite side**, and call the leg :math:`\overline{AC}` its **adjacent side**. Recall
-that the hypotenuse of the triangle is the side :math:`\overline{AB}`. The ratios of sides of a right
-triangle occur often enough in practical applications to warrant their own names, so we define the
-six **trigonometric functions** of :math:`A` as follows:
+设有一个直角三角形 :math:`\triangle\,ABC`，其中直角在 :math:`C`，边长为 :math:`A`、:math:`B` 和 :math:`C`，如右图所示。对于锐角 :math:`A`，将边 :math:`\overline{BC}` 称为它的 **对边**，将边 :math:`\overline{AC}` 称为它的 **邻边**。回忆一下，三角形的斜边是边 :math:`\overline{AB}`。在实际应用中，直角三角形的边长比值经常出现，因此我们为这些比值定义六个 **三角函数** 如下：
 
 .. _Table 1.2:
 
 .. _tbl:funcs:
 
-**Table 1.2 The six trigonometric functions of** :math:`A`
+**表 1.2** :math:`A` **的六个三角函数**
 
 .. list-table::
 
-    * - **Name of function**
-      - **Abbreviation**
-      - **Definition**
-    * - sine :math:`A`
+    * - **函数名称**
+      - **缩写**
+      - **定义**
+    * - 正弦 :math:`A`
       - :math:`\sin A`
-      - :math:`= \dfrac{\text{opposite side}}{\text{hypotenuse}} = \dfrac{a}{c}`
-    * - cosine :math:`A` 
+      - :math:`= \dfrac{\text{对边}}{\text{斜边}} = \dfrac{a}{c}`
+    * - 余弦 :math:`A` 
       - :math:`\cos A`
-      - :math:`= \dfrac{\text{adjacent side}}{\text{hypotenuse}} = \dfrac{b}{c}`
-    * - tangent :math:`A` 
+      - :math:`= \dfrac{\text{邻边}}{\text{斜边}} = \dfrac{b}{c}`
+    * - 正切 :math:`A` 
       - :math:`\tan A`
-      - :math:`= \dfrac{\text{opposite side}}{\text{adjacent side}} = \dfrac{a}{b}`
-    * - cosecant :math:`A`
+      - :math:`= \dfrac{\text{对边}}{\text{邻边}} = \dfrac{a}{b}`
+    * - 余割 :math:`A`
       - :math:`\csc A` 
-      - :math:`= \dfrac{\text{hypotenuse}}{\text{opposite side}} = \dfrac{c}{a}`
-    * - secant :math:`A`
+      - :math:`= \dfrac{\text{斜边}}{\text{对边}} = \dfrac{c}{a}`
+    * - 正割 :math:`A`
       - :math:`\sec A`
-      - :math:`= \dfrac{\text{hypotenuse}}{\text{adjacent side}} = \dfrac{c}{b}`
-    * - cotangent :math:`A`
+      - :math:`= \dfrac{\text{斜边}}{\text{邻边}} = \dfrac{c}{b}`
+    * - 余切 :math:`A`
       - :math:`\cot A`
-      - :math:`= \dfrac{\text{adjacent side}}{\text{opposite side}} = \dfrac{b}{a}`
+      - :math:`= \dfrac{\text{邻边}}{\text{对边}} = \dfrac{b}{a}`
 
-We will usually use the abbreviated names of the functions. Notice from Table :ref:`1.2 <tbl:funcs>` that the pairs :math:`\sin A` and :math:`\csc A`, :math:`\cos A` and :math:`\sec A`, and :math:`\tan A` and :math:`\cot A` are reciprocals:
+我们通常使用这些函数的缩写形式。从表 :ref:`1.2 <tbl:funcs>` 中可以看出，:math:`\sin A` 与 :math:`\csc A`、:math:`\cos A` 与 :math:`\sec A`、:math:`\tan A` 与 :math:`\cot A` 是互为倒数的关系：
 
 .. math::
 
@@ -467,6 +731,53 @@ We will usually use the abbreviated names of the functions. Notice from Table :r
     \cos A ~=~ \dfrac{1}{\sec A} \qquad\qquad
     \tan A ~=~ \dfrac{1}{\cot A}
 
+.. toggle::
+
+    Consider a right triangle :math:`\triangle\,ABC`, with the right angle at :math:`C` and with lengths :math:`A`, :math:`B`,
+    and :math:`C`, as in the figure on the right. For the acute angle :math:`A`, call the leg :math:`\overline{BC}` its
+    **opposite side**, and call the leg :math:`\overline{AC}` its **adjacent side**. Recall
+    that the hypotenuse of the triangle is the side :math:`\overline{AB}`. The ratios of sides of a right
+    triangle occur often enough in practical applications to warrant their own names, so we define the
+    six **trigonometric functions** of :math:`A` as follows:
+
+    **Table 1.2 The six trigonometric functions of** :math:`A`
+
+    .. list-table::
+
+        * - **Name of function**
+        - **Abbreviation**
+        - **Definition**
+        * - sine :math:`A`
+        - :math:`\sin A`
+        - :math:`= \dfrac{\text{opposite side}}{\text{hypotenuse}} = \dfrac{a}{c}`
+        * - cosine :math:`A` 
+        - :math:`\cos A`
+        - :math:`= \dfrac{\text{adjacent side}}{\text{hypotenuse}} = \dfrac{b}{c}`
+        * - tangent :math:`A` 
+        - :math:`\tan A`
+        - :math:`= \dfrac{\text{opposite side}}{\text{adjacent side}} = \dfrac{a}{b}`
+        * - cosecant :math:`A`
+        - :math:`\csc A` 
+        - :math:`= \dfrac{\text{hypotenuse}}{\text{opposite side}} = \dfrac{c}{a}`
+        * - secant :math:`A`
+        - :math:`\sec A`
+        - :math:`= \dfrac{\text{hypotenuse}}{\text{adjacent side}} = \dfrac{c}{b}`
+        * - cotangent :math:`A`
+        - :math:`\cot A`
+        - :math:`= \dfrac{\text{adjacent side}}{\text{opposite side}} = \dfrac{b}{a}`
+
+    We will usually use the abbreviated names of the functions. Notice from Table :ref:`1.2 <tbl:funcs>` that the pairs :math:`\sin A` and :math:`\csc A`, :math:`\cos A` and :math:`\sec A`, and :math:`\tan A` and :math:`\cot A` are reciprocals:
+
+    .. math::
+
+        \csc A ~=~ \dfrac{1}{\sin A} \qquad\qquad
+        \sec A ~=~ \dfrac{1}{\cos A} \qquad\qquad
+        \cot A ~=~ \dfrac{1}{\tan A} \\ 
+        \\
+        \sin A ~=~ \dfrac{1}{\csc A} \qquad\qquad
+        \cos A ~=~ \dfrac{1}{\sec A} \qquad\qquad
+        \tan A ~=~ \dfrac{1}{\cot A}
+
 .. _Example 1.5:
 
 .. _exmp:funcs345:
@@ -475,37 +786,65 @@ We will usually use the abbreviated names of the functions. Notice from Table :r
 
     .. figure:: ./img/e1.5.png
         :align: right
-      
-    For the right triangle :math:`\triangle\,ABC` shown on the right, find the values of all six trigonometric functions of the acute angles :math:`A` and :math:`B`.
 
-    **Solution:** The hypotenuse of :math:`\triangle\,ABC` has length ``5``. For angle :math:`A`, the opposite side :math:`\overline{BC}` has length ``3`` and the adjacent side :math:`\overline{AC}` has length ``4``. Thus:
+    对于右图所示的直角三角形 :math:`\triangle\,ABC`，求锐角 :math:`A` 和 :math:`B` 的所有六个三角函数值。
+
+    **解答：** 三角形 :math:`\triangle\,ABC` 的斜边长度为 ``5``。对于角 :math:`A`，其对边 :math:`\overline{BC}` 长度为 ``3``，邻边 :math:`\overline{AC}` 长度为 ``4``。因此：
 
     .. math::
 
-        \sin A ~=~ \dfrac{\text{opposite}}{\text{hypotenuse}} ~=~ \dfrac{3}{5} \qquad\qquad
-        \cos A ~=~ \dfrac{\text{adjacent}}{\text{hypotenuse}} ~=~ \dfrac{4}{5} \qquad\qquad
-        \tan A ~=~ \dfrac{\text{opposite}}{\text{adjacent}} ~=~ \dfrac{3}{4}\\
+        \sin A ~=~ \dfrac{\text{对边}}{\text{斜边}} ~=~ \dfrac{3}{5} \qquad\qquad
+        \cos A ~=~ \dfrac{\text{邻边}}{\text{斜边}} ~=~ \dfrac{4}{5} \qquad\qquad
+        \tan A ~=~ \dfrac{\text{对边}}{\text{邻边}} ~=~ \dfrac{3}{4}\\
         \\
-        \csc A ~=~ \dfrac{\text{hypotenuse}}{\text{opposite}} ~=~ \dfrac{5}{3} \qquad\qquad
-        \sec A ~=~ \dfrac{\text{hypotenuse}}{\text{adjacent}} ~=~ \dfrac{5}{4} \qquad\qquad
-        \cot A ~=~ \dfrac{\text{adjacent}}{\text{opposite}} ~=~ \dfrac{4}{3}
+        \csc A ~=~ \dfrac{\text{斜边}}{\text{对边}} ~=~ \dfrac{5}{3} \qquad\qquad
+        \sec A ~=~ \dfrac{\text{斜边}}{\text{邻边}} ~=~ \dfrac{5}{4} \qquad\qquad
+        \cot A ~=~ \dfrac{\text{邻边}}{\text{对边}} ~=~ \dfrac{4}{3}
 
-    For angle :math:`B`, the opposite side :math:`\overline{AC}` has length ``4`` and the adjacent side :math:`\overline{BC}` has length ``3``. Thus:
-    
+    对于角 :math:`B`，其对边 :math:`\overline{AC}` 长度为 ``4``，邻边 :math:`\overline{BC}` 长度为 ``3``。因此：
+
     .. math::
 
-        \sin B ~=~ \dfrac{\text{opposite}}{\text{hypotenuse}} ~=~ \dfrac{4}{5} \qquad\qquad
-        \cos B ~=~ \dfrac{\text{adjacent}}{\text{hypotenuse}} ~=~ \dfrac{3}{5} \qquad\qquad
-        \tan B ~=~ \dfrac{\text{opposite}}{\text{adjacent}} ~=~ \dfrac{4}{3}\\
+        \sin B ~=~ \dfrac{\text{对边}}{\text{斜边}} ~=~ \dfrac{4}{5} \qquad\qquad
+        \cos B ~=~ \dfrac{\text{邻边}}{\text{斜边}} ~=~ \dfrac{3}{5} \qquad\qquad
+        \tan B ~=~ \dfrac{\text{对边}}{\text{邻边}} ~=~ \dfrac{4}{3}\\
         \\
-        \csc B ~=~ \dfrac{\text{hypotenuse}}{\text{opposite}} ~=~ \dfrac{5}{4} \qquad\qquad
-        \sec B ~=~ \dfrac{\text{hypotenuse}}{\text{adjacent}} ~=~ \dfrac{5}{3} \qquad\qquad
-        \cot B ~=~ \dfrac{\text{adjacent}}{\text{opposite}} ~=~ \dfrac{3}{4}
+        \csc B ~=~ \dfrac{\text{斜边}}{\text{对边}} ~=~ \dfrac{5}{4} \qquad\qquad
+        \sec B ~=~ \dfrac{\text{斜边}}{\text{邻边}} ~=~ \dfrac{5}{3} \qquad\qquad
+        \cot B ~=~ \dfrac{\text{邻边}}{\text{对边}} ~=~ \dfrac{3}{4}
 
 
-Notice in Example :ref:`1.5 <exmp:funcs345>` that we did not specify the units for the lengths. This raises the possibility that our answers depended on a triangle of a specific physical size.
+    .. toggle::
 
-For example, suppose that two different students are reading this textbook: one in the United States and one in Germany. The American student thinks that the lengths ``3``, ``4``, and ``5`` in Example :ref:`1.5 <exmp:funcs345>` are measured in inches, while the German student thinks that they are measured in centimeters. Since ``1`` in :math:`\approx 2.54 \text{ cm}`, the students are using triangles of different physical sizes (see Figure :ref:`1.2.1 <fig:similar>` below, not drawn to scale).
+        For the right triangle :math:`\triangle\,ABC` shown on the right, find the values of all six trigonometric functions of the acute angles :math:`A` and :math:`B`.
+
+        **Solution:** The hypotenuse of :math:`\triangle\,ABC` has length ``5``. For angle :math:`A`, the opposite side :math:`\overline{BC}` has length ``3`` and the adjacent side :math:`\overline{AC}` has length ``4``. Thus:
+
+        .. math::
+
+            \sin A ~=~ \dfrac{\text{opposite}}{\text{hypotenuse}} ~=~ \dfrac{3}{5} \qquad\qquad
+            \cos A ~=~ \dfrac{\text{adjacent}}{\text{hypotenuse}} ~=~ \dfrac{4}{5} \qquad\qquad
+            \tan A ~=~ \dfrac{\text{opposite}}{\text{adjacent}} ~=~ \dfrac{3}{4}\\
+            \\
+            \csc A ~=~ \dfrac{\text{hypotenuse}}{\text{opposite}} ~=~ \dfrac{5}{3} \qquad\qquad
+            \sec A ~=~ \dfrac{\text{hypotenuse}}{\text{adjacent}} ~=~ \dfrac{5}{4} \qquad\qquad
+            \cot A ~=~ \dfrac{\text{adjacent}}{\text{opposite}} ~=~ \dfrac{4}{3}
+
+        For angle :math:`B`, the opposite side :math:`\overline{AC}` has length ``4`` and the adjacent side :math:`\overline{BC}` has length ``3``. Thus:
+        
+        .. math::
+
+            \sin B ~=~ \dfrac{\text{opposite}}{\text{hypotenuse}} ~=~ \dfrac{4}{5} \qquad\qquad
+            \cos B ~=~ \dfrac{\text{adjacent}}{\text{hypotenuse}} ~=~ \dfrac{3}{5} \qquad\qquad
+            \tan B ~=~ \dfrac{\text{opposite}}{\text{adjacent}} ~=~ \dfrac{4}{3}\\
+            \\
+            \csc B ~=~ \dfrac{\text{hypotenuse}}{\text{opposite}} ~=~ \dfrac{5}{4} \qquad\qquad
+            \sec B ~=~ \dfrac{\text{hypotenuse}}{\text{adjacent}} ~=~ \dfrac{5}{3} \qquad\qquad
+            \cot B ~=~ \dfrac{\text{adjacent}}{\text{opposite}} ~=~ \dfrac{3}{4}
+
+请注意，在示例 :ref:`1.5 <exmp:funcs345>` 中我们并未指定长度的单位。这就引出了一个问题：我们的答案是否依赖于一个具有特定物理尺寸的三角形。
+
+例如，假设有两个不同的学生在阅读本教材：一个在美国，一个在德国。美国学生认为示例 :ref:`1.5 <exmp:funcs345>` 中的长度 ``3``、``4`` 和 ``5`` 是以英寸为单位，而德国学生认为它们是以厘米为单位。由于 ``1`` 英寸 :math:`\approx 2.54 \text{ cm}`，两个学生使用的是不同物理尺寸的三角形（见下方图 :ref:`1.2.1 <fig:similar>`，图未按比例绘制）。
 
 .. _Figure 1.2.1:
 
@@ -514,14 +853,9 @@ For example, suppose that two different students are reading this textbook: one 
 .. figure:: ./img/f1.2.1.png
     :align: center
 
-    **Figure 1.2.1** :math:`\triangle\,ABC ~\sim~ \triangle\,A'B'C'`
+    **图 1.2.1** :math:`\triangle\,ABC ~\sim~ \triangle\,A'B'C'`
 
-If the American triangle is :math:`\triangle\,ABC` and the German triangle is :math:`\triangle\,A'B'C'`, then
-we see from Figure :ref:`1.2.1 <fig:similar>` that :math:`\triangle\,ABC` is similar to :math:`\triangle\,A'B'C'`, and
-hence the corresponding angles are equal and the ratios of the corresponding sides are equal. In
-fact, we know that common ratio: the sides of :math:`\triangle\,ABC` are approximately ``2.54`` times longer
-than the corresponding sides of :math:`\triangle\,A'B'C'`. So when the American student calculates
-:math:`\sin A` and the German student calculates :math:`\sin A'`, they get the same answer: [3]_
+如果美国学生使用的三角形是 :math:`\triangle\,ABC`，德国学生使用的是 :math:`\triangle\,A'B'C'`，那么我们从图 :ref:`1.2.1 <fig:similar>` 中可以看出，:math:`\triangle\,ABC` 与 :math:`\triangle\,A'B'C'` 是相似三角形，因此对应角相等，对应边的比值相等。事实上，我们知道一个公比：:math:`\triangle\,ABC` 的边大约是 :math:`\triangle\,A'B'C'` 的边的 ``2.54`` 倍。因此，当美国学生计算 :math:`\sin A`，德国学生计算 :math:`\sin A'` 时，他们会得到相同的答案： [3]_
 
 .. math::
 
@@ -529,11 +863,46 @@ than the corresponding sides of :math:`\triangle\,A'B'C'`. So when the American 
     \dfrac{BC}{B'C'} ~=~ \dfrac{AB}{A'B'} \quad\Rightarrow\quad
     \dfrac{BC}{AB} ~=~ \dfrac{B'C'}{A'B'} \quad\Rightarrow\quad \sin A ~=~ \sin A'
 
-Likewise, the other values of the trigonometric functions of :math:`A` and :math:`A'` are the same. In fact, our argument was general enough to work with any similar right triangles. This leads us to the following conclusion:
+同样，角 :math:`A` 与角 :math:`A'` 的其他三角函数值也是相同的。事实上，我们的论证足够一般，适用于任何相似的直角三角形。这引出了以下结论：
 
-  When calculating the trigonometric functions of an acute angle :math:`A`, you may use *any* right triangle which has :math:`A` as one of the angles.
+  当你计算一个锐角 :math:`A` 的三角函数时，可以使用任何一个以 :math:`A` 为角的直角三角形。
 
-Since we defined the trigonometric functions in terms of ratios of sides, you can think of the units of measurement for those sides as canceling out in those ratios. This means that *the values of the trigonometric functions are unitless numbers* . So when the American student calculated ``3/5`` as the value of :math:`\sin A` in Example :ref:`1.5 <exmp:funcs345>`, that is the same as the :math:`3/5` that the German student calculated, despite the different units for the lengths of the sides.
+由于我们是通过边长的比值来定义三角函数的，你可以认为这些边的度量单位在这些比值中被约掉了。这意味着 *三角函数的值是无单位的纯数*。因此，当美国学生在示例 :ref:`1.5 <exmp:funcs345>` 中计算 :math:`\sin A` 的值为 ``3/5`` 时，这与德国学生计算出来的 :math:`3/5` 是相同的，尽管边长的单位不同。
+
+
+.. toggle::
+
+    Notice in Example :ref:`1.5 <exmp:funcs345>` that we did not specify the units for the lengths. This raises the possibility that our answers depended on a triangle of a specific physical size.
+
+    For example, suppose that two different students are reading this textbook: one in the United States and one in Germany. The American student thinks that the lengths ``3``, ``4``, and ``5`` in Example :ref:`1.5 <exmp:funcs345>` are measured in inches, while the German student thinks that they are measured in centimeters. Since ``1`` in :math:`\approx 2.54 \text{ cm}`, the students are using triangles of different physical sizes (see Figure :ref:`1.2.1 <fig:similar>` below, not drawn to scale).
+
+    .. figure:: ./img/f1.2.1.png
+        :align: center
+
+        **Figure 1.2.1** :math:`\triangle\,ABC ~\sim~ \triangle\,A'B'C'`
+
+    If the American triangle is :math:`\triangle\,ABC` and the German triangle is :math:`\triangle\,A'B'C'`, then
+    we see from Figure :ref:`1.2.1 <fig:similar>` that :math:`\triangle\,ABC` is similar to :math:`\triangle\,A'B'C'`, and
+    hence the corresponding angles are equal and the ratios of the corresponding sides are equal. In
+    fact, we know that common ratio: the sides of :math:`\triangle\,ABC` are approximately ``2.54`` times longer
+    than the corresponding sides of :math:`\triangle\,A'B'C'`. So when the American student calculates
+    :math:`\sin A` and the German student calculates :math:`\sin A'`, they get the same answer: [3]_
+
+    .. math::
+
+        \triangle\,ABC ~\sim~ \triangle\,A'B'C' \quad\Rightarrow\quad
+        \dfrac{BC}{B'C'} ~=~ \dfrac{AB}{A'B'} \quad\Rightarrow\quad
+        \dfrac{BC}{AB} ~=~ \dfrac{B'C'}{A'B'} \quad\Rightarrow\quad \sin A ~=~ \sin A'
+
+    Likewise, the other values of the trigonometric functions of :math:`A` and :math:`A'` are the same. In fact, our argument was general enough to work with any similar right triangles. This leads us to the following conclusion:
+
+    When calculating the trigonometric functions of an acute angle :math:`A`, you may use *any* right triangle which has :math:`A` as one of the angles.
+
+    Since we defined the trigonometric functions in terms of ratios of sides, you can think of the units of measurement for those sides as canceling out in those ratios. This means that *the values of the trigonometric functions are unitless numbers* . So when the American student calculated ``3/5`` as the value of :math:`\sin A` in Example :ref:`1.5 <exmp:funcs345>`, that is the same as the :math:`3/5` that the German student calculated, despite the different units for the lengths of the sides.
+
+.. [3] 我们将使用 ``AB`` 表示线段 :math:`\overline{AB}` 的长度。
+       
+       We will use the notation ``AB`` to denote the length of a line segment :math:`\overline{AB}`.
 
 
 .. _Example 1.6:
@@ -545,29 +914,52 @@ Since we defined the trigonometric functions in terms of ratios of sides, you ca
     .. figure:: ./img/e1.6.png
         :align: right
 
-    Find the values of all six trigonometric functions of :math:`45^{\circ}`.
+    求 :math:`45^{\circ}` 的所有六个三角函数值。
 
-    **Solution:** Since we may use any right triangle which has :math:`45^{\circ}` as one of the angles, use the simplest one: take a square whose sides are all ``1`` unit long and divide it in half diagonally, as in the figure on the right. Since the two legs of the triangle :math:`\triangle\,ABC` have the same length, :math:`\triangle\,ABC` is an isosceles triangle, which means that the angles :math:`A` and :math:`B` are equal. So since :math:`A + B = 90^{\circ}`, this means that we must have :math:`A = B = 45^{\circ}`. By the Pythagorean Theorem, the length :math:`C` of the hypotenuse is given by
-    
+    **解：** 由于我们可以使用任何一个包含 :math:`45^{\circ}` 的直角三角形，因此使用最简单的一个：取一个边长为 ``1`` 的正方形，并沿对角线将其对半分，如右图所示。由于三角形 :math:`\triangle\,ABC` 的两条直角边长度相同，:math:`\triangle\,ABC` 是等腰三角形，这意味着角 :math:`A` 与角 :math:`B` 相等。所以，由于 :math:`A + B = 90^{\circ}`，我们得出 :math:`A = B = 45^{\circ}`。根据勾股定理，斜边 :math:`C` 的长度为：
+
     .. math::
 
         c^2 ~=~ 1^2 ~+~ 1^2 ~=~ 2 \quad\Rightarrow\quad c ~=~ \sqrt{2} ~.
 
-    Thus, using the angle :math:`A` we get:
-    
+    因此，使用角 :math:`A`，我们得到：
+
     .. math::
 
-        & \sin45^{\circ} ~=~ \dfrac{\text{opposite}}{\text{hypotenuse}} ~=~ \dfrac{1}{\sqrt{2}} \quad\quad
-        \cos45^{\circ} ~=~ \dfrac{\text{adjacent}}{\text{hypotenuse}} ~=~ \dfrac{1}{\sqrt{2}} \quad\quad
-        \tan45^{\circ} ~=~ \dfrac{\text{opposite}}{\text{adjacent}} ~=~ \dfrac{1}{1} ~=~ 1 \\
+        & \sin45^{\circ} ~=~ \dfrac{\text{对边}}{\text{斜边}} ~=~ \dfrac{1}{\sqrt{2}} \quad\quad
+        \cos45^{\circ} ~=~ \dfrac{\text{邻边}}{\text{斜边}} ~=~ \dfrac{1}{\sqrt{2}} \quad\quad
+        \tan45^{\circ} ~=~ \dfrac{\text{对边}}{\text{邻边}} ~=~ \dfrac{1}{1} ~=~ 1 \\
         \\
-        & \csc45^{\circ} ~=~ \dfrac{\text{hypotenuse}}{\text{opposite}} ~=~ \sqrt{2} \quad\quad
-        \sec45^{\circ} ~=~ \dfrac{\text{hypotenuse}}{\text{adjacent}} ~=~ \sqrt{2} \quad\quad
-        \cot45^{\circ} ~=~ \dfrac{\text{adjacent}}{\text{opposite}} ~=~ \dfrac{1}{1} ~=~ 1
+        & \csc45^{\circ} ~=~ \dfrac{\text{斜边}}{\text{对边}} ~=~ \sqrt{2} \quad\quad
+        \sec45^{\circ} ~=~ \dfrac{\text{斜边}}{\text{邻边}} ~=~ \sqrt{2} \quad\quad
+        \cot45^{\circ} ~=~ \dfrac{\text{邻边}}{\text{对边}} ~=~ \dfrac{1}{1} ~=~ 1
 
-    Note that we would have obtained the same answers if we had used any right triangle similar to :math:`\triangle\,ABC`. For example, if we multiply each side of :math:`\triangle\,ABC` by :math:`\sqrt{2}`, then we would have a similar triangle with legs of length :math:`\sqrt{2}` and hypotenuse of length :math:`2`. This would give us :math:`\sin45^{\circ} = \frac{\sqrt{2}}{2}`, which equals :math:`\frac{\sqrt{2}}{\sqrt{2} \cdot \sqrt{2}} = \frac{1}{\sqrt{2}}` as before. The same goes for the other functions.
+    请注意，如果我们使用任何一个与 :math:`\triangle\,ABC` 相似的直角三角形，也会得到相同的答案。例如，如果将 :math:`\triangle\,ABC` 的每条边都乘以 :math:`\sqrt{2}`，那么我们将得到一个边长为 :math:`\sqrt{2}`，斜边为 :math:`2` 的相似三角形。这将得出 :math:`\sin45^{\circ} = \frac{\sqrt{2}}{2}`，这与之前的 :math:`\frac{\sqrt{2}}{\sqrt{2} \cdot \sqrt{2}} = \frac{1}{\sqrt{2}}` 是相等的。其他函数同理。
 
-.. [3] We will use the notation ``AB`` to denote the length of a line segment :math:`\overline{AB}`.
+    .. toggle::
+
+        Find the values of all six trigonometric functions of :math:`45^{\circ}`.
+
+        **Solution:** Since we may use any right triangle which has :math:`45^{\circ}` as one of the angles, use the simplest one: take a square whose sides are all ``1`` unit long and divide it in half diagonally, as in the figure on the right. Since the two legs of the triangle :math:`\triangle\,ABC` have the same length, :math:`\triangle\,ABC` is an isosceles triangle, which means that the angles :math:`A` and :math:`B` are equal. So since :math:`A + B = 90^{\circ}`, this means that we must have :math:`A = B = 45^{\circ}`. By the Pythagorean Theorem, the length :math:`C` of the hypotenuse is given by
+        
+        .. math::
+
+            c^2 ~=~ 1^2 ~+~ 1^2 ~=~ 2 \quad\Rightarrow\quad c ~=~ \sqrt{2} ~.
+
+        Thus, using the angle :math:`A` we get:
+        
+        .. math::
+
+            & \sin45^{\circ} ~=~ \dfrac{\text{opposite}}{\text{hypotenuse}} ~=~ \dfrac{1}{\sqrt{2}} \quad\quad
+            \cos45^{\circ} ~=~ \dfrac{\text{adjacent}}{\text{hypotenuse}} ~=~ \dfrac{1}{\sqrt{2}} \quad\quad
+            \tan45^{\circ} ~=~ \dfrac{\text{opposite}}{\text{adjacent}} ~=~ \dfrac{1}{1} ~=~ 1 \\
+            \\
+            & \csc45^{\circ} ~=~ \dfrac{\text{hypotenuse}}{\text{opposite}} ~=~ \sqrt{2} \quad\quad
+            \sec45^{\circ} ~=~ \dfrac{\text{hypotenuse}}{\text{adjacent}} ~=~ \sqrt{2} \quad\quad
+            \cot45^{\circ} ~=~ \dfrac{\text{adjacent}}{\text{opposite}} ~=~ \dfrac{1}{1} ~=~ 1
+
+        Note that we would have obtained the same answers if we had used any right triangle similar to :math:`\triangle\,ABC`. For example, if we multiply each side of :math:`\triangle\,ABC` by :math:`\sqrt{2}`, then we would have a similar triangle with legs of length :math:`\sqrt{2}` and hypotenuse of length :math:`2`. This would give us :math:`\sin45^{\circ} = \frac{\sqrt{2}}{2}`, which equals :math:`\frac{\sqrt{2}}{\sqrt{2} \cdot \sqrt{2}} = \frac{1}{\sqrt{2}}` as before. The same goes for the other functions.
+
 
 ----------
 
@@ -580,42 +972,80 @@ Since we defined the trigonometric functions in terms of ratios of sides, you ca
     .. figure:: ./img/e1.7.png
         :align: right
 
+    求 :math:`60^{\circ}` 的所有六个三角函数值。
 
-    Find the values of all six trigonometric functions of :math:`60^{\circ}`.
-
-    **Solution:** Since we may use any right triangle which has :math:`60^{\circ}` as one of the angles, we will use a simple one: take a triangle whose sides are all ``2`` units long and divide it in half by drawing the bisector from one vertex to the opposite side, as in the figure on the right. Since the original triangle was an *equilateral triangle* (i.e. all three sides had the same length), its three angles were all the same, namely :math:`60^{\circ}`. Recall from elementary geometry that the bisector from the vertex angle of an equilateral triangle to its opposite side bisects both the vertex angle and the opposite side. So as in the figure on the right, the triangle :math:`\triangle\,ABC` has angle :math:`A = 60^{\circ}` and angle :math:`B = 30^{\circ}`, which forces the angle :math:`C` to be :math:`90^{\circ}`. Thus, :math:`\triangle\,ABC` is a right triangle. We see that the hypotenuse has length ``c = AB = 2`` and the leg :math:`\overline{AC}` has length :math:`b = AC = 1`. By the Pythagorean Theorem, the length :math:`A` of the leg :math:`\overline{BC}` is given by 
+    **解：** 由于我们可以使用任何一个包含 :math:`60^{\circ}` 的直角三角形，这里选用一个简单的：取一个边长都为 ``2`` 单位的三角形，并通过从一个顶点向对边作角平分线将其对半分割，如右图所示。原三角形是一个 *等边三角形* （即三边长度都相同），其三个角都为 :math:`60^{\circ}`。根据基础几何知识，等边三角形的顶角的角平分线会同时平分顶角和其对边。因此，如右图所示，三角形 :math:`\triangle\,ABC` 中，角 :math:`A = 60^{\circ}`，角 :math:`B = 30^{\circ}`，这使得角 :math:`C` 为 :math:`90^{\circ}`。因此，:math:`\triangle\,ABC` 是直角三角形。斜边长度为 ``c = AB = 2``，直角边 :math:`\overline{AC}` 长度为 :math:`b = AC = 1`。根据勾股定理，另一条直角边 :math:`\overline{BC}` 长度 :math:`a` 为：
 
     .. math::
 
         a^2 ~+~ b^2 ~=~ c^2 \quad\Rightarrow\quad a^2 ~=~ 2^2 ~-~ 1^2 ~=~ 3
         \quad\Rightarrow\quad a ~=~ \sqrt{3} ~.
- 
-    Thus, using the angle :math:`A` we get:
+
+    因此，使用角 :math:`A`，我们得到：
 
     .. math::
 
-        & \sin60^{\circ} = \dfrac{\text{opposite}}{\text{hypotenuse}} = \dfrac{\sqrt{3}}{2} \qquad
-        \cos60^{\circ} = \dfrac{\text{adjacent}}{\text{hypotenuse}} = \dfrac{1}{2} \qquad
-        \tan60^{\circ} = \dfrac{\text{opposite}}{\text{adjacent}} = \dfrac{\sqrt{3}}{1} \,=\, \sqrt{3} \\
+        & \sin60^{\circ} = \dfrac{\text{对边}}{\text{斜边}} = \dfrac{\sqrt{3}}{2} \qquad
+        \cos60^{\circ} = \dfrac{\text{邻边}}{\text{斜边}} = \dfrac{1}{2} \qquad
+        \tan60^{\circ} = \dfrac{\text{对边}}{\text{邻边}} = \dfrac{\sqrt{3}}{1} \,=\, \sqrt{3} \\
         \\
-        & \csc60^{\circ} = \dfrac{\text{hypotenuse}}{\text{opposite}} = \dfrac{2}{\sqrt{3}} \qquad
-        \sec60^{\circ} = \dfrac{\text{hypotenuse}}{\text{adjacent}} = 2 \qquad
-        \cot60^{\circ} = \dfrac{\text{adjacent}}{\text{opposite}} =
-          \dfrac{1}{\sqrt{3}}~
+        & \csc60^{\circ} = \dfrac{\text{斜边}}{\text{对边}} = \dfrac{2}{\sqrt{3}} \qquad
+        \sec60^{\circ} = \dfrac{\text{斜边}}{\text{邻边}} = 2 \qquad
+        \cot60^{\circ} = \dfrac{\text{邻边}}{\text{对边}} =
+            \dfrac{1}{\sqrt{3}}~
 
-    Notice that, as a bonus, we get the values of all six trigonometric functions of :math:`30^{\circ}`, by using angle :math:`B = 30^{\circ}` in the same triangle :math:`\triangle\,ABC` above:
+    注意，作为额外收获，我们还可以通过上面三角形 :math:`\triangle\,ABC` 中角 :math:`B = 30^{\circ}`，得到 :math:`30^{\circ}` 的所有六个三角函数值：
 
     .. math::
 
-        & \sin30^{\circ} = \dfrac{\text{opposite}}{\text{hypotenuse}} = \dfrac{1}{2} \qquad
-        \cos30^{\circ} = \dfrac{\text{adjacent}}{\text{hypotenuse}} = \dfrac{\sqrt{3}}{2} \qquad
-        \tan30^{\circ} = \dfrac{\text{opposite}}{\text{adjacent}} =
-          \dfrac{1}{\sqrt{3}}\quad\quad
+        & \sin30^{\circ} = \dfrac{\text{对边}}{\text{斜边}} = \dfrac{1}{2} \qquad
+        \cos30^{\circ} = \dfrac{\text{邻边}}{\text{斜边}} = \dfrac{\sqrt{3}}{2} \qquad
+        \tan30^{\circ} = \dfrac{\text{对边}}{\text{邻边}} =
+            \dfrac{1}{\sqrt{3}}\quad\quad
         \\
-        & \csc30^{\circ} = \dfrac{\text{hypotenuse}}{\text{opposite}} = 2 \qquad
-        \sec30^{\circ} = \dfrac{\text{hypotenuse}}{\text{adjacent}} = \dfrac{2}{\sqrt{3}} \qquad
-        \cot30^{\circ} = \dfrac{\text{adjacent}}{\text{opposite}} =
-          \dfrac{\sqrt{3}}{1} = \sqrt{3}
+        & \csc30^{\circ} = \dfrac{\text{斜边}}{\text{对边}} = 2 \qquad
+        \sec30^{\circ} = \dfrac{\text{斜边}}{\text{邻边}} = \dfrac{2}{\sqrt{3}} \qquad
+        \cot30^{\circ} = \dfrac{\text{邻边}}{\text{对边}} =
+            \dfrac{\sqrt{3}}{1} = \sqrt{3}
+
+
+    .. toggle::
+
+        Find the values of all six trigonometric functions of :math:`60^{\circ}`.
+
+        **Solution:** Since we may use any right triangle which has :math:`60^{\circ}` as one of the angles, we will use a simple one: take a triangle whose sides are all ``2`` units long and divide it in half by drawing the bisector from one vertex to the opposite side, as in the figure on the right. Since the original triangle was an *equilateral triangle* (i.e. all three sides had the same length), its three angles were all the same, namely :math:`60^{\circ}`. Recall from elementary geometry that the bisector from the vertex angle of an equilateral triangle to its opposite side bisects both the vertex angle and the opposite side. So as in the figure on the right, the triangle :math:`\triangle\,ABC` has angle :math:`A = 60^{\circ}` and angle :math:`B = 30^{\circ}`, which forces the angle :math:`C` to be :math:`90^{\circ}`. Thus, :math:`\triangle\,ABC` is a right triangle. We see that the hypotenuse has length ``c = AB = 2`` and the leg :math:`\overline{AC}` has length :math:`b = AC = 1`. By the Pythagorean Theorem, the length :math:`A` of the leg :math:`\overline{BC}` is given by 
+
+        .. math::
+
+            a^2 ~+~ b^2 ~=~ c^2 \quad\Rightarrow\quad a^2 ~=~ 2^2 ~-~ 1^2 ~=~ 3
+            \quad\Rightarrow\quad a ~=~ \sqrt{3} ~.
+    
+        Thus, using the angle :math:`A` we get:
+
+        .. math::
+
+            & \sin60^{\circ} = \dfrac{\text{opposite}}{\text{hypotenuse}} = \dfrac{\sqrt{3}}{2} \qquad
+            \cos60^{\circ} = \dfrac{\text{adjacent}}{\text{hypotenuse}} = \dfrac{1}{2} \qquad
+            \tan60^{\circ} = \dfrac{\text{opposite}}{\text{adjacent}} = \dfrac{\sqrt{3}}{1} \,=\, \sqrt{3} \\
+            \\
+            & \csc60^{\circ} = \dfrac{\text{hypotenuse}}{\text{opposite}} = \dfrac{2}{\sqrt{3}} \qquad
+            \sec60^{\circ} = \dfrac{\text{hypotenuse}}{\text{adjacent}} = 2 \qquad
+            \cot60^{\circ} = \dfrac{\text{adjacent}}{\text{opposite}} =
+            \dfrac{1}{\sqrt{3}}~
+
+        Notice that, as a bonus, we get the values of all six trigonometric functions of :math:`30^{\circ}`, by using angle :math:`B = 30^{\circ}` in the same triangle :math:`\triangle\,ABC` above:
+
+        .. math::
+
+            & \sin30^{\circ} = \dfrac{\text{opposite}}{\text{hypotenuse}} = \dfrac{1}{2} \qquad
+            \cos30^{\circ} = \dfrac{\text{adjacent}}{\text{hypotenuse}} = \dfrac{\sqrt{3}}{2} \qquad
+            \tan30^{\circ} = \dfrac{\text{opposite}}{\text{adjacent}} =
+            \dfrac{1}{\sqrt{3}}\quad\quad
+            \\
+            & \csc30^{\circ} = \dfrac{\text{hypotenuse}}{\text{opposite}} = 2 \qquad
+            \sec30^{\circ} = \dfrac{\text{hypotenuse}}{\text{adjacent}} = \dfrac{2}{\sqrt{3}} \qquad
+            \cot30^{\circ} = \dfrac{\text{adjacent}}{\text{opposite}} =
+            \dfrac{\sqrt{3}}{1} = \sqrt{3}
 
 .. _Example 1.8:
 
@@ -625,50 +1055,90 @@ Since we defined the trigonometric functions in terms of ratios of sides, you ca
 
     .. figure:: ./img/e1.8.png
         :align: right
+    
+    :math:`A` 是一个锐角，且满足 :math:`\sin A = \frac{2}{3}`。求 :math:`A` 的其他三角函数值。
 
-    :math:`A` is an acute angle such that :math:`\sin A = \frac{2}{3}`. Find the values of the other trigonometric functions of :math:`A`.
+    **解：** 通常，画一个直角三角形有助于解决这类问题。原因是三角函数是以直角三角形边长比定义的，题中已给出一个三角函数（这里是正弦）作为比值：:math:`\sin A = \frac{2}{3}`。因为 :math:`\sin A` 定义为 :math:`\frac{\text{对边}}{\text{斜边}}`，所以在直角三角形 :math:`\triangle\,ABC` 中（见上图），取对边长度为 ``2``，斜边长度为 ``3``，使得 :math:`\sin A = \frac{2}{3}`。
 
-    **Solution:** In general it helps to draw a right triangle to solve problems of this type. The reason is that the trigonometric functions were defined in terms of ratios of sides of a right triangle, and you are given one such function (the sine, in this case) already in terms of a ratio: :math:`\sin A = \frac{2}{3}`. Since :math:`\sin A` is defined as :math:`\frac{\text{opposite}}{\text{hypotenuse}}`, use ``2`` as the length of the side opposite :math:`A` and use ``3`` as the length of the hypotenuse in a right triangle :math:`\triangle\,ABC` (see the figure above), so that :math:`\sin A = \frac{2}{3}`.
-
-    The adjacent side to :math:`A` has unknown length :math:`B`, but we can use the Pythagorean Theorem to find it:
+    与角 :math:`A` 相邻的边长未知，设为 :math:`B`，可以用勾股定理求出：
 
     .. math::
 
         2^2 ~+~ b^2 ~=~ 3^2 \quad\Rightarrow\quad b^2 ~=~ 9 ~-~ 4 ~=~ 5 \quad\Rightarrow\quad b ~=~ \sqrt{5}
 
-    We now know the lengths of all sides of the triangle :math:`\triangle\,ABC`, so we have:
+    现在我们知道了三角形 :math:`\triangle\,ABC` 的所有边长，因此有：
 
     .. math::
 
-        & \cos A = \dfrac{\text{adjacent}}{\text{hypotenuse}} = \dfrac{\sqrt{5}}{3} \qquad
-        \tan A = \dfrac{\text{opposite}}{\text{adjacent}} =
-          \dfrac{2}{\sqrt{5}}\quad\quad
+        & \cos A = \dfrac{\text{邻边}}{\text{斜边}} = \dfrac{\sqrt{5}}{3} \qquad
+        \tan A = \dfrac{\text{对边}}{\text{邻边}} =
+            \dfrac{2}{\sqrt{5}}\quad\quad
         \\
-        & \csc A = \dfrac{\text{hypotenuse}}{\text{opposite}} = \dfrac{3}{2} \qquad
-        \sec A = \dfrac{\text{hypotenuse}}{\text{adjacent}} = \dfrac{3}{\sqrt{5}} \qquad
-        \cot A = \dfrac{\text{adjacent}}{\text{opposite}} = \dfrac{\sqrt{5}}{2}
+        & \csc A = \dfrac{\text{斜边}}{\text{对边}} = \dfrac{3}{2} \qquad
+        \sec A = \dfrac{\text{斜边}}{\text{邻边}} = \dfrac{3}{\sqrt{5}} \qquad
+        \cot A = \dfrac{\text{邻边}}{\text{对边}} = \dfrac{\sqrt{5}}{2}
+
+    .. toggle::
+
+        :math:`A` is an acute angle such that :math:`\sin A = \frac{2}{3}`. Find the values of the other trigonometric functions of :math:`A`.
+
+        **Solution:** In general it helps to draw a right triangle to solve problems of this type. The reason is that the trigonometric functions were defined in terms of ratios of sides of a right triangle, and you are given one such function (the sine, in this case) already in terms of a ratio: :math:`\sin A = \frac{2}{3}`. Since :math:`\sin A` is defined as :math:`\frac{\text{opposite}}{\text{hypotenuse}}`, use ``2`` as the length of the side opposite :math:`A` and use ``3`` as the length of the hypotenuse in a right triangle :math:`\triangle\,ABC` (see the figure above), so that :math:`\sin A = \frac{2}{3}`.
+
+        The adjacent side to :math:`A` has unknown length :math:`B`, but we can use the Pythagorean Theorem to find it:
+
+        .. math::
+
+            2^2 ~+~ b^2 ~=~ 3^2 \quad\Rightarrow\quad b^2 ~=~ 9 ~-~ 4 ~=~ 5 \quad\Rightarrow\quad b ~=~ \sqrt{5}
+
+        We now know the lengths of all sides of the triangle :math:`\triangle\,ABC`, so we have:
+
+        .. math::
+
+            & \cos A = \dfrac{\text{adjacent}}{\text{hypotenuse}} = \dfrac{\sqrt{5}}{3} \qquad
+            \tan A = \dfrac{\text{opposite}}{\text{adjacent}} =
+                \dfrac{2}{\sqrt{5}}\quad\quad
+            \\
+            & \csc A = \dfrac{\text{hypotenuse}}{\text{opposite}} = \dfrac{3}{2} \qquad
+            \sec A = \dfrac{\text{hypotenuse}}{\text{adjacent}} = \dfrac{3}{\sqrt{5}} \qquad
+            \cot A = \dfrac{\text{adjacent}}{\text{opposite}} = \dfrac{\sqrt{5}}{2}
 
 
 ----------------
 
-You may have noticed the connections between the sine and cosine, secant and cosecant, and tangent
-and cotangent of the complementary angles in Examples :ref:`1.5 <exmp:funcs345>` and :ref:`1.7 <exmp:funcs60>`.
-Generalizing those examples gives us the following theorem:
+你可能已经注意到，在例子 :ref:`1.5 <exmp:funcs345>` 和 :ref:`1.7 <exmp:funcs60>` 中，余角的正弦与余弦、正割与余割、正切与余切之间的联系。推广这些例子，得出如下定理：
 
-    .. _thm:cofunction:
+.. _thm:cofunction:
 
-    **Theorem 1.2. Cofunction Theorem:** If :math:`A` and :math:`B` are the complementary acute angles in a right triangle
-    :math:`\triangle\,ABC`, then the following relations hold:
+**定理 1.2. 余函数定理：** 若 :math:`A` 和 :math:`B` 是直角三角形 :math:`\triangle\,ABC` 中的互余锐角，则满足以下关系：
 
-    .. math::
+.. math::
 
-        & \sin A ~=~ \cos B \qquad\qquad \sec A ~=~ \csc B \qquad\qquad \tan A ~=~ \cot B \\
-        \\
-        & \sin B ~=~ \cos A \qquad\qquad \sec B ~=~ \csc A \qquad\qquad \tan B ~=~ \cot A
+    & \sin A ~=~ \cos B \qquad\qquad \sec A ~=~ \csc B \qquad\qquad \tan A ~=~ \cot B \\
+    \\
+    & \sin B ~=~ \cos A \qquad\qquad \sec B ~=~ \csc A \qquad\qquad \tan B ~=~ \cot A
 
-    We say that the pairs of functions :math:`\lbrace\sin, \cos\rbrace`, :math:`\lbrace\sec, \csc\rbrace`, and :math:`\lbrace\tan, \cot\rbrace` are **cofunctions**.
+我们称函数对 :math:`\lbrace\sin, \cos\rbrace`，:math:`\lbrace\sec, \csc\rbrace` 和 :math:`\lbrace\tan, \cot\rbrace` 为 **余函数** 。
 
-So sine and cosine are cofunctions, secant and cosecant are cofunctions, and tangent and cotangent are cofunctions. That is how the functions cosine, cosecant, and cotangent got the "co" in their names. The Cofunction Theorem says that any trigonometric function of an acute angle is equal to its cofunction of the complementary angle.
+因此，正弦和余弦是余函数，正割和余割是余函数，正切和余切是余函数。这也是余弦、余割和余切名字中带“co”的原因。余函数定理说明，锐角的任意三角函数值等于其余角的对应余函数值。
+
+.. toggle::
+
+    You may have noticed the connections between the sine and cosine, secant and cosecant, and tangent
+    and cotangent of the complementary angles in Examples :ref:`1.5 <exmp:funcs345>` and :ref:`1.7 <exmp:funcs60>`.
+    Generalizing those examples gives us the following theorem:
+
+        **Theorem 1.2. Cofunction Theorem:** If :math:`A` and :math:`B` are the complementary acute angles in a right triangle
+        :math:`\triangle\,ABC`, then the following relations hold:
+
+        .. math::
+
+            & \sin A ~=~ \cos B \qquad\qquad \sec A ~=~ \csc B \qquad\qquad \tan A ~=~ \cot B \\
+            \\
+            & \sin B ~=~ \cos A \qquad\qquad \sec B ~=~ \csc A \qquad\qquad \tan B ~=~ \cot A
+
+        We say that the pairs of functions :math:`\lbrace\sin, \cos\rbrace`, :math:`\lbrace\sec, \csc\rbrace`, and :math:`\lbrace\tan, \cot\rbrace` are **cofunctions**.
+
+    So sine and cosine are cofunctions, secant and cosecant are cofunctions, and tangent and cotangent are cofunctions. That is how the functions cosine, cosecant, and cotangent got the "co" in their names. The Cofunction Theorem says that any trigonometric function of an acute angle is equal to its cofunction of the complementary angle.
 
 
 .. _Example 1.9:
@@ -677,16 +1147,31 @@ So sine and cosine are cofunctions, secant and cosecant are cofunctions, and tan
 
 .. admonition:: Example 1.9
 
-    Write each of the following numbers as trigonometric functions of an angle less than :math:`45^{\circ}`:
-    **(a)** :math:`\sin65^{\circ}`; **(b)** :math:`\cos78^{\circ}`; **(c)** :math:`\tan59^{\circ}`.
+    将以下各数写成小于 :math:`45^{\circ}` 角的三角函数形式：
+    
+    **(a)** :math:`\sin65^{\circ}`；**(b)** :math:`\cos78^{\circ}`；**(c)** :math:`\tan59^{\circ}`。
 
-    **Solution:** 
+    **解答：**
 
-    **(a)** The complement of :math:`65^{\circ}` is :math:`90^{\circ} - 65^{\circ} = 25^{\circ}` and the cofunction of :math:`\sin` is :math:`\cos`, so by the Cofunction Theorem we know that :math:`\sin65^{\circ} = \cos25^{\circ}`.
+    **(a)** :math:`65^{\circ}` 的余角是 :math:`90^{\circ} - 65^{\circ} = 25^{\circ}`，而 :math:`\sin` 的余函数是 :math:`\cos`，所以根据余函数定理，有 :math:`\sin65^{\circ} = \cos25^{\circ}`。
 
-    **(b)** The complement of :math:`78^{\circ}` is :math:`90^{\circ} - 78^{\circ} = 12^{\circ}` and the cofunction of :math:`\cos` is :math:`\sin`, so :math:`\cos78^{\circ} = \sin12^{\circ}`.
+    **(b)** :math:`78^{\circ}` 的余角是 :math:`90^{\circ} - 78^{\circ} = 12^{\circ}`，而 :math:`\cos` 的余函数是 :math:`\sin`，所以 :math:`\cos78^{\circ} = \sin12^{\circ}`。
 
-    **(c)** The complement of :math:`59^{\circ}` is :math:`90^{\circ} - 59^{\circ} = 31^{\circ}` and the cofunction of :math:`\tan` is :math:`\cot`, so :math:`\tan59^{\circ} = \cot31^{\circ}`.
+    **(c)** :math:`59^{\circ}` 的余角是 :math:`90^{\circ} - 59^{\circ} = 31^{\circ}`，而 :math:`\tan` 的余函数是 :math:`\cot`，所以 :math:`\tan59^{\circ} = \cot31^{\circ}`。
+
+
+    .. toggle::
+
+        Write each of the following numbers as trigonometric functions of an angle less than :math:`45^{\circ}`:
+        **(a)** :math:`\sin65^{\circ}`; **(b)** :math:`\cos78^{\circ}`; **(c)** :math:`\tan59^{\circ}`.
+
+        **Solution:** 
+
+        **(a)** The complement of :math:`65^{\circ}` is :math:`90^{\circ} - 65^{\circ} = 25^{\circ}` and the cofunction of :math:`\sin` is :math:`\cos`, so by the Cofunction Theorem we know that :math:`\sin65^{\circ} = \cos25^{\circ}`.
+
+        **(b)** The complement of :math:`78^{\circ}` is :math:`90^{\circ} - 78^{\circ} = 12^{\circ}` and the cofunction of :math:`\cos` is :math:`\sin`, so :math:`\cos78^{\circ} = \sin12^{\circ}`.
+
+        **(c)** The complement of :math:`59^{\circ}` is :math:`90^{\circ} - 59^{\circ} = 31^{\circ}` and the cofunction of :math:`\tan` is :math:`\cot`, so :math:`\tan59^{\circ} = \cot31^{\circ}`.
 
 
 ------------------
@@ -698,9 +1183,18 @@ So sine and cosine are cofunctions, secant and cosecant are cofunctions, and tan
 .. figure:: ./img/f1.2.2.png
     :align: center
 
-    **Figure 1.2.2 Two general right triangles (any a >0)**
+    **图 1.2.2 两个通用的直角三角形（任意 a > 0）**
 
-The angles :math:`30^{\circ}`, :math:`45^{\circ}`, and :math:`60^{\circ}` arise often in applications. We can use the Pythagorean Theorem to generalize the right triangles in Examples :ref:`1.6 <exmp:funcs45>` and :ref:`1.7 <exmp:funcs60>` and see what *any* ``45-45-90`` and ``30-60-90`` right triangles look like, as in Figure :ref:`1.2.2 <fig:gen45>` above.
+角 :math:`30^{\circ}`、:math:`45^{\circ}` 和 :math:`60^{\circ}` 在应用中经常出现。我们可以利用勾股定理对示例 :ref:`1.6 <exmp:funcs45>` 和 :ref:`1.7 <exmp:funcs60>` 中的直角三角形进行推广，从而了解 *任意* ``45-45-90`` 和 ``30-60-90`` 直角三角形的形式，如上图所示（图 :ref:`1.2.2 <fig:gen45>`）。
+
+.. toggle::
+
+    .. figure:: ./img/f1.2.2.png
+        :align: center
+
+        **Figure 1.2.2 Two general right triangles (any a >0)**
+
+    The angles :math:`30^{\circ}`, :math:`45^{\circ}`, and :math:`60^{\circ}` arise often in applications. We can use the Pythagorean Theorem to generalize the right triangles in Examples :ref:`1.6 <exmp:funcs45>` and :ref:`1.7 <exmp:funcs60>` and see what *any* ``45-45-90`` and ``30-60-90`` right triangles look like, as in Figure :ref:`1.2.2 <fig:gen45>` above.
 
 -----------
 
@@ -713,42 +1207,67 @@ The angles :math:`30^{\circ}`, :math:`45^{\circ}`, and :math:`60^{\circ}` arise 
     .. figure:: ./img/e1.10.png 
         :align: right
 
-    Find the sine, cosine, and tangent of :math:`75^{\circ}`.
+    求 :math:`75^{\circ}` 的正弦、余弦和正切值。
 
-    **Solution:** Since :math:`75^{\circ} = 45^{\circ} + 30^{\circ}`, place a ``30-60-90`` right triangle :math:`\triangle\,ADB` with
-    legs of length :math:`\sqrt{3}` and :math:`1` on top of the hypotenuse of a ``45-45-90`` right triangle
-    :math:`\triangle\,ABC` whose hypotenuse has length :math:`\sqrt{3}`, as in the figure on the right.
-    From Figure :ref:`1.2.2(a) <fig:gen45>` we know that the length of each leg of :math:`\triangle\,ABC`
-    is the length of the hypotenuse divided by :math:`\sqrt{2}`. So :math:`AC = BC = \frac{\sqrt{3}}{\sqrt{2}} =
-    \sqrt{\frac{3}{2}}`. Draw :math:`\overline{DE}` perpendicular to :math:`\overline{AC}`, so that :math:`\triangle\,ADE`
-    is a right triangle. Since :math:`\angle\,BAC = 45^{\circ}` and :math:`ngle\,DAB = 30^{\circ}`, we see that
-    :math:`\angle\,DAE = 75^{\circ}` since it is the sum of those two angles. Thus, we need to find the sine,
-    cosine, and tangent of :math:`\angle\,DAE`.
+    **解：** 由于 :math:`75^{\circ} = 45^{\circ} + 30^{\circ}`，将一个 ``30-60-90`` 的直角三角形 :math:`\triangle\,ADB` （其两条直角边长分别为 :math:`\sqrt{3}` 和 :math:`1` ）放置在一个 ``45-45-90`` 的直角三角形 :math:`\triangle\,ABC` 的斜边上，其中斜边长为 :math:`\sqrt{3}`，如右图所示。
 
-    Notice that :math:`\angle\,ADE = 15^{\circ}`, since it is the complement of :math:`\angle\,DAE`. And
-    :math:`\angle\,ADB = 60^{\circ}`, since it is the complement of :math:`\angle\,DAB`. Draw
-    :math:`\overline{BF}` perpendicular to :math:`\overline{DE}`, so that :math:`\triangle\,DFB` is a right triangle. Then
-    :math:`\angle\,BDF = 45^{\circ}`, since it is the difference of :math:`\angle\,ADB = 60^{\circ}` and
-    :math:`\angle\,ADE = 15^{\circ}`. Also, :math:`\angle\,DBF = 45^{\circ}` since it is the complement of
-    :math:`\angle\,BDF`. The hypotenuse :math:`\overline{BD}` of :math:`\triangle\,DFB` has length :math:`1` and
-    :math:`\triangle\,DFB` is a :math:`45-45-90` right triangle, so we know that :math:`DF = FB = \frac{1}{\sqrt{2}}`.
+    根据图 :ref:`1.2.2(a) <fig:gen45>`，我们知道 :math:`\triangle\,ABC` 的每条直角边的长度为斜边除以 :math:`\sqrt{2}`。所以有 :math:`AC = BC = \frac{\sqrt{3}}{\sqrt{2}} = \sqrt{\frac{3}{2}}`。作 :math:`\overline{DE}` 垂直于 :math:`\overline{AC}`，从而 :math:`\triangle\,ADE` 为直角三角形。由于 :math:`\angle\,BAC = 45^{\circ}` 且 :math:`\angle\,DAB = 30^{\circ}`，我们可知 :math:`\angle\,DAE = 75^{\circ}`，因为它是这两个角的和。因此我们需要求出 :math:`\angle\,DAE` 的正弦、余弦和正切值。
 
-    Now, we know that :math:`\overline{DE} \perp \overline{AC}` and :math:`\overline{BC} \perp \overline{AC}`, so
-    :math:`\overline{FE}` and :math:`\overline{BC}` are parallel. Likewise, :math:`\overline{FB}` and :math:`\overline{EC}` are
-    both perpendicular to :math:`\overline{DE}` and hence :math:`\overline{FB}` is parallel to :math:`\overline{EC}`.
-    Thus, :math:`FBCE` is a rectangle, since :math:`\angle\,BCE` is a right angle. So :math:`EC = FB = \frac{1}{\sqrt{2}}`
-    and :math:`FE = BC = \sqrt{\frac{3}{2}}`. Hence, 
+    注意到 :math:`\angle\,ADE = 15^{\circ}`，因为它是 :math:`\angle\,DAE` 的余角。而 :math:`\angle\,ADB = 60^{\circ}`，因为它是 :math:`\angle\,DAB` 的余角。作 :math:`\overline{BF}` 垂直于 :math:`\overline{DE}`，使得 :math:`\triangle\,DFB` 为直角三角形。于是有 :math:`\angle\,BDF = 45^{\circ}`，因为它是 :math:`\angle\,ADB = 60^{\circ}` 与 :math:`\angle\,ADE = 15^{\circ}` 的差。另外，:math:`\angle\,DBF = 45^{\circ}`，因为它是 :math:`\angle\,BDF` 的余角。直角三角形 :math:`\triangle\,DFB` 的斜边 :math:`\overline{BD}` 长为 :math:`1`，且该三角形是一个 :math:`45-45-90` 直角三角形，所以我们知道 :math:`DF = FB = \frac{1}{\sqrt{2}}`。
 
-    :math:`DE ~=~ DF ~+~ FE ~=~ \tfrac{1}{\sqrt{2}} ~+~ \sqrt{\tfrac{3}{2}} ~=~ \tfrac{\sqrt{3} ~+~ 1}{\sqrt{2}}` and 
-    :math:`AE ~=~ AC ~-~ EC ~=~ \sqrt{\tfrac{3}{2}} ~-~ \tfrac{1}{\sqrt{2}} ~=~ \tfrac{\sqrt{3} ~-~ 1}{\sqrt{2}}` Thus,
+    现在我们知道 :math:`\overline{DE} \perp \overline{AC}` 且 :math:`\overline{BC} \perp \overline{AC}`，因此 :math:`\overline{FE}` 与 :math:`\overline{BC}` 平行。同样地，:math:`\overline{FB}` 和 :math:`\overline{EC}` 都垂直于 :math:`\overline{DE}`，因此 :math:`\overline{FB}` 平行于 :math:`\overline{EC}`。所以，:math:`FBCE` 是一个矩形，因为 :math:`\angle\,BCE` 是直角。因此有 :math:`EC = FB = \frac{1}{\sqrt{2}}` 且 :math:`FE = BC = \sqrt{\frac{3}{2}}`。由此可得：
 
-    :math:`\sin75^{\circ} = \tfrac{DE}{AD} = \tfrac{\frac{\sqrt{3} + 1}{\sqrt{2}}}{2} = \tfrac{\sqrt{6} + \sqrt{2}}{4} ~,~ \cos75^{\circ} = \tfrac{AE}{AD} = \tfrac{\frac{\sqrt{3} - 1}{\sqrt{2}}}{2} = \tfrac{\sqrt{6} - \sqrt{2}}{4}`, and :math:`\tan75^{\circ} = \tfrac{DE}{AE} = \tfrac{\frac{\sqrt{3} + 1}{\sqrt{2}}}{\frac{\sqrt{3} - 1}{\sqrt{2}}} = \tfrac{\sqrt{6} + \sqrt{2}}{\sqrt{6} - \sqrt{2}} ~.`
+    :math:`DE ~=~ DF ~+~ FE ~=~ \tfrac{1}{\sqrt{2}} ~+~ \sqrt{\tfrac{3}{2}} ~=~ \tfrac{\sqrt{3} ~+~ 1}{\sqrt{2}}`，
 
-    Note: Taking reciprocals, we get :math:`\csc75^{\circ} = \frac{4}{\sqrt{6} + \sqrt{2}}`, :math:`\sec75^{\circ} = \frac{4}{\sqrt{6} - \sqrt{2}}`, and 
-    :math:`\cot75^{\circ} = \frac{\sqrt{6} - \sqrt{2}}{\sqrt{6} + \sqrt{2}}`.
+    :math:`AE ~=~ AC ~-~ EC ~=~ \sqrt{\tfrac{3}{2}} ~-~ \tfrac{1}{\sqrt{2}} ~=~ \tfrac{\sqrt{3} ~-~ 1}{\sqrt{2}}`。因此，
 
-Exercises
+    :math:`\sin75^{\circ} = \tfrac{DE}{AD} = \tfrac{\frac{\sqrt{3} + 1}{\sqrt{2}}}{2} = \tfrac{\sqrt{6} + \sqrt{2}}{4} ~,~ \cos75^{\circ} = \tfrac{AE}{AD} = \tfrac{\frac{\sqrt{3} - 1}{\sqrt{2}}}{2} = \tfrac{\sqrt{6} - \sqrt{2}}{4}`，
+
+    :math:`\tan75^{\circ} = \tfrac{DE}{AE} = \tfrac{\frac{\sqrt{3} + 1}{\sqrt{2}}}{\frac{\sqrt{3} - 1}{\sqrt{2}}} = \tfrac{\sqrt{6} + \sqrt{2}}{\sqrt{6} - \sqrt{2}} ~.`
+
+    注：取倒数可得：:math:`\csc75^{\circ} = \frac{4}{\sqrt{6} + \sqrt{2}}`，:math:`\sec75^{\circ} = \frac{4}{\sqrt{6} - \sqrt{2}}`，以及  
+    :math:`\cot75^{\circ} = \frac{\sqrt{6} - \sqrt{2}}{\sqrt{6} + \sqrt{2}}`。
+
+
+    .. toggle::
+
+        Find the sine, cosine, and tangent of :math:`75^{\circ}`.
+
+        **Solution:** Since :math:`75^{\circ} = 45^{\circ} + 30^{\circ}`, place a ``30-60-90`` right triangle :math:`\triangle\,ADB` with
+        legs of length :math:`\sqrt{3}` and :math:`1` on top of the hypotenuse of a ``45-45-90`` right triangle
+        :math:`\triangle\,ABC` whose hypotenuse has length :math:`\sqrt{3}`, as in the figure on the right.
+        From Figure :ref:`1.2.2(a) <fig:gen45>` we know that the length of each leg of :math:`\triangle\,ABC`
+        is the length of the hypotenuse divided by :math:`\sqrt{2}`. So :math:`AC = BC = \frac{\sqrt{3}}{\sqrt{2}} =
+        \sqrt{\frac{3}{2}}`. Draw :math:`\overline{DE}` perpendicular to :math:`\overline{AC}`, so that :math:`\triangle\,ADE`
+        is a right triangle. Since :math:`\angle\,BAC = 45^{\circ}` and :math:`ngle\,DAB = 30^{\circ}`, we see that
+        :math:`\angle\,DAE = 75^{\circ}` since it is the sum of those two angles. Thus, we need to find the sine,
+        cosine, and tangent of :math:`\angle\,DAE`.
+
+        Notice that :math:`\angle\,ADE = 15^{\circ}`, since it is the complement of :math:`\angle\,DAE`. And
+        :math:`\angle\,ADB = 60^{\circ}`, since it is the complement of :math:`\angle\,DAB`. Draw
+        :math:`\overline{BF}` perpendicular to :math:`\overline{DE}`, so that :math:`\triangle\,DFB` is a right triangle. Then
+        :math:`\angle\,BDF = 45^{\circ}`, since it is the difference of :math:`\angle\,ADB = 60^{\circ}` and
+        :math:`\angle\,ADE = 15^{\circ}`. Also, :math:`\angle\,DBF = 45^{\circ}` since it is the complement of
+        :math:`\angle\,BDF`. The hypotenuse :math:`\overline{BD}` of :math:`\triangle\,DFB` has length :math:`1` and
+        :math:`\triangle\,DFB` is a :math:`45-45-90` right triangle, so we know that :math:`DF = FB = \frac{1}{\sqrt{2}}`.
+
+        Now, we know that :math:`\overline{DE} \perp \overline{AC}` and :math:`\overline{BC} \perp \overline{AC}`, so
+        :math:`\overline{FE}` and :math:`\overline{BC}` are parallel. Likewise, :math:`\overline{FB}` and :math:`\overline{EC}` are
+        both perpendicular to :math:`\overline{DE}` and hence :math:`\overline{FB}` is parallel to :math:`\overline{EC}`.
+        Thus, :math:`FBCE` is a rectangle, since :math:`\angle\,BCE` is a right angle. So :math:`EC = FB = \frac{1}{\sqrt{2}}`
+        and :math:`FE = BC = \sqrt{\frac{3}{2}}`. Hence, 
+
+        :math:`DE ~=~ DF ~+~ FE ~=~ \tfrac{1}{\sqrt{2}} ~+~ \sqrt{\tfrac{3}{2}} ~=~ \tfrac{\sqrt{3} ~+~ 1}{\sqrt{2}}` and 
+        :math:`AE ~=~ AC ~-~ EC ~=~ \sqrt{\tfrac{3}{2}} ~-~ \tfrac{1}{\sqrt{2}} ~=~ \tfrac{\sqrt{3} ~-~ 1}{\sqrt{2}}` Thus,
+
+        :math:`\sin75^{\circ} = \tfrac{DE}{AD} = \tfrac{\frac{\sqrt{3} + 1}{\sqrt{2}}}{2} = \tfrac{\sqrt{6} + \sqrt{2}}{4} ~,~ \cos75^{\circ} = \tfrac{AE}{AD} = \tfrac{\frac{\sqrt{3} - 1}{\sqrt{2}}}{2} = \tfrac{\sqrt{6} - \sqrt{2}}{4}`, and :math:`\tan75^{\circ} = \tfrac{DE}{AE} = \tfrac{\frac{\sqrt{3} + 1}{\sqrt{2}}}{\frac{\sqrt{3} - 1}{\sqrt{2}}} = \tfrac{\sqrt{6} + \sqrt{2}}{\sqrt{6} - \sqrt{2}} ~.`
+
+        Note: Taking reciprocals, we get :math:`\csc75^{\circ} = \frac{4}{\sqrt{6} + \sqrt{2}}`, :math:`\sec75^{\circ} = \frac{4}{\sqrt{6} - \sqrt{2}}`, and 
+        :math:`\cot75^{\circ} = \frac{\sqrt{6} - \sqrt{2}}{\sqrt{6} + \sqrt{2}}`.
+
+练习
 ~~~~~~~~~~~~~~
+Exercises
 
 .. _Figure 1.2.3:
 
@@ -838,8 +1357,9 @@ For Exercises 24-28, write the given number as a trigonometric function of an ac
 40. In Exercise :ref:`37 <exer:circle1237>`, verify that the area of :math:`\triangle\,ABC` equals :math:`\frac{1}{2} (BC)^2 \cot A`.
 
 
-1.3 Applications and Solving Right Triangles
+1.3 应用与直角三角形的解法
 ----------------------------------------------
+1.3 Applications and Solving Right Triangles
 
 Throughout its early development, trigonometry was often used as a means of indirect measurement, e.g. determining large distances or lengths by using measurements of angles and small, known distances. Today, trigonometry is widely used in physics, astronomy, engineering, navigation, surveying, and various fields of mathematics and other disciplines. In this section we will see some of the ways in which trigonometry can be applied. Your calculator should be in degree mode for these examples.
 
@@ -1168,8 +1688,9 @@ Notice in the above right triangle that we were given two pieces of information:
        This tells us that :math:`A = 36.87^{\circ}`, approximately. Thus :math:`B = 90^{\circ} - A = 90^{\circ} - 36.87^{\circ} = 53.13^{\circ}`.
        Note: The :math:`\boxed{\sin^{-1}}` and :math:`\boxed{\cos^{-1}}` keys work similarly for sine and cosine, respectively. These keys use the *inverse trigonometric functions* , which we will discuss in :ref:`Chapter 5 <c5>`.
 
-Exercises
-~~~~~~~~~~~~~~~~
+练习
+~~~~~~~~~~~~~~
+Exercises~~
 
 .. figure:: ./img/28-0.png
     :align: right
@@ -1331,8 +1852,9 @@ For Exercises :ref:`15 <exer:solvrtfirst>` - :ref:`23 <exer:solvrtlast>`, solve 
 
 29. Persons A and B are at the beach, their eyes are ``5`` ft and ``6`` ft, respectively, above sea level. How many miles farther out is Person B's horizon than Person A's? (Note: ``1`` mile = ``5280`` ft)
 
-1.4 Trigonometric Functions of Any Angle
+1.4 任意角的三角函数
 -----------------------------------------
+1.4 Trigonometric Functions of Any Angle
 
 To define the trigonometric functions of *any* angle - including angles less than :math:`0^{\circ}` or greater than :math:`360^{\circ}` - we need a more general definition of an angle. We say that an **angle** is formed by rotating a ray :math:`\overrightarrow{OA}` about the endpoint ``O`` (called the **vertex** ), so that the ray is in a new position, denoted by the ray :math:`\overrightarrow{OB}`. The ray :math:`\overrightarrow{OA}` is called the **initial side** of the angle, and :math:`\overrightarrow{OB}` is the
 **terminal side** of the angle (see Figure :ref:`1.4.1 (a) <fig:genangle>`).
@@ -1779,8 +2301,9 @@ For an angle :math:`\theta` in standard position and a point ``(x,y)`` on its te
 
 .. _sec1dot4:
 
-Exercises
-~~~~~~~~~~~~~~~~
+练习
+~~~~~~~~~~~~~~
+Exercises~~
 
 For Exercises 1-10, state in which quadrant or on which axis the given angle lies.
 
@@ -1847,8 +2370,9 @@ For Exercises 37-40, use Table :ref:`1.3 <tbl:commonangles>` to answer the follo
 
 41. Expand Table :ref:`1.3 <tbl:commonangles>` to include all integer multiples of :math:`15^{\circ}`. See Example :ref:`1.10 <exmp:funcs75>` in Section 1.2.
 
-1.5 Rotations and Reflections of Angles
+1.5 角的旋转与反射
 ---------------------------------------------
+1.5 Rotations and Reflections of Angles
 
 Now that we know how to deal with angles of any measure, we will take a look at how certain geometric operations can help simplify the use of trigonometric functions of any angle, and how some basic relations between those functions can be made. The two operations on which we will concentrate in this section are *rotation* and *reflection*.
 
@@ -2142,8 +2666,9 @@ can help in determining which angles have a given trigonometric function value.
 
 .. _sec1dot5:
 
-Exercises
+练习
 ~~~~~~~~~~~~~~
+Exercises
 
 .. _exer:reflect:
 

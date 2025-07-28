@@ -1,10 +1,13 @@
 .. _c4:
 
-Chapter 4 Radian Measure
+第 4 章 弧度量  
 ============================
+Chapter 4 Radian Measure
 
-Radians and Degrees
+
+弧度与角度  
 ---------------------
+Radians and Degrees
 
 So far we have been using degrees as our unit of measurement for angles. However, there is another way of measuring angles that is often more convenient. The idea is simple: associate a central angle of a circle with the arc that it intercepts.
 
@@ -173,8 +176,9 @@ radians, so you would have to write your own angle conversions. [2]_
 
 .. _sec4dot1:
 
-Exercises
+练习
 ~~~~~~~~~~~~~~
+Exercises
 
 For Exercises 1-5, convert the given angle to radians.
 
@@ -196,8 +200,9 @@ For Exercises 6-10, convert the given angle to degrees.
 
 11. Put your calculator in radian mode and take the cosine of $0$. Whatever the answer is, take its cosine. Then take the cosine of the new answer. Keep repeating this. On most calculators after about $50$-$60$ iterations you should start to see the same answer repeating. What is that number? Try starting with a number different from $0$. Do you get the same answer repeating after roughly the same number of iterations as before? Try the same procedure in degree mode, starting with :math:`0^\circ`. Does the same thing happen? If so, does it take fewer iterations for the answer to start repeating than in radian mode, or more?
 
-Arc Length
+弧长  
 --------------
+Arc Length
 
 In Section 4.1 we saw that one revolution has a radian measure of :math:`2\pi` rad. Note that :math:`2\pi` is the ratio of the circumference (i.e. total arc length) $C$ of a circle to its radius $r$:
 
@@ -413,8 +418,9 @@ What about negative angles? In this case using :math:`s=r\,\theta` would mean th
 
 .. _sec4dot2:
 
-Exercises
+练习
 ~~~~~~~~~~~~~~
+Exercises
 
 
 For Exercises 1-4, find the length of the arc cut off by the given central angle :math:`\theta` in a circle of radius $r$.
@@ -473,8 +479,9 @@ rod is attached. Find the length $L$ of the wire from the wall to the box.
 11. Find the lengths of the two arcs cut off by a chord of length $3$ in a circle of radius $2$.
 12. Find the perimeter of a *regular dodecagon* (i.e. a $12$-sided polygon with sides of equal length) inscribed inside a circle of radius :math:`\frac{1}{2}`. Compare it to the circumference of the circle.
 
-Area of a Sector
+扇形的面积  
 ------------------
+Area of a Sector
 
 .. _Figure 4.3.1
 
@@ -718,8 +725,9 @@ Note that as a consequence of formula :ref:`4.7 <eqn:segment>` we must have :mat
 
 .. _sec4dot3:
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~~
 
 For Exercises 1-3, find the area of the sector for the given angle :math:`\theta` and radius $r$.
 
@@ -825,8 +833,9 @@ For Exercises :ref:`10 <exer:segstart>`-:ref:`12 <exer:segend>`, find the area o
 19.  For a fixed central angle :math:`\theta`, how much does the area of its sector increase when the radius of the circle is doubled? How much does the length of its intercepted arc increase?
 
 
-Circular Motion: Linear and Angular Speed
+圆周运动：线速度与角速度  
 --------------------------------------------
+Circular Motion: Linear and Angular Speed
 
 .. _fig:circmotion:
 
@@ -990,8 +999,9 @@ This works because all we did was multiply by $1$ twice. Converting to other uni
 
 .. _sec4dot4:
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~
 
 For Exercises 1-6, assume that a particle moves along a circle of radius $r$ for a period of time $t$. Given either the arc length $s$ or the central angle :math:`\theta` swept out by the particle, find the linear and angular speed of the particle.
 

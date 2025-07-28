@@ -1,6 +1,6 @@
 .. _c2:
 
-Chapter 2 General Triangles
+第 2 章 一般三角形
 =============================
 Chapter 2 General Triangles
 
@@ -19,8 +19,10 @@ In this chapter we will learn how to solve a general triangle in all four of the
 
 As we will see, Cases 1 and 2 can be solved using the *law of sines*, Case 3 can be solved using either the *law of cosines* or the *law of tangents*, and Case 4 can be solved using the law of cosines.
 
-The Law of Sines
+
+正弦定理
 ------------------
+The Law of Sines
 
 .. _ Theorem 2.1:
 
@@ -338,8 +340,9 @@ Thus, :math:`\sin\;A \le \sin\;C` if $C$ is acute or obtuse, so by the Law of Si
 
 By a similar argument, :math:`b \le c`. Thus, :math:`a \le c` and :math:`b \le c`, i.e. $c$ is the largest side. [qed]
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~~~
 
 
 For Exercises 1-9, solve the triangle :math:`\triangle ABC`.
@@ -370,8 +373,10 @@ For Exercises 1-9, solve the triangle :math:`\triangle ABC`.
 15. One diagonal of a parallelogram is 17 cm long and makes angles of :math:`36^\circ \text{ and } 15^\circ` with the sides. Find the lengths of the sides.
 16. Explain why in Case 1 (one side and two angles) there is always exactly one solution.
 
-The Law of Cosines
+
+余弦定理
 --------------------
+The Law of Cosines
 
 We will now discuss how to solve a triangle in Case 3: two sides and the angle between them. First, let us see what happens when we try to use the Law of Sines for this case.
 
@@ -735,8 +740,9 @@ Like the Law of Sines, the Law of Cosines can be used to prove some geometric fa
 
     **[QED]**
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~~~
 
 For Exercises 1-6, solve the triangle :math:`\triangle ABC`.
 
@@ -828,8 +834,9 @@ For Exercises 1-6, solve the triangle :math:`\triangle ABC`.
 
     .. [3] See pp. 22-25 in T. Pratt and C.W. Bostian, *Satellite Communications*, New York: John Wiley \& Sons, 1986.
 
-The Law of Tangents
+正切定理
 ----------------------
+The Law of Tangents
 
 We have shown how to solve a triangle in all four cases discussed at the beginning of this chapter. An alternative to the Law of Cosines for Case 3 (two sides and the included angle) is the *Law of Tangents*:
 
@@ -991,8 +998,9 @@ We will prove the Law of Tangents and Mollweide's equations in :ref:`Chapter 3 <
 
 .. [6] There are (complex) geometric proofs of the Law of Tangents and Mollweide's equations. See pp. 96-98 in *P.R. Rider*, *Plane and Spherical Trigonometry*, New York: The Macmillan Company, 1942.
 
-Exercises
+练习
 ~~~~~~~~~~~~~~
+Exercises
 
 .. _sec2dot3:
 
@@ -1015,8 +1023,9 @@ For Exercises 4-6, check if it is possible for a triangle to have the given part
 11. If :math:`\,b\;\cos\;A = a\;\cos\;B\,`, show that the triangle :math:`\triangle ABC` is isosceles.
 12. Let $ABCD$ be a quadrilateral which completely contains its two diagonals. The quadrilateral has eight parts: four sides and four angles. What is the smallest number of parts that you would need to know to solve the quadrilateral? Explain your answer.
 
-The Area of a Triangle
+三角形的面积
 -----------------------
+The Area of a Triangle
 
 In elementary geometry you learned that the area of a triangle is one-half the base times the height. We will now use that, combined with some trigonometry, to derive more formulas for the area when given various parts of the triangle.
 
@@ -1310,8 +1319,9 @@ For a triangle :math:`\triangle ABC` with sides $a \ge b \ge c$, the area is:
 
 For the triangle in Example :ref:`2.16 <exmp:heronfail>`, the above formula gives an answer of exactly $K = 1$ on the same TI-83 Plus calculator that failed with Heron's formula.
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~
 
 .. _sec2dot4:
 
@@ -1371,8 +1381,9 @@ For Exercises 1-6, find the area of the triangle :math:`\triangle ABC`.
 11. Show that the triangle area formula :eq:`2.34 <eqn:jiushao>` is equivalent to Heron's formula. (*Hint: Factor the expression inside the square root.*)
 12. Find the angle $A$ in Example :ref:`2.16 <exmp:heronfail>`, then use formula :eq:`2.23 <eqn:areacase1a>` to find the area. Did it work?
 
-Circumscribed and Inscribed Circles
+外接圆与内切圆
 -------------------------------------
+Circumscribed and Inscribed Circles
 
 Recall from the Law of Sines that any triangle :math:`\triangle ABC` has a common ratio of sides to
 sines of opposite angles, namely
@@ -1678,8 +1689,9 @@ Recall from geometry how to bisect an angle: use a compass centered at the verte
 
     Figure :ref:`2.5.8 <fig:inscrib234>` shows how to draw the inscribed circle: draw the bisectors of $A$ and $B$, then at their intersection use a compass to draw a circle of radius :math:`r = \sqrt{5/12} \approx 0.645`.
 
+练习
+~~~~~~~~~~~~~~
 Exercises
-~~~~~~~~~~~
 
 .. _sec2dot5:
 
