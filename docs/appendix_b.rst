@@ -25,135 +25,158 @@ RUNNING GNUPLOT
 #. You should now get a Gnuplot terminal with a ``gnuplot>`` command prompt. In Windows this will appear in a new window, as shown in the picture on the next page. In Linux it will appear in the terminal window where the ``gnuplot`` command was run. For Windows, if the font is unreadable you can change it by right-clicking on the text part of the Gnuplot window and selecting the "Choose Font.." option. For example, the font "Courier", style "Regular", size "12" is usually a good choice (that choice can be saved for future sessions by right-clicking in the Gnuplot window again and selecting the option to update wgnuplot.ini).
 #. At the ``gnuplot>`` command prompt you can now run graphing commands, which we will now describe.
 
------
+.. figure:: ./img/164-0.png
+    :align: center
 
-\begin{figure}[h]
- \begin{center}
-  \includegraphics{wgnuplot.eps}
- \end{center}
-\end{figure}
+**GRAPHING FUNCTIONS**
 
-\par\noindent\textbf{\textsf{GRAPHING FUNCTIONS}}\vspace{2mm}\\
-The usual way to create graphs in Gnuplot is with the \textbf{\path{plot}} command:
-\begin{displaymath}
- \texttt{plot \emph{<range> <comma-separated list of functions>}}
-\end{displaymath}
-For a function $y=f(x)$, \texttt{\emph{<range>}} is the range of $x$ values (and optionally the
-range of $y$ values) over which to plot. To specify an $x$ range, use an expression of the form
-\symbol{91}$a:b$\symbol{93}, for some numbers $a<b$. This will cause the graph to
-be plotted for $a\le x\le b$.\vspace{2mm}
+The usual way to create graphs in Gnuplot is with the **plot** command:
 
-To specify an $x$ range and a $y$ range, use an expression of the form
-\symbol{91}$a:b$\symbol{93}\symbol{91}$c:d$\symbol{93}, for some numbers $a<b$ and $c<d$. This will
-cause the graph to be plotted for $a\le x\le b$ and $c\le y \le d$.\vspace{2mm}
+.. math::
 
-\par\noindent Function definitions use the $x$ variable in combination with mathematical operators,
-listed below:\vspace{1mm}
+ \texttt{plot <range> <comma-separated list of functions>}
 
-\begin{center}
-\begin{tabular}{@{} | c | c | c | c | @{}}
- \hline \textbf{Symbol} & \textbf{Operation} & \textbf{Example} & \textbf{Result}\\
- \hline $+$ & Addition & $2 + 3$ & $5$\\
- \hline $-$ & Subtraction & $3 - 2$ & $1$\\
- \hline * & Multiplication & $2$*$3$ & $6$\\
- \hline $/$ & Division & $4/2$ & $2$\\
- \hline ** & Power & $2$**$3$ & $2^3 = 8$\\
- \hline exp($x$) & $e^x$ & exp($2$) & $e^2$\\
- \hline log($x$) & $\ln x$ & log($2$) & $\ln 2$\\
- \hline sin($x$) & $\sin x$ & sin(pi/$2$) & $1$\\
- \hline cos($x$) & $\cos x$ & cos(pi) & $-1$\\
- \hline tan($x$) & $\tan x$ & tan(pi/$4$) & $1$\\\hline
-\end{tabular}\end{center}
+For a function :math:`y=f(x)`, *<range>* is the range of :math:`x` values (and optionally the range of :math:`y` values) over which to plot. To specify an :math:`x` range, use an expression of the form :math:`[a:b]`, for some numbers :math:`a<b`. This will cause the graph to be plotted for :math:`a\le x\le b`.
 
-Note that we use the special keyword ``pi'' to denote the value of $\pi$.
+To specify an :math:`x` range and a :math:`y` range, use an expression of the form :math:`[a:b]` :math:`[c:d]`, for some numbers :math:`a<b` and :math:`c<d`. This will cause the graph to be plotted for :math:`a\le x\le b` and :math:`c\le y \le d`.
 
-\vspace{2mm}
-\hrule width \textwidth height 0.5pt\vspace{2mm}
-\par\noindent \emph{\textbf{Example B.1.}}
- To graph the function $y=\sin\;x$ from $x=0$ to $x=2\pi$, type this at the
- \textbf{\path{gnuplot>}} prompt:
- \begin{displaymath}
-  \texttt{plot \symbol{91}0:2*pi\symbol{93} sin(x)}
- \end{displaymath}
- The result is shown below:
- 
-\begin{figure}[h]
- \begin{center}
-  \input{sine.tex}
- \end{center}
-\end{figure}
+Function definitions use the :math:`x` variable in combination with mathematical operators, listed below:
 
-Notice that the $x$-axis is labeled with integers. To get the $x$-axis labels with fractions of
-$\pi$, you need to modify the \texttt{terminal} setting. In Windows, you would do this:
-\begin{displaymath}
- \texttt{set terminal windows enhanced}
-\end{displaymath}
+.. list-table::
+
+    * - **Symbol**
+      - **Operation**
+      - **Example**
+      - **Result**
+    * - :math:`+`
+      - Addition
+      - :math:`2 + 3`
+      - :math:`5`
+    * - :math:`-`
+      - Subtraction
+      - :math:`3 - 2`
+      - :math:`1`
+    * - \*
+      - Multiplication
+      - :math:`2`*`3`
+      - :math:`6`
+    * - :math:`/`
+      - Division
+      - :math:`4/2`
+      - :math:`2`
+    * - \*\*
+      - Power
+      - :math:`2` \*\* :math:`3`
+      - :math:`2^3 = 8`
+    * - exp(:math:`x`)
+      - :math:`e^x`
+      - exp(:math:`2`)
+      - :math:`e^2`
+    * - log(:math:`x`)
+      - :math:`\ln x`
+      - log(:math:`2`)
+      - :math:`\ln 2`
+    * - sin(:math:`x`)
+      - :math:`\sin x`
+      - sin(pi/:math:`2`)
+      - :math:`1`
+    * - cos(:math:`x`)
+      - :math:`\cos x`
+      - cos(pi)
+      - :math:`-1`
+    * - tan(:math:`x`)
+      - :math:`\tan x`
+      - tan(pi/:math:`4`)
+      - :math:`1`
+  
+
+Note that we use the special keyword "pi" to denote the value of :math:`\pi`.
+
+.. admonition:: Example B.1.
+
+To graph the function :math:`y=\sin\;x` from :math:`x=0` to :math:`x=2\pi`, type this at the **gnuplot** prompt:
+
+.. math::
+
+    \texttt{plot [0:2*pi] sin(x)}
+
+The result is shown below:
+
+.. figure:: ./img/165-0.png
+    :align: center
+
+Notice that the :math:`x`-axis is labeled with integers. To get the :math:`x`-axis labels with fractions of :math:`\pi`, you need to modify the *terminal* setting. In Windows, you would do this:
+
+.. math::
+
+    \texttt{set terminal windows enhanced}
+
 In Linux you would do this:
-\begin{displaymath}
- \texttt{set terminal wxt enhanced}
-\end{displaymath}
-You can then (provided the Symbol font is installed, which it usually is) set the $x$-axis to have
-multiples of $\pi/2$ from $0$ to $2\pi$ as labels with this command (all on one line):
-\begin{gather*}
- \texttt{set xtics ('0' 0,'\{/Symbol p\}/2' pi/2,'\{/Symbol p\}' pi,'3\{/Symbol p\}/2' 3*pi/2,}\\
- \texttt{'2\{/Symbol p\}' 2*pi)}
-\end{gather*}
-In the above example,
- to also plot the function $y=\cos\;2x + \sin\;3x$ on the same graph, put a comma after the first
- function then append the new function:
- \begin{displaymath}
-  \texttt{plot \symbol{91}0:2*pi\symbol{93} sin(x), cos(2*x) + sin(3*x)}
- \end{displaymath}
-By default, the $x$-axis is not shown in the graph. To display it, use this command
-\emph{before} the \textbf{\path{plot}} command:
-\begin{displaymath}
- \texttt{set zeroaxis}
-\end{displaymath}
+
+.. math::
+
+    \texttt{set terminal wxt enhanced}
+
+You can then (provided the Symbol font is installed, which it usually is) set the :math:`x`-axis to have multiples of :math:`\pi/2` from :math:`0` to :math:`2\pi` as labels with this command (all on one line):
+
+.. math::
+
+    \begin{gather*}
+    \texttt{set xtics ('0' 0,'\{/Symbol p\}/2' pi/2,'\{/Symbol p\}' pi,'3\{/Symbol p\}/2' 3*pi/2,}\\
+    \texttt{'2\{/Symbol p\}' 2*pi)}
+    \end{gather*}
+
+In the above example, to also plot the function :math:`y=\cos\;2x + \sin\;3x` on the same graph, put a comma after the first function then append the new function:
+
+.. math::
+
+    \texttt{plot [0:2*pi] sin(x), cos(2*x) + sin(3*x)}
+
+By default, the `x`-axis is not shown in the graph. To display it, use this command *before* the **plot** command:
+
+.. math::
+
+    \texttt{set zeroaxis}
+
 Also, to label the axes, use these commands:
-\begin{gather*}
- \texttt{set xlabel "x"}\\\texttt{set ylabel "y"}
-\end{gather*}
-The default sample size for plots is $100$ units, which can result in jagged edges if the curve
-is complicated. To get a smoother curve, increase the
-sample size (to, say, $1000$) like this:
-\begin{displaymath}
- \texttt{set samples 1000}
-\end{displaymath}
+
+.. math::
+
+    \begin{gather*}
+    \texttt{set xlabel "x"}\\\texttt{set ylabel "y"}
+    \end{gather*}
+
+The default sample size for plots is :math:`100` units, which can result in jagged edges if the curve is complicated. To get a smoother curve, increase the sample size (to, say, :math:`1000`) like this:
+
+.. math::
+
+    \texttt{set samples 1000}
+
 Putting all this together, we get the following graph:
 
-\begin{figure}[H]
- \begin{center}
-  \input{tutorial.tex}
- \end{center}
-\end{figure}\vspace{-4mm}
-\lineacross
-\vspace{3mm}
+.. figure:: ./img/167-0.png
+    :align: center
 
-\par\noindent\textbf{\textsf{PRINTING AND SAVING}}\vspace{2mm}\\
-In Windows, if you are using the \texttt{windows enhanced} terminal then to print a graph from
-Gnuplot click on the printer icon in the menubar of the graph's window. If you are using the
-default \texttt{wxt} terminal then select \textbf{Print} near the top of the main Gnuplot window
-and enter \path{png} in the \emph{Terminal type?} textfield, then hit OK to get the Print Setup
-dialog.
+**PRINTING AND SAVING**
+---------------------------
 
-In Windows, to save a graph, say, as a PNG file, go to the File menu on the main Gnuplot menubar,
-select ``Output Device ...'', and enter \path{png} in the \emph{Terminal type?} textfield, hit OK. Then, in the
-File menu again, select the ``Output ...'' option and enter a filename (say, graph.png) in the \emph{Output
-filename?} textfield, hit OK. Now run your plot command again and the file will be saved in the
-current directory, usually in your \texttt{My Documents} folder (it can also be found by
-selecting the ``show Current Directory'' option in the File menu).\\
+In Windows, if you are using the *windows enhanced* terminal then to print a graph from Gnuplot click on the printer icon in the menubar of the graph's window. If you are using the default *wxt* terminal then select **Print** near the top of the main Gnuplot window and enter ``png`` in the ``Terminal type?`` textfield, then hit OK to get the Print Setup dialog.
 
-\par\noindent In Linux, to save the graph as a file called graph.png run the following
-commands:\vspace{2mm}
+In Windows, to save a graph, say, as a PNG file, go to the File menu on the main Gnuplot menubar, select "Output Device ...", and enter ``png`` in the *Terminal type?* textfield, hit OK. Then, in the File menu again, select the "Output ..." option and enter a filename (say, graph.png) in the *Output filename?* textfield, hit OK. Now run your plot command again and the file will be saved in the current directory, usually in your *My Documents* folder (it can also be found by selecting the "show Current Directory" option in the File menu).
 
-\begin{tabular}{l @{}}
-\texttt{set terminal png}\\
-\texttt{set output 'graph.png'}
-\end{tabular}\vspace{2mm}
+In Linux, to save the graph as a file called graph.png run the following commands:
 
-\par\noindent and then run your plot command. There are many terminal types (which determine the output format). Run
-the command \textbf{\texttt{set terminal}} to see all the possible types. In Linux, the \textbf{postscript} terminal type is
+.. math::
+    
+    \begin{align}
+    &\texttt{set terminal png}\\
+    &\texttt{set output 'graph.png'}
+    \end{align}
+
+
+and then run your plot command. There are many terminal types (which determine the output format). Run
+the command `set terminal` to see all the possible types. In Linux, the \textbf{postscript} terminal type is
 popular, since the print quality is high and there are many PostScript viewers available.
-\vspace{2mm}
 
-\par\noindent To quit Gnuplot, type \textbf{\path{quit}} at the \textbf{\path{gnuplot>}} command prompt.
+
+To quit Gnuplot, type ``quit`` at the ``gnuplot`` command prompt.
