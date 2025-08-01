@@ -1,0 +1,1186 @@
+.. _c6:
+
+
+第 6 章 附加主题  
+===============================
+Chapter 6 Additional Topics
+
+
+三角方程的求解  
+-------------------------------------
+Solving Trigonometric Equations
+
+An equation involving trigonometric functions is called a *trigonometric equation*. For example, an equation like
+
+.. math::
+
+    \tan\;A ~=~ 0.75 ~,
+
+which we encountered in :ref:`Chapter 1 <c1>`, is a trigonometric equation. In :ref:`Chapter 1 <c1>` we were concerned only with finding a single solution (say, between :math:`0^\circ` and :math:`90^\circ`). In this section we will be concerned with finding the most general solution to such equations.
+
+To see what that means, take the above equation :math:`\tan\;A = 0.75`. Using the :math:`\boxed{\tan^{-1}}` calculator button in degree mode, we get :math:`A=36.87^\circ`. However, we know that the tangent function has period :math:`\pi` rad :math:`= 180^\circ`, i.e. it repeats every :math:`180^\circ`. Thus, there are many other possible answers for the value of :math:`A`, namely :math:`36.87^\circ + 180^\circ`, :math:`36.87^\circ - 180^\circ`, :math:`36.87^\circ + 360^\circ`, :math:`36.87^\circ - 360^\circ`, :math:`36.87^\circ + 540^\circ`, etc. We can write this in a more compact form:
+
+.. math::
+
+    A ~=~ 36.87^\circ \;+\; 180^\circ k \quad\text{for }k=0, \pm\,1, \pm\,2, ...
+
+This is the most general solution to the equation.
+Often the part that says :math:`\text{for }k=0, \pm\,1, \pm\,2, ...` is omitted since it is
+usually understood that `k` varies over all integers. The general solution in radians would be:
+
+.. math::
+
+    A ~=~ 0.6435 \;+\; \pi k \quad\text{for }k=0, \pm\,1, \pm\,2, ...
+
+
+.. admonition:: Example 6.1
+
+    Solve the equation :math:`\;2\,\sin\;\theta \;+\;1 ~=~ 0`.
+
+    **Solution:** Isolating :math:`\sin\;\theta` gives :math:`\;\sin\;\theta ~=~ -\tfrac{1}{2}`. Using the :math:`\boxed{\sin^{-1}}` calculator button in degree
+    mode gives us :math:`\theta = -30^\circ`, which is in QIV. Recall that the reflection of this angle
+    around the :math:`y`-axis into QIII also has the same sine. That is, :math:`\sin\;210^\circ = -\tfrac{1}{2}`.
+    Thus, since the sine function has period :math:`2\pi` rad :math:`= 360^\circ`, and since :math:`-30^\circ` does
+    not differ from :math:`210^\circ` by an integer multiple of :math:`360^\circ`, the general solution is:
+
+    .. math::
+
+        \boxed{\theta ~=~ -30^\circ \;+\; 360^\circ k \quad\text{and}\quad 210^\circ \;+\; 360^\circ k} \qquad\text{for }k=0, \pm\,1, \pm\,2, ...
+
+    In radians, the solution is:
+
+    .. math::
+
+        \boxed{\theta ~=~ -\dfrac{\pi}{6} \;+\; 2\pi k \quad\text{and}\quad \dfrac{7\pi}{6} + 2\pi k} \qquad\text{for }k=0, \pm\,1, \pm\,2, ...
+
+
+For the rest of this section we will write our solutions in radians.
+
+.. admonition:: Example 6.2
+
+    Solve the equation :math:`\;2\cos^2 \;\theta \;-\; 1 ~=~ 0`.
+ 
+    **Solution:** Isolating :math:`\;\cos^2 \;\theta` gives us
+
+    .. math::
+
+        \cos^2 \;\theta ~=~ \frac{1}{2} \quad\Rightarrow\quad \cos\;\theta ~=~ \pm\,\frac{1}{\sqrt{2}}
+        \quad\Rightarrow\quad \theta ~=~ \frac{\pi}{4}\;,~\frac{3\pi}{4}\;,~\frac{5\pi}{4}\;,~
+        \frac{7\pi}{4}~,
+
+    and since the period of cosine is :math:`2\pi`, we would add :math:`2\pi k` to each of those angles to get the general solution. But notice that the above angles differ by multiples of :math:`\frac{\pi}{2}`. So since every multiple of `2\pi` is also a multiple of :math:`\frac{\pi}{2}`, we can combine those four separate answers into one:
+
+    .. math::
+
+        \boxed{\theta ~=~ \frac{\pi}{4} \;+\; \frac{\pi}{2}\,k}
+        \qquad\text{for }k=0, \pm\,1, \pm\,2, ...
+ 
+.. admonition:: Example 6.3
+
+    Solve the equation :math:`\;2\,\sec\;\theta ~=~ 1`.
+ 
+    **Solution:** Isolating :math:`\;\sec\;\theta` gives us
+
+    .. math::
+
+        \sec\;\theta ~=~ \frac{1}{2} \quad\Rightarrow\quad \cos\;\theta ~=~ \frac{1}{\sec\;\theta} ~=~ 2~,
+
+    which is impossible. Thus, there is \fbox{no solution}\;.
+
+.. admonition:: Example 6.4
+
+    Solve the equation :math:`\;\cos\;\theta ~=~ \tan\;\theta`.
+ 
+    **Solution:** The idea here is to use identities to put everything in terms of a single trigonometric function:
+
+    .. math::
+
+        \begin{align*}
+          \cos\;\theta ~&=~ \tan\;\theta\\
+          \cos\;\theta ~&=~ \frac{\sin\;\theta}{\cos\;\theta}\\
+          \cos^2 \;\theta ~&=~ \sin\;\theta\\
+          1 \;-\; \sin^2 \;\theta ~&=~ \sin\;\theta\\
+          0 ~&=~ \sin^2 \;\theta \;+\; \sin\;\theta \;-\; 1
+        \end{align*}
+
+    The last equation looks more complicated than the original equation, but notice that it is actually a *quadratic* equation: making the substitution :math:`x=\sin\;\theta`, we have
+    
+    .. math::
+
+        x^2 \;+\; x \;-\; 1 ~=~ 0 \quad\Rightarrow\quad x ~=~ \frac{-1 \;\pm\; \sqrt{1 - (4)\,(-1)}}{
+          2\,(1)} ~=~ \frac{-1 \;\pm\; \sqrt{5}}{2} ~=~ -1.618\;,~0.618
+ 
+    by the quadratic formula from elementary algebra. But :math:`-1.618 < -1`, so it is impossible that :math:`\;\sin\theta = x = -1.618`. Thus, we must have :math:`\;\sin\;\theta = x = 0.618`. Hence, there are two possible solutions: :math:`\theta = 0.666 ` rad in QI and its reflection :math:`\pi - \theta = 2.475` rad around the :math:`y`-axis in QII. Adding multiples of :math:`2\pi` to these gives us the general solution:
+ 
+    .. math::
+
+        \boxed{\theta ~=~ 0.666 \;+\; 2\pi k \quad\text{and}\quad 2.475 \;+\; 2\pi k}
+        \qquad\text{for }k=0, \pm\,1, \pm\,2, ...
+ 
+
+.. admonition:: Example 6.5
+
+    Solve the equation `\;\sin\;\theta ~=~ \tan\;\theta`.
+ 
+    **Solution:** Trying the same method as in the previous example, we get
+
+    .. math::
+
+        \begin{align*}
+        \sin\;\theta ~&=~ \tan\;\theta\\
+        \sin\;\theta ~&=~ \frac{\sin\;\theta}{\cos\;\theta}\\
+        \sin\;\theta~\cos\;\theta ~&=~ \sin\;\theta\\
+        \sin\;\theta~\cos\;\theta \;-\; \sin\;\theta ~&=~ 0\\
+        \sin\;\theta~(\cos\;\theta \;-\; 1) ~&=~ 0\\
+        &\Rightarrow\quad \sin\;\theta ~=~ 0 \quad\text{or}\quad \cos\;\theta ~=~ 1\\
+        &\Rightarrow\quad \theta ~=~ 0\;,~\pi \quad\text{or}\quad \theta ~=~ 0\\
+        &\Rightarrow\quad \theta ~=~ 0\;,~\pi~,
+        \end{align*}
+
+    plus multiples of :math:`2\pi`. So since the above angles are multiples of :math:`\pi`, and every multiple of :math:`2\pi` is a multiple of :math:`\pi`, we can combine the two answers into one for the general solution:
+
+    .. math::
+
+        \boxed{\theta ~=~ \pi k} \qquad\text{for }k=0, \pm\,1, \pm\,2, ...
+
+.. admonition:: Example 6.6
+
+    Solve the equation :math:`\;\cos\;3\theta ~=~ \frac{1}{2}`.
+ 
+    **Solution:** The idea here is to solve for :math:`3\theta` first, using the most general solution, and then divide that solution by :math:`3`. So since :math:`\;\cos^{-1} \frac{1}{2} = \frac{\pi}{3}`, there are two possible solutions for :math:`3\theta`: `3\theta = \frac{\pi}{3}` in QI and its reflection :math:`-3\theta = -\frac{\pi}{3}` around the :math:`x`-axis in QIV. Adding multiples of :math:`2\pi` to these gives us:
+
+    .. math::
+
+        3\theta ~=~ \pm\,\frac{\pi}{3} \;+\; 2\pi k \qquad\text{for }k=0, \pm\,1, \pm\,2, ...
+
+        So dividing everything by `3` we get the general solution for `\theta`:
+
+    .. math::
+
+        \boxed{\theta ~=~ \pm\,\frac{\pi}{9} \;+\; \frac{2\pi}{3} k}
+        \qquad\text{for }k=0, \pm\,1, \pm\,2, ...
+
+
+.. admonition:: Example 6.7
+
+    Solve the equation :math:`\;\sin\;2\theta ~=~ \sin\;\theta`.
+ 
+    **Solution:** Here we use the double-angle formula for sine:
+
+    .. math::
+
+        \begin{align*}
+        \sin\;2\theta ~&=~ \sin\;\theta\\
+        2\,\sin\theta~\cos\;\theta ~&=~ \sin\;\theta\\
+        \sin\;\theta~(2\,\cos\;\theta \;-\; 1) ~&=~ 0\\
+        &\Rightarrow\quad \sin\;\theta ~=~ 0 \quad\text{or}\quad \cos\;\theta ~=~ \frac{1}{2}\\
+        &\Rightarrow\quad \theta ~=~ 0\;,~\pi \quad\text{or}\quad \theta ~=~ \pm\,\frac{\pi}{3}\\
+        &\Rightarrow\quad \boxed{\theta ~=~ \pi k \quad\text{and}\quad \pm\,\frac{\pi}{3} \;+\; 2\pi k}
+        \qquad\text{for }k=0, \pm\,1, \pm\,2, ...
+        \end{align*}
+
+.. _exmp:trigeqncombo:
+
+.. admonition:: Example 6.8
+
+    .. _fig:trigeqn:
+
+    .. figure:: ./img/f6.1.1.png
+        :align: right
+
+        **Figure 6.1.1**
+
+    Solve the equation :math:`\;2\,\sin\;\theta \;-\; 3\,\cos\;\theta ~=~ 1`.
+
+    **Solution:** We will use the technique which we discussed in :math:`Chapter 5 <c5>` for finding the amplitude of a combination of sine and cosine functions. Take the coefficients :math:`2` and :math:`3` of :math:`\;\sin\;\theta` and :math:`\;-\cos\;\theta`, respectively, in the above equation and make them the legs of a right triangle, as in Figure :ref:`6.1.1 <fig:trigeqn>`. Let :math:`\phi` be the angle shown in the right triangle. The leg with length :math:`3 >0` means that the angle :math:`\phi` is above the :math:`x`-axis, and the leg with length :math:`2>0` means that :math:`\phi` is to the right of the :math:`y`-axis. Hence, :math:`\phi` must be in QI. The hypotenuse has length :math:`\sqrt{13}` by the Pythagorean Theorem, and hence :math:`\;\cos\;\phi = \frac{2}{\sqrt{13}}` and :math:`\;\sin\;\theta = \frac{3}{\sqrt{13}}`. We can use this to transform the equation to solve as follows:
+
+    .. math::
+
+        \begin{align*}
+        2\,\sin\;\theta \;-\; 3\,\cos\;\theta ~&=~ 1\\
+        \sqrt{13}\,\left( \tfrac{2}{\sqrt{13}}\,\sin\;\theta \;-\; \tfrac{3}{\sqrt{13}}\,\cos\;\theta
+          \right) ~&=~ 1\\
+        \sqrt{13}\,( \cos\;\phi\;\sin\;\theta \;-\; \sin\;\phi\;\cos\;\theta ) ~&=~ 1\\
+        \sqrt{13}\,\sin\;(\theta - \phi) ~&=~ 1\quad\text{(by the sine subtraction formula)}\\
+        \sin\;(\theta - \phi) ~&=~ \tfrac{1}{\sqrt{13}}\\
+        &\Rightarrow\quad \theta - \phi ~=~ 0.281 \quad\text{or}\quad \theta - \phi ~=~ \pi - 0.281 = 2.861\\
+        &\Rightarrow\quad \theta ~=~ \phi \;+\; 0.281 \quad\text{or}\quad \theta ~=~ \phi \;+\; 2.861
+        \end{align*}
+
+    Now, since :math:`\;\cos\;\phi = \frac{2}{\sqrt{13}}` and :math:`\phi` is in QI, the most general solution for :math:`\phi` is :math:`\phi = 0.983 + 2\pi k` for :math:`k=0`, :math:`\pm\,1`, :math:`\pm\,2`, :math:`...` . So since we needed to add multiples of :math:`2\pi` to the solutions :math:`0.281` and :math:`2.861` anyway, the most general solution for :math:`\theta` is:
+
+    .. math::
+
+        \begin{align*}
+        \theta ~&=~ 0.983 \;+\; 0.281 \;+\; 2\pi k\quad\text{and}\quad 0.983 \;+\; 2.861 \;+\; 2\pi k\\
+        &\Rightarrow\quad \boxed{\theta ~=~ 1.264 \;+\; 2\pi k\quad\text{and}\quad 3.844 \;+\; 2\pi k}
+        \quad\text{for }k=0, \pm\,1, \pm\,2, ...
+        \end{align*}
+
+Note: In Example :ref:`6.8 <exmp:trigeqncombo>` if the equation had been :math:`\;2\,\sin\;\theta \;+\; 3\,\cos\;\theta ~=~ 1` then we still would have used a right triangle with legs of lengths `2` and `3`, but we would have used the sine addition formula instead of the subtraction formula.
+
+.. _sec6dot1:
+
+练习
+~~~~~~~~~~~~~~
+Exercises
+
+For Exercises 1-12, solve the given equation (in radians).
+
+1. :math:`\tan\;\theta \;+\; 1 ~=~ 0`
+2. :math:`2\,\cos\;\theta \;+\; 1 ~=~ 0`
+3. :math:`\sin\;5\theta \;+\; 1 ~=~ 0`
+4. :math:`2\,\cos^2 \;\theta \;-\; \sin^2 \;\theta ~=~ 1`
+5. :math:`2\,\sin^2 \;\theta \;-\; \cos\;2\theta ~=~ 0`
+6. :math:`2\,\cos^2 \;\theta \;+\; 3\,\sin\;\theta ~=~ 0`
+7. :math:`\cos^2 \;\theta \;+\; 2\,\sin\;\theta ~=~ -1`
+8. :math:`\tan\;\theta \;+\; \cot\;\theta ~=~ 2`
+9. :math:`\sin\;\theta ~=~ \cos\;\theta`
+10. :math:`2\,\sin\;\theta \;-\; 3\,\cos\;\theta ~=~ 0`
+11. :math:`\cos^2 \;3\theta \;-\; 5\,\cos\;3\theta \;+\; 4 ~=~ 0`
+12. :math:`3\,\sin\;\theta \;-\; 4\,\cos\;\theta ~=~ 1`
+
+三角学中的数值方法  
+------------------------------------
+Numerical Methods in Trigonometry
+
+We were able to solve the trigonometric equations in the previous section fairly easily, which in general is not the case. For example, consider the equation
+
+.. _equation 6.1:
+
+.. math::
+    :label: eqn:cosinefixed
+
+    \cos\;x ~=~ x ~.
+
+There is a solution, as shown in Figure :ref:`6.2.1 <fig:cosineeqx>` below. The graphs of :math:`y=\cos\;x`
+and :math:`y=x` intersect somewhere between :math:`x=0` and :math:`x=1`, which means that there is an :math:`x` in the
+interval :math:`[0, 1]` such that :math:`\cos\;x = x`.
+
+.. _fig:cosineeqx:
+
+.. figure:: ./img/f6.2.1.png
+    :align: center
+
+    **Figure 6.2.1** :math:`y=\cos\;x` and :math:`y=x`
+
+Unfortunately there is no trigonometric identity or simple method which will help us here. Instead, we have to resort to *numerical methods*, which provide ways of getting successively better approximations to the actual solution(s) to within any desired degree of accuracy. There is a large field of mathematics devoted to this subject called *numerical analysis*. Many of the methods require calculus, but luckily there is a method which we can use that requires just basic algebra. It is called the *secant method*, and it finds roots of a given function :math:`f(x)`, i.e. values of :math:`x` such that :math:`f(x)=0`. A derivation of the secant method is beyond the scope of this book, [1]_ but we can state the algorithm it uses to solve :math:`f(x)=0`:
+
+1. Pick initial points :math:`x_0` and :math:`x_1` such that :math:`x_0 < x_1` and :math:`f(x_0)\,f(x_1) < 0` (i.e. the solution is somewhere between :math:`x_0` and :math:`x_1`).
+2. For :math:`n \ge 2`, define the number :math:`x_n` by
+  
+   .. _equation 6.2:
+
+   .. math::
+      :label: eqn:secantmethod
+
+      x_n ~=~ x_{n-1} ~-~ \dfrac{(x_{n-1} \;-\; x_{n-2})\,f(x_{n-1})}{f(x_{n-1}) \;-\; f(x_{n-2})}
+  
+   as long as :math:`|x_{n-1} \;-\; x_{n-2}| > \epsilon_{error}`, where :math:`\epsilon_{error} > 0` is the maximum amount of error desired (usually a very small number).
+
+3. The numbers :math:`x_0`, :math:`x_1`, :math:`x_2`, :math:`x_3`, :math:`...` will approach the solution :math:`x` as we go through more iterations, getting as close as desired.
+
+.. [1] For an explanation of why the secant method works, see pp. 338-344 in *A. Ralston and P. Rabinowitz*, *A First Course in Numerical Analysis*, 2nd ed., New York: McGraw-Hill Book Co., 1978.
+
+We will now show how to use this algorithm to solve the equation :math:`\cos\;x = x`. The solution to that equation is the root of the function :math:`f(x) =\cos\;x - x`. And we saw that the solution is somewhere in the interval :math:`[0, 1]` . So pick :math:`x_0 = 0` and :math:`x_1 = 1`. Then :math:`f(0)=1` and :math:`f(1)=-0.4597`, so that :math:`f(x_0)\,f(x_1) < 0` (we are using radians, of course). Then by definition,
+
+.. math::
+
+    \begin{align*}
+    x_2 ~&=~ x_1 ~-~ \dfrac{(x_1 \;-\; x_0)\,f(x_1)}{f(x_1) \;-\; f(x_0)}\\
+    &=~ 1 ~-~ \dfrac{(1 \;-\; 0)\,f(1)}{f(1) \;-\; f(0)}\\
+    &=~ 1 ~-~ \dfrac{(1 \;-\; 0)\,(-0.4597)}{-0.4597 \;-\; 1}\\
+    &=~ 0.6851~,\\
+    x_3 ~&=~ x_2 ~-~ \dfrac{(x_2 \;-\; x_1)\,f(x_2)}{f(x_2) \;-\; f(x_1)}\\
+    &=~ 0.6851 ~-~ \dfrac{(0.6851 \;-\; 1)\,f(0.6851)}{f(0.6851) \;-\; f(1)}\\
+    &=~ 0.6851 ~-~ \dfrac{(0.6851 \;-\; 1)\,(0.0893)}{0.0893 \;-\; (-0.4597)}\\
+    &=~ 0.7363 ~,
+    \end{align*}
+
+and so on. Using a calculator is not very efficient and will lead to rounding errors. A better way to implement the algorithm is with a computer. Listing :ref:`6.1 <lst:secant>` below shows the code (secant.java) for solving :math:`\cos\;x = x` with the secant method, using the Java programming language:
+
+.. _lst:secant:
+
+**Listing 6.1 Program listing for secant.java**
+
+.. code-block:: java 
+    :linenos:
+
+    import java.math.*;
+    public class secant {
+    public static void main (String[] args) {
+        double x0 =  Double.parseDouble(args[0]);
+        double x1 =  Double.parseDouble(args[1]);
+        double x = 0;
+        double error = 1.0E-50;
+        for (int i=2; i <= 10; i++) {
+            if (Double.compare(Math.abs(x0 - x1),error) > 0) {
+              x = x1 - (x1 - x0)*f(x1)/(f(x1) - f(x0));
+              x0 = x1;
+              x1 = x;
+              System.out.println("x" + i + " = " + x);
+            } else {
+              break;
+            }
+        }
+        MathContext mc = new MathContext(50);
+        BigDecimal answer = new BigDecimal(x,mc);
+        System.out.println("x = " + answer);
+      }
+      //Define the function f(x)
+      public static double f (double x) {
+        return Math.cos(x) - x;
+      }
+    }
+
+Lines 4-5 read in :math:`x_0` and :math:`x_1` as input parameters to the program.
+
+Line 6 initializes the variable that will eventually hold the solution.
+
+Line 7 sets the maximum error :math:`\epsilon_{error}` to be :math:`1.0 \,\times\, 10^{-50}`. That is, our final answer will be within that (tiny!) amount of the real solution.
+
+Line 8 starts a loop of 9 iterations of the algorithm, i.e. it will create the successive approximations :math:`x_2`, :math:`x_3`, :math:`...`, :math:`x_{10}` to the real solution, though in Line 9 we check to see if the two previous approximations differ by less than the maximum error. If they do, we stop (since this means we have an acceptable solution), otherwise we continue.
+
+Line 10 is the main step in the algorithm, creating :math:`x_n` from :math:`x_{n-1}` and :math:`x_{n-2}`.
+
+Lines 11-12 set the new values of :math:`x_{n-2}` and :math:`x_{n-1}`, respectively.
+
+Lines 18-20 set the number of decimal places to show in the final answer to 50 (the default is 16) and then print the answer.
+
+Lines 23-24 give the definition of the function :math:`f(x)=\cos\;x - x`.
+
+Below is the result of compiling and running the program using :math:`x_0 = 0` and :math:`x_1 = 1`:
+
+.. code:: shell
+
+    javac secant.java
+    java secant 0 1
+    x2 = 0.6850733573260451
+    x3 = 0.736298997613654
+    x4 = 0.7391193619116293
+    x5 = 0.7390851121274639
+    x6 = 0.7390851332150012
+    x7 = 0.7390851332151607
+    x8 = 0.7390851332151607
+    x = 0.73908513321516067229310920083662495017051696777344
+
+Notice that the program only got up to :math:`x_8`, not :math:`x_{10}`. The reason is that the difference between :math:`x_8` and :math:`x_7` was small enough (less than :math:`\epsilon_{error} = 1.0 \,\times\, 10^{-50}`) to stop at :math:`x_8` and call that our solution. The last line shows that solution to 50 decimal places.
+
+Does that number look familiar? It should, since it is the answer to Exercise :ref:`11 <exer:cosxeqx>` in Section 4.1. That is, when taking repeated cosines starting with any number (in radians), you eventually start getting the above number repeatedly after enough iterations. This turns out not to be a coincidence. Figure :ref:`6.2.2 <fig:cosinefixed>` gives an idea of why.
+
+.. _fig:cosinefixed:
+
+.. _Figure 6.2.2:
+
+.. figure:: ./img/f6.2.2.png
+    :align: center
+
+    Figure 6.2.2 Attractive fixed point for :math:`\cos\;x`
+
+Since :math:`x=0.73908513321516...` is the solution of :math:`\cos\;x = x`, you would get :math:`\cos\;(\cos\;x) = \cos\;x = x`, so :math:`\cos\;(\cos\;(\cos\;x)) = \cos\;x = x`, and so on. This number :math:`x` is called an *attractive fixed point* of the function :math:`\cos\;x`. No matter where you start, you end up getting "drawn" to it. Figure :ref:`6.2.2 <fig:cosinefixed>` shows what happens when starting at :math:`x=0`: taking the cosine of ``0`` takes you to ``1``, and then successive cosines (indicated by the intersections of the vertical lines with the cosine curve) eventually "spiral" in a rectangular fashion to the fixed point (i.e. the solution), which is the intersection of :math:`y=\cos\;x` and :math:`y=x`.
+
+Recall in Example :ref:`5.10 <exmp:cos6xsin4x>` in Section 5.2 that we claimed that the maximum and minimum of the function :math:`y=\cos\;6x + \sin\;4x` were :math:`\pm\,1.90596111871578`, respectively. We can show this by using the open-source program Octave. [2]_ Octave uses a *successive quadratic programming* method to find the minimum of a function :math:`f(x)`. Finding the maximum of :math:`f(x)` is the same as finding the minimum of :math:`-f(x)` then multiplying by :math:`-1` (why?). Below we show the commands to run at the Octave command prompt (``octave:n>``) to find the minimum of :math:`f(x) = \cos\;6x + \sin\;4x`. The command ``sqp(3,'f')`` says to use :math:`x=3` as a first approximation of the number `x` where `f(x)` is a minimum.
+
+.. code:: shell
+
+    octave:1> format long
+    octave:2> function y = f(x)
+    > y = cos(6*x) + sin(4*x)
+    > endfunction
+    octave:3> sqp(3,'f')
+    y = -1.90596111871578
+    ans = 2.65792064609274
+
+.. [2] Freely available at http://www.gnu.org/software/octave
+
+The output says that the minimum occurs when :math:`x=2.65792064609274` and that the minimum is :math:`-1.90596111871578`. To find the maximum of :math:`f(x)`, we find the minimum of `-f(x)` and then take its negative. The command ``sqp(2,'f')`` says to use `x=2` as a first approximation of the number :math:`x` where :math:`f(x)` is a maximum.
+
+.. code:: shell
+
+    octave:4> function y = f(x)
+    > y = -cos(6*x) - sin(4*x)
+    > endfunction
+    octave:5> sqp(2,'f')
+    y = -1.90596111871578
+    ans = 2.05446832062993
+
+
+The output says that the maximum occurs when ``x=2.05446832062993`` and that the maximum is ``-(-1.90596111871578) = 1.90596111871578``.
+
+Recall from Section 2.4 that Heron's formula is adequate for "typical" triangles, but will often have a problem when used in a calculator with, say, a triangle with two sides whose sum is barely larger than the third side. However, you can get around this problem by using computer software capable of handling numbers with a high degree of precision. Most modern computer programming languages have this capability. For example, in the Python programming language [3]_ (chosen here for simplicity) the *decimal* module can be used to set any level of precision. [4]_ Below we show how to get accuracy up to ``50`` decimal places using Heron's formula for the triangle in Example :ref:`2.16 <exmp:heronfail>` from Section 2.4, by using the python interactive command shell:
+
+.. code-block:: python-console
+
+    >>> from decimal import *
+    >>> getcontext().prec = 50
+    >>> a = Decimal("1000000")
+    >>> b = Decimal("999999.9999979")
+    >>> c = Decimal("0.0000029")
+    >>> s = (a+b+c)/2
+    >>> K = s*(s-a)*(s-b)*(s-c)
+    >>> print Decimal(K).sqrt()
+    0.99999999999894999999999894874999999889618749999829
+
+.. [3] Available for free at http://www.python.org
+.. [4] Other languages have similar capability, e.g. the *BigDecimal* class in Java.
+
+(Note: The triple arrow ``>>>`` is just a command prompt, not part of the code.)
+
+Notice in this case that we do get the correct answer; the high level of precision eliminates the rounding errors shown by many calculators when using Heron's formula.
+
+Another software option is Sage [5]_, a powerful and free open-source mathematics package based on Python. It can be run on your own computer, but it can also be run through a web interface: go to http://sagenb.org to create a free account, then once you register and sign in, click the **New Worksheet** link to start entering commands. For example, to find the solution to :math:`\cos\;x = x` in the interval :math:`[0, 1]` , enter these commands in the worksheet textfield:
+
+.. code-block:: python
+
+    x = var('x')
+    find_root(cos(x) == x, 0,1)
+
+.. [5] Visit the homepage at http://www.sagemath.org for more details.
+
+Click the **evaluate** link to display the answer: `0.7390851332151559`
+
+.. _sec6dot2:
+
+练习
+~~~~~~~~~~~~~~
+Exercises
+
+1. One obvious solution to the equation :math:`2\,\sin\;x = x` is :math:`x=0`. Write a program to find the other solution(s), accurate to at least within :math:`1.0 \,\times\, 10^{-20}`. You can use any programming language, though you may find it easier to just modify the code in Listing :ref:`6.1 <lst:secant>` (only one line needs to be changed!). It may help to use Gnuplot to get an idea of where the graphs of :math:`y=2\,\sin\;x` and :math:`y=x` intersect.
+2. Repeat Exercise 1 for the equation :math:`\sin\;x = x^2`.
+3. Use Octave or some other program to find the maximum and minimum of :math:`y=\cos\;5x - \sin\;3x`.
+
+复数  
+-----------------
+Complex Numbers
+
+There is no real number ``x`` such that :math:`x^2 = -1`. However, it turns out to be useful [6]_ to invent such a number, called the **imaginary unit** and denoted by the letter ``i``. Thus, :math:`i^2 = -1`, and hence :math:`i = \sqrt{-1}`. If ``a`` and ``b`` are real numbers, then a number of the form :math:`a + bi` is called a **complex number**, and if :math:`b \ne 0` then it is called an **imaginary number** (and **pure imaginary** if ``a=0`` and :math:`b \ne 0`). The real number ``a`` is called the **real part** of the complex number ``a+bi``, and ``bi`` is called its **imaginary part**.
+
+.. [6] Especially in electrical engineering, physics, and various fields of mathematics.
+
+What does it mean to add ``a`` to ``bi`` in the definition ``a+bi`` of a complex number, i.e. adding a real number and an imaginary number? You can think of it as a way of *extending* the set of real numbers. If ``b=0`` then :math:`a+bi = a+0i = a` (since ``0i`` is defined as ``0``), so that every real number is a complex number.
+
+The imaginary part ``bi`` in :math:`a+bi` can be thought of as a way of taking the *one-dimensional* set of all real numbers and extending it to a *two-dimensional* set: there is a natural correspondence between a complex number :math:`a+bi` and a *point* :math:`(a,b)` in the (two-dimensional) :math:`xy`-coordinate plane.
+
+Before exploring that correspondence further, we will first state some fundamental properties of and operations on complex numbers:
+
+.. admonition:: Let ``a+bi`` and ``c+di`` be complex numbers. Then:
+
+    1. :math:`a+bi ~=~ c+di` if and only if ``a=c`` and ``b=d~`` (i.e. the real parts are equal and the imaginary parts are equal)
+    2. :math:`(a+bi) \;+\; (c+di) ~=~ (a+c) \;+\; (b+d)i~` (i.e. add the real parts together and add the imaginary parts together)
+    3. :math:`(a+bi) \;-\; (c+di) ~=~ (a-c) \;+\; (b-d)i`
+    4. :math:`(a+bi)\,(c+di) ~=~ (ac-bd) \;+\; (ad+bc)i`
+    5. :math:`(a+bi)\,(a-bi) ~=~ a^2 \;+\; b^2`
+    6. :math:`\dfrac{a+bi}{c+di} ~=~ \dfrac{(ac+bd) \;+\; (bc-ad)i}{c^2 + d^2}`
+
+
+The first three items above are just definitions of equality, addition, and subtraction of complex numbers. The last three items can be derived by treating the multiplication and division of complex numbers as you would normally treat factors of real numbers:
+
+.. math::
+
+    \begin{align*}
+    (a+bi)\,(c+di) ~&=~ a\,(c+di) \;+\; bi\,(c+di)\\
+    &=~ ac \;+\; adi \;+\; bci \;+\; bdi^2 ~=~ ac \;+\; adi \;+\; bci \;+\; bd(-1)\\
+    &=~ (ac - bd) \;+\; (ad+bc)i
+    \end{align*}
+
+The fifth item is a special case of the multiplication formula:
+
+.. math::
+
+    \begin{align*}
+    (a+bi)\,(a-bi) ~&=~ ((a)(a) - (b)(-b)) \;+\; ((a)(-b) + (b)(a))i\\
+    &=~ ( a^2 + b^2 ) \;+\; (-ab + ba)i ~=~ ( a^2 + b^2 ) \;+\; 0i\\
+    &=~ a^2 \;+\; b^2
+    \end{align*}
+
+The sixth item comes from using the previous items:
+
+.. math::
+
+    \begin{align*}
+    \dfrac{a+bi}{c+di} ~&=~ \dfrac{a+bi}{c+di} \,\cdot\, \dfrac{c-di}{c-di}\\
+    &=~ \dfrac{(ac - b(-d)) \;+\; (a(-d) + bc)i}{c^2 + d^2}\\
+    &=~ \dfrac{(ac+bd) \;+\; (bc-ad)i}{c^2 + d^2}
+    \end{align*}
+
+The **conjugate** :math:`\overline{a+bi}` of a complex number ``a+bi`` is defined as :math:`\overline{a+bi} = a-bi`. Notice that :math:`(a+bi) \;+\; \overline{(a+bi)} ~=~ 2a` is a real number, :math:`(a+bi) \;-\; \overline{(a+bi)} ~=~ 2bi` is an imaginary number if :math:`b \ne 0`, and :math:`(a+bi) \overline{(a+bi)} ~=~ a^2 + b^2` is a real number. So for a complex number :math:`z=a+bi`, :math:`z\,\overline{z} = a^2 + b^2 \,` and thus we can define the **modulus** of ``z`` to be :math:`\sqrt{z\,\overline{z}} = \sqrt{a^2 + b^2}`, which we denote by :math:`|z|`.
+
+.. admonition:: Example 6.9
+
+    Let :math:`z_1 = -2+3i` and :math:`z_2 = 3+4i`. Find :math:`z_1 + z_2`, :math:`z_1 - z_2`, :math:`z_1 \, z_2`, :math:`z_1 / z_2`, :math:`|z_1|`, and :math:`|z_2|`.
+ 
+    **Solution:** Using our rules and definitions, we have:
+
+    .. math::
+        
+      \begin{align*}
+        z_1 \;+\; z_2 ~&=~ (-2+3i) \;+\; (3+4i)\\
+        &=~ 1 + 7i\\
+        z_1 \;-\; z_2 ~&=~ (-2+3i) \;-\; (3+4i)\\
+        &=~ -5 - i\\
+        z_1 \, z_2 ~&=~ (-2+3i)\, (3+4i)\\
+        &=~ ((-2)(3) - (3)(4)) \;+\; ((-2)(4) + (3)(3))i\\
+        &=~ -18 + i\\
+        \dfrac{z_1}{z_2} ~&=~ \dfrac{-2+3i}{3+4i}\\
+        &=~ \dfrac{(-2)(3) + (3)(4) \;+\; ((3)(3) - (-2)(4))i}{3^2 + 4^2}\\
+        &=~ \dfrac{6}{25} \;+\; \dfrac{17}{25}\,i\\
+        |z_1| ~&=~ \sqrt{(-2)^2 + 3^2}\\
+        &=~ \sqrt{13}\\
+        |z_2| ~&=~ \sqrt{3^2 + 4^2}\\
+        &=~ 5
+      \end{align*}
+
+We know that any point :math:`(x,y)` in the :math:`xy`-coordinate plane that is a distance :math:`r >0` from the
+origin has coordinates :math:`x=r\,\cos\;\theta` and :math:`y=r\,\sin\;\theta`, where :math:`\theta` is the angle in
+standard position as in Figure :ref:`6.3.1 <fig:complex>` (a).
+
+.. _fig:complex:
+
+.. _Figure 6.3.1:
+
+.. figure:: ./img/f6.3.1.png
+    :align: center
+
+    **Figure 6.3.1**
+    
+Let :math:`z=x+yi` be a complex number. We can represent ``z`` as a point in the **complex plane**, where the horizontal :math:`x`-axis represents the real part of ``z``, and the vertical :math:`y`-axis represents the pure imaginary part of ``z``, as in Figure :ref:`6.3.1 <fig:complex>` (b). The distance ``r`` from ``z`` to the origin is, by the Pythagorean Theorem, :math:`r = \sqrt{x^2 + y^2}`, which is just the modulus of ``z``. And we see from Figure :ref:`6.3.1 <fig:complex>` (b) that :math:`x=r\,\cos\;\theta` and :math:`y=r\,\sin\;\theta`, where :math:`\theta` is the angle formed by the positive :math:`x`-axis and the line segment from the origin to ``z``. We call this angle :math:`\theta` the **argument** of ``z``. Thus, we get the **trigonometric form** (sometimes called the *polar form*) of the complex number ``z``:
+
+.. tip:: 
+  
+    For any complex number :math:`z=x+yi`, we can write
+
+    .. _equation 6.3:
+
+    .. math::
+        :label: eqn:polar
+
+        \begin{align}
+        z ~&=~ r\,(\cos\;\theta \;+\; i\,\sin\;\theta)~~,~\text{where}\\
+        r ~&=~ |z| ~=~ \sqrt{x^2 + y^2}~~\text{and}\notag\\
+        \theta ~&=~ \text{the argument of $z$}~.\notag\\
+        \end{align}
+
+    The representation :math:`z=r\,(\cos\;\theta \;+\; i\,\sin\;\theta)` is often abbreviated as:
+
+    .. _equation 6.4:
+
+    .. math::
+        :label: eqn:cis
+    
+        z ~=~ r\,\text{cis}\;\theta
+
+In the special case :math:`z=0 = 0+0i`, the argument :math:`\theta` is undefined since :math:`r=|z|=0`. Also, note
+that the argument :math:`\theta` can be replaced by :math:`\theta \;+\; 360^\circ k` or :math:`\theta \;+\; \pi k`,
+depending on whether you are using degrees or radians, respectively, for :math:`k=0`, :math:`\pm\,1`, :math:`\pm\,2`,
+:math:`...` . Note also that for :math:`z=x+yi` with :math:`r=|z|`, :math:`\theta` must satisfy
+
+.. math::
+
+    \tan\;\theta ~=~ \tfrac{y}{x}~~,~ \cos\;\theta ~=~ \tfrac{x}{r}~~,~ \sin\;\theta ~=~ \tfrac{y}{r}~.
+
+.. admonition:: Example 6.10
+
+    .. _fig:exmppolar:
+
+    .. _Figure 6.3.2:
+
+    .. figure:: ./img/f6.3.2.png
+        :align: right
+
+        Figure 6.3.2
+
+    Represent the complex number :math:`-2 - i` in trigonometric form.
+ 
+    **Solution:** Let :math:`z=-2-i=x+yi`, so that :math:`x=-2` and :math:`y=-1`. Then :math:`\theta` is in QIII, as we see in Figure :ref:`6.3.2 <fig:exmppolar>`. So since :math:`\tan\;\theta = \tfrac{y}{x} = \tfrac{-1}{-2} = \tfrac{1}{2}`, we have :math:`\theta = 206.6^\circ`. Also,
+ 
+    .. math::
+
+        r ~=~ \sqrt{x^2 + y^2} ~=~ \sqrt{(-2)^2 + (-1)^2} ~=~ \sqrt{5} ~.
+ 
+    Thus, :math:`\boxed{-2 - i = \sqrt{5}\;(\cos\;206.6^\circ \;+\; i\,\sin\;206.6^\circ)}\;`, or :math:`\sqrt{5}\;\text{cis}\;206.6^\circ`.
+
+
+For complex numbers in trigonometric form, we have the following formulas for multiplication and division:
+
+.. tip::
+
+    Let :math:`z_1 = r_1 \,(\cos\;\theta_1 \;+\; i\,\sin\;\theta_1 )` and :math:`z_2 = r_2 \,(\cos\;\theta_2 \;+\; i\,\sin\;\theta_2 )` be complex numbers. Then
+
+    .. _equation 6.5:
+
+    .. math::
+        :label: eqn:complextrigmult
+
+        z_1 \, z_2 ~=~ r_1 \, r_2 \,(\cos\;(\theta_1 + \theta_2 ) \;+\; i\,\sin\;(\theta_1 + \theta_2 ))~\text{, and}
+
+    .. _equation 6.6:
+    
+    .. math::
+        :label: eqn:complextrigdiv
+
+        \frac{z_1}{z_2} ~=~ \frac{r_1}{r_2} \,(\cos\;(\theta_1 - \theta_2 ) \;+\; i\,\sin\;(\theta_1 - \theta_2 ))\quad\text{if `z_2 \ne 0`.}
+
+The proofs of these formulas are straightforward:
+
+.. math::
+
+    \begin{align*}
+    z_1 \, z_2 ~&=~ r_1 \,(\cos\;\theta_1 \;+\; i\,\sin\;\theta_1 ) \;\cdot\;
+      r_2 \,(\cos\;\theta_2 \;+\; i\,\sin\;\theta_2 )\\
+    &=~ r_1 \, r_2 \,\left[ (\cos\;\theta_1 ~ \cos\;\theta_2 \;-\; \sin\;\theta_1 ~ \sin\;\theta_2 )
+      \;+\; i\,(\sin\;\theta_1 ~ \cos\;\theta_2 \;+\; \cos\;\theta_1 ~ \sin\;\theta_2 ) \right]\\
+    &=~ r_1 \, r_2 \,(\cos\;(\theta_1 + \theta_2 ) \;+\; i\,\sin\;(\theta_1 + \theta_2 ))\\
+    \end{align*}
+
+by the addition formulas for sine and cosine. And
+
+.. math::
+
+    \begin{align*}
+    \frac{z_1}{z_2} ~&=~ \frac{r_1 \,(\cos\;\theta_1 \;+\; i\,\sin\;\theta_1 )}{
+      r_2 \,(\cos\;\theta_2 \;+\; i\,\sin\;\theta_2 )}\\
+    &=~ \frac{r_1}{r_2} \;\cdot\; \frac{\cos\;\theta_1 \;+\; i\,\sin\;\theta_1}{
+      \cos\;\theta_2 \;+\; i\,\sin\;\theta_2} \;\cdot\; \frac{\cos\;\theta_2 \;-\; i\,\sin\;\theta_2}{
+      \cos\;\theta_2 \;-\; i\,\sin\;\theta_2}\\
+    &=~ \frac{r_1}{r_2} \;\cdot\; \frac{(\cos\;\theta_1 ~ \cos\;\theta_2 \;+\; \sin\;\theta_1 ~
+      \sin\;\theta_2 ) \;+\; i\,(\sin\;\theta_1 ~ \cos\;\theta_2 \;-\; \cos\;\theta_1 ~
+      \sin\;\theta_2 )}{\cos^2 \,\theta_2 \;+\; \sin^2 \,\theta_2}\\
+    &=~ \frac{r_1}{r_2} \,(\cos\;(\theta_1 - \theta_2 ) \;+\; i\,\sin\;(\theta_1 - \theta_2 ))
+    \end{align*}
+
+by the subtraction formulas for sine and cosine, and since :math:`\cos^2 \,\theta_2 \;+\;\sin^2 \,\theta_2 = 1`. [.qed]
+
+Note that formulas :eq:`6.5 <eqn:complextrigmult>` and :eq:`6.6 <eqn:complextrigdiv>` say that when multiplying complex numbers the moduli are multiplied and the arguments are added, while when dividing complex numbers the moduli are divided and the arguments are subtracted. This makes working with complex numbers in trigonometric form fairly simple.
+
+.. admonition:: Example 6.11
+
+    Let :math:`z_1 = 6\,(\cos\;70^\circ \;+\; i\,\sin\;70^\circ )` and :math:`z_1 = 2\,(\cos\;31^\circ \;+\; i\,\sin\;31^\circ )`. Find :math:`z_1 \, z_2` and :math:`\frac{z_1}{z_2}`.
+ 
+    **Solution:** By formulas :eq:`6.5 <eqn:complextrigmult>` and :eq:`6.6 <eqn:complextrigdiv>` we have
+
+    .. math::
+
+        \begin{alignat*}{3}
+        z_1 \, z_2 ~&=~ (6) \, (2) \, (\cos\;(70^\circ + 31^\circ ) \;+\; i\,\sin\;(70^\circ +
+          31^\circ )) \quad&&\Rightarrow\quad \boxed{z_1 \, z_2 ~=~ 12 \, (\cos\;101^\circ \;+\;
+          i\,\sin\;101^\circ )} ~\text{, and}\\
+        \frac{z_1}{z_2} ~&=~ \frac{6}{2} \, (\cos\;(70^\circ - 31^\circ ) \;+\; i\,\sin\;(70^\circ -
+          31^\circ )) \quad&&\Rightarrow\quad \boxed{\frac{z_1}{z_2} ~=~ 3 \, (\cos\;39^\circ \;+\;
+          i\,\sin\;39^\circ )} ~.
+        \end{alignat*}
+
+
+For the special case when :math:`z_1 = z_2 = z = r\,(\cos\;\theta \;+\; i\,\sin\;\theta)` in formula :eq:`6.5 <eqn:complextrigmult>`, we have
+
+.. math::
+
+    \begin{align*}
+    \left[ r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\right]^2 ~&=~
+      r \cdot r \,(\cos\;(\theta + \theta ) \;+\; i\,\sin\;(\theta + \theta))\\
+    &=~ r^2 \,(\cos\;2\theta \;+\; i\,\sin\;2\theta) ~,\\
+    \end{align*}
+    
+and so
+
+.. math::
+
+    \begin{align*}
+    \left[ r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\right]^3 ~&=~
+      \left[ r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\right]^2 \;\cdot\;
+      r\,(\cos\;\theta \;+\; i\,\sin\;\theta )\\
+    &=~ r^2 \,(\cos\;2\theta \;+\; i\,\sin\;2\theta) \;\cdot\;
+      r\,(\cos\;\theta \;+\; i\,\sin\;\theta )\\
+    &=~ r^3 \,(\cos\;(2\theta + \theta) \;+\; i\,\sin\;(2\theta + \theta) )\\
+    &=~ r^3 \,(\cos\;3\theta \;+\; i\,\sin\;3\theta) ~,
+    \end{align*}
+
+and continuing like this (i.e. by *mathematical induction*), we get:
+
+.. _thm:demoivre:
+
+    **Theorem 6.1. De Moivre's Theorem:** [7]_ For any integer :math:`n \ge 1`,
+
+    .. _equation 6.7:
+
+    .. math::
+        :label: eqn:demoivre
+
+        \left[ r\,(\cos\;\theta \;+\; i\,\sin\;\theta )\right]^n ~=~
+        r^n \,(\cos\;n\theta \;+\; i\,\sin\;n\theta ) ~.
+
+.. [7] Named after the French statistician and mathematician Abraham de Moivre (1667-1754).
+
+We define :math:`z^0 = 1` and :math:`z^{-n} = 1/z^n` for all integers :math:`n \ge 1`. So by De Moivre's Theorem and formula :eq:`6.5 <eqn:complextrigmult>`, for any :math:`z=r\,(\cos\;\theta \;+\; i\,\sin\;\theta)` and integer :math:`n \ge 1` we get
+
+.. math::
+
+    \begin{align*}
+    z^{-n} ~&=~ \frac{1}{z^n}\\
+    &=~ \frac{1\,(\cos\;0^\circ \;+\; i\,\sin\;0^\circ )}{r^n \,(\cos\;n\theta \;+\;
+      i\,\sin\;n\theta )}\\
+    &=~ \frac{1}{r^n} \,(\cos\;(0^\circ - n\theta) \;+\; i\,\sin\;(0^\circ - n\theta))\\
+    &=~ r^{-n} \, (\cos\;(- n\theta) \;+\; i\,\sin\;(- n\theta)) ~,
+    \end{align*}
+
+and so De Moivre's Theorem in fact holds for *all* integers. [8]_
+
+.. [8] There is a way of defining :math:`z^n` when ``n`` is a real (or complex) number, so that De Moivre's Theorem holds for any real number ``n``. See pp. 59-60 in \textsc{R.V. Churchill}, *Complex Variables and Applications*, 2nd ed., New York: McGraw-Hill Book Co., 1960.
+
+.. admonition:: Example 6.12
+
+    Find :math:`(1+i)^{10}`.
+    
+    **Solution:** Since :math:`1+i = \sqrt{2}\;(\cos\;45^\circ \;+\; i\,\sin\;45^\circ )`  (why?), by De Moivre's Theorem we have
+    
+    .. math::
+      
+        (1+i)^{10} ~=~ (\sqrt{2})^{10} \;(\cos\;450^\circ \;+\; i\,\sin\;450^\circ ) ~=~ 2^{10/2} \;(0 \;+\; i\,(1)) ~=~ 2^5 \,\cdot\, i ~=~ \boxed{32i} ~.
+
+We can use De Moivre's Theorem to find the :math:`n^{th}` *roots* of a complex number. That is, given any complex number ``z`` and positive integer ``n``, find all complex numbers ``w`` such that :math:`w^n = z`. Let :math:`z=r\,(\cos\;\theta \;+\; i\,\sin\;\theta)`. Since the cosine and sine functions repeat every :math:`360^\circ`, we know that :math:`z=r\,(\cos\;(\theta + 360^\circ k)\;+\; i\,\sin\;(\theta + 360^\circ k))` for :math:`k=0`, :math:`\pm\,1`, :math:`\pm\,2`, :math:`...`. Now let :math:`w=r_0 \,(\cos\;\theta_0 \;+\; i\,\sin\;\theta_0 )` be an :math:`n^{th}` root of ``z``. Then
+
+.. math::
+
+    \begin{align*}
+    w^n ~=~ z \quad&\Rightarrow\quad \left[ r_0 \,(\cos\;\theta_0 \;+\; i\,\sin\;\theta_0 )\right]^n
+      ~=~ r\,(\cos\;(\theta + 360^\circ k)\;+\; i\,\sin\;(\theta + 360^\circ k))\\
+    &\Rightarrow\quad r_0^n \,(\cos\;n\theta_0 \;+\; i\,\sin\;n\theta_0 )
+      ~=~ r\,(\cos\;(\theta + 360^\circ k)\;+\; i\,\sin\;(\theta + 360^\circ k))\\
+    &\Rightarrow\quad r_0^n ~=~ r \quad\text{and}\quad n\theta_0 ~=~ \theta + 360^\circ k\\
+    &\Rightarrow\quad r_0 ~=~ r^{1/n} \quad\text{and}\quad \theta_0 ~=~
+      \frac{\theta + 360^\circ k}{n} ~.
+    \end{align*}
+
+Since the cosine and sine of :math:`\frac{\theta + 360^\circ k}{n}` will repeat for :math:`k \ge n`, we get the following formula for the :math:`n^{th}` roots of `z`:
+
+.. tip::
+
+    For any nonzero complex number :math:`z=r\,(\cos\;\theta \;+\; i\,\sin\;\theta)` and positive integer ``n``, the ``n`` distinct :math:`n^{th}`
+    roots of ``z`` are
+
+    .. _equation 6.8:
+
+    .. math::
+        :label: eqn:nthroots
+
+        r^{1/n} \, \left[ \cos\;\left(\frac{\theta + 360^\circ k}{n}\right) \;+\;
+        i\,\sin\;\left(\frac{\theta + 360^\circ k}{n}\right) \right]
+
+    for :math:`k=0`, `1`, `2`, `...`, `n-1`.
+
+
+Note: An :math:`n^{th}` root of ``z`` is usually written as :math:`z^{1/n}` or :math:`\sqrt[n]{z}`. The number :math:`r^{1/n}` in the above formula is the usual real `n^{th}` root of the real number :math:`r=|z|`.
+
+.. _exmp:cuberooti:
+
+.. admonition:: Example 6.13:
+
+    Find the three cube roots of `i`.
+ 
+    **Solution:** Since :math:`i = 1\,(\cos\;90^\circ \;+\; i\,\sin\;90^\circ)`, the three cube roots of ``i`` are:
+
+    .. math::
+
+        \begin{align}
+          \sqrt[3]{1} \;\left[ \cos\;\left(\frac{90^\circ + 360^\circ (0)}{3}\right) \;+\;
+          i\,\sin\;\left(\frac{90^\circ + 360^\circ (0)}{3}\right) \right] ~&=~
+          \cos\;30^\circ \;+\; i\,\sin\;30^\circ ~&&=~
+          \boxed{\frac{\sqrt{3}}{2} \;+\; \frac{1}{2}\,i}~,\\[3pt]
+          \sqrt[3]{1} \;\left[ \cos\;\left(\frac{90^\circ + 360^\circ (1)}{3}\right) \;+\;
+          i\,\sin\;\left(\frac{90^\circ + 360^\circ (1)}{3}\right) \right] ~&=~
+          \cos\;150^\circ \;+\; i\,\sin\;150^\circ ~&&=~
+          \boxed{-\frac{\sqrt{3}}{2} \;+\; \frac{1}{2}\,i}~,\\[3pt]
+          \sqrt[3]{1} \;\left[ \cos\;\left(\frac{90^\circ + 360^\circ (2)}{3}\right) \;+\;
+          i\,\sin\;\left(\frac{90^\circ + 360^\circ (2)}{3}\right) \right] ~&=~
+          \cos\;270^\circ \;+\; i\,\sin\;270^\circ ~&&=~ \boxed{-i}
+        \end{align}
+
+.. _fig:cuberooti:
+
+.. _Figure 6.3.3:
+
+.. figure:: ./img/f6.3.3.png
+    :align: right
+
+    **Figure 6.3.3**
+
+Notice from Example :ref:`6.13 <exmp:cuberooti>` that the three cube roots of ``i`` are equally spaced points along the unit circle :math:`|z|=1` in the complex plane, as shown in Figure :ref:`6.3.3 <fig:cuberooti>`. We see that consecutive cube roots are :math:`120^\circ` apart.
+
+In general, the :math:`n` :math:`n^{th}` roots of a complex number ``z`` will be equally spaced points along the circle of radius :math:`|z|^{1/n}` in the complex plane, with consecutive roots separated by :math:`\tfrac{360^\circ}{n}`.
+
+In higher mathematics the *Fundamental Theorem of Algebra* states that every polynomial of degree ``n`` with complex coefficients has `n` complex roots (some of which may repeat). In particular, every real number ``a`` has :math:`n` `n^{th}` roots (being the roots of :math:`z^n - a`). For example, the square roots of ``1`` are :math:`\pm\,1`, and the square roots of ``-1`` are :math:`\pm\,i`.
+
+.. _sec6dot3:
+
+练习
+~~~~~~~~~~~~~~
+Exercises
+
+For Exercises 1-16, calculate the given expression.
+
+1. :math:`(2+3i) \;+\; (-3-2i)`
+2. :math:`(2+3i) \;-\; (-3-2i)`
+3. :math:`(2+3i) \;\cdot\; (-3-2i)`
+4. :math:`(2+3i)/(-3-2i)`
+5. :math:`\overline{(2+3i)} \;+\; \overline{(-3-2i)}`
+6. :math:`\overline{(2+3i)} \;-\; \overline{(-3-2i)}`
+7. :math:`(1+i)/(1-i)`
+8. :math:`|-3+2i|`
+9. :math:`i^3`
+10. :math:`i^4`
+11. :math:`i^5`
+12. :math:`i^6`
+13. :math:`i^7`
+14. :math:`i^8`
+15. :math:`i^9`
+16. :math:`i^{2009}`
+
+For Exercises 17-24, prove the given identity for all complex numbers.
+
+17. :math:`\overline{\left( \overline{z} \right)} \;=\; z`
+18. :math:`\overline{z_1 + z_2} \;=\; \overline{z_1} + \overline{z_2}`
+19. :math:`\overline{z_1 - z_2} \;=\; \overline{z_1} - \overline{z_2}`
+20. :math:`\overline{z_1 \, z_2} \;=\; \overline{z_1} ~ \overline{z_2}`
+21. :math:`\overline{\left( \dfrac{z_1}{z_2} \right)} \;=\; \dfrac{\overline{z_1}}{\overline{z_2}}`
+22. :math:`|z| \;=\; |\overline{z}|\phantom{\dfrac{|1_1|}{|1_2|}}`
+23. :math:`|z_1 \, z_2| \;=\; |z_1|\,|z_2|\phantom{\dfrac{|1_1|}{|1_2|}}`
+24. :math:`\left| \dfrac{z_1}{z_2} \right| \;=\; \dfrac{|z_1|}{|z_2|}`
+
+For Exercises 25-30, put the given number in trigonometric form.
+
+25. :math:`2+3i`
+26. :math:`-3-2i`
+27. :math:`1-i`
+28. :math:`-i`
+29. :math:`1`
+30. :math:`-1`
+31. Verify that De Moivre's Theorem holds for the power :math:`n=0`.
+
+For Exercises 32-35, calculate the given number.
+
+32. :math:`3\,(\cos\;14^\circ \;+\; i\,\sin\;14^\circ ) \;\cdot\; 2\,(\cos\;121^\circ \;+\; i\,\sin\;121^\circ )`
+33. :math:`\lbrack 3\,(\cos\;14^\circ \;+\; i\,\sin\;14^\circ )\rbrack^4\phantom{\dfrac{3}{4}}`
+34. :math:`\lbrack 3\,(\cos\;14^\circ \;+\; i\,\sin\;14^\circ )\rbrack^{-4}\phantom{\dfrac{3}{4}}`
+35. :math:`\dfrac{3\,(\cos\;14^\circ \;+\; i\,\sin\;14^\circ )}{ 2\,(\cos\;121^\circ \;+\; i\,\sin\;121^\circ )}`
+36. Find the three cube roots of :math:`-i`.
+37. Find the three cube roots of :math:`1+i`.
+38. Find the three cube roots of :math:`1`.
+39. Find the three cube roots of :math:`-1`.
+40. Find the five fifth roots of :math:`1`.
+41. Find the five fifth roots of :math:`-1`.
+42. Find the two square roots of :math:`-2 + 2\sqrt{3}\,i`.
+43. Prove that if :math:`z` is an :math:`n^{th}` root of a real number ``a``, then so is :math:`\overline{z}`. (*Hint: Use Exercise 20.*)
+
+
+极坐标  
+---------------------
+Polar Coordinates
+
+.. _Figure 6.4.1:
+
+.. _fig:spiral:
+
+.. figure:: ./img/f6.4.1.png
+    :align: right
+
+    Figure 6.4.1
+
+Suppose that from the point :math:`(1,0)` in the :math:`xy`-coordinate plane we draw a spiral around the origin, such that the distance between any two points separated by :math:`360^\circ` along the spiral is always ``1``, as in Figure :ref:`6.4.1 <fig:spiral>`. We can not express this spiral as :math:`y=f(x)` for some function ``f`` in Cartesian coordinates, since its graph violates the vertical rule.
+
+However, this spiral would be simple to describe using the *polar coordinate system*. Recall that any point ``P`` distinct from the origin (denoted by ``O``) in the :math:`xy`-coordinate plane is a distance ``r>0`` from the origin, and the ray :math:`\overrightarrow{OP}` makes an angle :math:`\theta` with the positive :math:`x`-axis, as in Figure \ref{fig:polar}. We call the pair :math:`(r,\theta)` the **polar coordinates** of ``P``, and the positive :math:`x`-axis is called the **polar axis** of this coordinate system. Note that :math:`(r,\theta) = (r,\theta + 360^\circ k)` for :math:`k=0`, :math:`\pm\,1`, :math:`\pm\,2`, :math:`...`, so (unlike for Cartesian coordinates) the polar coordinates of a point are not unique.
+
+.. _Figure 6.4.2:
+
+.. _fig:polar:
+
+.. figure:: ./img/f6.4.2.png
+    :align: left
+
+    Figure 6.4.2 Polar coordinates :math:`(r,\theta)`
+
+.. _Figure 6.4.3:
+
+.. _fig:negpolar:
+
+.. figure:: ./img/f6.4.3.png
+    :align: center
+
+    Figure 6.4.3 Negative ``r``: :math:`(-r,\theta)`
+
+
+In polar coordinates we adopt the convention that ``r`` can be negative, by defining :math:`(-r,\theta) = (r,\theta + 180^\circ)` for any angle :math:`\theta`. That is, the ray :math:`\overrightarrow{OP}` is drawn in the opposite direction from the angle :math:`\theta`, as in Figure :ref:`6.4.3 <fig:negpolar>`. When :math:`r=0`, the point :math:`(r,\theta) = (0,\theta)` is the origin ``O``, regardless of the value of :math:`\theta`.
+
+You may be familiar with graphing paper, for plotting points or functions given in Cartesian coordinates (sometimes also called *rectangular coordinates*). Such paper consists of a rectangular grid. Similar graphing paper exists for plotting points and functions in polar coordinates, similar to Figure :ref:`6.4.4 <fig:polargraph>`.
+
+.. _Figure 6.4.4:
+
+.. _fig:polargraph:
+
+.. figure:: ./img/f6.4.4.png
+    :align: center
+
+    Figure 6.4.4 Polar coordinate graph
+
+The angle :math:`\theta` can be given in either degrees or radians, whichever is more convenient. Radians are often preferred when graphing functions in polar coordinates. The reason is that,  unlike degrees, radians can be considered "unitless" (as we mentioned in Chapter 4). This is desirable when a function given in polar coordinates is expressed as ``r`` as a function of :math:`\theta` (similar to how, in Cartesian coordinates :math:`(x,y)`, functions are usually expressed as ``y`` as a function of ``x``). For example, if a function in polar coordinates is written as :math:`r = 2\,\theta`, then ``r`` would have the same units as :math:`\theta`. But ``r`` should be a unitless quantity, hence using radians for :math:`\theta` makes more sense in this case.
+
+.. admonition:: Example6.14
+
+    Express the spiral from Figure :ref:`6.4.1 <fig:spiral>` in polar coordinates.
+ 
+    **Solution:** We will use radians for `\theta`. The goal is to find some equation involving ``r`` and :math:`\theta` that describes the spiral. We see that
+    
+    .. math::
+
+      \begin{align*}
+        \theta ~=~ 0 \quad&\Rightarrow\quad r ~=~ 1\\
+        \theta ~=~ 2\pi \quad&\Rightarrow\quad r ~=~ 2\\
+        \theta ~=~ 4\pi \quad&\Rightarrow\quad r ~=~ 3\\
+        &\vdots\\
+        \theta ~=~ 2\pi\,k \quad&\Rightarrow\quad r ~=~ 1+k\\
+      \end{align*}
+
+    for :math:`k=0,1,2,\ldots`. In fact, that last relation holds for any nonnegative real number ``k`` (why?). So for any :math:`\theta \ge 0`,
+
+    .. math::
+
+        \theta ~=~ 2\pi\,k \quad\Rightarrow\quad k ~=~ \frac{\theta}{2\pi} \quad\Rightarrow\quad r ~=~ 1 + k ~=~ 1 + \frac{\theta}{2\pi} ~.
+
+    Hence, the spiral can be written as :math:`\boxed{r ~=~ 1 + \frac{\theta}{2\pi}}` for :math:`\theta \ge 0`. The graph is shown in Figure :ref:`6.4.5 <fig:spiralgnu>`, along with the Gnuplot commands to create the graph.
+
+    .. _Figure 6.4.5:
+
+    .. _fig:spiralgnu:
+
+    .. figure:: ./img/f6.4.5.png
+        :align: right
+
+        Figure 6.4.5 :math:`r = 1 + \frac{\theta}{2\pi}`
+
+    |
+
+    .. code:: shell
+      
+        set polar
+        set size square
+        set samples 2000
+        unset key
+        set zeroaxis
+        set xlabel "x"
+        set ylabel "y"
+        plot [0:6*pi] 1 + t/(2*pi)
+
+    |
+
+    Note that when using the *set polar* command, Gnuplot will assume that the function being plotted is ``r`` as a function of :math:`\theta` (represented by the variable `t` in Gnuplot).
+
+
+.. _Figure 6.4.6:
+
+.. _fig:polarconvert:
+
+.. figure:: ./img/f6.4.6.png
+    :align: right
+
+    Figure 6.4.6 
+
+Figure :ref:`6.4.6 <fig:polarconvert>` shows how to convert between polar coordinates and Cartesian coordinates. For a point with polar coordinates :math:`(r,\theta)` and Cartesian coordinates :math:`(x,y)`:
+
+**Polar to Cartesian:**
+    .. _equation 6.9:
+
+    .. math::
+        :label: eqn:polartorect
+
+        \boxed{ x ~=~ r\,\cos\;\theta \qquad y ~=~ r\,\sin\;\theta }
+
+
+**Cartesian to Polar:**
+    .. _equation 6.10:
+
+    .. math::
+        :label: eqn:recttopolar
+
+        \boxed{ r ~=~ \pm\;\sqrt{x^2 ~+~ y^2} \qquad \tan\;\theta ~=~ \frac{y}{x} ~~\text{if `x \ne 0`} }
+
+
+Note that in formula :ref:`6.10 <eqn:recttopolar>`, if :math:`x = 0` then :math:`\theta = \pi/2` or :math:`\theta = 3\pi/2`. Also, if :math:`x \ne 0` and :math:`y \ne 0` then the two possible solutions for :math:`\theta` in the equation :math:`\tan\;\theta ~=~ \frac{y}{x}` are in opposite quadrants (for :math:`0 \le \theta < 2\pi`). If the angle :math:`\theta` is in the same quadrant as the point :math:`(x,y)`, then :math:`r = \sqrt{x^2 ~+~ y^2}` (i.e. ``r`` is positive); otherwise :math:`r = -\sqrt{x^2 ~+~ y^2}` (i.e. ``r`` is negative).
+
+.. admonition:: Example 6.15
+
+    Convert the following points from polar coordinates to Cartesian coordinates:
+
+    **(a)** :math:`(2,30^\circ)`; **(b)** :math:`(3,3\pi/4)`; **(c)** :math:`(-1,5\pi/3)`
+
+    **Solution:** 
+    
+    **(a)** Using formula :ref:`6.9 <eqn:polartorect>` with :math:`r=2` and :math:`\theta = 30^\circ`, we get:
+
+    .. math::
+
+        (x,y) ~=~ ( r\,\cos\;\theta, r\,\sin\;\theta) ~=~ (2\,\cos\;30^\circ,2\,\sin\;30^\circ) ~=~
+        \left(2 \;\cdot\; \tfrac{\sqrt{3}}{2}, 2 \;\cdot\; \tfrac{1}{2} \right) \quad\Rightarrow\quad
+        \boxed{(x,y) ~=~ \left( \sqrt{3},1 \right)}
+
+ 
+    **(b)** Using formula :ref:`6.9 <eqn:polartorect>` with :math:`r=3` and :math:`\theta = 3\pi/4`, we get:
+
+    .. math::
+
+        (x,y) ~=~ ( r\,\cos\;\theta, r\,\sin\;\theta) ~=~ \left( 3\,\cos\;\tfrac{3\pi}{4},3\,\sin\;\tfrac{3\pi}{4}
+        \right) ~=~ \left(3 \;\cdot\; \tfrac{-1}{\sqrt{2}}, 3 \;\cdot\; \tfrac{1}{\sqrt{2}} \right)
+        \quad\Rightarrow\quad \boxed{(x,y) ~=~ \left( \tfrac{-3}{\sqrt{2}},\tfrac{3}{\sqrt{2}} \right)}
+
+    
+    **(c)** Using formula :ref:`6.9 <eqn:polartorect>` with :math:`r=-1` and :math:`\theta = 5\pi/3`, we get:
+
+    .. math::
+
+        (x,y) ~=~ ( r\,\cos\;\theta, r\,\sin\;\theta) ~=~ \left( -1\,\cos\;\tfrac{5\pi}{3},-1\,\sin\;\tfrac{5\pi}{3}
+        \right) ~=~ \left(-1 \;\cdot\; \tfrac{1}{2},-1 \;\cdot\; \tfrac{-\sqrt{3}}{2} \right)
+        \quad\Rightarrow\quad \boxed{(x,y) ~=~ \left( -\tfrac{1}{2},\tfrac{\sqrt{3}}{2} \right)}
+
+
+.. admonition:: Example 6.16
+
+    Convert the following points from Cartesian coordinates to polar coordinates:
+
+    **(a)** ``(3,4)``; **(b)** ``(-5,-5)``
+
+    **Solution:** 
+
+    **(a)** Using formula :ref:`6.10 <eqn:recttopolar>` with ``x=3`` and ``y=4``, we get:
+
+    .. math::
+
+        \tan\;\theta ~=~ \frac{y}{x} ~=~ \frac{4}{3} \quad\Rightarrow\quad \theta ~=~ 53.13^\circ \quad
+        \text{or}\quad \theta ~=~ 233.13^\circ
+
+    Since :math:`\theta = 53.13^\circ` is in the same quadrant (QI) as the point :math:`(x,y) = (3,4)`, we can take :math:`r ~=~ \sqrt{x^2 + y^2} = \sqrt{3^2 + 4^2} = 5`. Thus, :math:`\boxed{(r,\theta) = (5,53.13^\circ)}`~.
+
+    Note that if we had used :math:`\theta = 233.13^\circ`, then we would have :math:`(r,\theta) = (-5,233.13^\circ)`.
+
+
+    **(b)**  Using formula :ref:`6.10 <eqn:recttopolar>` with ``x=-5`` and ``y=-5``, we get:
+
+    .. math::
+
+        \tan\;\theta ~=~ \frac{y}{x} ~=~ \frac{-5}{-5} ~=~ 1 \quad\Rightarrow\quad \theta ~=~ 45^\circ \quad \text{or}\quad \theta ~=~ 225^\circ
+
+    Since :math:`\theta = 225^\circ` is in the same quadrant (QIII) as the point :math:`(x,y) = (-5,-5)`, we can take :math:`r ~=~ \sqrt{x^2 + y^2} = \sqrt{(-5)^2 + (-5)^2} = 5\,\sqrt{2}`. Thus, :math:`\boxed{(r,\theta) = (5\,\sqrt{2},225^\circ)}`~.
+
+
+    Note that if we had used :math:`\theta = 45^\circ`, then we would have :math:`(r,\theta) = (-5\,\sqrt{2},45^\circ)`.
+
+.. _exmp:polarcircle:
+
+.. admonition:: Example 6.17
+
+    Write the equation :math:`x^2 + y^2 = 9` in polar coordinates.
+ 
+    **Solution:** This is just the equation of a circle of radius ``3`` centered at the origin. Since :math:`r = \pm\sqrt{x^2 + y^2} = \pm\sqrt{9}`, in polar coordinates the equation can be written as simply :math:`\boxed{r = 3}`~.
+
+
+.. admonition:: Example 6.18
+
+    Write the equation `x^2 + (y-4)^2 = 16` in polar coordinates.
+ 
+    **Solution:** This is the equation of a circle of radius ``4`` centered at the point ``(0,4)``. Expanding the equation, we get:
+
+    .. math::
+
+        \begin{align*}
+          x^2 ~+~ (y-4)^2 ~&=~ 16\\
+          x^2 ~+~ y^2 ~-~ 8y ~+~ 16 ~&=~ 16\\
+          x^2 ~+~ y^2 ~&=~ 8y\\
+          r^2 ~&=~ 8\,r\sin\;\theta\\
+          r ~&=~ 8\,\sin\;\theta
+        \end{align*}
+
+    Why could we cancel ``r`` from both sides in the last step? Because the point ``(0,0)`` is on the circle, canceling `r` does not eliminate ``r=0`` as a potential solution of the equation (since :math:`\theta = 0^\circ` would make :math:`r = 8\,\sin\;\theta = 8\,\sin\;0^\circ = 0`). Thus, the equation is :math:`\boxed{r = 8\,\sin\;\theta}`~.
+
+.. admonition:: Example 6.19
+
+    Write the equation :math:`y = x` in polar coordinates.
+ 
+    **Solution:** This is the equation of a line through the origin. So when :math:`x=0`, we know that :math:`y=0`. When :math:`x \ne 0`, we get:
+ 
+    .. math::
+
+        \begin{align*}
+          y ~&=~ x\\
+          \frac{y}{x} ~&=~ 1\\
+          \tan\;\theta ~&=~ 1\\
+          \theta ~&=~ 45^\circ
+        \end{align*}
+
+    Since there is no restriction on ``r``, we could have ``r=0`` and :math:`\theta = 45^\circ`, which would take care of the case :math:`x = 0` (since then :math:`(x,y) = (0,0)`, which is the same as :math:`(r,\theta) = (0,45^\circ))`. Thus, the equation is :math:`\boxed{\theta = 45^\circ}~`.
+
+.. admonition:: Example 6.20
+
+    Prove that the distance ``d`` between two points :math:`(r_1 , \theta_1)` and :math:`(r_2 , \theta_2)` in polar coordinates is
+
+    .. _equation 6.11:
+
+    .. math::
+        :label: eqn:polardist
+      
+        d ~=~ \sqrt{r_1^2 ~+~ r_2^2 ~-~ 2r_1r_2\,\cos\;(\theta_1 - \theta_2)} ~~.
+ 
+    **Solution:** The idea here is to use the distance formula in Cartesian coordinates, then convert that to polar coordinates. So write
+
+    .. math::
+
+        \begin{align*}
+          x_1 ~&=~ r_1 \,\cos\;\theta_1 \qquad& y_1 ~&=~ r_1 \,\sin\;\theta_1\\
+          x_2 ~&=~ r_2 \,\cos\;\theta_2 \qquad& y_2 ~&=~ r_2 \,\sin\;\theta_2 ~.
+        \end{align*}
+
+    Then :math:`(x_1,y_1)` and :math:`(x_2,y_2)` are the Cartesian equivalents of :math:`(r_1 , \theta_1)` and :math:`(r_2 , \theta_2)`,  respectively. Thus, by the Cartesian coordinate distance formula,
+
+    .. math::
+
+      \begin{align*}
+        d^2 ~&=~ (x_1 - x_2)^2 ~+~ (y_1 - y_2)^2\\
+        &=~ (r_1 \,\cos\;\theta_1 - r_2 \,\cos\;\theta_2)^2 ~+~ (r_1 \,\sin\;\theta_1 - r_2 \,\sin\;\theta_2)^2\\
+        &=~ r_1^2 \cos^2\;\theta_1 ~-~ 2r_1 r_2 \cos\;\theta_1~\cos\;\theta_2 ~+~ r_2^2 \cos^2\;\theta_2 ~+~
+        r_1^2 \sin^2\;\theta_1 ~-~ 2r_1 r_2 \sin\;\theta_1~\sin\;\theta_2 ~+~ r_2^2 \sin^2\;\theta_2\\
+        &=~ r_1^2 (\cos^2\;\theta_1 ~+~ \sin^2\;\theta_1) ~+~ r_2^2 (\cos^2\;\theta_2 ~+~ \sin^2\;\theta_2) ~-~
+        2r_1 r_2 (\cos\;\theta_1~\cos\;\theta_2 ~+~ \sin\;\theta_1~\sin\;\theta_2)\\
+        d^2 ~&=~ r_1^2 ~+~ r_2^2 ~-~ 2r_1r_2\,\cos\;(\theta_1 - \theta_2) ~,
+      \end{align*}
+
+    so the result follows by taking square roots of both sides.
+
+
+In Example :ref:`6.17 <exmp:polarcircle>` we saw that the equation :math:`x^2 + y^2 = 9` in Cartesian coordinates could be expressed as :math:`r = 3` in polar coordinates. This equation describes a circle centered at the origin, so the circle is symmetric about the origin. In general, polar coordinates are useful in situations when there is symmetry about the origin (though there are other situations), which arise in many physical applications.
+
+.. _sec6dot4:
+
+练习
+~~~~~~~~~~~~~~
+Exercises
+
+For Exercises 1-5, convert the given point from polar coordinates to Cartesian coordinates.
+
+1. :math:`(6,210^\circ)`
+2. :math:`(-4,3\pi)`
+3. :math:`(2,11\pi/6)`
+4. :math:`(6,90^\circ)`
+5. :math:`(-1,405^\circ)`
+
+For Exercises 6-10, convert the given point from Cartesian coordinates to polar coordinates.
+
+6. :math:`(3,1)`
+8. :math:`(-1,-3)`
+9. :math:`(0,2)`
+10. :math:`(4,-2)`
+11. :math:`(-2,0)`
+
+For Exercises 11-18, write the given equation in polar coordinates.
+
+12. :math:`(x-3)^2 + y^2 = 9`
+13. :math:`y = -x`
+14. :math:`x^2 - y^2 = 1`
+15. :math:`3x^2 + 4y^2 - 6x = 9`
+
+16. Graph the function :math:`r = 1 + 2\,\cos\;\theta` in polar coordinates.
+

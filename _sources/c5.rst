@@ -1,0 +1,1055 @@
+.. _c5:
+
+第 5 章 图像与反函数  
+=========================================
+Chapter 5 Graphing and Inverse Functions
+
+The trigonometric functions can be graphed just like any other function, as we will now show. In the graphs we will always use radians for the angle measure.
+
+三角函数的图像绘制 
+--------------------------------------
+Graphing the Trigonometric Functions
+
+.. _fig:unitcircle:
+
+.. _Figure 5.1.1:
+
+.. figure:: ./img/f5.1.1.png
+	:align: right
+
+	**Figure 5.1.1**
+
+The first function we will graph is the sine function. We will describe a geometrical way to create the graph, using the *unit circle*. This is the circle of radius $1$ in the $xy$-plane consisting of all points $(x,y)$ which satisfy the equation $x^2 + y^2 = 1$ .
+
+We see in Figure :ref:`5.1.1 <fig:unitcircle>` that any point on the unit circle has coordinates :math:`(x,y)=(\cos\;\theta,\sin\;\theta)`, where :math:`\theta` is the angle that the line segment from the origin to $(x,y)$ makes with the positive $x$-axis (by definition of sine and cosine). So as the point $(x,y)$ goes around the circle, its $y$-coordinate is :math:`\sin\;\theta`.
+
+We thus get a correspondence between the $y$-coordinates of points on the unit circle and the values :math:`f(\theta)=\sin\;\theta`, as shown by the horizontal lines from the unit circle to the graph of :math:`f(\theta)=\sin\;\theta` in Figure :ref:`5.1.2 <fig:sinecircle>` for the angles :math:`\theta = 0`, :math:`\tfrac{\pi}{6}`, :math:`\tfrac{\pi}{3}`, :math:`\tfrac{\pi}{2}`.
+
+.. _fig:sinecircle:
+
+.. _Figure 5.1.2:
+
+.. figure:: ./img/f5.1.2.png
+	:align: center
+
+	**Figure 5.1.2 Graph of sine function based on $y$-coordinate of points on unit circle**
+
+
+We can extend the above picture to include angles from $0$ to :math:`2\pi` radians, as in Figure :ref:`5.1.3 <fig:sinefullcircle>`. This illustrates what is sometimes called the *unit circle definition of the sine function*.
+
+.. _fig:sinefullcircle:
+
+.. _Figure 5.1.3:
+
+.. figure:: ./img/f5.1.3.png
+	:align: center
+
+	**Figure 5.1.3 Unit circle definition of the sine function**
+
+
+Since the trigonometric functions repeat every :math:`2\pi` radians (:math:`360^\circ`), we get, for example, the following graph of the function :math:`y=\sin\;x` for $x$ in the interval :math:`[-2\pi, 2\pi]` :
+
+.. _fig:sinegraph:
+
+.. _Figure 5.1.4:
+
+.. figure:: ./img/f5.1.4.png
+	:align: center
+
+	**Figure 5.1.4 Graph of** :math:`y=\sin\;x`
+
+
+To graph the cosine function, we could again use the unit circle idea (using the $x$-coordinate of a point that moves around the circle), but there is an easier way. Recall from Section 1.5 that :math:`\cos\;x = \sin\;(x+90^\circ)` for all $x$. So :math:`\cos\;0^\circ` has the same value as :math:`\sin\;90^\circ`, :math:`\cos\;90^\circ` has the same value as :math:`\sin\;180^\circ`, :math:`\cos\;180^\circ` has the same value as :math:`\sin\;270^\circ`, and so on. In other words, the graph of the cosine function is just the graph of the sine function shifted to the *left* by :math:`90^\circ = \pi/2` radians, as in Figure :ref:`5.1.5 <fig:cosinegraph>`:
+
+.. _fig:cosinegraph:
+
+.. _Figure 5.1.5:
+
+.. figure:: ./img/f5.1.5.png
+	:align: center
+
+	**Figure 5.1.5 Graph of** :math:`y=\cos\;x`
+
+To graph the tangent function, use :math:`\tan\;x = \frac{\sin\;x}{\cos\;x}` to get the following graph:
+
+
+.. _fig:tangentgraph:
+
+.. _Figure 5.1.6:
+
+.. figure:: ./img/f5.1.6.png
+	:align: center
+
+	**Figure 5.1.6 Graph of** :math:`y=\tan\;x`
+
+Recall that the tangent is positive for angles in QI and QIII, and is negative in QII and QIV, and that is indeed what the graph in Figure :ref:`5.1.6 <fig:tangentgraph>` shows. We know that :math:`\tan\;x` is not defined when :math:`\cos\;x = 0`, i.e. at odd multiples of :math:`\frac{\pi}{2}` : :math:`x=\pm\,\frac{\pi}{2}`, :math:`\pm\,\frac{3\pi}{2}`, :math:`\pm\,\frac{5\pi}{2}`, etc. We can figure out what happens *near* those angles by looking at the sine and cosine functions. For example, for $x$ in QI near :math:`\frac{\pi}{2}`, :math:`\sin\;x` and :math:`\cos\;x` are both positive, with :math:`\sin\;x` very close to $1$ and :math:`\cos\;x` very close to $0$, so the quotient :math:`\tan\;x = \frac{\sin\;x}{\cos\;x}` is a positive number that is very large. And the closer $x$ gets to :math:`\frac{\pi}{2}`, the larger :math:`\tan\;x` gets. Thus, :math:`x=\frac{\pi}{2}` is a *vertical asymptote* of the graph of :math:`y=\tan\;x`.
+
+Likewise, for $x$ in QII very close to :math:`\frac{\pi}{2}`, :math:`\sin\;x` is very close to $1$ and :math:`\cos\;x` is negative and very close to $0$, so the quotient :math:`\tan\;x = \frac{\sin\;x}{\cos\;x}` is a negative number that is very large, and it gets larger in the negative direction the closer $x$ gets to :math:`\frac{\pi}{2}`. The graph shows this. Similarly, we get vertical asymptotes at :math:`x=-\frac{\pi}{2}`, :math:`x=\frac{3\pi}{2}`, and :math:`x=-\frac{3\pi}{2}`, as in Figure :ref:`5.1.6 <fig:tangentgraph>`. Notice that the graph of the tangent function repeats every :math:`\pi` radians, i.e. two times faster than the graphs of sine and cosine repeat.
+
+The graphs of the remaining trigonometric functions can be determined by looking at the graphs of their reciprocal functions. For example, using :math:`\csc\;x = \frac{1}{\sin\;x}` we can just look at the graph of :math:`y=\sin\;x` and invert the values. We will get vertical asymptotes when :math:`\sin\;x=0`, namely at multiples of :math:`\pi`: $x=0$, :math:`\pm\,\pi`, :math:`\pm\,2\pi`, etc. Figure :ref:`5.1.7 <fig:cosecantgraph>` shows the graph of :math:`y=\csc\;x`, with the graph of :math:`y=\sin\;x` (the dashed curve) for reference.
+
+.. _fig:cosecantgraph:
+
+.. _Figure 5.1.7:
+
+.. figure:: ./img/f5.1.7.png
+	:align: center
+
+	**Figure 5.1.7 Graph of** :math:`y=\csc\;x`
+
+
+Likewise, Figure :ref:`5.1.8 <fig:secantgraph>` shows the graph of :math:`y=\sec\;x`, with the graph of :math:`y=\cos\;x` (the dashed curve) for reference. Note the vertical asymptotes at :math:`x=\pm\,\frac{\pi}{2}`, :math:`\pm\,\frac{3\pi}{2}`. Notice also that the graph is just the graph of the cosecant function shifted to the left by :math:`\frac{\pi}{2}` radians.
+
+.. _fig:secantgraph:
+
+.. _Figure 5.1.8:
+
+.. figure:: ./img/f5.1.8.png
+	:align: center
+
+	**Figure 5.1.8 Graph of** :math:`y=\sec\;x`
+
+The graph of :math:`y=\cot\;x` can also be determined by using :math:`\cot\;x = \frac{1}{\tan\;x}`.
+Alternatively, we can use the relation :math:`\cot\;x = -\tan\;(x+90^\circ)` from Section 1.5, so that the graph of the
+cotangent function is just the graph of the tangent function shifted to the left by :math:`\frac{\pi}{2}`
+radians and then reflected about the $x$-axis, as in Figure :ref:`5.1.9 <fig:cotangentgraph>`:
+
+.. _fig:cotangentgraph:
+
+.. _Figure 5.1.9:
+
+.. figure:: ./img/f5.1.9.png
+	:align: center
+
+	**Figure 5.1.9 Graph of** :math:`y=\cot\;x`
+
+.. admonition:: Example 5.1
+
+	Draw the graph of :math:`y=-\sin\;x` for :math:`0 \le x \le 2\pi`.
+
+	**Solution:** Multiplying a function by $-1$ just reflects its graph around the $x$-axis. So reflecting the graph of :math:`y=\sin\;x` around the $x$-axis gives us the graph of :math:`y=-\sin\;x`:
+
+	.. figure:: ./img/e5.1.png
+		:align: center
+
+
+	Note that this graph is the same as the graphs of :math:`y=\sin\;(x \pm \pi)` and :math:`y=\cos\;(x+\frac{\pi}{2})`.
+
+It is worthwhile to remember the general shapes of the graphs of the six trigonometric functions, especially for sine, cosine, and tangent. In particular, the graphs of the sine and cosine functions are called *sinusoidal* curves. Many phenomena in nature exhibit sinusoidal behavior, so recognizing the general shape is important.
+
+.. admonition:: Example 5.2
+
+	Draw the graph of :math:`y=1+\cos\;x` for :math:`0 \le x \le 2\pi`.
+
+	**Solution:** Adding a constant to a function just moves its graph up or down by that amount, depending on whether the constant is positive or negative, respectively. So adding $1$ to :math:`\cos\;x` moves the graph of :math:`y=\cos\;x` upward by $1$, giving us the graph of :math:`y=1+\cos\;x`:
+
+	.. figure:: ./img/e5.2.png
+		:align: center
+
+.. _sec5dot1:
+
+练习
+~~~~~~~~~~~~~~
+Exercises
+
+For Exercises 1-12, draw the graph of the given function for :math:`0 \le x \le 2\pi`.
+
+1. :math:`y=-\cos\;x`
+2. :math:`y=1+\sin\;x`
+3. :math:`y=2-\cos\;x`
+4. :math:`y=2-\sin\;x`
+5. :math:`y=-\tan\;x`
+6. :math:`y=-\cot\;x`
+7. :math:`y=1+\sec\;x`
+8. :math:`y=-1-\csc\;x`
+9. :math:`y=2\sin\;x`
+10. :math:`y=-3\cos\;x`
+11. :math:`y=-2\tan\;x`
+12. :math:`y=-2\sec\;x`
+
+.. _fig:linedef:
+
+.. _Figure 5.1.10:
+
+.. figure:: ./img/f5.1.10.png
+	:align: right
+
+	**Figure 5.1.10**
+
+.. _exmp:linedef:
+
+13. We can extend the unit circle definition of the sine and cosine functions to all six trigonometric functions. Let $P$ be a point in QI on the unit circle, so that the line segment :math:`\overline{OP}` in Figure :ref:`5.1.10 <fig:linedef>` has length $1$ and makes an acute angle :math:`\theta` with the positive $x$-axis. Identify each of the six trigonometric functions of :math:`\theta` with exactly one of the line segments in Figure :ref:`5.1.10 <fig:linedef>`, keeping in mind that the radius of the circle is $1$. To get you started, we have :math:`\sin\;\theta = MP` (why?).
+
+14. For Exercise :ref:`11 <exmp:linedef>`, how would you draw the line segments in Figure :ref:`5.1.10 <fig:linedef>` if :math:`\theta` was in QII? Recall that some of the trigonometric functions are negative in QII, so you will have to come up with a convention for how to treat some of the line segment lengths as negative.
+
+15. For any point $(x,y)$ on the unit circle and any angle :math:`\alpha`, show that the point :math:`R_{\alpha} (x,y)` defined by :math:`R_{\alpha} (x,y) = (x\,\cos\;\alpha \,-\, y\,\sin\;\alpha , x\,\sin\;\alpha \,+\, y\,\cos\;\alpha)` is also on the unit circle. What is the geometric interpretation of :math:`R_{\alpha} (x,y)` ? Also, show that :math:`R_{-\alpha} (R_{\alpha} (x,y)) = (x,y)` and :math:`R_{\beta} (R_{\alpha} (x,y)) = R_{\alpha + \beta} (x,y)`.
+
+
+三角函数图像的性质 
+------------------------------------------------
+Properties of Graphs of Trigonometric Functions
+
+We saw in Section 5.1 how the graphs of the trigonometric functions repeat every :math:`2\pi` radians. In this section we will discuss this and other properties of graphs, especially for the sinusoidal functions (sine and cosine).
+
+First, recall that the **domain** of a function $f(x)$ is the set of all numbers $x$ for which the function is defined. For example, the domain of :math:`f(x) = \sin\;x` is the set of all real numbers, whereas the domain of :math:`f(x) = \tan\;x` is the set of all real numbers except :math:`x=\pm\,\frac{\pi}{2}`, :math:`\pm\,\frac{3\pi}{2}`, :math:`\pm\,\frac{5\pi}{2}`, $...$. The **range** of a function $f(x)$ is the set of all values that $f(x)$ can take over its domain. For example, the range of :math:`f(x)=\sin\;x` is the set of all real numbers between $-1$ and $1$ (i.e. the interval :math:`[-1, 1]`), whereas the range of :math:`f(x) = \tan\;x` is the set of all real numbers, as we can see from their graphs.
+
+A function $f(x)$ is **periodic** if there exists a number $p>0$ such that $x+p$ is in the domain of $f(x)$ whenever $x$ is, and if the following relation holds:
+
+.. _equation 5.1:
+
+.. math::
+	:label: eqn:periodic
+
+	f(x+p) ~=~ f(x) \quad\text{for all $x$}
+
+There could be many numbers $p$ that satisfy the above requirements. If there is a smallest such number $p$, then we call that number the **period** of the function $f(x)$.
+
+.. admonition:: Example 5.3
+
+	The functions :math:`\sin\;x`, :math:`\cos\;x`, $\csc\;x$, and $\sec\;x$ all have the same period: :math:`2\pi` radians. We saw in Section 5.1 that the graphs of :math:`y=\tan\;x` and :math:`y=\cot\;x` repeat every :math:`2\pi` radians but they also repeat every :math:`\pi` radians. Thus, the functions :math:`\tan\;x` and :math:`\cot\;x` have a period of :math:`\pi` radians.
+
+.. admonition:: Example 5.4
+
+	What is the period of :math:`f(x)=\sin\;2x\,`?
+ 
+	**Solution:** The graph of :math:`y=\sin\;2x` is shown in Figure :ref:`5.2.1 <fig:sine2x>`, along with the graph of :math:`y=\sin\;x` for comparison, over the interval :math:`[0, 2\pi]`. Note that :math:`\sin\;2x` "goes twice as fast" as :math:`\sin\;x`.
+
+	.. _fig:sine2x:
+
+	.. _Figure 5.2.1:
+
+	.. figure:: ./img/f5.2.1.png 
+		:align: center 
+
+		**Figure 5.2.1 Graph of** :math:`y=\sin\;2x`
+
+	For example, for $x$ from $0$ to :math:`\frac{\pi}{2}`, :math:`\sin\;x` goes from $0$ to $1$, but :math:`\sin\;2x` is able to go from $0$ to $1$ quicker, just over the interval :math:`[0 , \frac{\pi}{4}]`. While :math:`\sin\;x` takes a full :math:`2\pi` radians to go through an entire \emph{cycle}\index{cycle} (the largest part of the graph that does not repeat), :math:`\sin\;2x` goes through an entire cycle in just :math:`\pi` radians. So the period of :math:`\sin\;2x` is :math:`\pi` radians.
+
+The above example made use of the graph of :math:`\sin\;2x`, but the period can be found analytically. Since :math:`\sin\;x` has period :math:`2\pi`, [1]_ we know that :math:`\sin\;(x+2\pi) = \sin\;x` for all $x$. Since $2x$ is a number for all $x$, this means in particular that :math:`\sin\;(2x+2\pi) = \sin\;2x` for all $x$. Now define :math:`f(x)=\sin\;2x`. Then
+
+.. math::
+
+	\begin{align*}
+	f(x+\pi) ~&=~ \sin\;2\,(x+\pi)\\
+	&=~ \sin\;(2x+2\pi)\\
+	&=~ \sin\;2x \quad\text{(as we showed above)}\\
+	&=~ f(x)
+	\end{align*}
+
+.. [1] We will usually leave out the "radians" part when discussing periods from now on.
+
+for all $x$, so the period $p$ of :math:`\sin\;2x` is *at most* :math:`\pi`, by our definition of period. We have to show that :math:`p>0` can not be smaller than :math:`\pi`. To do this, we will use a *proof by contradiction*. That is, assume that :math:`0<p<\pi`, then show that this leads to some contradiction, and hence can not be true. So suppose :math:`0<p<\pi`. Then :math:`0<2p<2\pi`, and hence
+
+.. math::
+
+	\begin{align*}
+	\sin\;2x ~&=~ f(x)\\
+	&=~ f(x+p) \quad\text{(since $p$ is the period of $f(x)$)}\\
+	&=~ \sin\;2(x+p)\\
+	&=~ \sin\;(2x+2p)
+	\end{align*}
+
+for all $x$. Since any number $u$ can be written as $2x$ for some $x$ (i.e $u = 2(u/2)$), this means that :math:`\sin\;u = \sin\;(u+2p)` for all real numbers $u$, and hence the period of :math:`\sin\;x` is as most $2p$. This is a contradiction. Why? Because the period of :math:`\sin\;x` is :math:`2\pi > 2p`. Hence, the period $p$ of :math:`\sin\;2x` can not be less than :math:`\pi`, so the period must equal :math:`\pi`.
+
+The above may seem like a lot of work to prove something that was visually obvious from the graph (and intuitively obvious by the "twice as fast" idea). Luckily, we do not need to go through all that work for each function, since a similar argument works when :math:`\sin\;2x` is replaced by :math:`\sin\;\omega x` for any positive real number :math:`\omega`: instead of dividing :math:`2\pi` by $2$ to get the period, divide by :math:`\omega`. And the argument works for the other trigonometric functions as well. Thus, we get:
+
+.. admonition:: For any number :math:`\omega >0` :
+
+	.. math::
+
+		\begin{align*}{4}
+		\sin\;\omega x ~~&\text{has period}~~ \frac{2\pi}{\omega}
+		\qquad\quad&\csc\;\omega x ~~&\text{has period}~~ \frac{2\pi}{\omega}\\[2pt]
+		\cos\;\omega x ~~&\text{has period}~~ \frac{2\pi}{\omega}
+		\qquad\quad&\sec\;\omega x ~~&\text{has period}~~ \frac{2\pi}{\omega}\\[2pt]
+		\tan\;\omega x ~~&\text{has period}~~ \frac{\pi}{\omega}
+		\qquad\quad&\cot\;\omega x ~~&\text{has period}~~ \frac{\pi}{\omega}
+		\end{align*}
+
+If :math:`\omega < 0`, then use :math:`\sin\;(-A) = -\sin\;A` and :math:`\cos\;(-A) = \cos\;A` (e.g. :math:`\sin\;(-3x) = -\sin\;3x`).
+
+.. admonition:: Example 5.5
+
+	The period of :math:`y=\cos\;3x` is :math:`\frac{2\pi}{3}` and the period of :math:`y=\cos\;\frac{1}{2}x` is :math:`4\pi`. The graphs of both functions are shown in Figure :ref:`5.2.2 <fig:cosine3x>`:
+
+	.. _fig:cosine3x:
+
+	.. _Figure 5.2.2:
+
+	.. figure:: ./img/f5.2.2.png 
+		:align: center 
+
+		**Figure 5.2.2 Graph of** :math:`y=\cos 3x` and :math:`y=\cos \frac{1}{2}x`
+
+We know that :math:`\;-1 \le \sin\;x \le 1\;` and :math:`\;-1 \le \cos\;x \le 1\;` for all $x$. Thus, for a constant :math:`A \ne 0`,
+
+.. math::
+
+	- |A| ~\le~ A\,\sin\;x ~\le~ |A| \quad\text{and}\quad
+	- |A| ~\le~ A\,\cos\;x ~\le~ |A|
+
+for all $x$. In this case, we call $|A|$ the **amplitude** of the functions :math:`y=A\,\sin\;x` and :math:`y=A\,\cos\;x`. In general, the amplitude of a periodic curve $f(x)$ is half the difference of the largest and smallest values that $f(x)$ can take:
+
+.. math::
+
+	\text{Amplitude of $f(x)$} ~=~ \frac{\text{(maximum of $f(x)$)} ~-~ \text{(minimum of $f(x)$)}}{2}
+
+In other words, the amplitude is the distance from either the top or bottom of the curve to the
+horizontal line that divides the curve in half, as in Figure :ref:`5.2.3 <fig:amplitude>`.
+
+.. _fig:amplitude:
+
+.. _Figure 5.2.3:
+
+.. figure:: ./img/f5.2.3.png 
+	:align: center 
+
+	Figure 5.2.3 Amplitude :math:`= \frac{\text{max} - \text{min}}{2} = \frac{|A| - (-|A|)}{2} = |A|`
+
+
+Not all periodic curves have an amplitude. For example, :math:`\tan\;x` has neither a maximum nor a minimum, so its amplitude is undefined. Likewise, :math:`\cot\;x`, :math:`\csc\;x`, and :math:`\sec\;x` do not have an amplitude. Since the amplitude involves vertical distances, it has no effect on the period of a function, and vice versa.
+
+.. admonition:: Example 5.6
+
+	Find the amplitude and period of :math:`y=3\,\cos\;2x`.
+ 
+	**Solution:** The amplitude is $|3| = 3$ and the period is :math:`\frac{2\pi}{2}=\pi`. The graph is shown in Figure :ref:`5.2.4 <fig:exmp3cos2x>`:
+
+	.. _fig:exmp3cos2x:
+
+	.. _Figure 5.2.4:
+
+	.. figure:: ./img/f5.2.4.png 
+		:align: center 
+
+		Figure 5.2.4 :math:`y=3\,\cos\;2x`
+
+.. admonition:: Example 5.7
+
+	Find the amplitude and period of :math:`y=2 - 3\,\sin\;\frac{2\pi}{3}x`.
+ 
+	**Solution:** The amplitude of :math:`-3\,\sin\;\frac{2\pi}{3}x` is $|-3| =3$. Adding $2$ to that function to get the function :math:`y=2 - 3\,\sin\;\frac{2\pi}{3}x` does not change the amplitude, even though it does change the maximum and minimum. It just shifts the entire graph upward by $2$. So in this case, we have
+
+	.. math::
+
+		\text{Amplitude} ~=~ \frac{\text{max} ~-~ \text{min}}{2} ~=~ \frac{5 ~-~ (-1)}{2} ~=~ \frac{6}{2} ~=~ 3 ~.
+	
+	The period is :math:`\dfrac{2\pi}{\frac{2\pi}{3}}=3`. The graph is shown in Figure :ref:`5.2.5 <fig:exmp2m3sinx>`:
+
+	.. _fig:exmp2m3sinx:
+
+	.. _Figure 5.2.5:
+
+	.. figure:: ./img/f5.2.5.png 
+		:align: center 
+
+		Figure 5.2.5 :math:`y=2-3\,\sin\;\frac{2\pi}{3}x`
+
+.. _exmp:2sinx2:
+
+.. admonition:: Example 5.8
+
+	Find the amplitude and period of :math:`y=2\,\sin\;( x^2 )`.
+
+	**Solution:** This is not a periodic function, since the angle that we are taking the sine of, $x^2$, is not a *linear* function of $x$, i.e. is not of the form $ax+b$ for some constants $a$ and $b$. Recall how we argued that :math:`\sin\;2x` was "twice as fast" as :math:`\sin\;x`, so that its period was :math:`\pi` instead of :math:`2\pi`. Can we say that :math:`\sin\;( x^2 )` is some "constant" times as fast as :math:`\sin\;x\,`? No. In fact, we see that the "speed" of the curve keeps increasing as $x$ gets larger, since $x^2$ grows at a variable rate, not a constant rate. This can be seen in the graph of :math:`y=2\,\sin\;( x^2 )`, shown in Figure :ref:`5.2.6 <fig:exmp2sinx2>`: [2]_
+
+	.. [2] This graph was created using Gnuplot, an open-source graphing program which is freely available at http://gnuplot.info. See Appendix B for a brief tutorial on how to use Gnuplot.
+
+	.. _fig:exmp2sinx2:
+
+	.. _Figure 5.2.6:
+
+	.. figure:: ./img/f5.2.6.png 
+		:align: center 
+
+		Figure 5.2.6 :math:`y=2\,\sin\;( x^2 )`
+
+	Notice how the curve "speeds up" as $x$ gets larger, making the "waves" narrower and narrower. Thus, :math:`y=2\,\sin\;( x^2 )` has no period. Despite this, it appears that the function does have an amplitude, namely $2$. To see why, note that since :math:`|\sin\;\theta| \le 1` for all :math:`\theta`, we have
+
+	.. math::
+
+		|2\,\sin\;( x^2 )| ~=~ |2| \;\cdot\; |\sin\;( x^2 )| ~\le~ 2 \;\cdot\; 1 ~=~ 2 ~.
+
+	In the exercises you will be asked to find values of $x$ such that :math:`2\,\sin\;( x^2 )` reaches the maximum value $2$ and the minimum value $-2$. Thus, the amplitude is indeed $2$. Note: This curve is still sinusoidal despite not being periodic, since the general shape is still that of a "sine wave", albeit one with variable *cycles*.
+
+So far in our examples we have been able to determine the amplitudes of sinusoidal curves fairly easily. This will not always be the case.
+
+
+.. _exmp:3sinx4cosx:
+
+.. admonition:: Example 5.9
+
+	Find the amplitude and period of :math:`y=3\,\sin\;x + 4\,\cos\;x`.
+	
+	**Solution:** This is sometimes called a *combination* sinusoidal curve, since it is the sum of two such curves. The period is still simple to determine: since :math:`\sin\;x` and :math:`\cos\;x` each repeat every :math:`2\pi` radians, then so does the combination :math:`3\,\sin\;x + 4\,\cos\;x`. Thus, :math:`y=3\,\sin\;x + 4\,\cos\;x` has period :math:`2\pi`. We can see this in the graph, shown in Figure :ref:`5.2.7 <fig:exmp3sinx4cosx>`:
+
+	.. _fig:exmp3sinx4cosx:
+
+	.. _Figure 5.2.7:
+
+	.. figure:: ./img/f5.2.7.png 
+		:align: center 
+
+		Figure 5.2.7 :math:`y=3\,\sin\;x + 4\,\cos\;x`
+
+	The graph suggests that the amplitude is $5$, which may not be immediately obvious just by looking at how the function is defined. In fact, the definition :math:`y=3\,\sin\;x + 4\,\cos\;x` may tempt you to think that the amplitude is $7$, since the largest that :math:`3\,\sin\;x` could be is $3$ and the largest that :math:`4\,\cos\;x` could be is $4$, so that the largest their sum could be is $3+4=7$. However, :math:`3\,\sin\;x` can never equal $3$ for the same $x$ that makes :math:`4\,\cos\;x` equal to $4$ (why?).
+
+	.. _fig:tri345:
+
+	.. _Figure 5.2.8:
+
+	.. figure:: ./img/f5.2.8.png 
+		:align: right 
+
+		Figure 5.2.8
+
+	There is a useful technique (which we will discuss further in :ref:`Chapter 6 <c6>`) for showing that the amplitude of :math:`y=3\,\sin\;x + 4\,\cos\;x` is $5$. Let :math:`\theta` be the angle shown in the right triangle in Figure :ref:`5.2.8 <fig:tri345>`. Then :math:`\cos\;\theta = \frac{3}{5}` and :math:`\sin\;\theta = \frac{4}{5}`. We can use this as follows:
+
+	.. math::
+
+		\begin{align*}
+		y ~&=~ 3\,\sin\;x ~+~ 4\,\cos\;x\\
+		&=~ 5\,\left( \tfrac{3}{5}\,\sin\;x ~+~ \tfrac{4}{5}\,\cos\;x \right)\\
+		&=~ 5\,( \cos\;\theta\;\sin\;x ~+~ \sin\;\theta\;\cos\;x )\\
+		&=~ 5\,\sin\;(x+\theta)\quad\text{(by the sine addition formula)}
+		\end{align*}
+
+	Thus, :math:`|y| = |5\,\sin\;(x+\theta)| = |5| \cdot\, |\sin\;(x+\theta)| \le (5)(1) = 5`, so the amplitude of :math:`y=3\,\sin\;x + 4\,\cos\;x` is $5$.
+
+
+
+In general, a combination of sines and cosines will have a period equal to the *lowest common multiple* of the periods of the sines and cosines being added. In Example :ref:`5.9 <exmp:3sinx4cosx>`, :math:`\sin\;x` and :math:`\cos\;x` each have period :math:`2\pi`, so the lowest common multiple (which is always an *integer* multiple) is :math:`1 \,\cdot\, 2\pi = 2\pi`.
+
+
+.. _exmp:cos6xsin4x:
+
+.. admonition:: Example 5.10
+
+	Find the period of :math:`y=\cos\;6x + \sin\;4x`.
+ 
+	**Solution:** The period of :math:`\cos\;6x` is :math:`\frac{2\pi}{6} = \frac{\pi}{3}`, and the period of :math:`\sin\;4x$ is $\frac{2\pi}{4} = \frac{\pi}{2}`. The lowest common multiple of :math:`\frac{\pi}{3}` and :math:`\frac{\pi}{2}` is :math:`\pi`:
+	
+	.. math::
+
+		\begin{align}
+		1 \;\cdot\; \tfrac{\pi}{3} ~&=~ \tfrac{\pi}{3} \quad\quad\quad
+		&1 \;&\cdot\; \tfrac{\pi}{2} ~&=~ \tfrac{\pi}{2}\\
+		2 \;\cdot\; \tfrac{\pi}{3} ~&=~ \tfrac{2\pi}{3} \quad\quad\quad
+		&2 \;&\cdot\; \tfrac{\pi}{2} ~&=~ \pi\\
+		3 \;\cdot\; \tfrac{\pi}{3} ~&=~ \pi \quad\quad\quad &{} &{}\\
+		\end{align}
+
+	Thus, the period of :math:`y=\cos\;6x + \sin\;4x` is :math:`\pi`. We can see this from its graph in Figure :ref:`5.2.9 <fig:exmpcos6xsin4x>`:
+	
+	.. _fig:exmpcos6xsin4x:
+
+	.. _Figure 5.2.9:
+
+	.. figure:: ./img/f5.2.9.png 
+		:align: right 
+
+		Figure 5.2.9
+
+	What about the amplitude? Unfortunately we can not use the technique from Example :ref:`5.9 <exmp:3sinx4cosx>`, since we are not taking the cosine and sine of the same angle; we are  taking the cosine of $6x$ but the sine of $4x$. In this case, it appears from the graph that the maximum is close to $2$ and the minimum is close to $-2$. In Chapter 6, we will describe how to use a numerical computation program to show that the maximum and minimum are :math:`\pm\,1.90596111871578`, respectively (accurate to within :math:`\approx 2.2204 \times 10^{-16}`). Hence, the amplitude is $1.90596111871578$.
+
+Generalizing Example :ref:`5.9 <exmp:3sinx4cosx>`, an expression of the form :math:`a\,\sin\;\omega x \;+\; b\,\cos\;\omega x` is equivalent to :math:`\sqrt{a^2 + b^2}\;\sin\;(x+\theta)`, where :math:`\theta` is an angle such that :math:`\cos\;\theta = \frac{a}{\sqrt{a^2 + b^2}}` and :math:`\sin\;\theta = \frac{b}{\sqrt{a^2 + b^2}}`. So :math:`y=a\,\sin\;\omega x \;+\; b\,\cos\;\omega x` will have amplitude :math:`\sqrt{a^2 + b^2}`. Note that this method only works when the angle :math:`\omega x` is the same in both the sine and cosine terms.
+
+We have seen how adding a constant to a function shifts the entire graph vertically. We will now see how to shift the entire graph of a periodic curve horizontally.
+
+.. _fig:phasenone:
+
+.. _Figure 5.2.10:
+
+.. figure:: ./img/f5.2.10.png 
+	:align: right 
+
+	Figure 5.2.10 :math:`y = A \sin \omega x`
+
+Consider a function of the form :math:`y=A\,\sin\;\omega x`, where $A$ and :math:`\omega` are nonzero constants. For simplicity we will assume that $A >0$ and :math:`\omega > 0` (in general either one could be negative). Then the amplitude is $A$ and the period is :math:`\frac{2\pi}{\omega}`. The graph is shown in Figure :ref:`5.2.10 <fig:phasenone>`.
+
+Now consider the function :math:`y=A\,\sin\;(\omega x - \phi)`, where $\phi$ is some constant. The amplitude is still $A$, and the period is still :math:`\frac{2\pi}{\omega}`, since :math:`\omega x - \phi` is a linear function of $x$. Also, we know that the sine function goes through an entire cycle when its angle goes from $0$ to :math:`2\pi`. Here, we are taking the sine of the angle :math:`\omega x - \phi`. So as :math:`\omega x - \phi` goes from $0$ to :math:`2\pi`, an entire cycle of the function :math:`y=A\,\sin\;(\omega x - \phi)` will be traced out. That cycle starts when
+
+.. math::
+
+	\begin{align*}
+	\omega x - \phi ~=~ 0 \quad&\Rightarrow\quad x ~=~ \frac{\phi}{\omega}\\
+	\text{and ends when}
+	\omega x - \phi ~=~ 2\pi \quad&\Rightarrow\quad x ~=~ \frac{2\pi}{\omega}\;+\;\frac{\phi}{\omega}~.
+	\end{align*}
+
+Thus, the graph of :math:`y=A\,\sin\;(\omega x - \phi)` is just the graph of :math:`y=A\,\sin\;\omega x` shifted horizontally by :math:`\frac{\phi}{\omega}`, as in Figure :ref:`5.2.11 <fig:phaseshift>`. The graph is shifted to the right when :math:`\phi >0`, and to the left when :math:`\phi <0`. The amount :math:`\frac{\phi}{\omega}` of the shift is called the **phase shift** of the graph.
+
+
+.. _fig:phaseshift:
+
+.. _Figure 5.2.11:
+
+.. figure:: ./img/f5.2.11.png 
+	:align: center 
+
+	Figure 5.2.11 Phase shift for :math:`y=A\,\sin\;(\omega x - \phi)`
+
+The phase shift is defined similarly for the other trigonometric functions.
+
+
+.. admonition:: Example 5.11
+
+	Find the amplitude, period, and phase shift of :math:`y=3\,\cos\;(2x - \pi)`.
+	
+	**Solution:** The amplitude is $3$, the period is :math:`\frac{2\pi}{2} = \pi`, and the phase shift is :math:`\frac{\pi}{2}`. The graph is shown in Figure :ref:`5.2.12 <fig:exmp3cos2mpi>`:
+
+	.. _fig:exmp3cos2mpi:
+
+	.. _Figure 5.2.12:
+
+	.. figure:: ./img/f5.2.12.png 
+		:align: center 
+
+		Figure 5.2.12 :math:`y=3\,\cos\;(2x - \pi)`
+
+
+	Notice that the graph is the same as the graph of :math:`y=3\,\cos\;2x` shifted to the right by :math:`\frac{\pi}{2}`, the amount of the phase shift.
+
+.. admonition:: Example 5.12
+
+	Find the amplitude, period, and phase shift of :math:`y=-2\,\sin\;\left(3x + \frac{\pi}{2}\right)`.
+
+	**Solution:** The amplitude is $2$, the period is :math:`\frac{2\pi}{3}`, and the phase shift is :math:`\frac{-\frac{\pi}{2}}{3} = -\frac{\pi}{6}`. Notice the negative sign in the phase shift, since :math:`3x+\pi=3x-(-\pi)` is in the form :math:`\omega x - \phi`. The graph is shown in Figure :ref:`5.2.13 <fig:exmpm2sin3ppi2>`:
+
+	.. _fig:exmpm2sin3ppi2:
+
+	.. _Figure 5.2.13:
+
+	.. figure:: ./img/f5.2.13.png 
+		:align: center 
+
+		Figure 5.2.13 :math:`y=-2\,\sin\;\left( 3x + \frac{\pi}{2} \right)`
+
+In engineering two periodic functions with the same period are said to be *out of phase* if their phase shifts differ. For example, :math:`\sin\;\left( x - \frac{\pi}{6} \right)` and :math:`\sin\;x` would be :math:`\frac{\pi}{6}` radians (or :math:`30^\circ`) out of phase, and :math:`\sin\;x` would be said to *lag* :math:`\sin\;\left( x - \frac{\pi}{6} \right)` by :math:`\frac{\pi}{6}` radians, while :math:`\sin\;\left( x - \frac{\pi}{6} \right)` *leads* :math:`\sin\;x` by :math:`\frac{\pi}{6}` radians. Periodic functions with the same period and the same phase shift are *in phase*.
+
+The following is a summary of the properties of trigonometric graphs:
+
+.. admonition:: For any constants :math:`A \ne 0`, :math:`\omega \ne 0`, and :math:`\phi`:
+
+	.. math::
+
+		\begin{align*}
+		y = A\,\sin\;(\omega x - \phi) ~~&\text{has amplitude $|A|$, period $\tfrac{2\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}\\
+		y = A\,\cos\;(\omega x - \phi) ~~&\text{has amplitude $|A|$, period $\tfrac{2\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}\\
+		y = A\,\tan\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}\\
+		y = A\,\csc\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{2\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}\\
+		y = A\,\sec\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{2\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}\\
+		y = A\,\cot\;(\omega x - \phi) ~~&\text{has undefined amplitude, period $\tfrac{\pi}{\omega}$, and
+		phase shift $\tfrac{\phi}{\omega}$}
+		\end{align*}
+
+练习
+~~~~~~~~~~~~~~
+Exercises
+
+For Exercises 1-12, find the amplitude, period, and phase shift of the given function. Then graph one cycle of the function, either by hand or by using Gnuplot (see :ref:`Appendix B <appendix b>`).
+
+1. :math:`y=3\,\cos\;\pi x`
+2. :math:`y=\sin\;(2\pi x - \pi)`
+3. :math:`y=-\sin\;(5x + 3)`
+4. :math:`y=1+8\,\cos\;(6x- \pi)`
+5. :math:`y=2+\cos\;(5x + \pi)`
+6. :math:`y=1-\sin\;(3\pi - 2x)`
+7. :math:`y=1-\cos\;(3\pi - 2x)`
+8. :math:`y=2\,\tan\;(x - 1)`
+9. :math:`y=1-\tan\;(3\pi - 2x)`
+10. :math:`y=\sec\;(2x + 1)`
+11. :math:`y=2\csc\;(2x - 1)`
+12. :math:`y=2+4\,\cot\;(1-x)`
+
+13. For the function :math:`y=2\,\sin\;( x^2 )` in Example :ref:`5.8 <exmp:2sinx2>`, for which values of $x$ does the function reach its maximum value $2$, and for which values of $x$ does it reach its minimum value ``-2``?
+14. For the function :math:`y=3\,\sin\;x + 4\,\cos\;x` in Example :ref:`5.9 <exmp:3sinx4cosx>`, for which values of $x$ does the function reach its maximum value $5$, and for which values of $x$ does it reach its minimum value ``-5`` ? You can restrict your answers to be between $0$ and :math:`2\pi`.
+15. Graph the function :math:`y=\sin^2 \,x` from $x=0$ to :math:`x=2\pi`, either by hand or by using Gnuplot. What are the amplitude and period of this function?
+
+.. _exer:circuitphase:
+
+16. The current :math:`i(t)` in an AC electrical circuit at time :math:`t\ge 0` is given by :math:`i(t) = I_m \,\sin\;\omega t`, and the voltage :math:`v(t)` is given by :math:`v(t) = V_m \,\sin\;\omega t`, where :math:`V_m > I_m > 0` and :math:`\omega > 0` are constants. Sketch one cycle of both :math:`i(t)` and :math:`v(t)` *together on the same graph* (i.e. on the same set of axes). Are the current and voltage in phase or out of phase?
+
+17. Repeat Exercise :ref:`16 <exer:circuitphase>` with :math:`i(t)` the same as before but with :math:`v(t)= V_m \,\sin\;\left(\omega t + \frac{\pi}{4}\right)`.
+18. Repeat Exercise :ref:`16 <exer:circuitphase>` with :math:`i(t)=-I_m \,\cos\;\left(\omega t - \frac{\pi}{3}\right)` and :math:`v(t)= V_m \,\sin\;\left(\omega t - \frac{5\pi}{6}\right)`.
+
+For Exercises :ref:`19 <exer:ampcombostart>`-:ref:`21 <exer:ampcomboend>`, find the amplitude and period of the given function. Then graph one cycle of the function, either by hand or by using Gnuplot.
+
+.. _exer:ampcombostart:
+
+19. :math:`y=3\,\sin\;\pi x \;-\; 5\,\cos\;\pi x`
+20. :math:`y=-5\,\sin\;3x \;+\; 12\,\cos\;3x`
+
+.. _exer:ampcomboend:
+
+21. :math:`y=2\,\cos\;x \;+\; 2\,\sin\;x`
+
+22. Find the amplitude of the function :math:`y=2\,\sin\;( x^2 ) \;+\; \cos\;( x^2 )`.
+
+For Exercises :ref:`23 <exer:percombostart>`-:ref:`25 <exer:percomboend>`, find the period of the given function. Graph one cycle using Gnuplot.
+
+.. _exer:percombostart:
+
+23. :math:`y=\sin\;3x \;-\; \cos\;5x`
+24. :math:`y=\sin\;\frac{x}{3} \;+\; 2\,\cos\;\frac{3x}{4}`
+
+.. _exer:percomboend:
+
+25. :math:`y=2\,\sin\;\pi x \;+\; 3\,\cos\;\frac{\pi}{3}x`
+26. Let :math:`y = 0.5\,\sin\;x ~\sin\;12x\,`. Its graph for $x$ from $0$ to :math:`4\pi` is shown in Figure :ref:`5.2.14 <fig:modulated>`:
+
+    .. _fig:modulated:
+    
+    .. _Figure 5.2.14:
+    
+    .. figure:: ./img/f5.2.14.png 
+    	:align: center 
+    
+    	Figure 5.2.14 Modulated wave :math:`y=0.5\,\sin\;x ~\sin\;12x`
+
+
+    You can think of this function as :math:`\sin\;12x` with a sinusoidally varying "amplitude" of :math:`0.5\,\sin\;x`. What is the period of this function? From the graph it looks like the amplitude may be $0.5$. Without finding the exact amplitude, explain why the amplitude is in fact *less* than $0.5$. The function above is known as a *modulated wave*, and the functions :math:`\pm\,0.5\,\sin\;x` form an *amplitude envelope* for the wave (i.e. they enclose the wave). Use an identity from Section 3.4 to write this function as a sum of sinusoidal curves.
+
+27. Use Gnuplot to graph the function :math:`y= x^2 \,\sin\;10x` from :math:`x = -2\pi` to :math:`x=2\pi`. What functions form its amplitude envelope? (Note: Use *set samples 500* in Gnuplot.)
+28. Use Gnuplot to graph the function :math:`y= \frac{1}{x^2} \,\sin\;80x` from $x = 0.2$ to :math:`x=\pi`. What functions form its amplitude envelope? (Note: Use *set samples 500* in Gnuplot.)
+29. Does the function :math:`y=\sin\;\pi x \;+\; \cos\;x` have a period? Explain your answer.
+30. Use Gnuplot to graph the function :math:`y=\frac{\sin\;x}{x}` from :math:`x=-4\pi` to :math:`x=4\pi`. What happens at $x=0$?
+ 
+反三角函数 
+----------------------------------- 
+Inverse Trigonometric Functions
+
+We have briefly mentioned the inverse trigonometric functions before, for example in Section 1.3 when we discussed how to use the :math:`\boxed{\sin^{-1}}`, :math:`\boxed{\cos^{-1}}`, and :math:`\boxed{\tan^{-1}}` buttons on a calculator to find an angle that has a certain trigonometric function value. We will now define those inverse functions and determine their graphs.
+
+.. _fig:function:
+
+.. _Figure 5.3.1:
+
+.. figure:: ./img/f5.3.1.png 
+	:align: right 
+
+	Figure 5.3.1
+
+Recall that a **function** is a rule that assigns a single object $y$ from one set (the **range**) to each object $x$ from another set (the **domain**). We can write that rule as :math:`y = f(x)`, where $f$ is the function (see Figure :ref:`5.3.1 <fig:function>`). There is a simple *vertical rule* for determining whether a rule $y=f(x)$ is a function: $f$ is a function if and only if every vertical line intersects the graph of $y=f(x)$ in the $xy$-coordinate plane at most once (see  Figure :ref:`5.3.2 <fig:verticalrule>`).
+
+
+.. _fig:verticalrule:
+
+.. _Figure 5.3.2:
+
+.. figure:: ./img/f5.3.2.png 
+	:align: center 
+
+	Figure 5.3.2 Vertical rule for functions
+
+Recall that a function $f$ is **one-to-one** (often written as $1-1$) if it assigns distinct values of $y$ to distinct values of $x$. In other words, if :math:`x_1 \ne x_2` then :math:`f(x_1 ) \ne f(x_2 )`. Equivalently, $f$ is one-to-one if :math:`f(x_1 ) = f(x_2 )` implies :math:`x_1 = x_2`. There is a simple *horizontal rule* for determining whether a function $y=f(x)$ is one-to-one: $f$ is one-to-one if and only if every horizontal line intersects the graph of $y=f(x)$ in the $xy$-coordinate plane at most once (see Figure :ref:`5.3.3 <fig:horizontalrule>`).
+
+.. _fig:horizontalrule:
+
+.. _Figure 5.3.3:
+
+.. figure:: ./img/f5.3.3.png 
+	:align: center 
+
+	Figure 5.3.3 Horizontal rule for one-to-one functions
+
+If a function $f$ is one-to-one on its domain, then $f$ has an **inverse function**, denoted by $f^{-1}$, such that :math:`y=f(x)` if and only if :math:`f^{-1}(y) = x`. The domain of :math:`f^{-1}` is the range of $f$.
+
+The basic idea is that $f^{-1}$ "undoes" what $f$ does, and vice versa. In other words,
+
+.. math::
+
+	\begin{align}
+	f^{-1}(f(x)) ~&=~ x \quad&&\text{for all $x$ in the domain of $f$, and}\\
+	f(f^{-1}(y)) ~&=~ y \quad&&\text{for all $y$ in the range of $f$.}
+	\end{align}
+
+We know from their graphs that none of the trigonometric functions are one-to-one over their entire domains. However, we can restrict those functions to *subsets* of their domains where they *are* one-to-one. For example, :math:`y=\sin\;x` is one-to-one over the interval :math:`\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]`, as we see in the graph below:
+
+.. _fig:sinerestricted:
+
+.. _Figure 5.3.4:
+
+.. figure:: ./img/f5.3.4.png 
+	:align: center 
+
+	Figure 5.3.4 :math:`y=\sin\;x` with $x$ restricted to :math:`\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]`
+
+For :math:`-\frac{\pi}{2} \le x \le \frac{\pi}{2}` we have :math:`-1 \le \sin\;x \le 1`, so we can define the **inverse sine** function $y=\sin^{-1} x$ (sometimes called the **arc sine** and denoted by :math:`y=\arcsin\;x`) whose domain is the interval :math:`[-1, 1]` and whose range is the interval :math:`\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]`. In other words:
+
+.. equation 5.2:
+
+.. math::
+	:label: eqn:arcsin1
+
+	\sin^{-1} (\sin\;y) ~=~ y \quad\text{for $-\tfrac{\pi}{2} \le y \le \tfrac{\pi}{2}$}
+
+.. equation 5.3:
+
+.. math::
+	:label: eqn:arcsin2
+
+	\sin\;(\sin^{-1} x) ~=~ x \quad\text{for $-1 \le x \le 1$}
+
+
+.. admonition:: Example 5.13
+
+	Find :math:`\sin^{-1} \left(\sin\;\frac{\pi}{4}\right)`.
+ 
+	**Solution:** Since :math:`-\frac{\pi}{2} \le \frac{\pi}{4} \le \frac{\pi}{2}`, we know that :math:`\sin^{-1} \left(\sin\;\frac{\pi}{4}\right) = \boxed{\frac{\pi}{4}}\;`, by formula :eq:`5.2 <eqn:arcsin1>`.
+
+.. _exmp:arcsin5pi4:
+
+.. admonition:: Example 5.14
+ 
+	Find :math:`\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right)`.
+ 
+	**Solution:** Since :math:`\frac{5\pi}{4} > \frac{\pi}{2}`, we can not use formula :eq:`5.2 <eqn:arcsin1>`. But we know that :math:`\sin\;\frac{5\pi}{4} = -\frac{1}{\sqrt{2}}`. Thus, :math:`\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right) = \sin^{-1} \left( -\frac{1}{\sqrt{2}} \right)` is, by definition, the angle $y$ such that :math:`-\frac{\pi}{2} \le y \le \frac{\pi}{2}` and :math:`\sin\;y = -\frac{1}{\sqrt{2}}`. That angle is :math:`y=-\frac{\pi}{4}`, since
+ 
+	.. math::
+
+		\sin\;\left( -\tfrac{\pi}{4} \right) ~=~ -\sin\;\left( \tfrac{\pi}{4} \right) ~=~ -\tfrac{1}{\sqrt{2}} ~.
+ 
+	Thus, :math:`\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right) = \boxed{-\tfrac{\pi}{4}}\;`.
+
+
+Example :ref:`5.14 <exmp:arcsin5pi4>` illustrates an important point: :math:`\sin^{-1} x` should *always* be a number between :math:`-\frac{\pi}{2}` and :math:`\frac{\pi}{2}`. If you get a number outside that range, then you made a mistake somewhere. This why in Example :ref:`1.27 <exmp:sinneg0682>` in Section 1.5 we got :math:`\sin^{-1}(-0.682) = -43^\circ` when using the :math:`\boxed{\sin^{-1}}` button on a calculator. Instead of an angle between :math:`0^\circ` and :math:`360^\circ` (i.e. $0$ to :math:`2\pi` radians) we got an angle between :math:`-90^\circ` and :math:`90^\circ` (i.e. :math:`-\frac{\pi}{2}` to :math:`\frac{\pi}{2}` radians).
+
+In general, the graph of an inverse function $f^{-1}$ is the reflection of the graph of $f$ around the line $y=x$. The graph of :math:`y=\sin^{-1} x` is shown in Figure :ref:`5.3.5 <fig:arcsine>`. Notice the symmetry about the line $y=x$ with the graph of :math:`y=\sin\;x`.
+
+.. _fig:arcsine:
+
+.. _Figure 5.3.5:
+
+.. figure:: ./img/f5.3.5.png 
+	:align: center 
+
+	Figure 5.3.5 Graph of :math:`y=\sin^{-1} x`
+
+
+The **inverse cosine** function :math:`y=\cos^{-1} x` (sometimes called the **arc cosine** and denoted by :math:`y=\arccos\;x`) can be determined in a similar fashion. The function :math:`y=\cos\;x` is one-to-one over the interval :math:`[0, \pi]`, as we see in the graph below:
+
+.. _fig:cosinerestricted:
+
+.. _Figure 5.3.6:
+
+.. figure:: ./img/f5.3.6.png 
+	:align: center 
+
+	Figure 5.3.6 :math:`y=\cos\;x` with $x$ restricted to :math:`[0, \pi]`
+
+
+Thus, :math:`y=\cos^{-1} x` is a function whose domain is the interval :math:`[-1, 1]` and whose range is the interval :math:`[0, \pi]`. In other words:
+
+.. _equation 5.4:
+
+.. math::
+	:label: eqn:arccos1
+
+ 	\cos^{-1} (\cos\;y) ~=~ y \quad\text{for $0 \le y \le \pi$}
+
+.. _equation 5.5:
+
+.. math::
+	:label: eqn:arccos2
+
+ 	\cos\;(\cos^{-1} x) ~=~ x \quad\text{for $-1 \le x \le 1$}
+
+
+The graph of :math:`y=\cos^{-1} x` is shown below in Figure :ref:`5.3.7 <fig:arccosine>`. Notice the symmetry about the line $y=x$ with the graph of :math:`y=\cos\;x`.
+
+.. _fig:arccosine:
+
+.. _Figure 5.3.7:
+
+.. figure:: ./img/f5.3.7.png 
+	:align: center 
+
+	Figure 5.3.7 Graph of :math:`y=\cos^{-1} x`
+
+
+.. admonition:: Example 5.15
+
+	Find :math:`\cos^{-1} \left(\cos\;\frac{\pi}{3}\right)`.
+ 
+	**Solution:** Since :math:`0 \le \frac{\pi}{3} \le \pi`, we know that :math:`\cos^{-1} \left(\cos\;\frac{\pi}{3}\right) = \boxed{\frac{\pi}{3}}\;`, by formula :eq:`5.4 <eqn:arccos1>`.
+
+
+.. _exmp:arccos4pi3:
+
+.. admonition:: Example 5.16
+
+
+	Find $\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right)$.
+
+ 
+	**Solution:** Since :math:`\frac{4\pi}{3} > \pi`, we can not use formula :eq:`5.4 <eqn:arccos1>`. But we know that :math:`\cos\;\frac{4\pi}{3} = -\frac{1}{2}`. Thus, :math:`\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right) = \cos^{-1} \left( -\frac{1}{2} \right)` is, by definition, the angle $y$ such that :math:`0 \le y \le \pi` and :math:`\cos\;y = -\frac{1}{2}`. That angle is :math:`y=\frac{2\pi}{3}` (i.e. :math:`120^\circ`). Thus, :math:`\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right) = \boxed{\tfrac{2\pi}{3}}\;`.
+
+Examples :ref:`5.14 <exmp:arcsin5pi4>` and :ref:`5.16 <exmp:arccos4pi3>` may be confusing, since they seem to violate the general rule for inverse functions that :math:`f^{-1}(f(x)) = x` for all $x$ in the domain of $f$. But that rule only applies when the function $f$ is one-to-one over its *entire* domain. We had to restrict the sine and cosine functions to very small subsets of their entire domains in order for those functions to be one-to-one. That general rule, therefore, only holds for $x$ in those small subsets in the case of the inverse sine and inverse cosine.
+
+The **inverse tangent** function :math:`y=\tan^{-1} x` (sometimes called the **arc tangent** and denoted by :math:`y=\arctan\;x`) can be determined similarly. The function :math:`y=\tan\;x` is one-to-one over the interval :math:`\left( -\frac{\pi}{2},\frac{\pi}{2} \right)`, as we see in Figure :ref:`5.3.8 <fig:tangentrestricted>`:
+
+.. _fig:tangentrestricted:
+
+.. _Figure 5.3.8:
+
+.. figure:: ./img/f5.3.8.png 
+	:align: center 
+
+	Figure 5.3.8 :math:`y=\tan\;x` with $x$ restricted to :math:`\left( -\frac{\pi}{2},\frac{\pi}{2} \right)`
+
+
+The graph of :math:`y=\tan^{-1} x` is shown below in Figure :ref:`5.3.9 <fig:arctangent>`. Notice that the vertical asymptotes for :math:`y=\tan\;x` become horizontal asymptotes for :math:`y=\tan^{-1} x`. Note also the symmetry about the line $y=x$ with the graph of :math:`y=\tan\;x`.
+
+.. _fig:arctangent:
+
+.. _Figure 5.3.9:
+
+.. figure:: ./img/f5.3.9.png 
+	:align: center 
+
+	Figure 5.3.9 Graph of :math:`y=\tan^{-1} x`
+
+
+Thus, :math:`y=\tan^{-1} x` is a function whose domain is the set of all real numbers and whose range is the interval :math:`\left( -\frac{\pi}{2},\frac{\pi}{2} \right)`. In other words:
+
+.. _equation 5.6:
+
+.. math::
+	:label: eqn:arctan1
+
+	\tan^{-1} (\tan\;y) ~=~ y \quad \text{for $-\tfrac{\pi}{2} < y < \tfrac{\pi}{2}$}
+
+.. _equation 5.7:
+
+.. math::
+	:label: eqn:arctan2
+
+	\tan\;(\tan^{-1} x) ~=~ x \quad \text{for all real $x$}
+
+.. admonition:: Example 5.17
+
+	Find :math:`\tan^{-1} \left(\tan\;\frac{\pi}{4}\right)`.
+ 
+	**Solution:** Since :math:`-\tfrac{\pi}{2} \le \tfrac{\pi}{4} \le \tfrac{\pi}{2}`, we know that :math:`\tan^{-1} \left(\tan\;\frac{\pi}{4}\right) = \boxed{\frac{\pi}{4}}\;`, by formula :eq:`5.6 <eqn:arctan1>`.
+
+.. _exmp:arctanpi:
+
+.. admonition:: Example 5.18
+
+	Find :math:`\tan^{-1} \left(\tan\;\pi\right)`.
+ 
+	**Solution:** Since :math:`\pi > \tfrac{\pi}{2}`, we can not use formula :eq:`5.6 <eqn:arctan1>`. But we know that :math:`\tan\;\pi = 0`. Thus, :math:`\tan^{-1} \left(\tan\;\pi\right) = \tan^{-1} 0` is, by definition, the angle $y$ such that :mamth:`-\tfrac{\pi}{2} \le y \le \tfrac{\pi}{2}` and :math:`\tan\;y = 0`. That angle is $y=0$. Thus, :math:`\tan^{-1} \left(\tan\;\pi \right) = \boxed{0}\;`.
+
+ Find the exact value of $\cos\;\left(\sin^{-1}\;\left(-\frac{1}{4}\right)\right)$.\vspace{1mm}
+ 
+.. admonition:: Example 5.19
+
+	**Solution:** Let :math:`\theta = \sin^{-1}\;\left(-\frac{1}{4}\right)`. We know that :math:`-\tfrac{\pi}{2} \le \theta \le \tfrac{\pi}{2}`, so since :math:`\sin\;\theta = -\frac{1}{4} < 0`, :math:`\theta` must be in QIV. Hence :math:`\cos\;\theta > 0`. Thus,
+
+	.. math::
+
+		\cos^2 \;\theta ~=~ 1 ~-~ \sin^2 \;\theta ~=~ 1 ~-~ \left( -\frac{1}{4} \right)^2 ~=~\frac{15}{16} \quad\Rightarrow\quad \cos\;\theta ~=~ \frac{\sqrt{15}}{4} ~.
+ 
+	Note that we took the positive square root above since :math:`\cos\;\theta > 0`. Thus, :math:`\cos\;\left(\sin^{-1}\;\left(-\frac{1}{4}\right)\right) = \boxed{\frac{\sqrt{15}}{4}}\;`.
+
+.. _exmp:tanarcsin:
+
+.. admonition:: Example 5.20
+
+	Show that :math:`\tan\;(\sin^{-1} x) = \dfrac{x}{\sqrt{1 - x^2}}` for $-1 < x < 1$.
+
+	.. _fig:tanarcsin:
+
+	.. _Figure 5.3.10:
+
+	.. figure:: ./img/f5.3.10.png
+		:align: right
+
+		**Figure 5.3.10**
+
+	**Solution:** When $x=0$, the formula holds trivially, since
+
+	.. math::
+
+		\tan\;(\sin^{-1} 0) ~=~ \tan\;0 ~=~ 0 ~=~ \dfrac{0}{\sqrt{1 - 0^2}} ~.
+
+	Now suppose that $0 < x < 1$. Let :math:`\theta = \sin^{-1} x`. Then :math:`\theta` is in QI and :math:`\sin\;\theta = x`. Draw a right triangle with an angle :math:`\theta` such that the opposite leg has length $x$ and the hypotenuse has length $1$, as in Figure :ref:`5.3.10 <fig:tanarcsin>` (note that this is possible since $0 < x < 1$). Then :math:`\sin\;\theta = \frac{x}{1} = x`. By the Pythagorean Theorem, the adjacent leg has length :math:`\sqrt{1 - x^2}`. Thus, :math:`\tan\;\theta = \frac{x}{\sqrt{1 - x^2}}`.
+	
+	If $-1 < x < 0$ then :math:`\theta = \sin^{-1} x` is in QIV. So we can draw the same triangle except that it would be "upside down" and we would again have :math:`\tan\;\theta = \frac{x}{\sqrt{1 - x^2}}`, since the tangent and sine have the same sign (negative) in QIV. Thus, :math:`\tan\;(\sin^{-1} x) = \dfrac{x}{\sqrt{1 - x^2}}` for $-1 < x < 1$.
+
+The inverse functions for cotangent, cosecant, and secant can be determined by looking at their graphs. For example, the function :math:`y=\cot\;x` is one-to-one in the interval :math:`(0,\pi)`, where it has a range equal to the set of all real numbers. Thus, the **inverse cotangent** :math:`y=\cot^{-1} x` is a function whose domain is the set of all real numbers and whose range is the interval :math:`(0,\pi)`. In other words:
+
+.. _equation 5.8:
+
+.. math::
+	:label: eqn:arccot1
+
+ 	\cot^{-1} (\cot\;y) ~=~ y \quad \text{for $0 < y < \pi$}
+
+.. _equation 5.9:
+
+.. math::
+	:label: eqn:arccot2
+
+	\cot\;(\cot^{-1} x) ~=~ x \quad \text{for all real $x$}
+
+The graph of :math:`y=\cot^{-1} x` is shown below in Figure :ref:`5.3.11 <fig:arccotangent>`.
+
+.. _fig:arccotangent:
+
+.. _Figure 5.3.11:
+
+.. figure:: ./img/f5.3.11.png
+	:align: right
+
+	**Figure 5.3.11** Graph of :math:`y=\cot^{-1} x`
+
+Similarly, it can be shown that the **inverse cosecant** :math:`y=\csc^{-1} x` is a function whose domain is :math:`|x| \ge 1` and whose range is :math:`-\frac{\pi}{2} \le y \le \frac{\pi}{2}`, :math:`y \ne 0`. Likewise, the **inverse secant** :math:`y=\sec^{-1} x` is a function whose domain is :math:`|x| \ge 1` and whose range is :math:`0 \le y \le \pi`, :math:`y \ne \frac{\pi}{2}`.
+
+.. _equation 5.10:
+
+.. math::
+	:label: eqn:arccsc1
+ 
+ 	\csc^{-1} (\csc\;y) ~=~ y \quad \text{for $-\frac{\pi}{2} \le y \le \frac{\pi}{2}$, $y \ne 0$}
+
+.. _equation 5.11:
+
+.. math::
+	:label: eqn:arccsc2
+
+	\csc\;(\csc^{-1} x) ~=~ x \quad \text{for $|x| \ge 1$}
+
+.. _equation 5.12:
+
+.. math::
+	:label: eqn:arcsec1
+
+	\sec^{-1} (\sec\;y) ~=~ y \quad \text{for $0 \le y \le \pi$, $y \ne \frac{\pi}{2}$}
+
+.. _equation 5.13:
+
+.. math::
+	:label: eqn:arcsec2
+
+	\sec\;(\sec^{-1} x) ~=~ x \quad \text{for $|x| \ge 1$}
+
+
+It is also common to call :math:`\cot^{-1} x`, :math:`\csc^{-1} x`, and :math:`\sec^{-1} x` the **arc cotangent**, **arc cosecant**, and **arc secant**, respectively, of $x$. The graphs of :math:`y=\csc^{-1} x` and :math:`y=\sec^{-1} x` are shown in Figure :ref:`5.3.12 <fig:arccscsec>`:
+
+.. _fig:arccscsec:
+
+.. _Figure 5.3.12:
+
+.. figure:: ./img/f5.3.12.png
+	:align: center
+
+	**Figure 5.3.12** Graph of :math:`y=\cot^{-1} x`
+
+.. admonition:: Example 5.21
+
+	Prove the identity $\tan^{-1} x \;+\; \cot^{-1} x ~=~ \frac{\pi}{2}$.
+ 
+	**Solution:** Let $\theta = \cot^{-1} x$. Using relations from Section 1.5, we have
+
+	.. math::
+
+		\tan\;\left( \tfrac{\pi}{2} - \theta \right) ~=~ -\tan\;\left( \theta - \tfrac{\pi}{2} \right) ~=~ \cot\;\theta ~=~ \cot\;(\cot^{-1} x) ~=~ x ~,
+ 
+	by formula :eq:`5.9 <eqn:arccot2>`. So since :math:`\tan\;(\tan^{-1} x) = x` for all $x$, this means that :math:`\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \theta \right)`. Thus, :math:`\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \cot^{-1} x \right)`. Now, we know that :math:`0 < \cot^{-1} x < \pi$, so $-\tfrac{\pi}{2} < \tfrac{\pi}{2} - \cot^{-1} x < \tfrac{\pi}{2}`, i.e. :math:`\tfrac{\pi}{2} - \cot^{-1} x` is in the restricted subset on which the tangent function is one-to-one. Hence, :math:`\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \cot^{-1} x \right)` implies that :math:`\tan^{-1} x = \tfrac{\pi}{2} - \cot^{-1} x`, which proves the identity.
+
+.. _exmp:arctanab:
+
+.. admonition:: Example 5.22
+
+	Is $\;\tan^{-1} a \;+\; \tan^{-1} b ~=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)\;$ an identity?
+ 
+	**Solution:** In the tangent addition formula :math:`\tan\;(A+B) = \dfrac{\tan\;A \;+\; \tan\;B}{1 \;-\; \tan\;A~\tan\;B}`, let :math:`A = \tan^{-1} a` and :math:`B = \tan^{-1} b`. Then
+
+	.. math::
+
+		\begin{align*}
+		\tan\;(\tan^{-1} a \;+\; \tan^{-1} b ) ~&=~ \dfrac{\tan\;(\tan^{-1} a) \;+\; \tan\;(\tan^{-1}
+		b)}{1 \;-\; \tan\;(\tan^{-1} a)~\tan\;(\tan^{-1} b)}\\
+		&=~ \dfrac{a+b}{1-ab}\qquad\text{by formula 5.7, so it seems that we have}\\
+		\tan^{-1} a \;+\; \tan^{-1} b ~&=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)
+		\end{align*}
+
+	by definition of the inverse tangent. However, recall that :math:`-\tfrac{\pi}{2} < \tan^{-1} x < \tfrac{\pi}{2}` for all real numbers $x$. So in particular, we must have :math:`-\tfrac{\pi}{2} < \tan^{-1} \left( \frac{a+b}{1-ab} \right) < \tfrac{\pi}{2}`. But it is possible that :math:`\tan^{-1} a \;+\; \tan^{-1} b` is *not* in the interval :math:`\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)`. For example,
+
+	.. math::
+
+		\tan^{-1} 1 \;+\; \tan^{-1} 2 ~=~ 1.892547 ~>~ \tfrac{\pi}{2} \approx 1.570796 ~.
+
+	And we see that :math:`\tan^{-1} \left( \frac{1+2}{1-(1)(2)} \right) = \tan^{-1} (-3) = -1.249045 \ne \tan^{-1} 1 \;+\; \tan^{-1} 2`. So the formula is only true when :math:`-\tfrac{\pi}{2} < \tan^{-1} a \;+\; \tan^{-1} b < \tfrac{\pi}{2}`.
+
+.. _sec5dot3:
+
+练习
+~~~~~~~~~~~~~~
+Exercises
+
+For Exercises 1-25, find the exact value of the given expression in radians.
+
+1. :math:`\tan^{-1} 1`
+2. :math:`\tan^{-1} \,(-1)`
+3. :math:`\tan^{-1} 0`
+4. :math:`\cos^{-1} 1`
+5. :math:`\cos^{-1} \,(-1)`
+6. :math:`\cos^{-1} 0`
+7. :math:`\sin^{-1} 1`
+8. :math:`\sin^{-1} \,(-1)`
+9. :math:`\sin^{-1} 0`
+10. :math:`\sin^{-1} \left(\sin\;\frac{\pi}{3}\right)`
+11. :math:`\sin^{-1} \left(\sin\;\frac{4\pi}{3}\right)`
+12. :math:`\sin^{-1} \left(\sin\;\left(-\frac{5\pi}{6}\right)\right)`
+13. :math:`\cos^{-1} \left(\cos\;\frac{\pi}{7}\right)`
+14. :math:`\cos^{-1} \left(\cos\;\left(-\frac{\pi}{10}\right)\right)`
+15. :math:`\cos^{-1} \left(\cos\;\frac{6\pi}{5}\right)`
+16. :math:`\tan^{-1} \left(\tan\;\frac{4\pi}{3}\right)`
+17. :math:`\tan^{-1} \left(\tan\;\left(-\frac{5\pi}{6}\right)\right)`
+18. :math:`\cot^{-1} \left(\cot\;\frac{4\pi}{3}\right)`
+19. :math:`\csc^{-1} \left(\csc\;\left(-\frac{\pi}{9}\right)\right)`
+20. :math:`\sec^{-1} \left(\sec\;\frac{6\pi}{5}\right)`
+21. :math:`\cos\;\left(\sin^{-1}\;\left(\frac{5}{13}\right)\right)`
+22. :math:`\cos\;\left(\sin^{-1}\;\left(-\frac{4}{5}\right)\right)`
+23. :math:`\sin^{-1}\;\frac{3}{5} \;+\; \sin^{-1}\;\frac{4}{5}`
+24. :math:`\sin^{-1}\;\frac{5}{13} \;+\; \cos^{-1}\;\frac{5}{13}`
+25. :math:`\tan^{-1}\;\frac{3}{5} \;+\; \cot^{-1}\;\frac{3}{5}`
+
+For Exercises 26-33, prove the given identity.
+
+26. :math:`\cos\;(\sin^{-1} x) ~=~ \sqrt{1 - x^2}`
+27. :math:`\sin\;(\cos^{-1} x) ~=~ \sqrt{1 - x^2}`
+28. :math:`\sin^{-1} x \;+\; \cos^{-1} x ~=~ \frac{\pi}{2}`
+29. :math:`\sec^{-1} x \;+\; \csc^{-1} x ~=~ \frac{\pi}{2}`
+30. :math:`\sin^{-1} (-x) ~=~ -\sin^{-1} x`
+31. :math:`\cos^{-1} (-x) \;+\; \cos^{-1} x ~=~ \pi`
+32. :math:`\cot^{-1} x ~=~ \tan^{-1} \,\frac{1}{x}~` for $x>0$
+33. :math:`\tan^{-1} x \;+\; \tan^{-1} \,\frac{1}{x} ~=~ \frac{\pi}{2}~` for $x>0$
+34. In Example :ref:`5.32 <exmp:arctanab>` we showed that the formula :math:`\;\tan^{-1} a \;+\; \tan^{-1} b ~=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)\;` does not always hold. Does the formula :math:`\tan\;(\tan^{-1} a \;+\; \tan^{-1} b ) ~=~ \dfrac{a+b}{1-ab}`, which was part of that example, always hold? Explain your answer.
+35. Show that :math:`\;\tan^{-1}\;\frac{1}{3}\;+\;\tan^{-1}\;\frac{1}{5} ~=~ \tan^{-1}\;\frac{4}{7}\;`.
+36. Show that :math:`\;\tan^{-1}\;\frac{1}{4}\;+\;\tan^{-1}\;\frac{2}{9} ~=~ \tan^{-1}\;\frac{1}{2}\;`.
+
+.. _exer:3squares:
+
+37. Figure :ref:`5.3.13 <fig:3squares>` shows three equal squares lined up against each other. For the angles :math:`\alpha`, :math:`\beta`, and :math:`\gamma` in the picture, show that :math:`\alpha = \beta + \gamma`. (*Hint: Consider the tangents of the angles.*)
+
+    .. _fig:3squares:
+
+    .. _Figure 5.3.13:
+
+    .. figure:: ./img/f5.3.13.png
+        :align: center
+    
+        **Figure 5.3.13** Exercise :ref:`37 <exer:3squares>`
+
+38. Sketch the graph of :math:`y=\sin^{-1} 2x`.
+39. Write a computer program to solve a triangle in the case where you are given three sides. Your program should read in the three sides as input parameters and print the three angles in degrees as output if a solution exists. Note that since most computer languages use radians for their inverse trigonometric functions, you will likely have to do the conversion from radians to degrees yourself in the program.
+

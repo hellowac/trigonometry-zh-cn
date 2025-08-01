@@ -1,0 +1,1175 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>第 5 章 图像与反函数 &#8212; 三角学(trigonometry)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script>let toggleHintShow = '原文';</script>
+    <script>let toggleHintHide = '收起';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]]}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'c5';</script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="第 6 章 附加主题" href="c6.html" />
+    <link rel="prev" title="第 4 章 弧度量" href="c4.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">三角学(trigonometry)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="about_author.html">关于作者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c1.html">第 1 章 直角三角形</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c2.html">第 2 章 一般三角形</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c3.html">第 3 章 恒等式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c4.html">第 4 章 弧度量</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">第 5 章 图像与反函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c6.html">第 6 章 附加主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_a.html">附录 A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_b.html">附录 B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">GNU Free Documentation License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/hellowac/trigonometry-zh-cn" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="源码库"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/c5.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>第 5 章 图像与反函数</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目录 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">三角函数的图像绘制</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec5dot1">练习</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">三角函数图像的性质</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">练习</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">反三角函数</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec5dot3">练习</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="c5">
+<span id="id1"></span><h1>第 5 章 图像与反函数<a class="headerlink" href="#c5" title="此标题的永久链接">#</a></h1>
+<p>Chapter 5 Graphing and Inverse Functions</p>
+<p>The trigonometric functions can be graphed just like any other function, as we will now show. In the graphs we will always use radians for the angle measure.</p>
+<section id="id2">
+<h2>三角函数的图像绘制<a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h2>
+<p>Graphing the Trigonometric Functions</p>
+<figure class="align-right" id="id14">
+<span id="figure-5-1-1"></span><span id="fig-unitcircle"></span><img alt="_images/f5.1.1.png" src="_images/f5.1.1.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.1.1</strong></span><a class="headerlink" href="#id14" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>The first function we will graph is the sine function. We will describe a geometrical way to create the graph, using the <em>unit circle</em>. This is the circle of radius $1$ in the $xy$-plane consisting of all points $(x,y)$ which satisfy the equation $x^2 + y^2 = 1$ .</p>
+<p>We see in Figure <a class="reference internal" href="#fig-unitcircle"><span class="std std-ref">5.1.1</span></a> that any point on the unit circle has coordinates <span class="math notranslate nohighlight">\((x,y)=(\cos\;\theta,\sin\;\theta)\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle that the line segment from the origin to $(x,y)$ makes with the positive $x$-axis (by definition of sine and cosine). So as the point $(x,y)$ goes around the circle, its $y$-coordinate is <span class="math notranslate nohighlight">\(\sin\;\theta\)</span>.</p>
+<p>We thus get a correspondence between the $y$-coordinates of points on the unit circle and the values <span class="math notranslate nohighlight">\(f(\theta)=\sin\;\theta\)</span>, as shown by the horizontal lines from the unit circle to the graph of <span class="math notranslate nohighlight">\(f(\theta)=\sin\;\theta\)</span> in Figure <a class="reference internal" href="#fig-sinecircle"><span class="std std-ref">5.1.2</span></a> for the angles <span class="math notranslate nohighlight">\(\theta = 0\)</span>, <span class="math notranslate nohighlight">\(\tfrac{\pi}{6}\)</span>, <span class="math notranslate nohighlight">\(\tfrac{\pi}{3}\)</span>, <span class="math notranslate nohighlight">\(\tfrac{\pi}{2}\)</span>.</p>
+<figure class="align-center" id="id15">
+<span id="figure-5-1-2"></span><span id="fig-sinecircle"></span><img alt="_images/f5.1.2.png" src="_images/f5.1.2.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.1.2 Graph of sine function based on $y$-coordinate of points on unit circle</strong></span><a class="headerlink" href="#id15" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>We can extend the above picture to include angles from $0$ to <span class="math notranslate nohighlight">\(2\pi\)</span> radians, as in Figure <a class="reference internal" href="#fig-sinefullcircle"><span class="std std-ref">5.1.3</span></a>. This illustrates what is sometimes called the <em>unit circle definition of the sine function</em>.</p>
+<figure class="align-center" id="id16">
+<span id="figure-5-1-3"></span><span id="fig-sinefullcircle"></span><img alt="_images/f5.1.3.png" src="_images/f5.1.3.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.1.3 Unit circle definition of the sine function</strong></span><a class="headerlink" href="#id16" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Since the trigonometric functions repeat every <span class="math notranslate nohighlight">\(2\pi\)</span> radians (<span class="math notranslate nohighlight">\(360^\circ\)</span>), we get, for example, the following graph of the function <span class="math notranslate nohighlight">\(y=\sin\;x\)</span> for $x$ in the interval <span class="math notranslate nohighlight">\([-2\pi, 2\pi]\)</span> :</p>
+<figure class="align-center" id="id17">
+<span id="figure-5-1-4"></span><span id="fig-sinegraph"></span><img alt="_images/f5.1.4.png" src="_images/f5.1.4.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.1.4 Graph of</strong> <span class="math notranslate nohighlight">\(y=\sin\;x\)</span></span><a class="headerlink" href="#id17" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>To graph the cosine function, we could again use the unit circle idea (using the $x$-coordinate of a point that moves around the circle), but there is an easier way. Recall from Section 1.5 that <span class="math notranslate nohighlight">\(\cos\;x = \sin\;(x+90^\circ)\)</span> for all $x$. So <span class="math notranslate nohighlight">\(\cos\;0^\circ\)</span> has the same value as <span class="math notranslate nohighlight">\(\sin\;90^\circ\)</span>, <span class="math notranslate nohighlight">\(\cos\;90^\circ\)</span> has the same value as <span class="math notranslate nohighlight">\(\sin\;180^\circ\)</span>, <span class="math notranslate nohighlight">\(\cos\;180^\circ\)</span> has the same value as <span class="math notranslate nohighlight">\(\sin\;270^\circ\)</span>, and so on. In other words, the graph of the cosine function is just the graph of the sine function shifted to the <em>left</em> by <span class="math notranslate nohighlight">\(90^\circ = \pi/2\)</span> radians, as in Figure <a class="reference internal" href="#fig-cosinegraph"><span class="std std-ref">5.1.5</span></a>:</p>
+<figure class="align-center" id="id18">
+<span id="figure-5-1-5"></span><span id="fig-cosinegraph"></span><img alt="_images/f5.1.5.png" src="_images/f5.1.5.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.1.5 Graph of</strong> <span class="math notranslate nohighlight">\(y=\cos\;x\)</span></span><a class="headerlink" href="#id18" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>To graph the tangent function, use <span class="math notranslate nohighlight">\(\tan\;x = \frac{\sin\;x}{\cos\;x}\)</span> to get the following graph:</p>
+<figure class="align-center" id="id19">
+<span id="figure-5-1-6"></span><span id="fig-tangentgraph"></span><img alt="_images/f5.1.6.png" src="_images/f5.1.6.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.1.6 Graph of</strong> <span class="math notranslate nohighlight">\(y=\tan\;x\)</span></span><a class="headerlink" href="#id19" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Recall that the tangent is positive for angles in QI and QIII, and is negative in QII and QIV, and that is indeed what the graph in Figure <a class="reference internal" href="#fig-tangentgraph"><span class="std std-ref">5.1.6</span></a> shows. We know that <span class="math notranslate nohighlight">\(\tan\;x\)</span> is not defined when <span class="math notranslate nohighlight">\(\cos\;x = 0\)</span>, i.e. at odd multiples of <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> : <span class="math notranslate nohighlight">\(x=\pm\,\frac{\pi}{2}\)</span>, <span class="math notranslate nohighlight">\(\pm\,\frac{3\pi}{2}\)</span>, <span class="math notranslate nohighlight">\(\pm\,\frac{5\pi}{2}\)</span>, etc. We can figure out what happens <em>near</em> those angles by looking at the sine and cosine functions. For example, for $x$ in QI near <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>, <span class="math notranslate nohighlight">\(\sin\;x\)</span> and <span class="math notranslate nohighlight">\(\cos\;x\)</span> are both positive, with <span class="math notranslate nohighlight">\(\sin\;x\)</span> very close to $1$ and <span class="math notranslate nohighlight">\(\cos\;x\)</span> very close to $0$, so the quotient <span class="math notranslate nohighlight">\(\tan\;x = \frac{\sin\;x}{\cos\;x}\)</span> is a positive number that is very large. And the closer $x$ gets to <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>, the larger <span class="math notranslate nohighlight">\(\tan\;x\)</span> gets. Thus, <span class="math notranslate nohighlight">\(x=\frac{\pi}{2}\)</span> is a <em>vertical asymptote</em> of the graph of <span class="math notranslate nohighlight">\(y=\tan\;x\)</span>.</p>
+<p>Likewise, for $x$ in QII very close to <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>, <span class="math notranslate nohighlight">\(\sin\;x\)</span> is very close to $1$ and <span class="math notranslate nohighlight">\(\cos\;x\)</span> is negative and very close to $0$, so the quotient <span class="math notranslate nohighlight">\(\tan\;x = \frac{\sin\;x}{\cos\;x}\)</span> is a negative number that is very large, and it gets larger in the negative direction the closer $x$ gets to <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>. The graph shows this. Similarly, we get vertical asymptotes at <span class="math notranslate nohighlight">\(x=-\frac{\pi}{2}\)</span>, <span class="math notranslate nohighlight">\(x=\frac{3\pi}{2}\)</span>, and <span class="math notranslate nohighlight">\(x=-\frac{3\pi}{2}\)</span>, as in Figure <a class="reference internal" href="#fig-tangentgraph"><span class="std std-ref">5.1.6</span></a>. Notice that the graph of the tangent function repeats every <span class="math notranslate nohighlight">\(\pi\)</span> radians, i.e. two times faster than the graphs of sine and cosine repeat.</p>
+<p>The graphs of the remaining trigonometric functions can be determined by looking at the graphs of their reciprocal functions. For example, using <span class="math notranslate nohighlight">\(\csc\;x = \frac{1}{\sin\;x}\)</span> we can just look at the graph of <span class="math notranslate nohighlight">\(y=\sin\;x\)</span> and invert the values. We will get vertical asymptotes when <span class="math notranslate nohighlight">\(\sin\;x=0\)</span>, namely at multiples of <span class="math notranslate nohighlight">\(\pi\)</span>: $x=0$, <span class="math notranslate nohighlight">\(\pm\,\pi\)</span>, <span class="math notranslate nohighlight">\(\pm\,2\pi\)</span>, etc. Figure <a class="reference internal" href="#fig-cosecantgraph"><span class="std std-ref">5.1.7</span></a> shows the graph of <span class="math notranslate nohighlight">\(y=\csc\;x\)</span>, with the graph of <span class="math notranslate nohighlight">\(y=\sin\;x\)</span> (the dashed curve) for reference.</p>
+<figure class="align-center" id="id20">
+<span id="figure-5-1-7"></span><span id="fig-cosecantgraph"></span><img alt="_images/f5.1.7.png" src="_images/f5.1.7.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.1.7 Graph of</strong> <span class="math notranslate nohighlight">\(y=\csc\;x\)</span></span><a class="headerlink" href="#id20" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Likewise, Figure <a class="reference internal" href="#fig-secantgraph"><span class="std std-ref">5.1.8</span></a> shows the graph of <span class="math notranslate nohighlight">\(y=\sec\;x\)</span>, with the graph of <span class="math notranslate nohighlight">\(y=\cos\;x\)</span> (the dashed curve) for reference. Note the vertical asymptotes at <span class="math notranslate nohighlight">\(x=\pm\,\frac{\pi}{2}\)</span>, <span class="math notranslate nohighlight">\(\pm\,\frac{3\pi}{2}\)</span>. Notice also that the graph is just the graph of the cosecant function shifted to the left by <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> radians.</p>
+<figure class="align-center" id="id21">
+<span id="figure-5-1-8"></span><span id="fig-secantgraph"></span><img alt="_images/f5.1.8.png" src="_images/f5.1.8.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.1.8 Graph of</strong> <span class="math notranslate nohighlight">\(y=\sec\;x\)</span></span><a class="headerlink" href="#id21" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>The graph of <span class="math notranslate nohighlight">\(y=\cot\;x\)</span> can also be determined by using <span class="math notranslate nohighlight">\(\cot\;x = \frac{1}{\tan\;x}\)</span>.
+Alternatively, we can use the relation <span class="math notranslate nohighlight">\(\cot\;x = -\tan\;(x+90^\circ)\)</span> from Section 1.5, so that the graph of the
+cotangent function is just the graph of the tangent function shifted to the left by <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>
+radians and then reflected about the $x$-axis, as in Figure <a class="reference internal" href="#fig-cotangentgraph"><span class="std std-ref">5.1.9</span></a>:</p>
+<figure class="align-center" id="id22">
+<span id="figure-5-1-9"></span><span id="fig-cotangentgraph"></span><img alt="_images/f5.1.9.png" src="_images/f5.1.9.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.1.9 Graph of</strong> <span class="math notranslate nohighlight">\(y=\cot\;x\)</span></span><a class="headerlink" href="#id22" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition-example-5-1 admonition">
+<p class="admonition-title">Example 5.1</p>
+<p>Draw the graph of <span class="math notranslate nohighlight">\(y=-\sin\;x\)</span> for <span class="math notranslate nohighlight">\(0 \le x \le 2\pi\)</span>.</p>
+<p><strong>Solution:</strong> Multiplying a function by $-1$ just reflects its graph around the $x$-axis. So reflecting the graph of <span class="math notranslate nohighlight">\(y=\sin\;x\)</span> around the $x$-axis gives us the graph of <span class="math notranslate nohighlight">\(y=-\sin\;x\)</span>:</p>
+<figure class="align-center">
+<img alt="_images/e5.1.png" src="_images/e5.1.png" />
+</figure>
+<p>Note that this graph is the same as the graphs of <span class="math notranslate nohighlight">\(y=\sin\;(x \pm \pi)\)</span> and <span class="math notranslate nohighlight">\(y=\cos\;(x+\frac{\pi}{2})\)</span>.</p>
+</div>
+<p>It is worthwhile to remember the general shapes of the graphs of the six trigonometric functions, especially for sine, cosine, and tangent. In particular, the graphs of the sine and cosine functions are called <em>sinusoidal</em> curves. Many phenomena in nature exhibit sinusoidal behavior, so recognizing the general shape is important.</p>
+<div class="admonition-example-5-2 admonition">
+<p class="admonition-title">Example 5.2</p>
+<p>Draw the graph of <span class="math notranslate nohighlight">\(y=1+\cos\;x\)</span> for <span class="math notranslate nohighlight">\(0 \le x \le 2\pi\)</span>.</p>
+<p><strong>Solution:</strong> Adding a constant to a function just moves its graph up or down by that amount, depending on whether the constant is positive or negative, respectively. So adding $1$ to <span class="math notranslate nohighlight">\(\cos\;x\)</span> moves the graph of <span class="math notranslate nohighlight">\(y=\cos\;x\)</span> upward by $1$, giving us the graph of <span class="math notranslate nohighlight">\(y=1+\cos\;x\)</span>:</p>
+<figure class="align-center">
+<img alt="_images/e5.2.png" src="_images/e5.2.png" />
+</figure>
+</div>
+<section id="sec5dot1">
+<span id="id3"></span><h3>练习<a class="headerlink" href="#sec5dot1" title="此标题的永久链接">#</a></h3>
+<p>Exercises</p>
+<p>For Exercises 1-12, draw the graph of the given function for <span class="math notranslate nohighlight">\(0 \le x \le 2\pi\)</span>.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(y=-\cos\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=1+\sin\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=2-\cos\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=2-\sin\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=-\tan\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=-\cot\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=1+\sec\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=-1-\csc\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=2\sin\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=-3\cos\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=-2\tan\;x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=-2\sec\;x\)</span></p></li>
+</ol>
+<figure class="align-right" id="id23">
+<span id="figure-5-1-10"></span><span id="fig-linedef"></span><img alt="_images/f5.1.10.png" src="_images/f5.1.10.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.1.10</strong></span><a class="headerlink" href="#id23" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" id="exmp-linedef" start="13">
+<li><p>We can extend the unit circle definition of the sine and cosine functions to all six trigonometric functions. Let $P$ be a point in QI on the unit circle, so that the line segment <span class="math notranslate nohighlight">\(\overline{OP}\)</span> in Figure <a class="reference internal" href="#fig-linedef"><span class="std std-ref">5.1.10</span></a> has length $1$ and makes an acute angle <span class="math notranslate nohighlight">\(\theta\)</span> with the positive $x$-axis. Identify each of the six trigonometric functions of <span class="math notranslate nohighlight">\(\theta\)</span> with exactly one of the line segments in Figure <a class="reference internal" href="#fig-linedef"><span class="std std-ref">5.1.10</span></a>, keeping in mind that the radius of the circle is $1$. To get you started, we have <span class="math notranslate nohighlight">\(\sin\;\theta = MP\)</span> (why?).</p></li>
+<li><p>For Exercise <a class="reference internal" href="#exmp-linedef"><span class="std std-ref">11</span></a>, how would you draw the line segments in Figure <a class="reference internal" href="#fig-linedef"><span class="std std-ref">5.1.10</span></a> if <span class="math notranslate nohighlight">\(\theta\)</span> was in QII? Recall that some of the trigonometric functions are negative in QII, so you will have to come up with a convention for how to treat some of the line segment lengths as negative.</p></li>
+<li><p>For any point $(x,y)$ on the unit circle and any angle <span class="math notranslate nohighlight">\(\alpha\)</span>, show that the point <span class="math notranslate nohighlight">\(R_{\alpha} (x,y)\)</span> defined by <span class="math notranslate nohighlight">\(R_{\alpha} (x,y) = (x\,\cos\;\alpha \,-\, y\,\sin\;\alpha , x\,\sin\;\alpha \,+\, y\,\cos\;\alpha)\)</span> is also on the unit circle. What is the geometric interpretation of <span class="math notranslate nohighlight">\(R_{\alpha} (x,y)\)</span> ? Also, show that <span class="math notranslate nohighlight">\(R_{-\alpha} (R_{\alpha} (x,y)) = (x,y)\)</span> and <span class="math notranslate nohighlight">\(R_{\beta} (R_{\alpha} (x,y)) = R_{\alpha + \beta} (x,y)\)</span>.</p></li>
+</ol>
+</section>
+</section>
+<section id="id4">
+<h2>三角函数图像的性质<a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h2>
+<p>Properties of Graphs of Trigonometric Functions</p>
+<p>We saw in Section 5.1 how the graphs of the trigonometric functions repeat every <span class="math notranslate nohighlight">\(2\pi\)</span> radians. In this section we will discuss this and other properties of graphs, especially for the sinusoidal functions (sine and cosine).</p>
+<p>First, recall that the <strong>domain</strong> of a function $f(x)$ is the set of all numbers $x$ for which the function is defined. For example, the domain of <span class="math notranslate nohighlight">\(f(x) = \sin\;x\)</span> is the set of all real numbers, whereas the domain of <span class="math notranslate nohighlight">\(f(x) = \tan\;x\)</span> is the set of all real numbers except <span class="math notranslate nohighlight">\(x=\pm\,\frac{\pi}{2}\)</span>, <span class="math notranslate nohighlight">\(\pm\,\frac{3\pi}{2}\)</span>, <span class="math notranslate nohighlight">\(\pm\,\frac{5\pi}{2}\)</span>, $…$. The <strong>range</strong> of a function $f(x)$ is the set of all values that $f(x)$ can take over its domain. For example, the range of <span class="math notranslate nohighlight">\(f(x)=\sin\;x\)</span> is the set of all real numbers between $-1$ and $1$ (i.e. the interval <span class="math notranslate nohighlight">\([-1, 1]\)</span>), whereas the range of <span class="math notranslate nohighlight">\(f(x) = \tan\;x\)</span> is the set of all real numbers, as we can see from their graphs.</p>
+<p>A function $f(x)$ is <strong>periodic</strong> if there exists a number $p&gt;0$ such that $x+p$ is in the domain of $f(x)$ whenever $x$ is, and if the following relation holds:</p>
+<div class="math notranslate nohighlight" id="equation-eqn-periodic">
+<span id="equation-5-1"></span><span class="eqno">(1)<a class="headerlink" href="#equation-eqn-periodic" title="此公式的永久链接">#</a></span>\[f(x+p) ~=~ f(x) \quad\text{for all $x$}\]</div>
+<p>There could be many numbers $p$ that satisfy the above requirements. If there is a smallest such number $p$, then we call that number the <strong>period</strong> of the function $f(x)$.</p>
+<div class="admonition-example-5-3 admonition">
+<p class="admonition-title">Example 5.3</p>
+<p>The functions <span class="math notranslate nohighlight">\(\sin\;x\)</span>, <span class="math notranslate nohighlight">\(\cos\;x\)</span>, $csc;x$, and $sec;x$ all have the same period: <span class="math notranslate nohighlight">\(2\pi\)</span> radians. We saw in Section 5.1 that the graphs of <span class="math notranslate nohighlight">\(y=\tan\;x\)</span> and <span class="math notranslate nohighlight">\(y=\cot\;x\)</span> repeat every <span class="math notranslate nohighlight">\(2\pi\)</span> radians but they also repeat every <span class="math notranslate nohighlight">\(\pi\)</span> radians. Thus, the functions <span class="math notranslate nohighlight">\(\tan\;x\)</span> and <span class="math notranslate nohighlight">\(\cot\;x\)</span> have a period of <span class="math notranslate nohighlight">\(\pi\)</span> radians.</p>
+</div>
+<div class="admonition-example-5-4 admonition">
+<p class="admonition-title">Example 5.4</p>
+<p>What is the period of <span class="math notranslate nohighlight">\(f(x)=\sin\;2x\,\)</span>?</p>
+<p><strong>Solution:</strong> The graph of <span class="math notranslate nohighlight">\(y=\sin\;2x\)</span> is shown in Figure <a class="reference internal" href="#fig-sine2x"><span class="std std-ref">5.2.1</span></a>, along with the graph of <span class="math notranslate nohighlight">\(y=\sin\;x\)</span> for comparison, over the interval <span class="math notranslate nohighlight">\([0, 2\pi]\)</span>. Note that <span class="math notranslate nohighlight">\(\sin\;2x\)</span> “goes twice as fast” as <span class="math notranslate nohighlight">\(\sin\;x\)</span>.</p>
+<figure class="align-center" id="id24">
+<span id="figure-5-2-1"></span><span id="fig-sine2x"></span><img alt="_images/f5.2.1.png" src="_images/f5.2.1.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.2.1 Graph of</strong> <span class="math notranslate nohighlight">\(y=\sin\;2x\)</span></span><a class="headerlink" href="#id24" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>For example, for $x$ from $0$ to <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>, <span class="math notranslate nohighlight">\(\sin\;x\)</span> goes from $0$ to $1$, but <span class="math notranslate nohighlight">\(\sin\;2x\)</span> is able to go from $0$ to $1$ quicker, just over the interval <span class="math notranslate nohighlight">\([0 , \frac{\pi}{4}]\)</span>. While <span class="math notranslate nohighlight">\(\sin\;x\)</span> takes a full <span class="math notranslate nohighlight">\(2\pi\)</span> radians to go through an entire emph{cycle}index{cycle} (the largest part of the graph that does not repeat), <span class="math notranslate nohighlight">\(\sin\;2x\)</span> goes through an entire cycle in just <span class="math notranslate nohighlight">\(\pi\)</span> radians. So the period of <span class="math notranslate nohighlight">\(\sin\;2x\)</span> is <span class="math notranslate nohighlight">\(\pi\)</span> radians.</p>
+</div>
+<p>The above example made use of the graph of <span class="math notranslate nohighlight">\(\sin\;2x\)</span>, but the period can be found analytically. Since <span class="math notranslate nohighlight">\(\sin\;x\)</span> has period <span class="math notranslate nohighlight">\(2\pi\)</span>, <a class="footnote-reference brackets" href="#id6" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> we know that <span class="math notranslate nohighlight">\(\sin\;(x+2\pi) = \sin\;x\)</span> for all $x$. Since $2x$ is a number for all $x$, this means in particular that <span class="math notranslate nohighlight">\(\sin\;(2x+2\pi) = \sin\;2x\)</span> for all $x$. Now define <span class="math notranslate nohighlight">\(f(x)=\sin\;2x\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+f(x+\pi) ~&amp;=~ \sin\;2\,(x+\pi)\\
+&amp;=~ \sin\;(2x+2\pi)\\
+&amp;=~ \sin\;2x \quad\text{(as we showed above)}\\
+&amp;=~ f(x)
+\end{align*}\end{split}\]</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id6" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">1</a><span class="fn-bracket">]</span></span>
+<p>We will usually leave out the “radians” part when discussing periods from now on.</p>
+</aside>
+</aside>
+<p>for all $x$, so the period $p$ of <span class="math notranslate nohighlight">\(\sin\;2x\)</span> is <em>at most</em> <span class="math notranslate nohighlight">\(\pi\)</span>, by our definition of period. We have to show that <span class="math notranslate nohighlight">\(p&gt;0\)</span> can not be smaller than <span class="math notranslate nohighlight">\(\pi\)</span>. To do this, we will use a <em>proof by contradiction</em>. That is, assume that <span class="math notranslate nohighlight">\(0&lt;p&lt;\pi\)</span>, then show that this leads to some contradiction, and hence can not be true. So suppose <span class="math notranslate nohighlight">\(0&lt;p&lt;\pi\)</span>. Then <span class="math notranslate nohighlight">\(0&lt;2p&lt;2\pi\)</span>, and hence</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\sin\;2x ~&amp;=~ f(x)\\
+&amp;=~ f(x+p) \quad\text{(since $p$ is the period of $f(x)$)}\\
+&amp;=~ \sin\;2(x+p)\\
+&amp;=~ \sin\;(2x+2p)
+\end{align*}\end{split}\]</div>
+<p>for all $x$. Since any number $u$ can be written as $2x$ for some $x$ (i.e $u = 2(u/2)$), this means that <span class="math notranslate nohighlight">\(\sin\;u = \sin\;(u+2p)\)</span> for all real numbers $u$, and hence the period of <span class="math notranslate nohighlight">\(\sin\;x\)</span> is as most $2p$. This is a contradiction. Why? Because the period of <span class="math notranslate nohighlight">\(\sin\;x\)</span> is <span class="math notranslate nohighlight">\(2\pi &gt; 2p\)</span>. Hence, the period $p$ of <span class="math notranslate nohighlight">\(\sin\;2x\)</span> can not be less than <span class="math notranslate nohighlight">\(\pi\)</span>, so the period must equal <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<p>The above may seem like a lot of work to prove something that was visually obvious from the graph (and intuitively obvious by the “twice as fast” idea). Luckily, we do not need to go through all that work for each function, since a similar argument works when <span class="math notranslate nohighlight">\(\sin\;2x\)</span> is replaced by <span class="math notranslate nohighlight">\(\sin\;\omega x\)</span> for any positive real number <span class="math notranslate nohighlight">\(\omega\)</span>: instead of dividing <span class="math notranslate nohighlight">\(2\pi\)</span> by $2$ to get the period, divide by <span class="math notranslate nohighlight">\(\omega\)</span>. And the argument works for the other trigonometric functions as well. Thus, we get:</p>
+<div class="admonition-for-any-number-math-omega-0 admonition">
+<p class="admonition-title">For any number <span class="math notranslate nohighlight">\(\omega &gt;0\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}{4}
+\sin\;\omega x ~~&amp;\text{has period}~~ \frac{2\pi}{\omega}
+\qquad\quad&amp;\csc\;\omega x ~~&amp;\text{has period}~~ \frac{2\pi}{\omega}\\[2pt]
+\cos\;\omega x ~~&amp;\text{has period}~~ \frac{2\pi}{\omega}
+\qquad\quad&amp;\sec\;\omega x ~~&amp;\text{has period}~~ \frac{2\pi}{\omega}\\[2pt]
+\tan\;\omega x ~~&amp;\text{has period}~~ \frac{\pi}{\omega}
+\qquad\quad&amp;\cot\;\omega x ~~&amp;\text{has period}~~ \frac{\pi}{\omega}
+\end{align*}\end{split}\]</div>
+</div>
+<p>If <span class="math notranslate nohighlight">\(\omega &lt; 0\)</span>, then use <span class="math notranslate nohighlight">\(\sin\;(-A) = -\sin\;A\)</span> and <span class="math notranslate nohighlight">\(\cos\;(-A) = \cos\;A\)</span> (e.g. <span class="math notranslate nohighlight">\(\sin\;(-3x) = -\sin\;3x\)</span>).</p>
+<div class="admonition-example-5-5 admonition">
+<p class="admonition-title">Example 5.5</p>
+<p>The period of <span class="math notranslate nohighlight">\(y=\cos\;3x\)</span> is <span class="math notranslate nohighlight">\(\frac{2\pi}{3}\)</span> and the period of <span class="math notranslate nohighlight">\(y=\cos\;\frac{1}{2}x\)</span> is <span class="math notranslate nohighlight">\(4\pi\)</span>. The graphs of both functions are shown in Figure <a class="reference internal" href="#fig-cosine3x"><span class="std std-ref">5.2.2</span></a>:</p>
+<figure class="align-center" id="id25">
+<span id="figure-5-2-2"></span><span id="fig-cosine3x"></span><img alt="_images/f5.2.2.png" src="_images/f5.2.2.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.2.2 Graph of</strong> <span class="math notranslate nohighlight">\(y=\cos 3x\)</span> and <span class="math notranslate nohighlight">\(y=\cos \frac{1}{2}x\)</span></span><a class="headerlink" href="#id25" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>We know that <span class="math notranslate nohighlight">\(\;-1 \le \sin\;x \le 1\;\)</span> and <span class="math notranslate nohighlight">\(\;-1 \le \cos\;x \le 1\;\)</span> for all $x$. Thus, for a constant <span class="math notranslate nohighlight">\(A \ne 0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[- |A| ~\le~ A\,\sin\;x ~\le~ |A| \quad\text{and}\quad
+- |A| ~\le~ A\,\cos\;x ~\le~ |A|\]</div>
+<p>for all $x$. In this case, we call $|A|$ the <strong>amplitude</strong> of the functions <span class="math notranslate nohighlight">\(y=A\,\sin\;x\)</span> and <span class="math notranslate nohighlight">\(y=A\,\cos\;x\)</span>. In general, the amplitude of a periodic curve $f(x)$ is half the difference of the largest and smallest values that $f(x)$ can take:</p>
+<div class="math notranslate nohighlight">
+\[\text{Amplitude of $f(x)$} ~=~ \frac{\text{(maximum of $f(x)$)} ~-~ \text{(minimum of $f(x)$)}}{2}\]</div>
+<p>In other words, the amplitude is the distance from either the top or bottom of the curve to the
+horizontal line that divides the curve in half, as in Figure <a class="reference internal" href="#fig-amplitude"><span class="std std-ref">5.2.3</span></a>.</p>
+<figure class="align-center" id="id26">
+<span id="figure-5-2-3"></span><span id="fig-amplitude"></span><img alt="_images/f5.2.3.png" src="_images/f5.2.3.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.3 Amplitude <span class="math notranslate nohighlight">\(= \frac{\text{max} - \text{min}}{2} = \frac{|A| - (-|A|)}{2} = |A|\)</span></span><a class="headerlink" href="#id26" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Not all periodic curves have an amplitude. For example, <span class="math notranslate nohighlight">\(\tan\;x\)</span> has neither a maximum nor a minimum, so its amplitude is undefined. Likewise, <span class="math notranslate nohighlight">\(\cot\;x\)</span>, <span class="math notranslate nohighlight">\(\csc\;x\)</span>, and <span class="math notranslate nohighlight">\(\sec\;x\)</span> do not have an amplitude. Since the amplitude involves vertical distances, it has no effect on the period of a function, and vice versa.</p>
+<div class="admonition-example-5-6 admonition">
+<p class="admonition-title">Example 5.6</p>
+<p>Find the amplitude and period of <span class="math notranslate nohighlight">\(y=3\,\cos\;2x\)</span>.</p>
+<p><strong>Solution:</strong> The amplitude is $|3| = 3$ and the period is <span class="math notranslate nohighlight">\(\frac{2\pi}{2}=\pi\)</span>. The graph is shown in Figure <a class="reference internal" href="#fig-exmp3cos2x"><span class="std std-ref">5.2.4</span></a>:</p>
+<figure class="align-center" id="id27">
+<span id="figure-5-2-4"></span><span id="fig-exmp3cos2x"></span><img alt="_images/f5.2.4.png" src="_images/f5.2.4.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.4 <span class="math notranslate nohighlight">\(y=3\,\cos\;2x\)</span></span><a class="headerlink" href="#id27" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="admonition-example-5-7 admonition">
+<p class="admonition-title">Example 5.7</p>
+<p>Find the amplitude and period of <span class="math notranslate nohighlight">\(y=2 - 3\,\sin\;\frac{2\pi}{3}x\)</span>.</p>
+<p><strong>Solution:</strong> The amplitude of <span class="math notranslate nohighlight">\(-3\,\sin\;\frac{2\pi}{3}x\)</span> is $|-3| =3$. Adding $2$ to that function to get the function <span class="math notranslate nohighlight">\(y=2 - 3\,\sin\;\frac{2\pi}{3}x\)</span> does not change the amplitude, even though it does change the maximum and minimum. It just shifts the entire graph upward by $2$. So in this case, we have</p>
+<div class="math notranslate nohighlight">
+\[\text{Amplitude} ~=~ \frac{\text{max} ~-~ \text{min}}{2} ~=~ \frac{5 ~-~ (-1)}{2} ~=~ \frac{6}{2} ~=~ 3 ~.\]</div>
+<p>The period is <span class="math notranslate nohighlight">\(\dfrac{2\pi}{\frac{2\pi}{3}}=3\)</span>. The graph is shown in Figure <a class="reference internal" href="#fig-exmp2m3sinx"><span class="std std-ref">5.2.5</span></a>:</p>
+<figure class="align-center" id="id28">
+<span id="figure-5-2-5"></span><span id="fig-exmp2m3sinx"></span><img alt="_images/f5.2.5.png" src="_images/f5.2.5.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.5 <span class="math notranslate nohighlight">\(y=2-3\,\sin\;\frac{2\pi}{3}x\)</span></span><a class="headerlink" href="#id28" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+</div>
+<div class="admonition-example-5-8 admonition" id="exmp-2sinx2">
+<p class="admonition-title">Example 5.8</p>
+<p>Find the amplitude and period of <span class="math notranslate nohighlight">\(y=2\,\sin\;( x^2 )\)</span>.</p>
+<p><strong>Solution:</strong> This is not a periodic function, since the angle that we are taking the sine of, $x^2$, is not a <em>linear</em> function of $x$, i.e. is not of the form $ax+b$ for some constants $a$ and $b$. Recall how we argued that <span class="math notranslate nohighlight">\(\sin\;2x\)</span> was “twice as fast” as <span class="math notranslate nohighlight">\(\sin\;x\)</span>, so that its period was <span class="math notranslate nohighlight">\(\pi\)</span> instead of <span class="math notranslate nohighlight">\(2\pi\)</span>. Can we say that <span class="math notranslate nohighlight">\(\sin\;( x^2 )\)</span> is some “constant” times as fast as <span class="math notranslate nohighlight">\(\sin\;x\,\)</span>? No. In fact, we see that the “speed” of the curve keeps increasing as $x$ gets larger, since $x^2$ grows at a variable rate, not a constant rate. This can be seen in the graph of <span class="math notranslate nohighlight">\(y=2\,\sin\;( x^2 )\)</span>, shown in Figure <a class="reference internal" href="#fig-exmp2sinx2"><span class="std std-ref">5.2.6</span></a>: <a class="footnote-reference brackets" href="#id8" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">2</a><span class="fn-bracket">]</span></span>
+<p>This graph was created using Gnuplot, an open-source graphing program which is freely available at <a class="reference external" href="http://gnuplot.info">http://gnuplot.info</a>. See Appendix B for a brief tutorial on how to use Gnuplot.</p>
+</aside>
+</aside>
+<figure class="align-center" id="id29">
+<span id="figure-5-2-6"></span><span id="fig-exmp2sinx2"></span><img alt="_images/f5.2.6.png" src="_images/f5.2.6.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.6 <span class="math notranslate nohighlight">\(y=2\,\sin\;( x^2 )\)</span></span><a class="headerlink" href="#id29" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Notice how the curve “speeds up” as $x$ gets larger, making the “waves” narrower and narrower. Thus, <span class="math notranslate nohighlight">\(y=2\,\sin\;( x^2 )\)</span> has no period. Despite this, it appears that the function does have an amplitude, namely $2$. To see why, note that since <span class="math notranslate nohighlight">\(|\sin\;\theta| \le 1\)</span> for all <span class="math notranslate nohighlight">\(\theta\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[|2\,\sin\;( x^2 )| ~=~ |2| \;\cdot\; |\sin\;( x^2 )| ~\le~ 2 \;\cdot\; 1 ~=~ 2 ~.\]</div>
+<p>In the exercises you will be asked to find values of $x$ such that <span class="math notranslate nohighlight">\(2\,\sin\;( x^2 )\)</span> reaches the maximum value $2$ and the minimum value $-2$. Thus, the amplitude is indeed $2$. Note: This curve is still sinusoidal despite not being periodic, since the general shape is still that of a “sine wave”, albeit one with variable <em>cycles</em>.</p>
+</div>
+<p>So far in our examples we have been able to determine the amplitudes of sinusoidal curves fairly easily. This will not always be the case.</p>
+<div class="admonition-example-5-9 admonition" id="exmp-3sinx4cosx">
+<p class="admonition-title">Example 5.9</p>
+<p>Find the amplitude and period of <span class="math notranslate nohighlight">\(y=3\,\sin\;x + 4\,\cos\;x\)</span>.</p>
+<p><strong>Solution:</strong> This is sometimes called a <em>combination</em> sinusoidal curve, since it is the sum of two such curves. The period is still simple to determine: since <span class="math notranslate nohighlight">\(\sin\;x\)</span> and <span class="math notranslate nohighlight">\(\cos\;x\)</span> each repeat every <span class="math notranslate nohighlight">\(2\pi\)</span> radians, then so does the combination <span class="math notranslate nohighlight">\(3\,\sin\;x + 4\,\cos\;x\)</span>. Thus, <span class="math notranslate nohighlight">\(y=3\,\sin\;x + 4\,\cos\;x\)</span> has period <span class="math notranslate nohighlight">\(2\pi\)</span>. We can see this in the graph, shown in Figure <a class="reference internal" href="#fig-exmp3sinx4cosx"><span class="std std-ref">5.2.7</span></a>:</p>
+<figure class="align-center" id="id30">
+<span id="figure-5-2-7"></span><span id="fig-exmp3sinx4cosx"></span><img alt="_images/f5.2.7.png" src="_images/f5.2.7.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.7 <span class="math notranslate nohighlight">\(y=3\,\sin\;x + 4\,\cos\;x\)</span></span><a class="headerlink" href="#id30" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>The graph suggests that the amplitude is $5$, which may not be immediately obvious just by looking at how the function is defined. In fact, the definition <span class="math notranslate nohighlight">\(y=3\,\sin\;x + 4\,\cos\;x\)</span> may tempt you to think that the amplitude is $7$, since the largest that <span class="math notranslate nohighlight">\(3\,\sin\;x\)</span> could be is $3$ and the largest that <span class="math notranslate nohighlight">\(4\,\cos\;x\)</span> could be is $4$, so that the largest their sum could be is $3+4=7$. However, <span class="math notranslate nohighlight">\(3\,\sin\;x\)</span> can never equal $3$ for the same $x$ that makes <span class="math notranslate nohighlight">\(4\,\cos\;x\)</span> equal to $4$ (why?).</p>
+<figure class="align-right" id="id31">
+<span id="figure-5-2-8"></span><span id="fig-tri345"></span><img alt="_images/f5.2.8.png" src="_images/f5.2.8.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.8</span><a class="headerlink" href="#id31" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>There is a useful technique (which we will discuss further in <a class="reference internal" href="c6.html#c6"><span class="std std-ref">Chapter 6</span></a>) for showing that the amplitude of <span class="math notranslate nohighlight">\(y=3\,\sin\;x + 4\,\cos\;x\)</span> is $5$. Let <span class="math notranslate nohighlight">\(\theta\)</span> be the angle shown in the right triangle in Figure <a class="reference internal" href="#fig-tri345"><span class="std std-ref">5.2.8</span></a>. Then <span class="math notranslate nohighlight">\(\cos\;\theta = \frac{3}{5}\)</span> and <span class="math notranslate nohighlight">\(\sin\;\theta = \frac{4}{5}\)</span>. We can use this as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+y ~&amp;=~ 3\,\sin\;x ~+~ 4\,\cos\;x\\
+&amp;=~ 5\,\left( \tfrac{3}{5}\,\sin\;x ~+~ \tfrac{4}{5}\,\cos\;x \right)\\
+&amp;=~ 5\,( \cos\;\theta\;\sin\;x ~+~ \sin\;\theta\;\cos\;x )\\
+&amp;=~ 5\,\sin\;(x+\theta)\quad\text{(by the sine addition formula)}
+\end{align*}\end{split}\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(|y| = |5\,\sin\;(x+\theta)| = |5| \cdot\, |\sin\;(x+\theta)| \le (5)(1) = 5\)</span>, so the amplitude of <span class="math notranslate nohighlight">\(y=3\,\sin\;x + 4\,\cos\;x\)</span> is $5$.</p>
+</div>
+<p>In general, a combination of sines and cosines will have a period equal to the <em>lowest common multiple</em> of the periods of the sines and cosines being added. In Example <a class="reference internal" href="#exmp-3sinx4cosx"><span class="std std-ref">5.9</span></a>, <span class="math notranslate nohighlight">\(\sin\;x\)</span> and <span class="math notranslate nohighlight">\(\cos\;x\)</span> each have period <span class="math notranslate nohighlight">\(2\pi\)</span>, so the lowest common multiple (which is always an <em>integer</em> multiple) is <span class="math notranslate nohighlight">\(1 \,\cdot\, 2\pi = 2\pi\)</span>.</p>
+<div class="admonition-example-5-10 admonition" id="exmp-cos6xsin4x">
+<p class="admonition-title">Example 5.10</p>
+<p>Find the period of <span class="math notranslate nohighlight">\(y=\cos\;6x + \sin\;4x\)</span>.</p>
+<p><strong>Solution:</strong> The period of <span class="math notranslate nohighlight">\(\cos\;6x\)</span> is <span class="math notranslate nohighlight">\(\frac{2\pi}{6} = \frac{\pi}{3}\)</span>, and the period of <span class="math notranslate nohighlight">\(\sin\;4x$ is $\frac{2\pi}{4} = \frac{\pi}{2}\)</span>. The lowest common multiple of <span class="math notranslate nohighlight">\(\frac{\pi}{3}\)</span> and <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> is <span class="math notranslate nohighlight">\(\pi\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+1 \;\cdot\; \tfrac{\pi}{3} ~&amp;=~ \tfrac{\pi}{3} \quad\quad\quad
+&amp;1 \;&amp;\cdot\; \tfrac{\pi}{2} ~&amp;=~ \tfrac{\pi}{2}\\
+2 \;\cdot\; \tfrac{\pi}{3} ~&amp;=~ \tfrac{2\pi}{3} \quad\quad\quad
+&amp;2 \;&amp;\cdot\; \tfrac{\pi}{2} ~&amp;=~ \pi\\
+3 \;\cdot\; \tfrac{\pi}{3} ~&amp;=~ \pi \quad\quad\quad &amp;{} &amp;{}\\
+\end{align}\end{split}\]</div>
+<p>Thus, the period of <span class="math notranslate nohighlight">\(y=\cos\;6x + \sin\;4x\)</span> is <span class="math notranslate nohighlight">\(\pi\)</span>. We can see this from its graph in Figure <a class="reference internal" href="#fig-exmpcos6xsin4x"><span class="std std-ref">5.2.9</span></a>:</p>
+<figure class="align-right" id="id32">
+<span id="figure-5-2-9"></span><span id="fig-exmpcos6xsin4x"></span><img alt="_images/f5.2.9.png" src="_images/f5.2.9.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.9</span><a class="headerlink" href="#id32" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>What about the amplitude? Unfortunately we can not use the technique from Example <a class="reference internal" href="#exmp-3sinx4cosx"><span class="std std-ref">5.9</span></a>, since we are not taking the cosine and sine of the same angle; we are  taking the cosine of $6x$ but the sine of $4x$. In this case, it appears from the graph that the maximum is close to $2$ and the minimum is close to $-2$. In Chapter 6, we will describe how to use a numerical computation program to show that the maximum and minimum are <span class="math notranslate nohighlight">\(\pm\,1.90596111871578\)</span>, respectively (accurate to within <span class="math notranslate nohighlight">\(\approx 2.2204 \times 10^{-16}\)</span>). Hence, the amplitude is $1.90596111871578$.</p>
+</div>
+<p>Generalizing Example <a class="reference internal" href="#exmp-3sinx4cosx"><span class="std std-ref">5.9</span></a>, an expression of the form <span class="math notranslate nohighlight">\(a\,\sin\;\omega x \;+\; b\,\cos\;\omega x\)</span> is equivalent to <span class="math notranslate nohighlight">\(\sqrt{a^2 + b^2}\;\sin\;(x+\theta)\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> is an angle such that <span class="math notranslate nohighlight">\(\cos\;\theta = \frac{a}{\sqrt{a^2 + b^2}}\)</span> and <span class="math notranslate nohighlight">\(\sin\;\theta = \frac{b}{\sqrt{a^2 + b^2}}\)</span>. So <span class="math notranslate nohighlight">\(y=a\,\sin\;\omega x \;+\; b\,\cos\;\omega x\)</span> will have amplitude <span class="math notranslate nohighlight">\(\sqrt{a^2 + b^2}\)</span>. Note that this method only works when the angle <span class="math notranslate nohighlight">\(\omega x\)</span> is the same in both the sine and cosine terms.</p>
+<p>We have seen how adding a constant to a function shifts the entire graph vertically. We will now see how to shift the entire graph of a periodic curve horizontally.</p>
+<figure class="align-right" id="id33">
+<span id="figure-5-2-10"></span><span id="fig-phasenone"></span><img alt="_images/f5.2.10.png" src="_images/f5.2.10.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.10 <span class="math notranslate nohighlight">\(y = A \sin \omega x\)</span></span><a class="headerlink" href="#id33" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Consider a function of the form <span class="math notranslate nohighlight">\(y=A\,\sin\;\omega x\)</span>, where $A$ and <span class="math notranslate nohighlight">\(\omega\)</span> are nonzero constants. For simplicity we will assume that $A &gt;0$ and <span class="math notranslate nohighlight">\(\omega &gt; 0\)</span> (in general either one could be negative). Then the amplitude is $A$ and the period is <span class="math notranslate nohighlight">\(\frac{2\pi}{\omega}\)</span>. The graph is shown in Figure <a class="reference internal" href="#fig-phasenone"><span class="std std-ref">5.2.10</span></a>.</p>
+<p>Now consider the function <span class="math notranslate nohighlight">\(y=A\,\sin\;(\omega x - \phi)\)</span>, where $phi$ is some constant. The amplitude is still $A$, and the period is still <span class="math notranslate nohighlight">\(\frac{2\pi}{\omega}\)</span>, since <span class="math notranslate nohighlight">\(\omega x - \phi\)</span> is a linear function of $x$. Also, we know that the sine function goes through an entire cycle when its angle goes from $0$ to <span class="math notranslate nohighlight">\(2\pi\)</span>. Here, we are taking the sine of the angle <span class="math notranslate nohighlight">\(\omega x - \phi\)</span>. So as <span class="math notranslate nohighlight">\(\omega x - \phi\)</span> goes from $0$ to <span class="math notranslate nohighlight">\(2\pi\)</span>, an entire cycle of the function <span class="math notranslate nohighlight">\(y=A\,\sin\;(\omega x - \phi)\)</span> will be traced out. That cycle starts when</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\omega x - \phi ~=~ 0 \quad&amp;\Rightarrow\quad x ~=~ \frac{\phi}{\omega}\\
+\text{and ends when}
+\omega x - \phi ~=~ 2\pi \quad&amp;\Rightarrow\quad x ~=~ \frac{2\pi}{\omega}\;+\;\frac{\phi}{\omega}~.
+\end{align*}\end{split}\]</div>
+<p>Thus, the graph of <span class="math notranslate nohighlight">\(y=A\,\sin\;(\omega x - \phi)\)</span> is just the graph of <span class="math notranslate nohighlight">\(y=A\,\sin\;\omega x\)</span> shifted horizontally by <span class="math notranslate nohighlight">\(\frac{\phi}{\omega}\)</span>, as in Figure <a class="reference internal" href="#fig-phaseshift"><span class="std std-ref">5.2.11</span></a>. The graph is shifted to the right when <span class="math notranslate nohighlight">\(\phi &gt;0\)</span>, and to the left when <span class="math notranslate nohighlight">\(\phi &lt;0\)</span>. The amount <span class="math notranslate nohighlight">\(\frac{\phi}{\omega}\)</span> of the shift is called the <strong>phase shift</strong> of the graph.</p>
+<figure class="align-center" id="id34">
+<span id="figure-5-2-11"></span><span id="fig-phaseshift"></span><img alt="_images/f5.2.11.png" src="_images/f5.2.11.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.11 Phase shift for <span class="math notranslate nohighlight">\(y=A\,\sin\;(\omega x - \phi)\)</span></span><a class="headerlink" href="#id34" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>The phase shift is defined similarly for the other trigonometric functions.</p>
+<div class="admonition-example-5-11 admonition">
+<p class="admonition-title">Example 5.11</p>
+<p>Find the amplitude, period, and phase shift of <span class="math notranslate nohighlight">\(y=3\,\cos\;(2x - \pi)\)</span>.</p>
+<p><strong>Solution:</strong> The amplitude is $3$, the period is <span class="math notranslate nohighlight">\(\frac{2\pi}{2} = \pi\)</span>, and the phase shift is <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>. The graph is shown in Figure <a class="reference internal" href="#fig-exmp3cos2mpi"><span class="std std-ref">5.2.12</span></a>:</p>
+<figure class="align-center" id="id35">
+<span id="figure-5-2-12"></span><span id="fig-exmp3cos2mpi"></span><img alt="_images/f5.2.12.png" src="_images/f5.2.12.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.12 <span class="math notranslate nohighlight">\(y=3\,\cos\;(2x - \pi)\)</span></span><a class="headerlink" href="#id35" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Notice that the graph is the same as the graph of <span class="math notranslate nohighlight">\(y=3\,\cos\;2x\)</span> shifted to the right by <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>, the amount of the phase shift.</p>
+</div>
+<div class="admonition-example-5-12 admonition">
+<p class="admonition-title">Example 5.12</p>
+<p>Find the amplitude, period, and phase shift of <span class="math notranslate nohighlight">\(y=-2\,\sin\;\left(3x + \frac{\pi}{2}\right)\)</span>.</p>
+<p><strong>Solution:</strong> The amplitude is $2$, the period is <span class="math notranslate nohighlight">\(\frac{2\pi}{3}\)</span>, and the phase shift is <span class="math notranslate nohighlight">\(\frac{-\frac{\pi}{2}}{3} = -\frac{\pi}{6}\)</span>. Notice the negative sign in the phase shift, since <span class="math notranslate nohighlight">\(3x+\pi=3x-(-\pi)\)</span> is in the form <span class="math notranslate nohighlight">\(\omega x - \phi\)</span>. The graph is shown in Figure <a class="reference internal" href="#fig-exmpm2sin3ppi2"><span class="std std-ref">5.2.13</span></a>:</p>
+<figure class="align-center" id="id36">
+<span id="figure-5-2-13"></span><span id="fig-exmpm2sin3ppi2"></span><img alt="_images/f5.2.13.png" src="_images/f5.2.13.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.13 <span class="math notranslate nohighlight">\(y=-2\,\sin\;\left( 3x + \frac{\pi}{2} \right)\)</span></span><a class="headerlink" href="#id36" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>In engineering two periodic functions with the same period are said to be <em>out of phase</em> if their phase shifts differ. For example, <span class="math notranslate nohighlight">\(\sin\;\left( x - \frac{\pi}{6} \right)\)</span> and <span class="math notranslate nohighlight">\(\sin\;x\)</span> would be <span class="math notranslate nohighlight">\(\frac{\pi}{6}\)</span> radians (or <span class="math notranslate nohighlight">\(30^\circ\)</span>) out of phase, and <span class="math notranslate nohighlight">\(\sin\;x\)</span> would be said to <em>lag</em> <span class="math notranslate nohighlight">\(\sin\;\left( x - \frac{\pi}{6} \right)\)</span> by <span class="math notranslate nohighlight">\(\frac{\pi}{6}\)</span> radians, while <span class="math notranslate nohighlight">\(\sin\;\left( x - \frac{\pi}{6} \right)\)</span> <em>leads</em> <span class="math notranslate nohighlight">\(\sin\;x\)</span> by <span class="math notranslate nohighlight">\(\frac{\pi}{6}\)</span> radians. Periodic functions with the same period and the same phase shift are <em>in phase</em>.</p>
+<p>The following is a summary of the properties of trigonometric graphs:</p>
+<div class="admonition-for-any-constants-math-a-ne-0-math-omega-ne-0-and-math-phi admonition">
+<p class="admonition-title">For any constants <span class="math notranslate nohighlight">\(A \ne 0\)</span>, <span class="math notranslate nohighlight">\(\omega \ne 0\)</span>, and <span class="math notranslate nohighlight">\(\phi\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+y = A\,\sin\;(\omega x - \phi) ~~&amp;\text{has amplitude $|A|$, period $\tfrac{2\pi}{\omega}$, and
+phase shift $\tfrac{\phi}{\omega}$}\\
+y = A\,\cos\;(\omega x - \phi) ~~&amp;\text{has amplitude $|A|$, period $\tfrac{2\pi}{\omega}$, and
+phase shift $\tfrac{\phi}{\omega}$}\\
+y = A\,\tan\;(\omega x - \phi) ~~&amp;\text{has undefined amplitude, period $\tfrac{\pi}{\omega}$, and
+phase shift $\tfrac{\phi}{\omega}$}\\
+y = A\,\csc\;(\omega x - \phi) ~~&amp;\text{has undefined amplitude, period $\tfrac{2\pi}{\omega}$, and
+phase shift $\tfrac{\phi}{\omega}$}\\
+y = A\,\sec\;(\omega x - \phi) ~~&amp;\text{has undefined amplitude, period $\tfrac{2\pi}{\omega}$, and
+phase shift $\tfrac{\phi}{\omega}$}\\
+y = A\,\cot\;(\omega x - \phi) ~~&amp;\text{has undefined amplitude, period $\tfrac{\pi}{\omega}$, and
+phase shift $\tfrac{\phi}{\omega}$}
+\end{align*}\end{split}\]</div>
+</div>
+<section id="id9">
+<h3>练习<a class="headerlink" href="#id9" title="此标题的永久链接">#</a></h3>
+<p>Exercises</p>
+<p>For Exercises 1-12, find the amplitude, period, and phase shift of the given function. Then graph one cycle of the function, either by hand or by using Gnuplot (see <a class="reference internal" href="appendix_b.html#appendix-b"><span class="std std-ref">Appendix B</span></a>).</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(y=3\,\cos\;\pi x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=\sin\;(2\pi x - \pi)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=-\sin\;(5x + 3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=1+8\,\cos\;(6x- \pi)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=2+\cos\;(5x + \pi)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=1-\sin\;(3\pi - 2x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=1-\cos\;(3\pi - 2x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=2\,\tan\;(x - 1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=1-\tan\;(3\pi - 2x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=\sec\;(2x + 1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=2\csc\;(2x - 1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=2+4\,\cot\;(1-x)\)</span></p></li>
+<li><p>For the function <span class="math notranslate nohighlight">\(y=2\,\sin\;( x^2 )\)</span> in Example <a class="reference internal" href="#exmp-2sinx2"><span class="std std-ref">5.8</span></a>, for which values of $x$ does the function reach its maximum value $2$, and for which values of $x$ does it reach its minimum value <code class="docutils literal notranslate"><span class="pre">-2</span></code>?</p></li>
+<li><p>For the function <span class="math notranslate nohighlight">\(y=3\,\sin\;x + 4\,\cos\;x\)</span> in Example <a class="reference internal" href="#exmp-3sinx4cosx"><span class="std std-ref">5.9</span></a>, for which values of $x$ does the function reach its maximum value $5$, and for which values of $x$ does it reach its minimum value <code class="docutils literal notranslate"><span class="pre">-5</span></code> ? You can restrict your answers to be between $0$ and <span class="math notranslate nohighlight">\(2\pi\)</span>.</p></li>
+<li><p>Graph the function <span class="math notranslate nohighlight">\(y=\sin^2 \,x\)</span> from $x=0$ to <span class="math notranslate nohighlight">\(x=2\pi\)</span>, either by hand or by using Gnuplot. What are the amplitude and period of this function?</p></li>
+</ol>
+<ol class="arabic simple" id="exer-circuitphase" start="16">
+<li><p>The current <span class="math notranslate nohighlight">\(i(t)\)</span> in an AC electrical circuit at time <span class="math notranslate nohighlight">\(t\ge 0\)</span> is given by <span class="math notranslate nohighlight">\(i(t) = I_m \,\sin\;\omega t\)</span>, and the voltage <span class="math notranslate nohighlight">\(v(t)\)</span> is given by <span class="math notranslate nohighlight">\(v(t) = V_m \,\sin\;\omega t\)</span>, where <span class="math notranslate nohighlight">\(V_m &gt; I_m &gt; 0\)</span> and <span class="math notranslate nohighlight">\(\omega &gt; 0\)</span> are constants. Sketch one cycle of both <span class="math notranslate nohighlight">\(i(t)\)</span> and <span class="math notranslate nohighlight">\(v(t)\)</span> <em>together on the same graph</em> (i.e. on the same set of axes). Are the current and voltage in phase or out of phase?</p></li>
+<li><p>Repeat Exercise <a class="reference internal" href="#exer-circuitphase"><span class="std std-ref">16</span></a> with <span class="math notranslate nohighlight">\(i(t)\)</span> the same as before but with <span class="math notranslate nohighlight">\(v(t)= V_m \,\sin\;\left(\omega t + \frac{\pi}{4}\right)\)</span>.</p></li>
+<li><p>Repeat Exercise <a class="reference internal" href="#exer-circuitphase"><span class="std std-ref">16</span></a> with <span class="math notranslate nohighlight">\(i(t)=-I_m \,\cos\;\left(\omega t - \frac{\pi}{3}\right)\)</span> and <span class="math notranslate nohighlight">\(v(t)= V_m \,\sin\;\left(\omega t - \frac{5\pi}{6}\right)\)</span>.</p></li>
+</ol>
+<p>For Exercises <a class="reference internal" href="#exer-ampcombostart"><span class="std std-ref">19</span></a>-<a class="reference internal" href="#exer-ampcomboend"><span class="std std-ref">21</span></a>, find the amplitude and period of the given function. Then graph one cycle of the function, either by hand or by using Gnuplot.</p>
+<ol class="arabic simple" id="exer-ampcombostart" start="19">
+<li><p><span class="math notranslate nohighlight">\(y=3\,\sin\;\pi x \;-\; 5\,\cos\;\pi x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=-5\,\sin\;3x \;+\; 12\,\cos\;3x\)</span></p></li>
+</ol>
+<ol class="arabic simple" id="exer-ampcomboend" start="21">
+<li><p><span class="math notranslate nohighlight">\(y=2\,\cos\;x \;+\; 2\,\sin\;x\)</span></p></li>
+<li><p>Find the amplitude of the function <span class="math notranslate nohighlight">\(y=2\,\sin\;( x^2 ) \;+\; \cos\;( x^2 )\)</span>.</p></li>
+</ol>
+<p>For Exercises <a class="reference internal" href="#exer-percombostart"><span class="std std-ref">23</span></a>-<a class="reference internal" href="#exer-percomboend"><span class="std std-ref">25</span></a>, find the period of the given function. Graph one cycle using Gnuplot.</p>
+<ol class="arabic simple" id="exer-percombostart" start="23">
+<li><p><span class="math notranslate nohighlight">\(y=\sin\;3x \;-\; \cos\;5x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y=\sin\;\frac{x}{3} \;+\; 2\,\cos\;\frac{3x}{4}\)</span></p></li>
+</ol>
+<ol class="arabic" id="exer-percomboend" start="25">
+<li><p><span class="math notranslate nohighlight">\(y=2\,\sin\;\pi x \;+\; 3\,\cos\;\frac{\pi}{3}x\)</span></p></li>
+<li><p>Let <span class="math notranslate nohighlight">\(y = 0.5\,\sin\;x ~\sin\;12x\,\)</span>. Its graph for $x$ from $0$ to <span class="math notranslate nohighlight">\(4\pi\)</span> is shown in Figure <a class="reference internal" href="#fig-modulated"><span class="std std-ref">5.2.14</span></a>:</p>
+<figure class="align-center" id="id37">
+<span id="figure-5-2-14"></span><span id="fig-modulated"></span><img alt="_images/f5.2.14.png" src="_images/f5.2.14.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.2.14 Modulated wave <span class="math notranslate nohighlight">\(y=0.5\,\sin\;x ~\sin\;12x\)</span></span><a class="headerlink" href="#id37" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>You can think of this function as <span class="math notranslate nohighlight">\(\sin\;12x\)</span> with a sinusoidally varying “amplitude” of <span class="math notranslate nohighlight">\(0.5\,\sin\;x\)</span>. What is the period of this function? From the graph it looks like the amplitude may be $0.5$. Without finding the exact amplitude, explain why the amplitude is in fact <em>less</em> than $0.5$. The function above is known as a <em>modulated wave</em>, and the functions <span class="math notranslate nohighlight">\(\pm\,0.5\,\sin\;x\)</span> form an <em>amplitude envelope</em> for the wave (i.e. they enclose the wave). Use an identity from Section 3.4 to write this function as a sum of sinusoidal curves.</p>
+</li>
+<li><p>Use Gnuplot to graph the function <span class="math notranslate nohighlight">\(y= x^2 \,\sin\;10x\)</span> from <span class="math notranslate nohighlight">\(x = -2\pi\)</span> to <span class="math notranslate nohighlight">\(x=2\pi\)</span>. What functions form its amplitude envelope? (Note: Use <em>set samples 500</em> in Gnuplot.)</p></li>
+<li><p>Use Gnuplot to graph the function <span class="math notranslate nohighlight">\(y= \frac{1}{x^2} \,\sin\;80x\)</span> from $x = 0.2$ to <span class="math notranslate nohighlight">\(x=\pi\)</span>. What functions form its amplitude envelope? (Note: Use <em>set samples 500</em> in Gnuplot.)</p></li>
+<li><p>Does the function <span class="math notranslate nohighlight">\(y=\sin\;\pi x \;+\; \cos\;x\)</span> have a period? Explain your answer.</p></li>
+<li><p>Use Gnuplot to graph the function <span class="math notranslate nohighlight">\(y=\frac{\sin\;x}{x}\)</span> from <span class="math notranslate nohighlight">\(x=-4\pi\)</span> to <span class="math notranslate nohighlight">\(x=4\pi\)</span>. What happens at $x=0$?</p></li>
+</ol>
+</section>
+</section>
+<section id="id10">
+<h2>反三角函数<a class="headerlink" href="#id10" title="此标题的永久链接">#</a></h2>
+<p>Inverse Trigonometric Functions</p>
+<p>We have briefly mentioned the inverse trigonometric functions before, for example in Section 1.3 when we discussed how to use the <span class="math notranslate nohighlight">\(\boxed{\sin^{-1}}\)</span>, <span class="math notranslate nohighlight">\(\boxed{\cos^{-1}}\)</span>, and <span class="math notranslate nohighlight">\(\boxed{\tan^{-1}}\)</span> buttons on a calculator to find an angle that has a certain trigonometric function value. We will now define those inverse functions and determine their graphs.</p>
+<figure class="align-right" id="id38">
+<span id="figure-5-3-1"></span><span id="fig-function"></span><img alt="_images/f5.3.1.png" src="_images/f5.3.1.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.3.1</span><a class="headerlink" href="#id38" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Recall that a <strong>function</strong> is a rule that assigns a single object $y$ from one set (the <strong>range</strong>) to each object $x$ from another set (the <strong>domain</strong>). We can write that rule as <span class="math notranslate nohighlight">\(y = f(x)\)</span>, where $f$ is the function (see Figure <a class="reference internal" href="#fig-function"><span class="std std-ref">5.3.1</span></a>). There is a simple <em>vertical rule</em> for determining whether a rule $y=f(x)$ is a function: $f$ is a function if and only if every vertical line intersects the graph of $y=f(x)$ in the $xy$-coordinate plane at most once (see  Figure <a class="reference internal" href="#fig-verticalrule"><span class="std std-ref">5.3.2</span></a>).</p>
+<figure class="align-center" id="id39">
+<span id="figure-5-3-2"></span><span id="fig-verticalrule"></span><img alt="_images/f5.3.2.png" src="_images/f5.3.2.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.3.2 Vertical rule for functions</span><a class="headerlink" href="#id39" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Recall that a function $f$ is <strong>one-to-one</strong> (often written as $1-1$) if it assigns distinct values of $y$ to distinct values of $x$. In other words, if <span class="math notranslate nohighlight">\(x_1 \ne x_2\)</span> then <span class="math notranslate nohighlight">\(f(x_1 ) \ne f(x_2 )\)</span>. Equivalently, $f$ is one-to-one if <span class="math notranslate nohighlight">\(f(x_1 ) = f(x_2 )\)</span> implies <span class="math notranslate nohighlight">\(x_1 = x_2\)</span>. There is a simple <em>horizontal rule</em> for determining whether a function $y=f(x)$ is one-to-one: $f$ is one-to-one if and only if every horizontal line intersects the graph of $y=f(x)$ in the $xy$-coordinate plane at most once (see Figure <a class="reference internal" href="#fig-horizontalrule"><span class="std std-ref">5.3.3</span></a>).</p>
+<figure class="align-center" id="id40">
+<span id="figure-5-3-3"></span><span id="fig-horizontalrule"></span><img alt="_images/f5.3.3.png" src="_images/f5.3.3.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.3.3 Horizontal rule for one-to-one functions</span><a class="headerlink" href="#id40" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>If a function $f$ is one-to-one on its domain, then $f$ has an <strong>inverse function</strong>, denoted by $f^{-1}$, such that <span class="math notranslate nohighlight">\(y=f(x)\)</span> if and only if <span class="math notranslate nohighlight">\(f^{-1}(y) = x\)</span>. The domain of <span class="math notranslate nohighlight">\(f^{-1}\)</span> is the range of $f$.</p>
+<p>The basic idea is that $f^{-1}$ “undoes” what $f$ does, and vice versa. In other words,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+f^{-1}(f(x)) ~&amp;=~ x \quad&amp;&amp;\text{for all $x$ in the domain of $f$, and}\\
+f(f^{-1}(y)) ~&amp;=~ y \quad&amp;&amp;\text{for all $y$ in the range of $f$.}
+\end{align}\end{split}\]</div>
+<p>We know from their graphs that none of the trigonometric functions are one-to-one over their entire domains. However, we can restrict those functions to <em>subsets</em> of their domains where they <em>are</em> one-to-one. For example, <span class="math notranslate nohighlight">\(y=\sin\;x\)</span> is one-to-one over the interval <span class="math notranslate nohighlight">\(\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]\)</span>, as we see in the graph below:</p>
+<figure class="align-center" id="id41">
+<span id="figure-5-3-4"></span><span id="fig-sinerestricted"></span><img alt="_images/f5.3.4.png" src="_images/f5.3.4.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.3.4 <span class="math notranslate nohighlight">\(y=\sin\;x\)</span> with $x$ restricted to <span class="math notranslate nohighlight">\(\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]\)</span></span><a class="headerlink" href="#id41" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>For <span class="math notranslate nohighlight">\(-\frac{\pi}{2} \le x \le \frac{\pi}{2}\)</span> we have <span class="math notranslate nohighlight">\(-1 \le \sin\;x \le 1\)</span>, so we can define the <strong>inverse sine</strong> function $y=sin^{-1} x$ (sometimes called the <strong>arc sine</strong> and denoted by <span class="math notranslate nohighlight">\(y=\arcsin\;x\)</span>) whose domain is the interval <span class="math notranslate nohighlight">\([-1, 1]\)</span> and whose range is the interval <span class="math notranslate nohighlight">\(\left[ -\frac{\pi}{2},\frac{\pi}{2} \right]\)</span>. In other words:</p>
+<div class="math notranslate nohighlight" id="equation-eqn-arcsin1">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eqn-arcsin1" title="此公式的永久链接">#</a></span>\[\sin^{-1} (\sin\;y) ~=~ y \quad\text{for $-\tfrac{\pi}{2} \le y \le \tfrac{\pi}{2}$}\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-arcsin2">
+<span class="eqno">(3)<a class="headerlink" href="#equation-eqn-arcsin2" title="此公式的永久链接">#</a></span>\[\sin\;(\sin^{-1} x) ~=~ x \quad\text{for $-1 \le x \le 1$}\]</div>
+<div class="admonition-example-5-13 admonition">
+<p class="admonition-title">Example 5.13</p>
+<p>Find <span class="math notranslate nohighlight">\(\sin^{-1} \left(\sin\;\frac{\pi}{4}\right)\)</span>.</p>
+<p><strong>Solution:</strong> Since <span class="math notranslate nohighlight">\(-\frac{\pi}{2} \le \frac{\pi}{4} \le \frac{\pi}{2}\)</span>, we know that <span class="math notranslate nohighlight">\(\sin^{-1} \left(\sin\;\frac{\pi}{4}\right) = \boxed{\frac{\pi}{4}}\;\)</span>, by formula <a class="reference internal" href="#equation-eqn-arcsin1">(2)</a>.</p>
+</div>
+<div class="admonition-example-5-14 admonition" id="exmp-arcsin5pi4">
+<p class="admonition-title">Example 5.14</p>
+<p>Find <span class="math notranslate nohighlight">\(\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right)\)</span>.</p>
+<p><strong>Solution:</strong> Since <span class="math notranslate nohighlight">\(\frac{5\pi}{4} &gt; \frac{\pi}{2}\)</span>, we can not use formula <a class="reference internal" href="#equation-eqn-arcsin1">(2)</a>. But we know that <span class="math notranslate nohighlight">\(\sin\;\frac{5\pi}{4} = -\frac{1}{\sqrt{2}}\)</span>. Thus, <span class="math notranslate nohighlight">\(\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right) = \sin^{-1} \left( -\frac{1}{\sqrt{2}} \right)\)</span> is, by definition, the angle $y$ such that <span class="math notranslate nohighlight">\(-\frac{\pi}{2} \le y \le \frac{\pi}{2}\)</span> and <span class="math notranslate nohighlight">\(\sin\;y = -\frac{1}{\sqrt{2}}\)</span>. That angle is <span class="math notranslate nohighlight">\(y=-\frac{\pi}{4}\)</span>, since</p>
+<div class="math notranslate nohighlight">
+\[\sin\;\left( -\tfrac{\pi}{4} \right) ~=~ -\sin\;\left( \tfrac{\pi}{4} \right) ~=~ -\tfrac{1}{\sqrt{2}} ~.\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(\sin^{-1} \left(\sin\;\frac{5\pi}{4}\right) = \boxed{-\tfrac{\pi}{4}}\;\)</span>.</p>
+</div>
+<p>Example <a class="reference internal" href="#exmp-arcsin5pi4"><span class="std std-ref">5.14</span></a> illustrates an important point: <span class="math notranslate nohighlight">\(\sin^{-1} x\)</span> should <em>always</em> be a number between <span class="math notranslate nohighlight">\(-\frac{\pi}{2}\)</span> and <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>. If you get a number outside that range, then you made a mistake somewhere. This why in Example <a class="reference internal" href="c1.html#exmp-sinneg0682"><span class="std std-ref">1.27</span></a> in Section 1.5 we got <span class="math notranslate nohighlight">\(\sin^{-1}(-0.682) = -43^\circ\)</span> when using the <span class="math notranslate nohighlight">\(\boxed{\sin^{-1}}\)</span> button on a calculator. Instead of an angle between <span class="math notranslate nohighlight">\(0^\circ\)</span> and <span class="math notranslate nohighlight">\(360^\circ\)</span> (i.e. $0$ to <span class="math notranslate nohighlight">\(2\pi\)</span> radians) we got an angle between <span class="math notranslate nohighlight">\(-90^\circ\)</span> and <span class="math notranslate nohighlight">\(90^\circ\)</span> (i.e. <span class="math notranslate nohighlight">\(-\frac{\pi}{2}\)</span> to <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span> radians).</p>
+<p>In general, the graph of an inverse function $f^{-1}$ is the reflection of the graph of $f$ around the line $y=x$. The graph of <span class="math notranslate nohighlight">\(y=\sin^{-1} x\)</span> is shown in Figure <a class="reference internal" href="#fig-arcsine"><span class="std std-ref">5.3.5</span></a>. Notice the symmetry about the line $y=x$ with the graph of <span class="math notranslate nohighlight">\(y=\sin\;x\)</span>.</p>
+<figure class="align-center" id="id42">
+<span id="figure-5-3-5"></span><span id="fig-arcsine"></span><img alt="_images/f5.3.5.png" src="_images/f5.3.5.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.3.5 Graph of <span class="math notranslate nohighlight">\(y=\sin^{-1} x\)</span></span><a class="headerlink" href="#id42" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>The <strong>inverse cosine</strong> function <span class="math notranslate nohighlight">\(y=\cos^{-1} x\)</span> (sometimes called the <strong>arc cosine</strong> and denoted by <span class="math notranslate nohighlight">\(y=\arccos\;x\)</span>) can be determined in a similar fashion. The function <span class="math notranslate nohighlight">\(y=\cos\;x\)</span> is one-to-one over the interval <span class="math notranslate nohighlight">\([0, \pi]\)</span>, as we see in the graph below:</p>
+<figure class="align-center" id="id43">
+<span id="figure-5-3-6"></span><span id="fig-cosinerestricted"></span><img alt="_images/f5.3.6.png" src="_images/f5.3.6.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.3.6 <span class="math notranslate nohighlight">\(y=\cos\;x\)</span> with $x$ restricted to <span class="math notranslate nohighlight">\([0, \pi]\)</span></span><a class="headerlink" href="#id43" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Thus, <span class="math notranslate nohighlight">\(y=\cos^{-1} x\)</span> is a function whose domain is the interval <span class="math notranslate nohighlight">\([-1, 1]\)</span> and whose range is the interval <span class="math notranslate nohighlight">\([0, \pi]\)</span>. In other words:</p>
+<div class="math notranslate nohighlight" id="equation-eqn-arccos1">
+<span id="equation-5-4"></span><span class="eqno">(4)<a class="headerlink" href="#equation-eqn-arccos1" title="此公式的永久链接">#</a></span>\[\cos^{-1} (\cos\;y) ~=~ y \quad\text{for $0 \le y \le \pi$}\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-arccos2">
+<span id="equation-5-5"></span><span class="eqno">(5)<a class="headerlink" href="#equation-eqn-arccos2" title="此公式的永久链接">#</a></span>\[\cos\;(\cos^{-1} x) ~=~ x \quad\text{for $-1 \le x \le 1$}\]</div>
+<p>The graph of <span class="math notranslate nohighlight">\(y=\cos^{-1} x\)</span> is shown below in Figure <a class="reference internal" href="#fig-arccosine"><span class="std std-ref">5.3.7</span></a>. Notice the symmetry about the line $y=x$ with the graph of <span class="math notranslate nohighlight">\(y=\cos\;x\)</span>.</p>
+<figure class="align-center" id="id44">
+<span id="figure-5-3-7"></span><span id="fig-arccosine"></span><img alt="_images/f5.3.7.png" src="_images/f5.3.7.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.3.7 Graph of <span class="math notranslate nohighlight">\(y=\cos^{-1} x\)</span></span><a class="headerlink" href="#id44" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition-example-5-15 admonition">
+<p class="admonition-title">Example 5.15</p>
+<p>Find <span class="math notranslate nohighlight">\(\cos^{-1} \left(\cos\;\frac{\pi}{3}\right)\)</span>.</p>
+<p><strong>Solution:</strong> Since <span class="math notranslate nohighlight">\(0 \le \frac{\pi}{3} \le \pi\)</span>, we know that <span class="math notranslate nohighlight">\(\cos^{-1} \left(\cos\;\frac{\pi}{3}\right) = \boxed{\frac{\pi}{3}}\;\)</span>, by formula <a class="reference internal" href="#equation-eqn-arccos1">(4)</a>.</p>
+</div>
+<div class="admonition-example-5-16 admonition" id="exmp-arccos4pi3">
+<p class="admonition-title">Example 5.16</p>
+<p>Find $cos^{-1} left(cos;frac{4pi}{3}right)$.</p>
+<p><strong>Solution:</strong> Since <span class="math notranslate nohighlight">\(\frac{4\pi}{3} &gt; \pi\)</span>, we can not use formula <a class="reference internal" href="#equation-eqn-arccos1">(4)</a>. But we know that <span class="math notranslate nohighlight">\(\cos\;\frac{4\pi}{3} = -\frac{1}{2}\)</span>. Thus, <span class="math notranslate nohighlight">\(\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right) = \cos^{-1} \left( -\frac{1}{2} \right)\)</span> is, by definition, the angle $y$ such that <span class="math notranslate nohighlight">\(0 \le y \le \pi\)</span> and <span class="math notranslate nohighlight">\(\cos\;y = -\frac{1}{2}\)</span>. That angle is <span class="math notranslate nohighlight">\(y=\frac{2\pi}{3}\)</span> (i.e. <span class="math notranslate nohighlight">\(120^\circ\)</span>). Thus, <span class="math notranslate nohighlight">\(\cos^{-1} \left(\cos\;\frac{4\pi}{3}\right) = \boxed{\tfrac{2\pi}{3}}\;\)</span>.</p>
+</div>
+<p>Examples <a class="reference internal" href="#exmp-arcsin5pi4"><span class="std std-ref">5.14</span></a> and <a class="reference internal" href="#exmp-arccos4pi3"><span class="std std-ref">5.16</span></a> may be confusing, since they seem to violate the general rule for inverse functions that <span class="math notranslate nohighlight">\(f^{-1}(f(x)) = x\)</span> for all $x$ in the domain of $f$. But that rule only applies when the function $f$ is one-to-one over its <em>entire</em> domain. We had to restrict the sine and cosine functions to very small subsets of their entire domains in order for those functions to be one-to-one. That general rule, therefore, only holds for $x$ in those small subsets in the case of the inverse sine and inverse cosine.</p>
+<p>The <strong>inverse tangent</strong> function <span class="math notranslate nohighlight">\(y=\tan^{-1} x\)</span> (sometimes called the <strong>arc tangent</strong> and denoted by <span class="math notranslate nohighlight">\(y=\arctan\;x\)</span>) can be determined similarly. The function <span class="math notranslate nohighlight">\(y=\tan\;x\)</span> is one-to-one over the interval <span class="math notranslate nohighlight">\(\left( -\frac{\pi}{2},\frac{\pi}{2} \right)\)</span>, as we see in Figure <a class="reference internal" href="#fig-tangentrestricted"><span class="std std-ref">5.3.8</span></a>:</p>
+<figure class="align-center" id="id45">
+<span id="figure-5-3-8"></span><span id="fig-tangentrestricted"></span><img alt="_images/f5.3.8.png" src="_images/f5.3.8.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.3.8 <span class="math notranslate nohighlight">\(y=\tan\;x\)</span> with $x$ restricted to <span class="math notranslate nohighlight">\(\left( -\frac{\pi}{2},\frac{\pi}{2} \right)\)</span></span><a class="headerlink" href="#id45" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>The graph of <span class="math notranslate nohighlight">\(y=\tan^{-1} x\)</span> is shown below in Figure <a class="reference internal" href="#fig-arctangent"><span class="std std-ref">5.3.9</span></a>. Notice that the vertical asymptotes for <span class="math notranslate nohighlight">\(y=\tan\;x\)</span> become horizontal asymptotes for <span class="math notranslate nohighlight">\(y=\tan^{-1} x\)</span>. Note also the symmetry about the line $y=x$ with the graph of <span class="math notranslate nohighlight">\(y=\tan\;x\)</span>.</p>
+<figure class="align-center" id="id46">
+<span id="figure-5-3-9"></span><span id="fig-arctangent"></span><img alt="_images/f5.3.9.png" src="_images/f5.3.9.png" />
+<figcaption>
+<p><span class="caption-text">Figure 5.3.9 Graph of <span class="math notranslate nohighlight">\(y=\tan^{-1} x\)</span></span><a class="headerlink" href="#id46" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Thus, <span class="math notranslate nohighlight">\(y=\tan^{-1} x\)</span> is a function whose domain is the set of all real numbers and whose range is the interval <span class="math notranslate nohighlight">\(\left( -\frac{\pi}{2},\frac{\pi}{2} \right)\)</span>. In other words:</p>
+<div class="math notranslate nohighlight" id="equation-eqn-arctan1">
+<span id="equation-5-6"></span><span class="eqno">(6)<a class="headerlink" href="#equation-eqn-arctan1" title="此公式的永久链接">#</a></span>\[\tan^{-1} (\tan\;y) ~=~ y \quad \text{for $-\tfrac{\pi}{2} &lt; y &lt; \tfrac{\pi}{2}$}\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-arctan2">
+<span id="equation-5-7"></span><span class="eqno">(7)<a class="headerlink" href="#equation-eqn-arctan2" title="此公式的永久链接">#</a></span>\[\tan\;(\tan^{-1} x) ~=~ x \quad \text{for all real $x$}\]</div>
+<div class="admonition-example-5-17 admonition">
+<p class="admonition-title">Example 5.17</p>
+<p>Find <span class="math notranslate nohighlight">\(\tan^{-1} \left(\tan\;\frac{\pi}{4}\right)\)</span>.</p>
+<p><strong>Solution:</strong> Since <span class="math notranslate nohighlight">\(-\tfrac{\pi}{2} \le \tfrac{\pi}{4} \le \tfrac{\pi}{2}\)</span>, we know that <span class="math notranslate nohighlight">\(\tan^{-1} \left(\tan\;\frac{\pi}{4}\right) = \boxed{\frac{\pi}{4}}\;\)</span>, by formula <a class="reference internal" href="#equation-eqn-arctan1">(6)</a>.</p>
+</div>
+<div class="admonition-example-5-18 admonition" id="exmp-arctanpi">
+<p class="admonition-title">Example 5.18</p>
+<blockquote>
+<div><p>Find <span class="math notranslate nohighlight">\(\tan^{-1} \left(\tan\;\pi\right)\)</span>.</p>
+<p><strong>Solution:</strong> Since <span class="math notranslate nohighlight">\(\pi &gt; \tfrac{\pi}{2}\)</span>, we can not use formula <a class="reference internal" href="#equation-eqn-arctan1">(6)</a>. But we know that <span class="math notranslate nohighlight">\(\tan\;\pi = 0\)</span>. Thus, <span class="math notranslate nohighlight">\(\tan^{-1} \left(\tan\;\pi\right) = \tan^{-1} 0\)</span> is, by definition, the angle $y$ such that <a href="#id11"><span class="problematic" id="id12">:mamth:`-\tfrac{\pi}{2} \le y \le \tfrac{\pi}{2}`</span></a> and <span class="math notranslate nohighlight">\(\tan\;y = 0\)</span>. That angle is $y=0$. Thus, <span class="math notranslate nohighlight">\(\tan^{-1} \left(\tan\;\pi \right) = \boxed{0}\;\)</span>.</p>
+</div></blockquote>
+<p>Find the exact value of $cos;left(sin^{-1};left(-frac{1}{4}right)right)$.vspace{1mm}</p>
+</div>
+<div class="admonition-example-5-19 admonition">
+<p class="admonition-title">Example 5.19</p>
+<p><strong>Solution:</strong> Let <span class="math notranslate nohighlight">\(\theta = \sin^{-1}\;\left(-\frac{1}{4}\right)\)</span>. We know that <span class="math notranslate nohighlight">\(-\tfrac{\pi}{2} \le \theta \le \tfrac{\pi}{2}\)</span>, so since <span class="math notranslate nohighlight">\(\sin\;\theta = -\frac{1}{4} &lt; 0\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span> must be in QIV. Hence <span class="math notranslate nohighlight">\(\cos\;\theta &gt; 0\)</span>. Thus,</p>
+<div class="math notranslate nohighlight">
+\[\cos^2 \;\theta ~=~ 1 ~-~ \sin^2 \;\theta ~=~ 1 ~-~ \left( -\frac{1}{4} \right)^2 ~=~\frac{15}{16} \quad\Rightarrow\quad \cos\;\theta ~=~ \frac{\sqrt{15}}{4} ~.\]</div>
+<p>Note that we took the positive square root above since <span class="math notranslate nohighlight">\(\cos\;\theta &gt; 0\)</span>. Thus, <span class="math notranslate nohighlight">\(\cos\;\left(\sin^{-1}\;\left(-\frac{1}{4}\right)\right) = \boxed{\frac{\sqrt{15}}{4}}\;\)</span>.</p>
+</div>
+<div class="admonition-example-5-20 admonition" id="exmp-tanarcsin">
+<p class="admonition-title">Example 5.20</p>
+<p>Show that <span class="math notranslate nohighlight">\(\tan\;(\sin^{-1} x) = \dfrac{x}{\sqrt{1 - x^2}}\)</span> for $-1 &lt; x &lt; 1$.</p>
+<figure class="align-right" id="id47">
+<span id="figure-5-3-10"></span><span id="fig-tanarcsin"></span><img alt="_images/f5.3.10.png" src="_images/f5.3.10.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.3.10</strong></span><a class="headerlink" href="#id47" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Solution:</strong> When $x=0$, the formula holds trivially, since</p>
+<div class="math notranslate nohighlight">
+\[\tan\;(\sin^{-1} 0) ~=~ \tan\;0 ~=~ 0 ~=~ \dfrac{0}{\sqrt{1 - 0^2}} ~.\]</div>
+<p>Now suppose that $0 &lt; x &lt; 1$. Let <span class="math notranslate nohighlight">\(\theta = \sin^{-1} x\)</span>. Then <span class="math notranslate nohighlight">\(\theta\)</span> is in QI and <span class="math notranslate nohighlight">\(\sin\;\theta = x\)</span>. Draw a right triangle with an angle <span class="math notranslate nohighlight">\(\theta\)</span> such that the opposite leg has length $x$ and the hypotenuse has length $1$, as in Figure <a class="reference internal" href="#fig-tanarcsin"><span class="std std-ref">5.3.10</span></a> (note that this is possible since $0 &lt; x &lt; 1$). Then <span class="math notranslate nohighlight">\(\sin\;\theta = \frac{x}{1} = x\)</span>. By the Pythagorean Theorem, the adjacent leg has length <span class="math notranslate nohighlight">\(\sqrt{1 - x^2}\)</span>. Thus, <span class="math notranslate nohighlight">\(\tan\;\theta = \frac{x}{\sqrt{1 - x^2}}\)</span>.</p>
+<p>If $-1 &lt; x &lt; 0$ then <span class="math notranslate nohighlight">\(\theta = \sin^{-1} x\)</span> is in QIV. So we can draw the same triangle except that it would be “upside down” and we would again have <span class="math notranslate nohighlight">\(\tan\;\theta = \frac{x}{\sqrt{1 - x^2}}\)</span>, since the tangent and sine have the same sign (negative) in QIV. Thus, <span class="math notranslate nohighlight">\(\tan\;(\sin^{-1} x) = \dfrac{x}{\sqrt{1 - x^2}}\)</span> for $-1 &lt; x &lt; 1$.</p>
+</div>
+<p>The inverse functions for cotangent, cosecant, and secant can be determined by looking at their graphs. For example, the function <span class="math notranslate nohighlight">\(y=\cot\;x\)</span> is one-to-one in the interval <span class="math notranslate nohighlight">\((0,\pi)\)</span>, where it has a range equal to the set of all real numbers. Thus, the <strong>inverse cotangent</strong> <span class="math notranslate nohighlight">\(y=\cot^{-1} x\)</span> is a function whose domain is the set of all real numbers and whose range is the interval <span class="math notranslate nohighlight">\((0,\pi)\)</span>. In other words:</p>
+<div class="math notranslate nohighlight" id="equation-eqn-arccot1">
+<span id="equation-5-8"></span><span class="eqno">(8)<a class="headerlink" href="#equation-eqn-arccot1" title="此公式的永久链接">#</a></span>\[\cot^{-1} (\cot\;y) ~=~ y \quad \text{for $0 &lt; y &lt; \pi$}\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-arccot2">
+<span id="equation-5-9"></span><span class="eqno">(9)<a class="headerlink" href="#equation-eqn-arccot2" title="此公式的永久链接">#</a></span>\[\cot\;(\cot^{-1} x) ~=~ x \quad \text{for all real $x$}\]</div>
+<p>The graph of <span class="math notranslate nohighlight">\(y=\cot^{-1} x\)</span> is shown below in Figure <a class="reference internal" href="#fig-arccotangent"><span class="std std-ref">5.3.11</span></a>.</p>
+<figure class="align-right" id="id48">
+<span id="figure-5-3-11"></span><span id="fig-arccotangent"></span><img alt="_images/f5.3.11.png" src="_images/f5.3.11.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.3.11</strong> Graph of <span class="math notranslate nohighlight">\(y=\cot^{-1} x\)</span></span><a class="headerlink" href="#id48" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Similarly, it can be shown that the <strong>inverse cosecant</strong> <span class="math notranslate nohighlight">\(y=\csc^{-1} x\)</span> is a function whose domain is <span class="math notranslate nohighlight">\(|x| \ge 1\)</span> and whose range is <span class="math notranslate nohighlight">\(-\frac{\pi}{2} \le y \le \frac{\pi}{2}\)</span>, <span class="math notranslate nohighlight">\(y \ne 0\)</span>. Likewise, the <strong>inverse secant</strong> <span class="math notranslate nohighlight">\(y=\sec^{-1} x\)</span> is a function whose domain is <span class="math notranslate nohighlight">\(|x| \ge 1\)</span> and whose range is <span class="math notranslate nohighlight">\(0 \le y \le \pi\)</span>, <span class="math notranslate nohighlight">\(y \ne \frac{\pi}{2}\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-eqn-arccsc1">
+<span id="equation-5-10"></span><span class="eqno">(10)<a class="headerlink" href="#equation-eqn-arccsc1" title="此公式的永久链接">#</a></span>\[\csc^{-1} (\csc\;y) ~=~ y \quad \text{for $-\frac{\pi}{2} \le y \le \frac{\pi}{2}$, $y \ne 0$}\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-arccsc2">
+<span id="equation-5-11"></span><span class="eqno">(11)<a class="headerlink" href="#equation-eqn-arccsc2" title="此公式的永久链接">#</a></span>\[\csc\;(\csc^{-1} x) ~=~ x \quad \text{for $|x| \ge 1$}\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-arcsec1">
+<span id="equation-5-12"></span><span class="eqno">(12)<a class="headerlink" href="#equation-eqn-arcsec1" title="此公式的永久链接">#</a></span>\[\sec^{-1} (\sec\;y) ~=~ y \quad \text{for $0 \le y \le \pi$, $y \ne \frac{\pi}{2}$}\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-arcsec2">
+<span id="equation-5-13"></span><span class="eqno">(13)<a class="headerlink" href="#equation-eqn-arcsec2" title="此公式的永久链接">#</a></span>\[\sec\;(\sec^{-1} x) ~=~ x \quad \text{for $|x| \ge 1$}\]</div>
+<p>It is also common to call <span class="math notranslate nohighlight">\(\cot^{-1} x\)</span>, <span class="math notranslate nohighlight">\(\csc^{-1} x\)</span>, and <span class="math notranslate nohighlight">\(\sec^{-1} x\)</span> the <strong>arc cotangent</strong>, <strong>arc cosecant</strong>, and <strong>arc secant</strong>, respectively, of $x$. The graphs of <span class="math notranslate nohighlight">\(y=\csc^{-1} x\)</span> and <span class="math notranslate nohighlight">\(y=\sec^{-1} x\)</span> are shown in Figure <a class="reference internal" href="#fig-arccscsec"><span class="std std-ref">5.3.12</span></a>:</p>
+<figure class="align-center" id="id49">
+<span id="figure-5-3-12"></span><span id="fig-arccscsec"></span><img alt="_images/f5.3.12.png" src="_images/f5.3.12.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.3.12</strong> Graph of <span class="math notranslate nohighlight">\(y=\cot^{-1} x\)</span></span><a class="headerlink" href="#id49" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition-example-5-21 admonition">
+<p class="admonition-title">Example 5.21</p>
+<p>Prove the identity $tan^{-1} x ;+; cot^{-1} x ~=~ frac{pi}{2}$.</p>
+<p><strong>Solution:</strong> Let $theta = cot^{-1} x$. Using relations from Section 1.5, we have</p>
+<div class="math notranslate nohighlight">
+\[\tan\;\left( \tfrac{\pi}{2} - \theta \right) ~=~ -\tan\;\left( \theta - \tfrac{\pi}{2} \right) ~=~ \cot\;\theta ~=~ \cot\;(\cot^{-1} x) ~=~ x ~,\]</div>
+<p>by formula <a class="reference internal" href="#equation-eqn-arccot2">(9)</a>. So since <span class="math notranslate nohighlight">\(\tan\;(\tan^{-1} x) = x\)</span> for all $x$, this means that <span class="math notranslate nohighlight">\(\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \theta \right)\)</span>. Thus, <span class="math notranslate nohighlight">\(\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \cot^{-1} x \right)\)</span>. Now, we know that <span class="math notranslate nohighlight">\(0 &lt; \cot^{-1} x &lt; \pi$, so $-\tfrac{\pi}{2} &lt; \tfrac{\pi}{2} - \cot^{-1} x &lt; \tfrac{\pi}{2}\)</span>, i.e. <span class="math notranslate nohighlight">\(\tfrac{\pi}{2} - \cot^{-1} x\)</span> is in the restricted subset on which the tangent function is one-to-one. Hence, <span class="math notranslate nohighlight">\(\tan\;(\tan^{-1} x) = \tan\;\left( \tfrac{\pi}{2} - \cot^{-1} x \right)\)</span> implies that <span class="math notranslate nohighlight">\(\tan^{-1} x = \tfrac{\pi}{2} - \cot^{-1} x\)</span>, which proves the identity.</p>
+</div>
+<div class="admonition-example-5-22 admonition" id="exmp-arctanab">
+<p class="admonition-title">Example 5.22</p>
+<p>Is $;tan^{-1} a ;+; tan^{-1} b ~=~ tan^{-1} left( dfrac{a+b}{1-ab} right);$ an identity?</p>
+<p><strong>Solution:</strong> In the tangent addition formula <span class="math notranslate nohighlight">\(\tan\;(A+B) = \dfrac{\tan\;A \;+\; \tan\;B}{1 \;-\; \tan\;A~\tan\;B}\)</span>, let <span class="math notranslate nohighlight">\(A = \tan^{-1} a\)</span> and <span class="math notranslate nohighlight">\(B = \tan^{-1} b\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\tan\;(\tan^{-1} a \;+\; \tan^{-1} b ) ~&amp;=~ \dfrac{\tan\;(\tan^{-1} a) \;+\; \tan\;(\tan^{-1}
+b)}{1 \;-\; \tan\;(\tan^{-1} a)~\tan\;(\tan^{-1} b)}\\
+&amp;=~ \dfrac{a+b}{1-ab}\qquad\text{by formula 5.7, so it seems that we have}\\
+\tan^{-1} a \;+\; \tan^{-1} b ~&amp;=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)
+\end{align*}\end{split}\]</div>
+<p>by definition of the inverse tangent. However, recall that <span class="math notranslate nohighlight">\(-\tfrac{\pi}{2} &lt; \tan^{-1} x &lt; \tfrac{\pi}{2}\)</span> for all real numbers $x$. So in particular, we must have <span class="math notranslate nohighlight">\(-\tfrac{\pi}{2} &lt; \tan^{-1} \left( \frac{a+b}{1-ab} \right) &lt; \tfrac{\pi}{2}\)</span>. But it is possible that <span class="math notranslate nohighlight">\(\tan^{-1} a \;+\; \tan^{-1} b\)</span> is <em>not</em> in the interval <span class="math notranslate nohighlight">\(\left(-\tfrac{\pi}{2},\tfrac{\pi}{2}\right)\)</span>. For example,</p>
+<div class="math notranslate nohighlight">
+\[\tan^{-1} 1 \;+\; \tan^{-1} 2 ~=~ 1.892547 ~&gt;~ \tfrac{\pi}{2} \approx 1.570796 ~.\]</div>
+<p>And we see that <span class="math notranslate nohighlight">\(\tan^{-1} \left( \frac{1+2}{1-(1)(2)} \right) = \tan^{-1} (-3) = -1.249045 \ne \tan^{-1} 1 \;+\; \tan^{-1} 2\)</span>. So the formula is only true when <span class="math notranslate nohighlight">\(-\tfrac{\pi}{2} &lt; \tan^{-1} a \;+\; \tan^{-1} b &lt; \tfrac{\pi}{2}\)</span>.</p>
+</div>
+<section id="sec5dot3">
+<span id="id13"></span><h3>练习<a class="headerlink" href="#sec5dot3" title="此标题的永久链接">#</a></h3>
+<p>Exercises</p>
+<p>For Exercises 1-25, find the exact value of the given expression in radians.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\tan^{-1} 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\tan^{-1} \,(-1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\tan^{-1} 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos^{-1} 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos^{-1} \,(-1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos^{-1} 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^{-1} 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^{-1} \,(-1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^{-1} 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^{-1} \left(\sin\;\frac{\pi}{3}\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^{-1} \left(\sin\;\frac{4\pi}{3}\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^{-1} \left(\sin\;\left(-\frac{5\pi}{6}\right)\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos^{-1} \left(\cos\;\frac{\pi}{7}\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos^{-1} \left(\cos\;\left(-\frac{\pi}{10}\right)\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos^{-1} \left(\cos\;\frac{6\pi}{5}\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\tan^{-1} \left(\tan\;\frac{4\pi}{3}\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\tan^{-1} \left(\tan\;\left(-\frac{5\pi}{6}\right)\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cot^{-1} \left(\cot\;\frac{4\pi}{3}\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\csc^{-1} \left(\csc\;\left(-\frac{\pi}{9}\right)\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sec^{-1} \left(\sec\;\frac{6\pi}{5}\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos\;\left(\sin^{-1}\;\left(\frac{5}{13}\right)\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos\;\left(\sin^{-1}\;\left(-\frac{4}{5}\right)\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^{-1}\;\frac{3}{5} \;+\; \sin^{-1}\;\frac{4}{5}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^{-1}\;\frac{5}{13} \;+\; \cos^{-1}\;\frac{5}{13}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\tan^{-1}\;\frac{3}{5} \;+\; \cot^{-1}\;\frac{3}{5}\)</span></p></li>
+</ol>
+<p>For Exercises 26-33, prove the given identity.</p>
+<ol class="arabic simple" start="26">
+<li><p><span class="math notranslate nohighlight">\(\cos\;(\sin^{-1} x) ~=~ \sqrt{1 - x^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin\;(\cos^{-1} x) ~=~ \sqrt{1 - x^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^{-1} x \;+\; \cos^{-1} x ~=~ \frac{\pi}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sec^{-1} x \;+\; \csc^{-1} x ~=~ \frac{\pi}{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^{-1} (-x) ~=~ -\sin^{-1} x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos^{-1} (-x) \;+\; \cos^{-1} x ~=~ \pi\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cot^{-1} x ~=~ \tan^{-1} \,\frac{1}{x}~\)</span> for $x&gt;0$</p></li>
+<li><p><span class="math notranslate nohighlight">\(\tan^{-1} x \;+\; \tan^{-1} \,\frac{1}{x} ~=~ \frac{\pi}{2}~\)</span> for $x&gt;0$</p></li>
+<li><p>In Example <a class="reference internal" href="#exmp-arctanab"><span class="std std-ref">5.32</span></a> we showed that the formula <span class="math notranslate nohighlight">\(\;\tan^{-1} a \;+\; \tan^{-1} b ~=~ \tan^{-1} \left( \dfrac{a+b}{1-ab} \right)\;\)</span> does not always hold. Does the formula <span class="math notranslate nohighlight">\(\tan\;(\tan^{-1} a \;+\; \tan^{-1} b ) ~=~ \dfrac{a+b}{1-ab}\)</span>, which was part of that example, always hold? Explain your answer.</p></li>
+<li><p>Show that <span class="math notranslate nohighlight">\(\;\tan^{-1}\;\frac{1}{3}\;+\;\tan^{-1}\;\frac{1}{5} ~=~ \tan^{-1}\;\frac{4}{7}\;\)</span>.</p></li>
+<li><p>Show that <span class="math notranslate nohighlight">\(\;\tan^{-1}\;\frac{1}{4}\;+\;\tan^{-1}\;\frac{2}{9} ~=~ \tan^{-1}\;\frac{1}{2}\;\)</span>.</p></li>
+</ol>
+<ol class="arabic" id="exer-3squares" start="37">
+<li><p>Figure <a class="reference internal" href="#fig-3squares"><span class="std std-ref">5.3.13</span></a> shows three equal squares lined up against each other. For the angles <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(\beta\)</span>, and <span class="math notranslate nohighlight">\(\gamma\)</span> in the picture, show that <span class="math notranslate nohighlight">\(\alpha = \beta + \gamma\)</span>. (<em>Hint: Consider the tangents of the angles.</em>)</p>
+<figure class="align-center" id="id50">
+<span id="figure-5-3-13"></span><span id="fig-3squares"></span><img alt="_images/f5.3.13.png" src="_images/f5.3.13.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5.3.13</strong> Exercise <a class="reference internal" href="#exer-3squares"><span class="std std-ref">37</span></a></span><a class="headerlink" href="#id50" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Sketch the graph of <span class="math notranslate nohighlight">\(y=\sin^{-1} 2x\)</span>.</p></li>
+<li><p>Write a computer program to solve a triangle in the case where you are given three sides. Your program should read in the three sides as input parameters and print the three angles in degrees as output if a solution exists. Note that since most computer languages use radians for their inverse trigonometric functions, you will likely have to do the conversion from radians to degrees yourself in the program.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="c4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">第 4 章 弧度量</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="c6.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">第 6 章 附加主题</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目录
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">三角函数的图像绘制</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec5dot1">练习</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">三角函数图像的性质</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">练习</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">反三角函数</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec5dot3">练习</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： Michael Corral
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2009, Michael Corral.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
