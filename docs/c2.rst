@@ -1931,49 +1931,89 @@ Exercises
 -----------------------
 The Area of a Triangle
 
-In elementary geometry you learned that the area of a triangle is one-half the base times the height. We will now use that, combined with some trigonometry, to derive more formulas for the area when given various parts of the triangle.
+在初等几何中，你学到三角形的面积是底乘以高的一半。现在我们将运用这一原理，结合一些三角学知识，推导出更多已知三角形各部分面积的公式。
 
-*Case 1: Two sides and the included angle.* 
+*案例 1：两条边和夹角。*
 
-Suppose that we have a triangle :math:`\triangle ABC`, in which $A$ can be either acute, a right angle, or obtuse, as in Figure :ref:`2.4.1 <fig:areacase1>`. Assume that $A$, $b$, and $c$ are known.
+假设我们有一个三角形 :math:`\triangle ABC`，其中 $A$ 可以是锐角、直角或钝角，如图 :ref:`2.4.1 <fig:areacase1>` 所示。假设 $A$、$b$ 和 $c$ 已知。
 
 .. _fig:areacase1:
 
 .. _Figure 2.4.1:
 
 .. figure:: ./img/f2.4.1.png
-    :align: center 
+    :align: center
 
-    **Figure 2.4.1 Area of** :math:`\triangle ABC`
+    **图 2.4.1 三角形 ABC 的面积**
 
-In each case we draw an altitude of height $h$ from the vertex at $C$ to :math:`\overline{AB}`, so that
-the area (which we will denote by the letter $K$) is given by :math:`K = \frac{1}{2}hc`. But we see that
-:math:`h = b\;\sin\;A` in each of the triangles (since :math:`\;h=b` and :math:`\sin\;A = \sin\;90^\circ = 1` in Figure :ref:`2.4.1 <fig:areacase1>` (b), and :math:`\;h = b\;\sin\;(180^\circ - A) = b\;\sin\;A` in Figure :ref:`2.4.1 <fig:areacase1>` (c)). We thus get the following formula:
+在每种情况下，我们从顶点 $C$ 到 :math:`\overline{AB}` 画一条高为 $h$ 的线，因此
+面积（我们用字母 $K$ 表示）等于 :math:`K = \frac{1}{2}hc`。但我们看到
+:math:`h = b\sin\;A` 在每个三角形中（因为图 :ref:`2.4.1 <fig:areacase1>` (b) 中 :math:`\;h=b` 且 :math:`\sin\;A = \sin\;90^\circ = 1`，而图 :ref:`2.4.1 <fig:areacase1>` (c) 中 :math:`\;h = b\sin\;(180^\circ - A) = b\sin\;A`）。因此，我们得到以下公式：
 
 .. _equation 2.23:
+
+.. _eqn:areacase1a:
 
 .. math::
     :label: eqn:areacase1a
 
     \boxed{\text{Area} ~=~ K ~=~ \tfrac{1}{2}\,bc\;\sin\;A}
 
-The above formula for the area of :math:`\triangle ABC` is in terms of the known parts $A$, $b$, and $c$. Similar arguments for the angles $B$ and $C$ give us:
+上述 :math:`\triangle ABC` 的面积公式是根据已知部分 $A$、$b$ 和 $c$ 计算的。对于角 $B$ 和 $C$，类似的推导可得：
 
 .. _equation 2.24:
+
+.. _eqn:areacase1b:
 
 .. math::
     :label: eqn:areacase1b
 
     \boxed{\text{Area} ~=~ K ~=~ \tfrac{1}{2}\,ac\;\sin\;B}
- 
+
 .. _equation 2.25:
+
+.. _eqn:areacase1c:
 
 .. math::
     :label: eqn:areacase1c
-    
+
     \boxed{\text{Area} ~=~ K ~=~ \tfrac{1}{2}\,ab\;\sin\;C}
 
-Notice that the height $h$ does not appear explicitly in these formulas, although it is implicitly there. These formulas have the advantage of being in terms of parts of the triangle, without having to find $h$ separately.
+请注意，高 $h$ 在这些公式中并未明确出现，尽管它隐含在其中。这些公式的优点在于，它们以三角形的部分表示，无需单独计算 $h$。
+
+.. toggle::
+
+    In elementary geometry you learned that the area of a triangle is one-half the base times the height. We will now use that, combined with some trigonometry, to derive more formulas for the area when given various parts of the triangle.
+
+    *Case 1: Two sides and the included angle.* 
+
+    Suppose that we have a triangle :math:`\triangle ABC`, in which $A$ can be either acute, a right angle, or obtuse, as in Figure :ref:`2.4.1 <fig:areacase1>`. Assume that $A$, $b$, and $c$ are known.
+
+    .. figure:: ./img/f2.4.1.png
+        :align: center 
+
+        **Figure 2.4.1 Area of** :math:`\triangle ABC`
+
+    In each case we draw an altitude of height $h$ from the vertex at $C$ to :math:`\overline{AB}`, so that
+    the area (which we will denote by the letter $K$) is given by :math:`K = \frac{1}{2}hc`. But we see that
+    :math:`h = b\;\sin\;A` in each of the triangles (since :math:`\;h=b` and :math:`\sin\;A = \sin\;90^\circ = 1` in Figure :ref:`2.4.1 <fig:areacase1>` (b), and :math:`\;h = b\;\sin\;(180^\circ - A) = b\;\sin\;A` in Figure :ref:`2.4.1 <fig:areacase1>` (c)). We thus get the following formula:
+
+    .. math::
+
+        \boxed{\text{Area} ~=~ K ~=~ \tfrac{1}{2}\,bc\;\sin\;A}
+
+    The above formula for the area of :math:`\triangle ABC` is in terms of the known parts $A$, $b$, and $c$. Similar arguments for the angles $B$ and $C$ give us:
+
+    .. math::
+
+        \boxed{\text{Area} ~=~ K ~=~ \tfrac{1}{2}\,ac\;\sin\;B}
+
+    .. math::
+        :label: eqn:areacase1c
+        
+        \boxed{\text{Area} ~=~ K ~=~ \tfrac{1}{2}\,ab\;\sin\;C}
+
+    Notice that the height $h$ does not appear explicitly in these formulas, although it is implicitly there. These formulas have the advantage of being in terms of parts of the triangle, without having to find $h$ separately.
 
 .. _Example 2.13:
 
@@ -1985,38 +2025,44 @@ Notice that the height $h$ does not appear explicitly in these formulas, althoug
         :align: right
         :scale: 50%
 
-    Find the area of the triangle :math:`\triangle ABC` given :math:`A = 33^\circ`, $b = 5$, and $c = 7$.
+    已知 :math:`A = 33^\circ`、$b = 5$ 和 $c = 7$，求三角形 :math:`\triangle ABC` 的面积。
 
-    **Solution:** Using formula :eq:`2.23 <eqn:areacase1a>`, the area $K$ is given by:
+    **解答：** 使用公式 :eq:`2.23 <eqn:areacase1a>`，面积 $K$ 如下：
 
     .. math::
 
         \begin{align*}
-          K ~&=~ \tfrac{1}{2}\,bc\;\sin\;A\\
-          &=~ \tfrac{1}{2}\,(5)(7)\;\sin\;33^\circ\\
-          K ~&=~ 9.53
+        K ~&=~ \tfrac{1}{2}\,bc\;\sin\;A\\
+        &=~ \tfrac{1}{2}\,(5)(7)\;\sin\;33^\circ\\
+        K ~&=~ 9.53
         \end{align*}
 
-    *Case 2: Three angles and any side.*
+    *情况 2：三个角和任意边。*
 
-    Suppose that we have a triangle :math:`\triangle ABC` in which one side, say, $a$, and all three angles are known. [7]_ By the Law of Sines we know that
+    假设我们有一个三角形 :math:`\triangle ABC`，其中一条边（例如 $a$）和所有三个角都是已知的。 [7]_ 
+    
+    根据正弦定理，我们知道
 
     .. math::
 
         c ~=~ \frac{a\;\sin\;C}{\sin\;A} ~,
 
-    so substituting this into formula :eq:`2.24 <eqn:areacase1b>` we get:
+    因此将其代入公式 :eq:`2.24 <eqn:areacase1b>` 可得：
 
     .. _Figure 2.26:
+
+    .. _eqn:areacase2a:
 
     .. math::
         :label: eqn:areacase2a
 
         \text{Area} ~=~ K ~=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;A}
 
-    Similar arguments for the sides $b$ and $c$ give us:
+    对于边 $b$ 和 $c$ 进行类似的推导，可得：
 
     .. _Figure 2.27:
+
+    .. _eqn:areacase2b:
 
     .. math::
         :label: eqn:areacase2b
@@ -2025,12 +2071,62 @@ Notice that the height $h$ does not appear explicitly in these formulas, althoug
 
     .. _Figure 2.28:
 
+    .. _eqn:areacase2c:
+
     .. math::
         :label: eqn:areacase2c
 
         \text{Area} ~=~ K ~=~ \frac{c^2 \;\sin\;A \;\sin\;B}{2\;\sin\;C}
 
-    .. [7] Note that this is equivalent to knowing just \emph{two} angles and a side (why?).
+    .. [7] 注意，这相当于只知道 \emph{两个} 角和一条边（为什么？）。
+
+           Note that this is equivalent to knowing just \emph{two} angles and a side (why?).
+
+    .. toggle::
+
+        .. figure:: ./img/e2.13.png 
+            :align: right
+            :scale: 50%
+
+        Find the area of the triangle :math:`\triangle ABC` given :math:`A = 33^\circ`, $b = 5$, and $c = 7$.
+
+        **Solution:** Using formula :eq:`2.23 <eqn:areacase1a>`, the area $K$ is given by:
+
+        .. math::
+
+            \begin{align*}
+            K ~&=~ \tfrac{1}{2}\,bc\;\sin\;A\\
+            &=~ \tfrac{1}{2}\,(5)(7)\;\sin\;33^\circ\\
+            K ~&=~ 9.53
+            \end{align*}
+
+        *Case 2: Three angles and any side.*
+
+        Suppose that we have a triangle :math:`\triangle ABC` in which one side, say, $a$, and all three angles are known. [7]_ By the Law of Sines we know that
+
+        .. math::
+
+            c ~=~ \frac{a\;\sin\;C}{\sin\;A} ~,
+
+        so substituting this into formula :eq:`2.24 <eqn:areacase1b>` we get:
+
+        .. math::
+            :label: eqn:areacase2a
+
+            \text{Area} ~=~ K ~=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;A}
+
+        Similar arguments for the sides $b$ and $c$ give us:
+
+
+        .. math::
+            :label: eqn:areacase2b
+
+            \text{Area} ~=~ K ~=~ \frac{b^2 \;\sin\;A \;\sin\;C}{2\;\sin\;B}
+
+        .. math::
+            :label: eqn:areacase2c
+
+            \text{Area} ~=~ K ~=~ \frac{c^2 \;\sin\;A \;\sin\;B}{2\;\sin\;C}
 
 .. _Example 2.14:
 
@@ -2042,22 +2138,43 @@ Notice that the height $h$ does not appear explicitly in these formulas, althoug
         :align: right
         :scale: 50%
 
-    Find the area of the triangle :math:`\triangle ABC` given :math:`A = 115^\circ`, :math:`B=25^\circ`, :math:`C=40^\circ`, and $a = 12$.
+    已知 :math:`A = 115^\circ`、:math:`B=25^\circ`、:math:`C=40^\circ` 和 $a = 12$，求三角形 :math:`\triangle ABC` 的面积。
 
-    **Solution:** Using formula :eq:`2.26 <eqn:areacase2a>`, the area $K$ is given by:
+    **解答：** 使用公式 :eq:`2.26 <eqn:areacase2a>`，面积 $K$ 计算如下：
 
     .. math::
 
         \begin{align*}
-          K ~&=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;A}\\
-          &=~ \frac{12^2 \;\sin\;25^\circ \;\sin\;40^\circ}{2\;\sin\;115^\circ}\\
-          K ~&=~ 21.58
+        K ~&=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;A}\\
+        &=~ \frac{12^2 \;\sin\;25^\circ \;\sin\;40^\circ}{2\;\sin\;115^\circ}\\
+        K ~&=~ 21.58
         \end{align*}
 
+    .. toggle::
 
-*Case 3: Three sides.* Suppose that we have a triangle :math:`\triangle ABC` in which all three sides are known. Then *Heron's formula* [8]_ gives us the area:
+        .. figure:: ./img/e2.14.png 
+            :align: right
+            :scale: 50%
 
-.. [8] Due to the ancient Greek engineer and mathematician Heron of Alexandria (c. 10-70 A.D.).
+        Find the area of the triangle :math:`\triangle ABC` given :math:`A = 115^\circ`, :math:`B=25^\circ`, :math:`C=40^\circ`, and $a = 12$.
+
+        **Solution:** Using formula :eq:`2.26 <eqn:areacase2a>`, the area $K$ is given by:
+
+        .. math::
+
+            \begin{align*}
+            K ~&=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;A}\\
+            &=~ \frac{12^2 \;\sin\;25^\circ \;\sin\;40^\circ}{2\;\sin\;115^\circ}\\
+            K ~&=~ 21.58
+            \end{align*}
+
+*情况三：三条边。* 假设我们有一个三角形 :math:`\triangle ABC`，其三条边均已知。那么 *海伦公式* [8]_ 可以计算出三角形的面积：
+
+.. [8] 源于古希腊工程师兼数学家亚历山大的海伦（约公元 10-70 年）。
+
+    Due to the ancient Greek engineer and mathematician Heron of Alexandria (c. 10-70 A.D.).
+
+    **海伦公式**：对于边长为 $a$、$b$ 和 $c$ 的三角形 :math:`\triangle ABC`，令 :math:`s = \frac{1}{2}\,(a+b+c)` （即 :math:`2s = a+b+c` 是三角形的周长）。那么三角形的面积 $K$ 为
 
     **Heron's formula:** For a triangle :math:`\triangle ABC` with sides $a$, $b$, and $c$, let :math:`s = \frac{1}{2}\,(a+b+c)` (i.e. :math:`2s = a+b+c` is the perimeter of the triangle). Then the area $K$ of the triangle is
 
@@ -2066,9 +2183,9 @@ Notice that the height $h$ does not appear explicitly in these formulas, althoug
     .. math::
         :label: eqn:heron
 
-        \text{Area} ~=~ K ~=~ \sqrt{s\,(s-a)\,(s-b)\,(s-c)} ~~.
+        \text{Area} ~=~ K ~=~ \sqrt{s\,(s-a)\,(s-b)\,(s-c)} ~~。
 
-To prove this, first remember that the area $K$ is one-half the base times the height. Using $c$ as the base and the altitude $h$ as the height, as before in Figure :ref:`2.4.1 <fig:areacase1>`, we have :math:`K = \frac{1}{2}hc`. Squaring both sides gives us
+为了证明这一点，首先要记住，面积 $K$ 等于底乘以高的一半。以 $c$ 为底，以高 $h$ 为高，如前图 :ref:`2.4.1 <fig:areacase1>` 所示，可得 :math:`K = \frac{1}{2}hc`。两边取平方可得
 
 .. _equation 2.29:
 
@@ -2077,7 +2194,7 @@ To prove this, first remember that the area $K$ is one-half the base times the h
 
     K^2 = \tfrac{1}{4}\,h^2 c^2 ~.
 
-In Figure :ref:`2.4.2 <fig:heron>`, let $D$ be the point where the altitude touches :math:`\overline{AB}` (or its extension).
+在图 :ref:`2.4.2 <fig:heron>` 中，令 $D$ 为高与 :math:`\overline{AB}` （或其延长线）的交点。
 
 .. _Figure 2.4.2:
 
@@ -2087,20 +2204,19 @@ In Figure :ref:`2.4.2 <fig:heron>`, let $D$ be the point where the altitude touc
     :align: center
     :scale: 50%
 
-    **Figure 2.4.2 Proof of Heron's formula**
+**图 2.4.2 海伦公式的证明**
 
-By the Pythagorean Theorem, we see that :math:`\;h^2 = b^2 - (AD)^2`. In Figure :ref:`2.4.2 <fig:heron>` (a), we see that $\;AD = b\;\cos\;A$. And in Figure :ref:`2.4.2 <fig:heron>` (b) we see that :math:`\;AD = b\;\cos\;(180^\circ - A) = -b\cos\;A`. Hence, in either case we have :math:`\;(AD)^2 = b^2 \;(\cos\;A)^2`, and so
-
+根据勾股定理，我们得到 :math:`\;h^2 = b^2 - (AD)^2`。在图 :ref:`2.4.2 <fig:heron>` (a) 中，我们看到 :math:`\;AD = b\;\cos\;A`。在图 :ref:`2.4.2 <fig:heron>` (b) 中，我们看到 :math:`\;AD = b\;\cos\;(180^\circ - A) = -b\cos\;A`。因此，无论哪种情况，我们都有 :math:`\;(AD)^2 = b^2 \;(\cos\;A)^2`，因此
 
 .. _equation 2.31:
 
 .. math::
     :label: eqn:heronproof2
 
-    h^2 ~=~ b^2 - b^2 \;(\cos\;A)^2 ~=~ b^2 \,(1 - (\cos\;A)^2 ) ~=~ b^2 \,(1+ \cos\;A)\,(1- \cos\;A)~.
+    h^2 ~=~ b^2 - b^2 \;(\cos\;A)^2 ~=~ b^2 \,(1 - (\cos\;A)^2 ) ~=~ b^2 \,(1+ \cos\;A)\,(1- \cos\;A)~。
 
-(Note that the above equation also holds when :math:`A=90^\circ` since :math:`\cos\;90^\circ =0` and $h=b$).
-Thus, substituting equation :eq:`2.31 <eqn:heronproof2>` into equation :eq:`2.30 <eqn:heronproof1>`, we have
+（注意，当 :math:`A=90^\circ` 时，上述等式也成立，因为 :math:`\cos\;90^\circ =0` 且 $h=b$）。
+因此，将方程 :eq:`2.31 <eqn:heronproof2>` 代入方程 :eq:`2.30 <eqn:heronproof1>`，可得
 
 .. _equation 2.32:
 
@@ -2109,50 +2225,138 @@ Thus, substituting equation :eq:`2.31 <eqn:heronproof2>` into equation :eq:`2.30
 
     K^2 = \tfrac{1}{4}\,b^2 c^2 \,(1+ \cos\;A)\,(1- \cos\;A) ~.
 
-By the Law of Cosines we know that
+根据余弦定律，我们知道
 
 .. math::
 
     \begin{align*}
     1 + \cos\;A ~&=~ 1 + \frac{b^2 + c^2 - a^2}{2bc} ~=~ \frac{2bc + b^2 + c^2 - a^2}{2bc}
-      ~=~ \frac{(b+c)^2 - a^2}{2bc} ~=~ \frac{((b+c) + a)\,((b+c) - a)}{2bc}\\
-      &=~ \frac{(a + b + c)\,(b + c - a)}{2bc} ~,
+    ~=~ \frac{(b+c)^2 - a^2}{2bc} ~=~ \frac{((b+c) + a)\,((b+c) - a)}{2bc}\\
+    &=~ \frac{(a + b + c)\,(b + c - a)}{2bc} ~,
     \end{align*}
 
-and similarly
+类似地
 
 .. math::
 
     \begin{align*}
     1 - \cos\;A ~&=~ 1 - \frac{b^2 + c^2 - a^2}{2bc} ~=~ \frac{2bc - b^2 - c^2 + a^2}{2bc}
-      ~=~ \frac{a^2 - (b-c)^2}{2bc} ~=~ \frac{(a - (b-c))\,(a + (b-c))}{2bc}\\
-      &=~ \frac{(a - b + c)\,(a + b - c)}{2bc} ~.
+    ~=~ \frac{a^2 - (b-c)^2}{2bc} ~=~ \frac{(a - (b-c))\,(a + (b-c))}{2bc}\\
+    &=~ \frac{(a - b + c)\,(a + b - c)}{2bc} ~.
     \end{align*}
 
-Thus, substituting these expressions into equation :eq:`2.32 <eqn:heronproof3>`, we have
+因此，将这些表达式代入方程 :eq:`2.32 <eqn:heronproof3>`，我们得到
 
 .. math::
 
     \begin{align*}
     K^2 ~&=~ \tfrac{1}{4}\,b^2 c^2 \;\frac{(a + b + c)\,(b + c - a)}{2bc} \;\cdot\;
-      \frac{(a - b + c)\,(a + b - c)}{2bc}\\
-      &=~ \frac{a + b + c}{2} \;\cdot\; \frac{b + c - a}{2} \;\cdot\; \frac{a - b + c}{2} \;\cdot\;
-      \frac{a + b - c}{2} ~,
+    \frac{(a - b + c)\,(a + b - c)}{2bc}\\
+    &=~ \frac{a + b + c}{2} \;\cdot\; \frac{b + c - a}{2} \;\cdot\; \frac{a - b + c}{2} \;\cdot\;
+    \frac{a + b - c}{2} ~,
     \end{align*}
 
-and since we defined :math:`s = \frac{1}{2}\,(a+b+c)`, we see that
+由于我们定义了 :math:`s = \frac{1}{2}\,(a+b+c)`，因此
 
 .. math::
 
-      K^2 ~=~ s\,(s-a)\,(s-b)\,(s-c) ~,\\
+    K^2 ~=~ s\,(s-a)\,(s-b)\,(s-c) ~,\\
 
-so upon taking square roots we get
+因此，开平方后我们得到
 
 .. math::
 
     K ~=~ \sqrt{s\,(s-a)\,(s-b)\,(s-c)} ~~.\quad
-    
+
 [qed]
+
+.. toggle::
+
+    *Case 3: Three sides.* Suppose that we have a triangle :math:`\triangle ABC` in which all three sides are known. Then *Heron's formula* [8]_ gives us the area:
+
+    .. [8] Due to the ancient Greek engineer and mathematician Heron of Alexandria (c. 10-70 A.D.).
+
+        **Heron's formula:** For a triangle :math:`\triangle ABC` with sides $a$, $b$, and $c$, let :math:`s = \frac{1}{2}\,(a+b+c)` (i.e. :math:`2s = a+b+c` is the perimeter of the triangle). Then the area $K$ of the triangle is
+
+        .. math::
+            :label: eqn:heron
+
+            \text{Area} ~=~ K ~=~ \sqrt{s\,(s-a)\,(s-b)\,(s-c)} ~~.
+
+    To prove this, first remember that the area $K$ is one-half the base times the height. Using $c$ as the base and the altitude $h$ as the height, as before in Figure :ref:`2.4.1 <fig:areacase1>`, we have :math:`K = \frac{1}{2}hc`. Squaring both sides gives us
+
+    .. math::
+        :label: eqn:heronproof1
+
+        K^2 = \tfrac{1}{4}\,h^2 c^2 ~.
+
+    In Figure :ref:`2.4.2 <fig:heron>`, let $D$ be the point where the altitude touches :math:`\overline{AB}` (or its extension).
+
+    .. figure:: ./img/f2.4.2.png
+        :align: center
+        :scale: 50%
+
+        **Figure 2.4.2 Proof of Heron's formula**
+
+    By the Pythagorean Theorem, we see that :math:`\;h^2 = b^2 - (AD)^2`. In Figure :ref:`2.4.2 <fig:heron>` (a), we see that $\;AD = b\;\cos\;A$. And in Figure :ref:`2.4.2 <fig:heron>` (b) we see that :math:`\;AD = b\;\cos\;(180^\circ - A) = -b\cos\;A`. Hence, in either case we have :math:`\;(AD)^2 = b^2 \;(\cos\;A)^2`, and so
+
+    .. math::
+        :label: eqn:heronproof2
+
+        h^2 ~=~ b^2 - b^2 \;(\cos\;A)^2 ~=~ b^2 \,(1 - (\cos\;A)^2 ) ~=~ b^2 \,(1+ \cos\;A)\,(1- \cos\;A)~.
+
+    (Note that the above equation also holds when :math:`A=90^\circ` since :math:`\cos\;90^\circ =0` and $h=b$).
+    Thus, substituting equation :eq:`2.31 <eqn:heronproof2>` into equation :eq:`2.30 <eqn:heronproof1>`, we have
+
+    .. math::
+        :label: eqn:heronproof3
+
+        K^2 = \tfrac{1}{4}\,b^2 c^2 \,(1+ \cos\;A)\,(1- \cos\;A) ~.
+
+    By the Law of Cosines we know that
+
+    .. math::
+
+        \begin{align*}
+        1 + \cos\;A ~&=~ 1 + \frac{b^2 + c^2 - a^2}{2bc} ~=~ \frac{2bc + b^2 + c^2 - a^2}{2bc}
+        ~=~ \frac{(b+c)^2 - a^2}{2bc} ~=~ \frac{((b+c) + a)\,((b+c) - a)}{2bc}\\
+        &=~ \frac{(a + b + c)\,(b + c - a)}{2bc} ~,
+        \end{align*}
+
+    and similarly
+
+    .. math::
+
+        \begin{align*}
+        1 - \cos\;A ~&=~ 1 - \frac{b^2 + c^2 - a^2}{2bc} ~=~ \frac{2bc - b^2 - c^2 + a^2}{2bc}
+        ~=~ \frac{a^2 - (b-c)^2}{2bc} ~=~ \frac{(a - (b-c))\,(a + (b-c))}{2bc}\\
+        &=~ \frac{(a - b + c)\,(a + b - c)}{2bc} ~.
+        \end{align*}
+
+    Thus, substituting these expressions into equation :eq:`2.32 <eqn:heronproof3>`, we have
+
+    .. math::
+
+        \begin{align*}
+        K^2 ~&=~ \tfrac{1}{4}\,b^2 c^2 \;\frac{(a + b + c)\,(b + c - a)}{2bc} \;\cdot\;
+        \frac{(a - b + c)\,(a + b - c)}{2bc}\\
+        &=~ \frac{a + b + c}{2} \;\cdot\; \frac{b + c - a}{2} \;\cdot\; \frac{a - b + c}{2} \;\cdot\;
+        \frac{a + b - c}{2} ~,
+        \end{align*}
+
+    and since we defined :math:`s = \frac{1}{2}\,(a+b+c)`, we see that
+
+    .. math::
+
+        K^2 ~=~ s\,(s-a)\,(s-b)\,(s-c) ~,\\
+
+    so upon taking square roots we get
+
+    .. math::
+
+        K ~=~ \sqrt{s\,(s-a)\,(s-b)\,(s-c)} ~~.\quad
+        
+    [qed]
 
 .. _Example 2.15
 
@@ -2164,20 +2368,41 @@ so upon taking square roots we get
         :align: right
         :scale: 50%
 
-    Find the area of the triangle :math:`\triangle ABC` given $a=5$, $b=4$, and $c = 7$.
+    给定 $a=5$、$b=4$ 和 $c = 7$，求三角形 :math:`\triangle ABC` 的面积。
 
-    **Solution:** Using Heron's formula with :math:`s = \frac{1}{2}\,(a+b+c) = \frac{1}{2}\,(5+4+7) = 8`, the area $K$ is given by:
+    **解答：** 使用海伦公式，其中 :math:`s = \frac{1}{2}\,(a+b+c) = \frac{1}{2}\,(5+4+7) = 8`，面积 $K$ 为：
 
     .. math::
 
         \begin{align*}
-          K ~&=~ \sqrt{s\,(s-a)\,(s-b)\,(s-c)}\\
-          &=~ \sqrt{8\,(8-5)\,(8-4)\,(8-7)} ~=~ \sqrt{96} \quad\Rightarrow\quad \boxed{K ~=~ 4\,\sqrt{6}
-          ~\approx~ 9.8} ~.
+        K ~&=~ \sqrt{s\,(s-a)\,(s-b)\,(s-c)}\\
+        &=~ \sqrt{8\,(8-5)\,(8-4)\,(8-7)} ~=~ \sqrt{96} \quad\Rightarrow\quad \boxed{K ~=~ 4\,\sqrt{6}
+        ~\approx~ 9.8} ~.
         \end{align*}
 
+    .. toggle::
 
-Heron's formula is useful for theoretical purposes (e.g. in deriving other formulas). However, it is not well-suited for calculator use, exhibiting what is called *numerical instability* for "extreme" triangles, as in the following example.
+        .. figure:: ./img/e2.15.png 
+            :align: right
+            :scale: 50%
+
+        Find the area of the triangle :math:`\triangle ABC` given $a=5$, $b=4$, and $c = 7$.
+
+        **Solution:** Using Heron's formula with :math:`s = \frac{1}{2}\,(a+b+c) = \frac{1}{2}\,(5+4+7) = 8`, the area $K$ is given by:
+
+        .. math::
+
+            \begin{align*}
+            K ~&=~ \sqrt{s\,(s-a)\,(s-b)\,(s-c)}\\
+            &=~ \sqrt{8\,(8-5)\,(8-4)\,(8-7)} ~=~ \sqrt{96} \quad\Rightarrow\quad \boxed{K ~=~ 4\,\sqrt{6}
+            ~\approx~ 9.8} ~.
+            \end{align*}
+
+海伦公式在理论方面很有用（例如，在推导其他公式时）。然而，它不太适合用计算器计算，在计算“极端”三角形时会表现出所谓的“数值不稳定性”，如下例所示。
+
+.. toggle::
+
+    Heron's formula is useful for theoretical purposes (e.g. in deriving other formulas). However, it is not well-suited for calculator use, exhibiting what is called *numerical instability* for "extreme" triangles, as in the following example.
 
 .. _Example 2.16
 
@@ -2185,43 +2410,83 @@ Heron's formula is useful for theoretical purposes (e.g. in deriving other formu
 
 .. admonition:: Example 2.16
 
-    Find the area of the triangle :math:`\triangle ABC` given $a=1000000$, $b=999999.9999979$, and $c = 0.0000029$.
+    给定 $a=1000000$、$b=999999.9999979$ 和 $c = 0.0000029$，求三角形 :math:`\triangle ABC` 的面积。
 
-    **Solution:** To use Heron's formula, we need to calculate :math:`s = \frac{1}{2}\,(a+b+c)`. Notice that the actual value of $a+b+c$ is $2000000.0000008$, which has $14$ digits. Most calculators can store $12$-$14$ digits internally (even if they display less), and hence may round off that value of $a+b+c$ to $2000000$. When we then divide that rounded value for $a+b+c$ by $2$ to get $s$, some calculators (e.g. the TI-83 Plus) will give a rounded down value of $1000000$.
+    **解答：** 要使用海伦公式，我们需要计算 :math:`s = \frac{1}{2}\,(a+b+c)`。注意，$a+b+c$ 的实际值为 $2000000.0000008$，有 $14$ 位数字。大多数计算器内部可以存储 $12$-$14$ 位数字（即使显示的位数更少），因此可能会将 $a+b+c$ 的值四舍五入为 $2000000$。当我们将 $a+b+c$ 的四舍五入值除以 $2$ 得到 $s$ 时，某些计算器（例如 TI-83 Plus）会给出向下舍入的值 $1000000$。
 
-    This is a problem because $a=1000000$, and so we would get $s-a=0$, causing Heron's formula to give us an area of $0$ for the triangle! And this is indeed the incorrect answer that the TI-83 Plus returns. Other calculators may give some other inaccurate answer, depending on how they store values internally. The actual area - accurate to $15$ decimal places - is $K = 0.99999999999895$, i.e. it is basically $1$.
+    这是一个问题，因为 $a=1000000$，所以我们会得到 $s-a=0$，导致海伦公式计算出的三角形面积为 $0$！这确实是 TI-83 Plus 返回的错误答案。其他计算器可能会给出其他不准确的答案，具体取决于它们内部存储值的方式。实际面积（精确到小数点后 15 位）为 $K = 0.99999999999895$，即它基本上为 $1$。
 
-The above example shows how problematic *floating-point arithmetic* can be. [9]_ Luckily there is a better formula [10]_ for the area of a triangle when the three sides are known:
+    .. toggle::
 
-    For a triangle :math:`\triangle ABC` with sides :math:`a \ge b \ge c`, the area is :
-    
-    .. _equation 2.33
+        Find the area of the triangle :math:`\triangle ABC` given $a=1000000$, $b=999999.9999979$, and $c = 0.0000029$.
 
-    .. math::
-        :label: eqn:kahan
+        **Solution:** To use Heron's formula, we need to calculate :math:`s = \frac{1}{2}\,(a+b+c)`. Notice that the actual value of $a+b+c$ is $2000000.0000008$, which has $14$ digits. Most calculators can store $12$-$14$ digits internally (even if they display less), and hence may round off that value of $a+b+c$ to $2000000$. When we then divide that rounded value for $a+b+c$ by $2$ to get $s$, some calculators (e.g. the TI-83 Plus) will give a rounded down value of $1000000$.
 
-        \text{Area} ~=~ K ~=~ \tfrac{1}{4}\,\sqrt{(a + (b+c))\,(c - (a-b))\,(c + (a-b))\,(a + (b-c))}
+        This is a problem because $a=1000000$, and so we would get $s-a=0$, causing Heron's formula to give us an area of $0$ for the triangle! And this is indeed the incorrect answer that the TI-83 Plus returns. Other calculators may give some other inaccurate answer, depending on how they store values internally. The actual area - accurate to $15$ decimal places - is $K = 0.99999999999895$, i.e. it is basically $1$.
 
-.. [9] This is an issue even on modern computers. There is an excellent overview of this important subject in the article *What Every Computer Scientist Should Know About Floating-Point Arithmetic* by D. Goldberg, available at http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
+上面的例子展示了 *浮点运算* 的复杂性。[9]_ 幸运的是，当三条边已知时，有一个更好的公式 [10]_ 来计算三角形的面积：
 
-.. [10] Due to W. Kahan: http://www.eecs.berkeley.edu/~wkahan/Triangle.pdf
+对于边长为 :math:`\triangle ABC` 的三角形 :math:`a \ge b \ge c`，其面积为：
 
-To use this formula, sort the names of the sides so that :math:`a \ge b \ge c`. Then perform the operations inside the square root *in the exact order in which they appear in the formula, including the use of parentheses*. Then take the square root and divide by $4$. For the triangle in Example :ref:`2.16 <exmp:heronfail>`, the above formula gives an answer of exactly $K = 1$ on the same TI-83 Plus calculator that failed with Heron's formula. What is amazing about this formula is that it is just Heron's formula rewritten! The use of parentheses is what forces the correct order of operations for numerical stability.
+.. _equation 2.33
 
-Another formula [11]_ for the area of a triangle given its three sides is given below:
+.. math::
+    :label: eqn:kahan
 
-.. [11] Due to the Chinese mathematician Qiu Jiushao (ca. 1202-1261).
+    \text{Area} ~=~ K ~=~ \tfrac{1}{4}\,\sqrt{(a + (b+c))\,(c - (a-b))\,(c + (a-b))\,(a + (b-c))}
 
-For a triangle :math:`\triangle ABC` with sides $a \ge b \ge c$, the area is:
+.. [9] 即使在现代计算机上，这仍然是一个问题。 D. Goldberg 的文章《每个计算机科学家都应该知道的浮点运算》对这一重要主题进行了精彩的概述，网址为 http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
 
-    .. _equation 2.34
+   This is an issue even on modern computers. There is an excellent overview of this important subject in the article *What Every Computer Scientist Should Know About Floating-Point Arithmetic* by D. Goldberg, available at http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
 
-    .. math::
-        :label: eqn:jiushao
+.. [10] 感谢 W. Kahan：http://www.eecs.berkeley.edu/~wkahan/Triangle.pdf
 
-        \text{Area} ~=~ K ~=~ \tfrac{1}{2}\,\sqrt{a^2 c^2 ~-~ \left( \tfrac{a^2 + c^2 - b^2}{2} \right)^2}
+   Due to W. Kahan: http://www.eecs.berkeley.edu/~wkahan/Triangle.pdf
 
-For the triangle in Example :ref:`2.16 <exmp:heronfail>`, the above formula gives an answer of exactly $K = 1$ on the same TI-83 Plus calculator that failed with Heron's formula.
+要使用此公式，请将边的名称排序，使得 :math:`a \ge b \ge c`。然后， *按照公式中出现的顺序（包括括号的使用）对平方根内的运算进行操作* 。然后，取平方根并除以 4。对于示例 :ref:`2.16 <exmp:heronfail>` 中的三角形，上述公式在与海伦公式不符的同一台 TI-83 Plus 计算器上，给出的答案恰好是 $K = 1$。这个公式的神奇之处在于，它只是海伦公式的重写版！括号的使用是为了确保数值稳定性，强制运算顺序正确。
+
+另一个公式 [11]_ 给出了三角形三条边的面积，如下所示：
+
+.. [11] 源自中国数学家邱九韶（约 1202-1261 年）。
+
+   Due to the Chinese mathematician Qiu Jiushao (ca. 1202-1261).
+
+对于边长为 :math:`a \ge b \ge c` 的三角形 :math:`\triangle ABC`，其面积为：
+
+.. _equation 2.34
+
+.. math::
+    :label: eqn:jiushao
+
+    \text{Area} ~=~ K ~=~ \tfrac{1}{2}\,\sqrt{a^2 c^2 ~-~ \left( \tfrac{a^2 + c^2 - b^2}{2} \right)^2}
+
+对于示例 :ref:`2.16 <exmp:heronfail>` 中的三角形，在使用海伦公式计算失败的同一台 TI-83 Plus 计算器上，上述公式的计算结果恰好为 $K = 1$。
+
+.. toggle::
+
+    The above example shows how problematic *floating-point arithmetic* can be. [9]_ Luckily there is a better formula [10]_ for the area of a triangle when the three sides are known:
+
+        For a triangle :math:`\triangle ABC` with sides :math:`a \ge b \ge c`, the area is :
+        
+        .. _equation 2.33
+
+        .. math::
+            :label: eqn:kahan
+
+            \text{Area} ~=~ K ~=~ \tfrac{1}{4}\,\sqrt{(a + (b+c))\,(c - (a-b))\,(c + (a-b))\,(a + (b-c))}
+
+    To use this formula, sort the names of the sides so that :math:`a \ge b \ge c`. Then perform the operations inside the square root *in the exact order in which they appear in the formula, including the use of parentheses*. Then take the square root and divide by $4$. For the triangle in Example :ref:`2.16 <exmp:heronfail>`, the above formula gives an answer of exactly $K = 1$ on the same TI-83 Plus calculator that failed with Heron's formula. What is amazing about this formula is that it is just Heron's formula rewritten! The use of parentheses is what forces the correct order of operations for numerical stability.
+
+    Another formula [11]_ for the area of a triangle given its three sides is given below:
+
+    For a triangle :math:`\triangle ABC` with sides $a \ge b \ge c$, the area is:
+
+        .. math::
+            :label: eqn:jiushao
+
+            \text{Area} ~=~ K ~=~ \tfrac{1}{2}\,\sqrt{a^2 c^2 ~-~ \left( \tfrac{a^2 + c^2 - b^2}{2} \right)^2}
+
+    For the triangle in Example :ref:`2.16 <exmp:heronfail>`, the above formula gives an answer of exactly $K = 1$ on the same TI-83 Plus calculator that failed with Heron's formula.
 
 练习
 ~~~~~~~~~~~~~~
@@ -2229,7 +2494,7 @@ Exercises
 
 .. _sec2dot4:
 
-For Exercises 1-6, find the area of the triangle :math:`\triangle ABC`.
+练习 1-6，求三角形 :math:`\triangle ABC` 的面积。
 
 1. :math:`A = 70^\circ`, $b = 4$, $c = 12$
 2. $a = 10$, :math:`B = 95^\circ`, $c = 35$
@@ -2240,7 +2505,7 @@ For Exercises 1-6, find the area of the triangle :math:`\triangle ABC`.
 
 .. _exer:areaquad:
 
-7. Find the area of the quadrilateral in Figure :ref:`2.4.3 <fig:areaquad>` below.
+7. 查找下图 :ref:`2.4.3 <fig:areaquad>` 中四边形的面积。
 
 .. _fig:areaquad:
 
@@ -2250,7 +2515,7 @@ For Exercises 1-6, find the area of the triangle :math:`\triangle ABC`.
     :align: left
     :scale: 50%
 
-    **Fiugre 2.4.3 Exercise** :ref:`7 <exer:areaquad>`
+    **图 2.4.3 练习** :ref:`7 <exer:areaquad>`
 
 .. _fig:areaquaddiag:
 
@@ -2260,30 +2525,74 @@ For Exercises 1-6, find the area of the triangle :math:`\triangle ABC`.
     :align: center
     :scale: 50%
 
-    **Fiugre 2.4.4 Exercise** :ref:`8 <exer:areaquaddiag>`
+    **图 2.4.4 练习** :ref:`8 <exer:areaquaddiag>`
 
 .. _exer:areaquaddiag:
 
-8. Let $ABCD$ be a quadrilateral which completely contains its two diagonals, as in Figure :ref:`2.4.4 <fig:areaquaddiag>` above. Show that the area $K$ of $ABCD$ is equal to half the product of its diagonals and the sine of the angle they form, i.e. :math:`K = \frac{1}{2}\,AC\,\cdot\,BD\;\sin\;\theta\;`.
+8. 设 $ABCD$ 为完全包含其两条对角线的四边形，如图 :ref:`2.4.4 所示<fig:areaquaddiag>` 如上所述。证明 $ABCD$ 的面积 $K$ 等于其对角线与它们所夹角的正弦值乘积的一半，即 :math:`K = \frac{1}{2}\,AC\,\cdot\,BD\;\sin\;\theta\;`。
 
-9. From formula :eq:`2.26 <eqn:areacase2a>` derive the following formula for the area of a triangle :math:`\triangle ABC`:
+9. 根据公式 :eq:`2.26 <eqn:areacase2a>` 推导出三角形 :math:`\triangle ABC` 的面积公式：
 
-    .. math::
+.. math::
 
-        \text{Area} ~=~ K ~=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;(B+C)}
+    \text{Area} ~=~ K ~=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;(B+C)}
 
-10. Show that the triangle area formula
+10. 证明三角形面积公式
 
-    .. math::
+.. math::
 
-        \text{Area} ~=~ K ~=~ \tfrac{1}{4}\,\sqrt{(a + (b+c))\,(c - (a-b))\,(c + (a-b))\,(a + (b-c))}
+    \text{Area} ~=~ K ~=~ \tfrac{1}{4}\,\sqrt{(a + (b+c))\,(c - (a-b))\,(c + (a-b))\,(a + (b-c))}
 
-    is equivalent to Heron's formula. (*Hint: In Heron's formula replace* $s$ by :math:`\frac{1}{2}(a+b+c)`.)
+与海伦公式等价。 （*提示：在海伦公式中，将* $s$ 替换为 :math:`\frac{1}{2}(a+b+c)`。）
 
 .. _exmp:jiushao:
 
-11. Show that the triangle area formula :eq:`2.34 <eqn:jiushao>` is equivalent to Heron's formula. (*Hint: Factor the expression inside the square root.*)
-12. Find the angle $A$ in Example :ref:`2.16 <exmp:heronfail>`, then use formula :eq:`2.23 <eqn:areacase1a>` to find the area. Did it work?
+11. 证明三角形面积公式 :eq:`2.34 <eqn:jiushao>` 与海伦公式等价。（*提示：将表达式分解为平方根。*）
+12. 求出例题 :ref:`2.16 <exmp:heronfail>` 中的角 $A$，然后使用公式 :eq:`2.23 <eqn:areacase1a>` 求面积。这样算对了吗？
+
+.. toggle::
+
+    For Exercises 1-6, find the area of the triangle :math:`\triangle ABC`.
+
+    1. :math:`A = 70^\circ`, $b = 4$, $c = 12$
+    2. $a = 10$, :math:`B = 95^\circ`, $c = 35$
+    3. :math:`A = 10^\circ`, :math:`B = 48^\circ`, :math:`C = 122^\circ`, $c = 11$
+    4. :math:`A = 171^\circ`, :math:`B = 1^\circ`, :math:`C = 8^\circ`, $b = 2$
+    5. $a = 2$, $b = 3$, $c = 4$
+    6. $a = 5$, $b=6$, $c = 5$
+
+    7. Find the area of the quadrilateral in Figure :ref:`2.4.3 <fig:areaquad>` below.
+
+    .. figure:: ./img/f2.4.3.png
+        :align: left
+        :scale: 50%
+
+        **Fiugre 2.4.3 Exercise** :ref:`7 <exer:areaquad>`
+
+    .. figure:: ./img/f2.4.4.png
+        :align: center
+        :scale: 50%
+
+        **Fiugre 2.4.4 Exercise** :ref:`8 <exer:areaquaddiag>`
+
+    8. Let $ABCD$ be a quadrilateral which completely contains its two diagonals, as in Figure :ref:`2.4.4 <fig:areaquaddiag>` above. Show that the area $K$ of $ABCD$ is equal to half the product of its diagonals and the sine of the angle they form, i.e. :math:`K = \frac{1}{2}\,AC\,\cdot\,BD\;\sin\;\theta\;`.
+
+    9. From formula :eq:`2.26 <eqn:areacase2a>` derive the following formula for the area of a triangle :math:`\triangle ABC`:
+
+        .. math::
+
+            \text{Area} ~=~ K ~=~ \frac{a^2 \;\sin\;B \;\sin\;C}{2\;\sin\;(B+C)}
+
+    10. Show that the triangle area formula
+
+        .. math::
+
+            \text{Area} ~=~ K ~=~ \tfrac{1}{4}\,\sqrt{(a + (b+c))\,(c - (a-b))\,(c + (a-b))\,(a + (b-c))}
+
+        is equivalent to Heron's formula. (*Hint: In Heron's formula replace* $s$ by :math:`\frac{1}{2}(a+b+c)`.)
+
+    11. Show that the triangle area formula :eq:`2.34 <eqn:jiushao>` is equivalent to Heron's formula. (*Hint: Factor the expression inside the square root.*)
+    12. Find the angle $A$ in Example :ref:`2.16 <exmp:heronfail>`, then use formula :eq:`2.23 <eqn:areacase1a>` to find the area. Did it work?
 
 2.5 外接圆与内切圆
 -------------------------------------
