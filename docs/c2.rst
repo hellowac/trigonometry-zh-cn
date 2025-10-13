@@ -2204,7 +2204,7 @@ The Area of a Triangle
     :align: center
     :scale: 50%
 
-**图 2.4.2 海伦公式的证明**
+    **图 2.4.2 海伦公式的证明**
 
 根据勾股定理，我们得到 :math:`\;h^2 = b^2 - (AD)^2`。在图 :ref:`2.4.2 <fig:heron>` (a) 中，我们看到 :math:`\;AD = b\;\cos\;A`。在图 :ref:`2.4.2 <fig:heron>` (b) 中，我们看到 :math:`\;AD = b\;\cos\;(180^\circ - A) = -b\cos\;A`。因此，无论哪种情况，我们都有 :math:`\;(AD)^2 = b^2 \;(\cos\;A)^2`，因此
 
@@ -2230,9 +2230,11 @@ The Area of a Triangle
 .. math::
 
     \begin{align*}
-    1 + \cos\;A ~&=~ 1 + \frac{b^2 + c^2 - a^2}{2bc} ~=~ \frac{2bc + b^2 + c^2 - a^2}{2bc}
-    ~=~ \frac{(b+c)^2 - a^2}{2bc} ~=~ \frac{((b+c) + a)\,((b+c) - a)}{2bc}\\
-    &=~ \frac{(a + b + c)\,(b + c - a)}{2bc} ~,
+    1 + \cos\;A ~&=~ 1 + \frac{b^2 + c^2 - a^2}{2bc} \\
+    ~&=~ \frac{2bc + b^2 + c^2 - a^2}{2bc} \\
+    ~&=~ \frac{(b+c)^2 - a^2}{2bc} \\
+    ~&=~ \frac{((b+c) + a)\,((b+c) - a)}{2bc} \\
+    ~&=~ \frac{(a + b + c)\,(b + c - a)}{2bc} ~,
     \end{align*}
 
 类似地
@@ -2240,9 +2242,11 @@ The Area of a Triangle
 .. math::
 
     \begin{align*}
-    1 - \cos\;A ~&=~ 1 - \frac{b^2 + c^2 - a^2}{2bc} ~=~ \frac{2bc - b^2 - c^2 + a^2}{2bc}
-    ~=~ \frac{a^2 - (b-c)^2}{2bc} ~=~ \frac{(a - (b-c))\,(a + (b-c))}{2bc}\\
-    &=~ \frac{(a - b + c)\,(a + b - c)}{2bc} ~.
+    1 - \cos\;A ~&=~ 1 - \frac{b^2 + c^2 - a^2}{2bc} \\
+    ~&=~ \frac{2bc - b^2 - c^2 + a^2}{2bc} \\
+    ~&=~ \frac{a^2 - (b-c)^2}{2bc} \\
+    ~&=~ \frac{(a - (b-c))\,(a + (b-c))}{2bc}\\
+    ~&=~ \frac{(a - b + c)\,(a + b - c)}{2bc} ~.
     \end{align*}
 
 因此，将这些表达式代入方程 :eq:`2.32 <eqn:heronproof3>`，我们得到
@@ -2917,8 +2921,10 @@ Circumscribed and Inscribed Circles
 
     \begin{align*}
     2\,s ~&=~ a ~+~ b ~+~ c ~=~ (AD + DB ) ~+~ (CE + EB) ~+~ (AF + FC)\\
-    &=~ AD ~+~ EB ~+~ CE ~+~ EB ~+~ AD ~+~ CE ~=~ 2\,(AD + EB + CE)\\
-    s ~&=~ AD ~+~ EB ~+~ CE ~=~ AD ~+~ a\\
+    ~&=~ AD ~+~ EB ~+~ CE ~+~ EB ~+~ AD ~+~ CE \\
+    ~&=~ 2\,(AD + EB + CE)\\
+    s ~&=~ AD ~+~ EB ~+~ CE \\
+      ~&=~ AD ~+~ a\\
     AD ~&=~ s - a ~.
     \end{align*}
 
@@ -3113,9 +3119,9 @@ Circumscribed and Inscribed Circles
 
     .. math::
 
-        r ~=~ \sqrt{\frac{(s-a)\,(s-b)\,(s-c)}{s}} ~=~
-        \sqrt{\frac{\left(\frac{9}{2}-2\right)\,\left(\frac{9}{2}-3\right)\,\left(\frac{9}{2}-
-        4\right)}{\frac{9}{2}}} ~=~ \sqrt{\frac{5}{12}}~。
+        r ~&=~ \sqrt{\frac{(s-a)\,(s-b)\,(s-c)}{s}} \\
+          ~&=~ \sqrt{\frac{\left(\frac{9}{2}-2\right)\,\left(\frac{9}{2}-3\right)\,\left(\frac{9}{2}- 4\right)}{\frac{9}{2}}} \\
+          ~&=~ \sqrt{\frac{5}{12}}~。
 
     图 :ref:`2.5.8 <fig:inscrib234>` 展示了如何画内切圆：画出 $A$ 和 $B$ 的角平分线，然后在它们的交点处用圆规画一个半径为 :math:`r = \sqrt{5/12} \approx 0.645` 的圆。
 
@@ -3132,9 +3138,9 @@ Circumscribed and Inscribed Circles
 
         .. math::
 
-            r ~=~ \sqrt{\frac{(s-a)\,(s-b)\,(s-c)}{s}} ~=~
-            \sqrt{\frac{\left(\frac{9}{2}-2\right)\,\left(\frac{9}{2}-3\right)\,\left(\frac{9}{2}-
-            4\right)}{\frac{9}{2}}} ~=~ \sqrt{\frac{5}{12}}~.
+            r ~&=~ \sqrt{\frac{(s-a)\,(s-b)\,(s-c)}{s}} \\
+            ~&=~ \sqrt{\frac{\left(\frac{9}{2}-2\right)\,\left(\frac{9}{2}-3\right)\,\left(\frac{9}{2}- 4\right)}{\frac{9}{2}}} \\
+            ~&=~ \sqrt{\frac{5}{12}}~。
 
         Figure :ref:`2.5.8 <fig:inscrib234>` shows how to draw the inscribed circle: draw the bisectors of $A$ and $B$, then at their intersection use a compass to draw a circle of radius :math:`r = \sqrt{5/12} \approx 0.645`.
 
