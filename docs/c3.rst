@@ -4,73 +4,71 @@
 ===========================================
 Chapter 3 Identities
 
-基本三角恒等式  
+.. _c3.1:
+
+1. 基本三角恒等式  
 -------------------------------
 Basic Trigonometric Identities
 
-So far we know a few relations between the trigonometric functions. For example, we know the
-reciprocal relations:
+到目前为止，我们知道了三角函数之间的一些关系。例如，我们知道以下互逆关系：
 
+1. 当 :math:`\sin\;\theta \ne 0` 时， :math:`\csc\;\theta ~=~ \dfrac{1}{\sin\;\theta}\qquad`
+2. 当 :math:`\cos\;\theta \ne 0` 时， :math:`\sec\;\theta ~=~ \dfrac{1}{\cos\;\theta}\qquad`
+3. 当 :math:`\tan\;\theta` 有定义且不为 0 时， :math:`\cot\;\theta ~=~ \dfrac{1}{\tan\;\theta}\qquad`
+4. 当 :math:`\sin\;\theta ~=~ \dfrac{1}{\csc\;\theta}\qquad` :math:`\csc\;\theta` 有定义且不为 0
+5. :math:`\cos\;\theta ~=~ \dfrac{1}{\sec\;\theta}\qquad`，当 :math:`\sec\;\theta` 有定义且不为 0
+6. :math:`\tan\;\theta ~=~ \dfrac{1}{\cot\;\theta}\qquad`，当 :math:`\cot\;\theta` 有定义且不为 0
 
-1. :math:`\csc\;\theta ~=~ \dfrac{1}{\sin\;\theta}\qquad` when :math:`\sin\;\theta \ne 0`
-2. :math:`\sec\;\theta ~=~ \dfrac{1}{\cos\;\theta}\qquad` when :math:`\cos\;\theta \ne 0`
-3. :math:`\cot\;\theta ~=~ \dfrac{1}{\tan\;\theta}\qquad` when :math:`\tan\;\theta` is defined and not $0$
-4. :math:`\sin\;\theta ~=~ \dfrac{1}{\csc\;\theta}\qquad` when :math:`\csc\;\theta` is defined and not $0$
-5. :math:`\cos\;\theta ~=~ \dfrac{1}{\sec\;\theta}\qquad` when :math:`\sec\;\theta` is defined and not $0$
-6. :math:`\tan\;\theta ~=~ \dfrac{1}{\cot\;\theta}\qquad` when :math:`\cot\;\theta` is defined and not $0$
-
-Notice that each of these equations is true for *all* angles :math:`\theta` for which both sides of the equation are defined. Such equations are called **identities**, and in this section we will discuss several *trigonometric identities*, i.e. identities involving the trigonometric functions. These identities are often used to simplify complicated expressions or equations. For example, one of the most useful trigonometric identities is the following:
+请注意，对于等式两边均有定义的 *所有* 角 :math:`\theta`，这些等式均成立。这类等式称为 **恒等式(identities)** ，本节我们将讨论几个 *三角恒等式* ，即涉及三角函数的恒等式。这些恒等式常用于简化复杂的表达式或方程。例如，最有用的三角恒等式之一如下：
 
 .. _equation 3.1:
 
 .. math::
     :label: eqn:identan
 
-    \tan\;\theta ~=~ \frac{\sin\;\theta}{\cos\;\theta} \qquad \text{when } \cos\;\theta \ne 0
+    \tan\;\theta ~=~ \frac{\sin\;\theta}{\cos\;\theta} \qquad \text{当 } \cos\;\theta \ne 0
 
-To prove this identity, pick a point $(x,y)$ on the terminal side of :math:`\theta` a distance $r >0$ from
-the origin, and suppose that :math:`\cos\;\theta \ne 0`. Then :math:`x \ne 0` (since :math:`\cos\;\theta = \frac{x}{r}`), so by definition
+为了证明这个恒等式，在 :math:`\theta` 的端点处取一个点 $(x,y)$，该点距离原点 $r > 0$，并假设 :math:`\cos\;\theta \ne 0`。则 :math:`x \ne 0` （因为 :math:`\cos\;\theta = \frac{x}{r}` ），所以根据定义
 
 .. math::
 
     \frac{\sin\;\theta}{\cos\;\theta} ~=~ \dfrac{~\dfrac{y}{r}~}{~\dfrac{x}{r}~} ~=~ \frac{y}{x} ~=~
-    \tan\;\theta ~.
+    \tan\;\theta ~。
 
-Note how we proved the identity by expanding one of its sides (:math:`\frac{\sin\;\theta}{\cos\;\theta}`) until we got an expression that was equal to the other side (:math:`\tan\;\theta`). This is probably the most common technique for proving identities. Taking reciprocals in the above identity gives:
+注意，我们是如何通过展开其中一边（ :math:`\frac{\sin\;\theta}{\cos\;\theta}` ）来证明恒等式的，直到得到一个等于另一边的表达式（:math:`\tan\;\theta`）。这可能是证明恒等式最常用的技巧。对上述恒等式取倒数可得：
 
-.. _equation 3.2:
+.. _Figure 3.2:
 
 .. math::
     :label: eqn:idencot
 
-    \cot\;\theta ~=~ \frac{\cos\;\theta}{\sin\;\theta} \qquad \text{when } \sin\;\theta \ne 0
-
+    \cot\;\theta ~=~ \frac{\cos\;\theta}{\sin\;\theta} \qquad \text{当 } \sin\;\theta \ne 0
 
 .. _fig:rdist:
 
 .. _Figure 3.1.1:
 
-.. figure:: ./img/f3.1.1.png 
+.. figure:: ./img/f3.1.1.png
     :align: right
 
-    **Figure 3.1.1**
+    **图 3.1.1**
 
-We will now derive one of the most important trigonometric identities. Let :math:`\theta` be any angle with a point $(x,y)$ on its terminal side a distance $r>0$ from the origin. By the Pythagorean Theorem, :math:`r^2 = x^2 + y^2` (and hence :math:`r=\sqrt{x^2 + y^2}`).
+现在我们将推导一个最重要的三角恒等式。设 :math:`\theta` 为任意角，其端点 $(x,y)$ 到原点的距离为 $r>0$。根据勾股定理，:math:`r^2 = x^2 + y^2` （因此 :math:`r=\sqrt{x^2 + y^2}`）。
 
-For example, if :math:`\theta` is in QIII as in Figure :ref:`3.1.1 <fig:rdist>`, then the legs of the right triangle formed by the reference angle have lengths :math:`|x|` and :math:`|y|` (we use absolute values because $x$ and $y$ are negative in QIII). The same argument holds if :math:`\theta` is in the other quadrants or on either axis. Thus,
+例如，如果 :math:`\theta` 位于 QIII 中，如图 :ref:`3.1.1 <fig:rdist>` 所示，则由参考角构成的直角三角形的两条边的长度分别为 :math:`|x|` 和 :math:`|y|` （我们使用绝对值，因为 $x$ 和 $y$ 在 QIII 中为负数）。如果 :math:`\theta` 位于其他象限或任一轴上，则同样的道理也成立。因此，
 
 .. math::
 
-    r^2 ~=~ |x|^2 ~+~ |y|^2 ~=~ x^2 ~+~ y^2 ~,
+    r^2 ~=~ |x|^2 ~+~ |y|^2 ~=~ x^2 ~+~ y^2 ~，
 
-so dividing both sides of the equation by $r^2$ (which we can do since $r>0$) gives
+因此，等式两边同时除以 $r^2$（由于 $r>0$，我们可以这样做）可得：
 
 .. math::
 
     \frac{r^2}{r^2} ~=~ \frac{x^2 ~+~ y^2}{r^2} ~=~ \frac{x^2}{r^2} ~+~ \frac{y^2}{r^2} ~=~
-    \left(\frac{x}{r}\right)^2 ~+~ \left(\frac{y}{r}\right)^2 ~.
+    \left(\frac{x}{r}\right)^2 ~+~ \left(\frac{y}{r}\right)^2 ~。
 
-Since :math:`\frac{r^2}{r^2} = 1$, $\frac{x}{r} = \cos\;\theta`, and :math:`\frac{y}{r} = \sin\;\theta`, we can rewrite this as:
+由于 :math:`\frac{r^2}{r^2} = 1$，$\frac{x}{r} = \cos\;\theta`，且 :math:`\frac{y}{r} = \sin\;\theta`，我们可以将其重写为：
 
 .. _equation 3.3:
 
@@ -79,9 +77,9 @@ Since :math:`\frac{r^2}{r^2} = 1$, $\frac{x}{r} = \cos\;\theta`, and :math:`\fra
 
     \cos^2 \;\theta ~+~ \sin^2 \;\theta ~=~ 1
 
-You can think of this as sort of a trigonometric variant of the Pythagorean Theorem. Note that we use the notation :math:`\sin^2 \;\theta` to mean :math:`(\sin\;\theta)^2`, likewise for cosine and the other trigonometric functions. We will use the same notation for other powers besides $2$.
+你可以将其视为勾股定理的三角函数变体。注意，我们使用 :math:`\sin^2 \;\theta` 表示 :math:`(\sin\;\theta)^2`，余弦和其他三角函数也是如此。我们将对除 2 之外的其他幂使用相同的符号。
 
-From the above identity we can derive more identities. For example:
+从上述恒等式我们可以推导出更多的恒等式。例如：
 
 .. _equation 3.4:
 
@@ -97,7 +95,7 @@ From the above identity we can derive more identities. For example:
 
     \cos^2 \;\theta ~=~ 1 ~-~ \sin^2 \;\theta
 
-from which we get (after taking square roots):
+由此我们得到（开平方后）：
 
 .. _equation 3.6:
 
@@ -114,7 +112,7 @@ from which we get (after taking square roots):
 
     \cos\;\theta ~=~ \pm\,\sqrt{1 ~-~ \sin^2 \;\theta}
 
-Also, from the inequalities :math:`0 \le \sin^2 \;\theta = 1 ~-~ \cos^2 \;\theta \le 1` and :math:`0 \le \cos^2 \;\theta = 1 ~-~ \sin^2 \;\theta \le 1`, taking square roots gives us the following bounds on sine and cosine:
+此外，从不等式 :math:`0 \le \sin^2 \;\theta = 1 ~-~ \cos^2 \;\theta \le 1` 和 :math:`0 \le \cos^2 \;\theta = 1 ~-~ \sin^2 \;\theta \le 1` 取平方根可得出正弦和余弦的以下界限：
 
 .. _equation 3.8:
 
@@ -131,17 +129,16 @@ Also, from the inequalities :math:`0 \le \sin^2 \;\theta = 1 ~-~ \cos^2 \;\theta
 
     -1 ~ \le ~ \cos\;\theta ~ \le ~ 1
 
+上述不等式并非恒等式（因为它们并非方程），但它们有助于检验计算结果。回想一下，我们根据 :ref:`1.4 节 <c1.4>` 中正弦和余弦的定义推导出了这些不等式。
 
-The above inequalities are not identities (since they are not equations), but they provide useful checks on calculations. Recall that we derived those inequalities from the definitions of sine and cosine in Section 1.4.
-
-In formula :eq:`3.3 <eqn:idensincos1>`, dividing both sides of the identity by :math:`\cos^2 \;\theta` gives
+在公式 :eq:`3.3 <eqn:idensincos1>` 中，恒等式两边同时除以 :math:`\cos^2 \;\theta` 可得
 
 .. math::
 
     \frac{\cos^2 \;\theta}{\cos^2 \;\theta} ~+~ \frac{\sin^2 \;\theta}{\cos^2 \;\theta} ~=~
     \frac{1}{\cos^2 \;\theta} ~~,
 
-so since :math:`\tan\;\theta = \frac{\sin\;\theta}{\cos\;\theta}` and :math:`\sec\;\theta = \frac{1}{\cos\;\theta}`, we get:
+因此，由于 :math:`\tan\;\theta = \frac{\sin\;\theta}{\cos\;\theta}` 且 :math:`\sec\;\theta = \frac{1}{\cos\;\theta}`，我们得到：
 
 .. _equation 3.10:
 
@@ -150,14 +147,14 @@ so since :math:`\tan\;\theta = \frac{\sin\;\theta}{\cos\;\theta}` and :math:`\se
 
     1 ~+~ \tan^2 \;\theta ~=~ \sec^2 \;\theta
 
-Likewise, dividing both sides of formula :eq:`3.3 <eqn:idensincos1>` by :math:`\sin^2 \;\theta` gives
+同样，将公式 :eq:`3.3 <eqn:idensincos1>` 两边除以 :math:`\sin^2 \;\theta` 可得：
 
 .. math::
 
     \frac{\cos^2 \;\theta}{\sin^2 \;\theta} ~+~ \frac{\sin^2 \;\theta}{\sin^2 \;\theta} ~=~
-    \frac{1}{\sin^2 \;\theta} ~~,
+    \frac{1}{\sin^2 \;\theta} ~~，
 
-so since :math:`\cot\;\theta = \frac{\cos\;\theta}{\sin\;\theta}` and :math:`\csc\;\theta = \frac{1}{\sin\;\theta}`, we get:
+因此由于 :math:`\cot\;\theta = \frac{\cos\;\theta}{\sin\;\theta}` 和 :math:`\csc\;\theta = \frac{1}{\sin\;\theta}`，我们得到：
 
 .. _equation 3.10:
 
@@ -166,13 +163,137 @@ so since :math:`\cot\;\theta = \frac{\cos\;\theta}{\sin\;\theta}` and :math:`\cs
     
     \cot^2 \;\theta ~+~ 1 ~=~ \csc^2 \;\theta
 
+.. toggle::
+
+    So far we know a few relations between the trigonometric functions. For example, we know the reciprocal relations:
+    
+    1. :math:`\csc\;\theta ~=~ \dfrac{1}{\sin\;\theta}\qquad` when :math:`\sin\;\theta \ne 0`
+    2. :math:`\sec\;\theta ~=~ \dfrac{1}{\cos\;\theta}\qquad` when :math:`\cos\;\theta \ne 0`
+    3. :math:`\cot\;\theta ~=~ \dfrac{1}{\tan\;\theta}\qquad` when :math:`\tan\;\theta` is defined and not $0$
+    4. :math:`\sin\;\theta ~=~ \dfrac{1}{\csc\;\theta}\qquad` when :math:`\csc\;\theta` is defined and not $0$
+    5. :math:`\cos\;\theta ~=~ \dfrac{1}{\sec\;\theta}\qquad` when :math:`\sec\;\theta` is defined and not $0$
+    6. :math:`\tan\;\theta ~=~ \dfrac{1}{\cot\;\theta}\qquad` when :math:`\cot\;\theta` is defined and not $0$
+    
+    Notice that each of these equations is true for *all* angles :math:`\theta` for which both sides of the equation are defined. Such equations are called **identities**, and in this section we will discuss several *trigonometric identities*, i.e. identities involving the trigonometric functions. These identities are often used to simplify complicated expressions or equations. For example, one of the most useful trigonometric identities is the following:
+    
+    .. math::
+    
+        \tan\;\theta ~=~ \frac{\sin\;\theta}{\cos\;\theta} \qquad \text{when } \cos\;\theta \ne 0
+    
+    To prove this identity, pick a point $(x,y)$ on the terminal side of :math:`\theta` a distance $r >0$ from
+    the origin, and suppose that :math:`\cos\;\theta \ne 0`. Then :math:`x \ne 0` (since :math:`\cos\;\theta = \frac{x}{r}`), so by definition
+    
+    .. math::
+    
+        \frac{\sin\;\theta}{\cos\;\theta} ~=~ \dfrac{~\dfrac{y}{r}~}{~\dfrac{x}{r}~} ~=~ \frac{y}{x} ~=~
+        \tan\;\theta ~.
+    
+    Note how we proved the identity by expanding one of its sides (:math:`\frac{\sin\;\theta}{\cos\;\theta}`) until we got an expression that was equal to the other side (:math:`\tan\;\theta`). This is probably the most common technique for proving identities. Taking reciprocals in the above identity gives:
+    
+    .. math::
+    
+        \cot\;\theta ~=~ \frac{\cos\;\theta}{\sin\;\theta} \qquad \text{when } \sin\;\theta \ne 0
+    
+    .. figure:: ./img/f3.1.1.png 
+        :align: right
+    
+        **Figure 3.1.1**
+    
+    We will now derive one of the most important trigonometric identities. Let :math:`\theta` be any angle with a point $(x,y)$ on its terminal side a distance $r>0$ from the origin. By the Pythagorean Theorem, :math:`r^2 = x^2 + y^2` (and hence :math:`r=\sqrt{x^2 + y^2}`).
+    
+    For example, if :math:`\theta` is in QIII as in Figure :ref:`3.1.1 <fig:rdist>`, then the legs of the right triangle formed by the reference angle have lengths :math:`|x|` and :math:`|y|` (we use absolute values because $x$ and $y$ are negative in QIII). The same argument holds if :math:`\theta` is in the other quadrants or on either axis. Thus,
+    
+    .. math::
+    
+        r^2 ~=~ |x|^2 ~+~ |y|^2 ~=~ x^2 ~+~ y^2 ~,
+    
+    so dividing both sides of the equation by $r^2$ (which we can do since $r>0$) gives
+    
+    .. math::
+    
+        \frac{r^2}{r^2} ~=~ \frac{x^2 ~+~ y^2}{r^2} ~=~ \frac{x^2}{r^2} ~+~ \frac{y^2}{r^2} ~=~
+        \left(\frac{x}{r}\right)^2 ~+~ \left(\frac{y}{r}\right)^2 ~.
+    
+    Since :math:`\frac{r^2}{r^2} = 1$, $\frac{x}{r} = \cos\;\theta`, and :math:`\frac{y}{r} = \sin\;\theta`, we can rewrite this as:
+    
+    .. math::
+    
+        \cos^2 \;\theta ~+~ \sin^2 \;\theta ~=~ 1
+    
+    You can think of this as sort of a trigonometric variant of the Pythagorean Theorem. Note that we use the notation :math:`\sin^2 \;\theta` to mean :math:`(\sin\;\theta)^2`, likewise for cosine and the other trigonometric functions. We will use the same notation for other powers besides $2$.
+    
+    From the above identity we can derive more identities. For example:
+    
+    .. math::
+    
+        \sin^2 \;\theta ~=~ 1 ~-~ \cos^2 \;\theta
+    
+    .. math::
+    
+        \cos^2 \;\theta ~=~ 1 ~-~ \sin^2 \;\theta
+    
+    from which we get (after taking square roots):
+    
+    .. math::
+    
+        \sin\;\theta ~=~ \pm\,\sqrt{1 ~-~ \cos^2 \;\theta}
+    
+    .. math::
+    
+        \cos\;\theta ~=~ \pm\,\sqrt{1 ~-~ \sin^2 \;\theta}
+    
+    Also, from the inequalities :math:`0 \le \sin^2 \;\theta = 1 ~-~ \cos^2 \;\theta \le 1` and :math:`0 \le \cos^2 \;\theta = 1 ~-~ \sin^2 \;\theta \le 1`, taking square roots gives us the following bounds on sine and cosine:
+    
+    .. math::
+        
+        -1 ~ \le ~ \sin\;\theta ~ \le ~ 1
+    
+    .. math::
+    
+        -1 ~ \le ~ \cos\;\theta ~ \le ~ 1
+    
+    
+    The above inequalities are not identities (since they are not equations), but they provide useful checks on calculations. Recall that we derived those inequalities from the definitions of sine and cosine in Section 1.4.
+    
+    In formula :eq:`3.3 <eqn:idensincos1>`, dividing both sides of the identity by :math:`\cos^2 \;\theta` gives
+    
+    .. math::
+    
+        \frac{\cos^2 \;\theta}{\cos^2 \;\theta} ~+~ \frac{\sin^2 \;\theta}{\cos^2 \;\theta} ~=~
+        \frac{1}{\cos^2 \;\theta} ~~,
+    
+    so since :math:`\tan\;\theta = \frac{\sin\;\theta}{\cos\;\theta}` and :math:`\sec\;\theta = \frac{1}{\cos\;\theta}`, we get:
+    
+    .. math::
+    
+        1 ~+~ \tan^2 \;\theta ~=~ \sec^2 \;\theta
+    
+    Likewise, dividing both sides of formula :eq:`3.3 <eqn:idensincos1>` by :math:`\sin^2 \;\theta` gives
+    
+    .. math::
+    
+        \frac{\cos^2 \;\theta}{\sin^2 \;\theta} ~+~ \frac{\sin^2 \;\theta}{\sin^2 \;\theta} ~=~
+        \frac{1}{\sin^2 \;\theta} ~~,
+    
+    so since :math:`\cot\;\theta = \frac{\cos\;\theta}{\sin\;\theta}` and :math:`\csc\;\theta = \frac{1}{\sin\;\theta}`, we get:
+
+    .. math::
+        
+        \cot^2 \;\theta ~+~ 1 ~=~ \csc^2 \;\theta
+
 .. _Example 3.1:
 
 .. admonition:: Example 3.1
 
-    Simplify :math:`\;\cos^2 \;\theta ~ \tan^2 \;\theta\;`.
+    简化 :math:`\;\cos^2 \;\theta ~ \tan^2 \;\theta\;`。
 
-    **Solution:** We can use formula :eq:`3.1 <eqn:identan>` to simplify:
+    **解答：** 我们可以使用公式 :eq:`3.1 <eqn:identan>` 来简化：
+
+    .. toggle::
+
+        Simplify :math:`\;\cos^2 \;\theta ~ \tan^2 \;\theta\;`.
+
+        **Solution:** We can use formula :eq:`3.1 <eqn:identan>` to simplify:
 
     .. math::
 
@@ -186,9 +307,15 @@ so since :math:`\cot\;\theta = \frac{\cos\;\theta}{\sin\;\theta}` and :math:`\cs
 
 .. admonition:: Example 3.2
 
-    Simplify :math:`\;5\sin^2 \;\theta ~+~ 4\cos^2 \;\theta\;`.
+    简化 :math:`\;5\sin^2 \;\theta ~+~ 4\cos^2 \;\theta\;`.
 
-    **Solution:** We can use formula :eq:`3.5 <eqn:idencossq>` to simplify:
+    **解答:** 我们可以使用公式 :eq:`3.5 <eqn:idencossq>` 来简化:
+
+    .. toggle::
+
+        Simplify :math:`\;5\sin^2 \;\theta ~+~ 4\cos^2 \;\theta\;`.
+
+        **Solution:** We can use formula :eq:`3.5 <eqn:idencossq>` to simplify:
 
     .. math::
 
@@ -203,60 +330,108 @@ so since :math:`\cot\;\theta = \frac{\cos\;\theta}{\sin\;\theta}` and :math:`\cs
 
 .. admonition:: Example 3.3
 
-    Prove that :math:`\;\tan \;\theta ~+~ \cot \;\theta ~=~ \sec \;\theta ~ \csc \;\theta\;`.
+    证明 :math:`\;\tan \;\theta ~+~ \cot \;\theta ~=~ \sec \;\theta ~ \csc \;\theta\;`。
 
-    **Solution:** We will expand the left side and show that it equals the right side:
+    **解答：** 我们将左边展开，并证明它等于右边：
 
     .. math::
 
         \begin{alignat*}{3}
           \tan \;\theta + \cot \;\theta ~ &= ~ \frac{\sin\;\theta}{\cos\;\theta} ~+~
-          \frac{\cos\;\theta}{\sin\;\theta} &{} \qquad &\text{(by eq 3.1 and
-          eq 3.2 )}\\[2mm]
+          \frac{\cos\;\theta}{\sin\;\theta} &{} \qquad &\text{(通过公式 3.1 和 3.2 )}\\[2mm]
           &= ~ \frac{\sin\;\theta}{\cos\;\theta} \;\cdot\; \frac{\sin\;\theta}{\sin\;\theta} ~+~
           \frac{\cos\;\theta}{\sin\;\theta} \;\cdot\; \frac{\cos\;\theta}{\cos\;\theta}
-          &{} \qquad &\text{(multiply both fractions by $1$)}\\[2mm]
+          &{} \qquad &\text{(将两个分数乘以 $1$)}\\[2mm]
           &= ~ \frac{\sin^2 \;\theta ~+~ \cos^2 \;\theta}{\cos\;\theta ~ \sin\;\theta} &{} \qquad
-          &\text{(after getting a common denominator)}\\[2mm]
-          &= ~ \frac{1}{\cos\;\theta ~ \sin\;\theta} &{} \qquad &\text{(by eq 3.3)}\\[2mm]
+          &\text{(得到共同分母后)}\\[2mm]
+          &= ~ \frac{1}{\cos\;\theta ~ \sin\;\theta} &{} \qquad &\text{(通过公式 3.3)}\\[2mm]
           &= ~ \frac{1}{\cos\;\theta} ~\cdot~ \frac{1}{\sin\;\theta}\\[2mm]
           &= ~ \sec \;\theta ~ \csc \;\theta
         \end{alignat*}
 
-In the above example, how did we know to expand the left side instead of the right side? In general, though this technique does not always work, the more complicated side of the identity is likely to be easier to expand. The reason is that, by its complexity, there will be more things that you can do with that expression. For example, if you were asked to prove that
+    .. toggle::
+
+        Prove that :math:`\;\tan \;\theta ~+~ \cot \;\theta ~=~ \sec \;\theta ~ \csc \;\theta\;`.
+
+        **Solution:** We will expand the left side and show that it equals the right side:
+
+        .. math::
+
+            \begin{alignat*}{3}
+            \tan \;\theta + \cot \;\theta ~ &= ~ \frac{\sin\;\theta}{\cos\;\theta} ~+~
+            \frac{\cos\;\theta}{\sin\;\theta} &{} \qquad &\text{(by eq 3.1 and
+            eq 3.2 )}\\[2mm]
+            &= ~ \frac{\sin\;\theta}{\cos\;\theta} \;\cdot\; \frac{\sin\;\theta}{\sin\;\theta} ~+~
+            \frac{\cos\;\theta}{\sin\;\theta} \;\cdot\; \frac{\cos\;\theta}{\cos\;\theta}
+            &{} \qquad &\text{(multiply both fractions by $1$)}\\[2mm]
+            &= ~ \frac{\sin^2 \;\theta ~+~ \cos^2 \;\theta}{\cos\;\theta ~ \sin\;\theta} &{} \qquad
+            &\text{(after getting a common denominator)}\\[2mm]
+            &= ~ \frac{1}{\cos\;\theta ~ \sin\;\theta} &{} \qquad &\text{(by eq 3.3)}\\[2mm]
+            &= ~ \frac{1}{\cos\;\theta} ~\cdot~ \frac{1}{\sin\;\theta}\\[2mm]
+            &= ~ \sec \;\theta ~ \csc \;\theta
+            \end{alignat*}
+
+在上面的例子中，我们是如何知道应该展开左边而不是右边的呢？一般来说，虽然这种方法并不总是有效，但恒等式中更复杂的一边可能更容易展开。原因是，由于其复杂性，你可以用这个表达式做更多的事情。例如，如果你被要求证明
 
 .. math::
 
-    \sec\;\theta ~-~ \sin\;\theta ~ \tan\;\theta ~=~ \cos\;\theta ~,
+    \sec\;\theta ~-~ \sin\;\theta ~ \tan\;\theta ~=~ \cos\;\theta ~，
 
-there would not be much that you could do with the right side of that identity; it consists of a single term (:math:`\cos\;\theta`) that offers no obvious means of expansion.
+你用这个恒等式的右边能做的事情不多；它只有一个项 (:math:`\cos\;\theta`)，没有明显的展开方式。
+
+.. toggle::
+
+    In the above example, how did we know to expand the left side instead of the right side? In general, though this technique does not always work, the more complicated side of the identity is likely to be easier to expand. The reason is that, by its complexity, there will be more things that you can do with that expression. For example, if you were asked to prove that
+
+    .. math::
+
+        \sec\;\theta ~-~ \sin\;\theta ~ \tan\;\theta ~=~ \cos\;\theta ~,
+
+    there would not be much that you could do with the right side of that identity; it consists of a single term (:math:`\cos\;\theta`) that offers no obvious means of expansion.
 
 .. _Example 3.4:
 
 .. admonition:: Example 3.4
 
-    Prove that :math:`\;\dfrac{1 ~+~ \cot^2 \;\theta}{\sec\;\theta} ~=~ \csc\;\theta ~ \cot\;\theta\;`.
+    证明 :math:`\;\dfrac{1 ~+~ \cot^2 \;\theta}{\sec\;\theta} ~=~ \csc\;\theta ~ \cot\;\theta\;`。
 
-    **Solution:** Of the two sides, the left side looks more complicated, so we will expand that:
+    **解答：** 两边中，左边看起来更复杂，所以我们展开它：
 
     .. math::
 
         \begin{alignat*}{3}
         \frac{1 ~+~ \cot^2 \;\theta}{\sec\;\theta} ~ &= ~ \frac{\csc^2 \;\theta}{\sec\;\theta}
-          &{} \qquad &\text{(by eq 3.11)}\\[1.5mm]
+          &{} \qquad &\text{(通过公式 3.11)}\\[1.5mm]
         &= ~ \dfrac{\csc\;\theta ~\cdot~ \dfrac{1}{\sin\;\theta}}{\dfrac{1}{\cos\;\theta}} &{}
           &{}\\[2mm]
         &= ~ \csc\;\theta ~\cdot~ \frac{\cos\;\theta}{\sin\;\theta} &{} &{}\\[2mm]
-        &= ~ \csc \;\theta ~ \cot \;\theta &{} \qquad &\text{(by eq 3.2)}
+        &= ~ \csc \;\theta ~ \cot \;\theta &{} \qquad &\text{(通过公式 3.2)}
         \end{alignat*}
+
+    .. toggle::
+
+        Prove that :math:`\;\dfrac{1 ~+~ \cot^2 \;\theta}{\sec\;\theta} ~=~ \csc\;\theta ~ \cot\;\theta\;`.
+
+        **Solution:** Of the two sides, the left side looks more complicated, so we will expand that:
+
+        .. math::
+
+            \begin{alignat*}{3}
+            \frac{1 ~+~ \cot^2 \;\theta}{\sec\;\theta} ~ &= ~ \frac{\csc^2 \;\theta}{\sec\;\theta}
+            &{} \qquad &\text{(by eq 3.11)}\\[1.5mm]
+            &= ~ \dfrac{\csc\;\theta ~\cdot~ \dfrac{1}{\sin\;\theta}}{\dfrac{1}{\cos\;\theta}} &{}
+            &{}\\[2mm]
+            &= ~ \csc\;\theta ~\cdot~ \frac{\cos\;\theta}{\sin\;\theta} &{} &{}\\[2mm]
+            &= ~ \csc \;\theta ~ \cot \;\theta &{} \qquad &\text{(by eq 3.2)}
+            \end{alignat*}
 
 .. _Example 3.5:
 
 .. admonition:: Example 3.5
 
-    Prove that :math:`\;\dfrac{\tan^2 \;\theta ~+~ 2}{1 ~+~ \tan^2 \;\theta} ~=~ 1 ~+~ \cos^2 \;\theta\;`.
+    证明 :math:`\;\dfrac{\tan^2 \;\theta ~+~ 2}{1 ~+~ \tan^2 \;\theta} ~=~ 1 ~+~ \cos^2 \;\theta\;`。
 
-    **Solution:** Expand the left side:
+    **解答：** 展开左边：
 
     .. math::
 
@@ -264,25 +439,55 @@ there would not be much that you could do with the right side of that identity; 
         \frac{\tan^2 \;\theta ~+~ 2}{1 ~+~ \tan^2 \;\theta} ~ &= ~
           \frac{\left( \tan^2 \;\theta ~+~ 1 \right) ~+~ 1}{1 ~+~ \tan^2 \;\theta} &{} \qquad &{}\\[2mm]
         &= ~ \frac{\sec^2 \;\theta ~+~ 1}{\sec^2 \;\theta} &{} \qquad
-          &\text{(by eq 3.10)}\\[2mm]
+          &\text{(通过公式 3.10)}\\[2mm]
         &= ~ \frac{\sec^2 \;\theta}{\sec^2 \;\theta} ~+~ \frac{1}{\sec^2 \;\theta} &{} &{}\\[2mm]
         &= ~ 1 ~+~ \cos^2 \;\theta\
         \end{alignat*}
 
-When trying to prove an identity where at least one side is a ratio of expressions,
-*cross-multiplying* can be an effective technique:
+    .. toggle::
+
+        Prove that :math:`\;\dfrac{\tan^2 \;\theta ~+~ 2}{1 ~+~ \tan^2 \;\theta} ~=~ 1 ~+~ \cos^2 \;\theta\;`.
+
+        **Solution:** Expand the left side:
+
+        .. math::
+
+            \begin{alignat*}{3}
+            \frac{\tan^2 \;\theta ~+~ 2}{1 ~+~ \tan^2 \;\theta} ~ &= ~
+            \frac{\left( \tan^2 \;\theta ~+~ 1 \right) ~+~ 1}{1 ~+~ \tan^2 \;\theta} &{} \qquad &{}\\[2mm]
+            &= ~ \frac{\sec^2 \;\theta ~+~ 1}{\sec^2 \;\theta} &{} \qquad
+            &\text{(by eq 3.10)}\\[2mm]
+            &= ~ \frac{\sec^2 \;\theta}{\sec^2 \;\theta} ~+~ \frac{1}{\sec^2 \;\theta} &{} &{}\\[2mm]
+            &= ~ 1 ~+~ \cos^2 \;\theta\
+            \end{alignat*}
+
+当试图证明一个恒等式，其中至少有一边是表达式的比率时， *交叉相乘(cross-multiplying)* 可能是一种有效的技巧：
 
 .. math::
 
-    \frac{a}{b} ~=~ \frac{c}{d} \quad\text{if and only if}\quad ad ~=~ bc
+    \frac{a}{b} ~=~ \frac{c}{d} \quad\text{当且仅当}\quad ad ~=~ bc
+
+.. toggle::
+    
+    When trying to prove an identity where at least one side is a ratio of expressions, *cross-multiplying* can be an effective technique:
+
+    .. math::
+
+        \frac{a}{b} ~=~ \frac{c}{d} \quad\text{if and only if}\quad ad ~=~ bc
 
 .. _Example 3.6:
 
 .. admonition:: Example 3.6
 
-    Prove that :math:`\;\dfrac{1 ~+~ \sin\;\theta}{\cos\;\theta} ~=~ \dfrac{\cos\;\theta}{1 ~-~ \sin\;\theta}\;`.
+    证明 :math:`\;\dfrac{1 ~+~ \sin\;\theta}{\cos\;\theta} ~=~ \dfrac{\cos\;\theta}{1 ~-~ \sin\;\theta}\;`。
 
-    **Solution:** Cross-multiply and reduce both sides until it is clear that they are equal:
+    **解答：** 对等式两边进行交叉相乘并约简，直到它们相等为止：
+
+    .. toggle::
+
+        Prove that :math:`\;\dfrac{1 ~+~ \sin\;\theta}{\cos\;\theta} ~=~ \dfrac{\cos\;\theta}{1 ~-~ \sin\;\theta}\;`.
+
+        **Solution:** Cross-multiply and reduce both sides until it is clear that they are equal:
 
     .. math::
 
@@ -291,7 +496,11 @@ When trying to prove an identity where at least one side is a ratio of expressio
         1 ~-~ \sin^2 \;\theta ~ &= ~ \cos^2 \;\theta
         \end{align*}
 
-By :eq:`3.5 <eqn:idencossq>` both sides of the last equation are indeed equal. Thus, the original identity holds.
+    根据公式 :eq:`3.5 <eqn:idencossq>`，最后一个等式的两边确实相等。因此，原始恒等式成立。
+
+    .. toggle::
+
+        By :eq:`3.5 <eqn:idencossq>` both sides of the last equation are indeed equal. Thus, the original identity holds.
 
 .. _Example 3.7:
 
@@ -299,10 +508,10 @@ By :eq:`3.5 <eqn:idencossq>` both sides of the last equation are indeed equal. T
 
 .. admonition:: Example 3.7
 
-    Suppose that :math:`\;a\,\cos\;\theta = b\;` and :math:`\;c\,\sin\;\theta = d\;` for some angle :math:`\theta` and
-    some constants $a$, $b$, $c$, and $d$. Show that :math:`\;a^2 c^2 = b^2 c^2 + a^2 d^2`.
+    假设 :math:`\;a\,\cos\;\theta = b\;` 且 :math:`\;c\,\sin\;\theta = d\;`，其中 :math:`\theta` 为某个角度，
+    且有常数 $a$、$b$、$c$ 和 $d$。证明 :math:`\;a^2 c^2 = b^2 c^2 + a^2 d^2`。
 
-    **Solution:** Multiply both sides of the first equation by $c$ and the second equation by $a$:
+    **解法：** 将第一个等式两边乘以 $c$，将第二个等式乘以 $a$：
 
     .. math::
       
@@ -311,17 +520,43 @@ By :eq:`3.5 <eqn:idencossq>` both sides of the last equation are indeed equal. T
         ac\,\sin\;\theta ~ &= ~ ad
         \end{align*}
 
-    Now square each of the above equations then add them together to get:
+    现在对上述每个方程求平方，然后将它们相加得到：
 
     .. math::
       
-      \begin{align*}
-      (ac\,\cos\;\theta)^2 ~+~ (ac\,\sin\;\theta)^2 ~ &= ~ (bc)^2 ~+~ (ad)^2\\
-      (ac)^2 \left( \cos^2 \;\theta ~+~ \sin^2 \;\theta \right)~ &= ~ b^2 c^2 ~+~ a^2 d^2\\
-      a^2 c^2 ~ &= ~ b^2 c^2 ~+~ a^2 d^2 \qquad\text{(by (\ref{eqn:idensincos1}))}
-      \end{align*}
+        \begin{align*}
+        (ac\,\cos\;\theta)^2 ~+~ (ac\,\sin\;\theta)^2 ~ &= ~ (bc)^2 ~+~ (ad)^2\\
+        (ac)^2 \left( \cos^2 \;\theta ~+~ \sin^2 \;\theta \right)~ &= ~ b^2 c^2 ~+~ a^2 d^2\\
+        a^2 c^2 ~ &= ~ b^2 c^2 ~+~ a^2 d^2 \qquad\text{(通过公式 3.3)}
+        \end{align*}
 
-    Notice how :math:`\theta` does not appear in our final result. The trick was to get a common coefficient ($ac$) for :math:`\;\cos\;\theta\;` and :math:`\;\sin\;\theta\;` so that we could use :math:`\;\cos^2 \;\theta + \sin^2 \;\theta = 1`. This is a common technique for eliminating trigonometric functions from systems of equations.
+    注意： :math:`\theta` 并没有出现在我们的最终结果中。诀窍在于求出 :math:`\cos\;\theta\;` 和 :math:`\sin\;\theta\;` 的公共系数 ($ac$)，这样我们就可以使用 :math:`\cos^2 \theta + \sin^2 \theta = 1` 。这是一种从方程组中消除三角函数的常用技巧。
+
+    .. toggle::
+
+        Suppose that :math:`\;a\,\cos\;\theta = b\;` and :math:`\;c\,\sin\;\theta = d\;` for some angle :math:`\theta` and
+        some constants $a$, $b$, $c$, and $d$. Show that :math:`\;a^2 c^2 = b^2 c^2 + a^2 d^2`.
+
+        **Solution:** Multiply both sides of the first equation by $c$ and the second equation by $a$:
+
+        .. math::
+        
+            \begin{align*}
+            ac\,\cos\;\theta ~ &= ~ bc\\
+            ac\,\sin\;\theta ~ &= ~ ad
+            \end{align*}
+
+        Now square each of the above equations then add them together to get:
+
+        .. math::
+        
+            \begin{align*}
+            (ac\,\cos\;\theta)^2 ~+~ (ac\,\sin\;\theta)^2 ~ &= ~ (bc)^2 ~+~ (ad)^2\\
+            (ac)^2 \left( \cos^2 \;\theta ~+~ \sin^2 \;\theta \right)~ &= ~ b^2 c^2 ~+~ a^2 d^2\\
+            a^2 c^2 ~ &= ~ b^2 c^2 ~+~ a^2 d^2 \qquad\text{(by 3.3)}
+            \end{align*}
+
+        Notice how :math:`\theta` does not appear in our final result. The trick was to get a common coefficient ($ac$) for :math:`\;\cos\;\theta\;` and :math:`\;\sin\;\theta\;` so that we could use :math:`\;\cos^2 \;\theta + \sin^2 \;\theta = 1`. This is a common technique for eliminating trigonometric functions from systems of equations.
 
 .. _sec3dot1:
 
@@ -329,23 +564,24 @@ By :eq:`3.5 <eqn:idencossq>` both sides of the last equation are indeed equal. T
 ~~~~~~~~~~~~~~
 Exercises
 
-1. We showed that :math:`\;\sin\;\theta ~=~ \pm\,\sqrt{1 ~-~ \cos^2 \;\theta}\;` for all :math:`\theta`. Give an example of an angle :math:`\theta` such that :math:`\sin\;\theta ~=~ -\sqrt{1 ~-~ \cos^2 \;\theta}\;`.
-2. We showed that :math:`\;\cos\;\theta ~=~ \pm\,\sqrt{1 ~-~ \sin^2 \;\theta}\;` for all :math:`\theta`. Give an example of an angle :math:`\theta` such that :math:`\cos\;\theta ~=~ -\sqrt{1 ~-~ \sin^2 \;\theta}\;`.
-3. Suppose that you are given a system of two equations of the following form: [1]_
+1. 我们证明了，对于所有 :math:`\theta`，:math:`\sin\;\theta ~=~ \pm\,\sqrt{1 ~-~ \cos^2 \;\theta}\;`。请给出一个角 :math:`\theta` 的例子，使得 :math:`\sin\;\theta ~=~ -\sqrt{1 ~-~ \cos^2 \;\theta}\;`。
+2. 我们证明了，对于所有 :math:`\theta`，:math:`\cos\;\theta ~=~ \pm\,\sqrt{1 ~-~ \sin^2 \;\theta}\;`。举一个角度 :math:`\theta` 的例子，使得 :math:`\cos\;\theta ~=~ -\sqrt{1 ~-~ \sin^2 \;\theta}\;`。
+3. 假设给定一个如下形式的二元方程组： [1]_
 
    .. math::
- 
+   
        \begin{align*}
        A\,\cos\;\phi ~ &= ~ B\, \nu_1 ~-~ B\nu_2 \;\cos\;\theta\\
-       A\,\sin\;\phi ~ &= ~ B\, \nu_2 \;\sin\;\theta ~.
+       A\,\sin\;\phi ~ &= ~ B\, \nu_2 \;\sin\;\theta ~。
        \end{align*}
- 
-   Show that :math:`\;A ^2 ~=~ B^2 \left( \nu_1^2 ~+~ \nu_2^2 ~-~ 2\nu_1 \nu_2 \;\cos\theta\ \right)`.
 
-   .. [1] These types of equations arise in physics, e.g. in the study of photon-electron collisions. See pp. 95-97 in *W. Rindler*, *Special Relativity*, Edinburgh: Oliver and Boyd, LTD., 1960.
- 
+证明 :math:`\;A ^2 ~=~ B^2 \left( \nu_1^2 ~+~ \nu_2^2 ~-~ 2\nu_1 \nu_2 \;\cos\theta\ \right)`。
 
-For Exercises 4-16, prove the given identity.
+.. [1] 这类方程常见于物理学中，例如光子-电子碰撞研究。参见 *W. Rindler* 所著《狭义相对论》第 95-97 页，爱丁堡：Oliver and Boyd 出版社，1960 年。
+   
+       These types of equations arise in physics, e.g. in the study of photon-electron collisions. See pp. 95-97 in *W. Rindler*, *Special Relativity*, Edinburgh: Oliver and Boyd, LTD., 1960.
+
+练习 4-16 证明给定的恒等式。
 
 4. :math:`\cos\;\theta ~ \tan\;\theta ~=~ \sin\;\theta`
 5. :math:`\sin\;\theta ~ \cot\;\theta ~=~ \cos\;\theta`
@@ -365,7 +601,7 @@ For Exercises 4-16, prove the given identity.
 
 .. _exer:sintansq:
 
-16. :math:`\sin\;\theta ~=~ \pm\,\dfrac{\tan\;\theta}{\sqrt{1 ~+~ \tan^2 \;\theta}}\qquad` (*Hint: Solve for* :math:`\;\sin^2 \theta\;` *in Exercise* :ref:`14 <exer:sintan>`.})
+16. :math:`\sin\;\theta ~=~ \pm\,\dfrac{\tan\;\theta}{\sqrt{1 ~+~ \tan^2 \;\theta}}\qquad` (*提示：在练习* :ref:`14 <exer:sintan>` *中求解* :math:`\;\sin^2 \theta\;`。})
 
 .. _fig:exer2.1.21:
 
@@ -376,19 +612,68 @@ For Exercises 4-16, prove the given identity.
 
 .. _exer:sintansqg:
 
-17. Sometimes identities can be proved by geometrical methods. For example, to prove the identity in Exercise :ref:`16 <exer:sintansq>`, draw an acute angle :math:`\theta` in QI and pick the point $(1,y)$ on its terminal side, as in Figure :ref:`3.1.2 <fig:exer2.1.21>`. What must $y$ equal? Use that to prove the identity for acute :math:`\theta`. Explain the adjustment(s) you would need to make in Figure :ref:`3.1.2 <fig:exer2.1.21>` to prove the identity for :math:`\theta` in the other quadrants. Does the identity hold if :math:`\theta` is on either axis?
+17. 有时恒等式可以用几何方法证明。例如，为了证明练习 :ref:`16 <exer:sintansq>` 中的恒等式，在 QI 中画一个锐角 :math:`\theta`，并在其端点取点 $(1,y)$，如图 :ref:`3.1.2 <fig:exer2.1.21>` 所示。$y$ 必须等于多少？用这个值来证明锐角 :math:`\theta` 的恒等式。解释你需要在图 :ref:`3.1.2 <fig:exer2.1.21>` 中做出哪些调整才能在其他象限中证明 :math:`\theta` 的恒等式。如果 :math:`\theta` 在任一轴上，恒等式是否成立？
 
-18. Similar to Exercise :ref:`16 <exer:sintansq>` , find an expression for :math:`\cos\;\theta` solely in terms of :math:`\tan\;\theta`.
-19. Find an expression for :math:`\tan\;\theta` solely in terms of :math:`\sin\;\theta`, and one solely in terms of :math:`\cos\;\theta`
+18. 与练习 :ref:`16 <exer:sintansq>` 类似，仅根据 :math:`\tan\;\theta` 找到 :math:`\cos\;\theta` 的表达式。
+19. 仅根据 :math:`\sin\;\theta` 找到 :math:`\tan\;\theta` 的表达式，以及仅根据 :math:`\cos\;\theta` 找到 :math:`\tan\;\theta` 的表达式
 
 .. _exer:marion:
 
-20. Suppose that a point with coordinates :math:`(x,y)=(a\;(\cos\;\psi\;-\;\epsilon),a\sqrt{1 - \epsilon^2}~\sin\;\psi)` is a distance $r>0$ from the origin, where $a>0$ and :math:`0 < \epsilon < 1`. Use :math:`\;r^2 = x^2 + y^2` to show that :math:`\;r = a\;(1 \;-\; \epsilon\;\cos\;\psi)\;`. (Note: These coordinates arise in the study of elliptical orbits of planets.)
+20. 假设坐标为 :math:`(x,y)=(a\;(\cos\;\psi\;-\;\epsilon),a\sqrt{1 - \epsilon^2}~\sin\;\psi)` 的点到原点的距离为 $r>0$，其中 $a>0$ 且 :math:`0 < \epsilon < 1`。使用 :math:`\;r^2 = x^2 + y^2` 可证明 :math:`\;r = a\;(1 \;-\; \epsilon\;\cos\;\psi)`。（注：这些坐标出现在行星椭圆轨道的研究中。）
 
-21. Show that each trigonometric function can be put in terms of the sine function.
+21. 证明每个三角函数都可以用正弦函数来表示。
 
+.. toggle::
 
-和差公式  
+    1. We showed that :math:`\;\sin\;\theta ~=~ \pm\,\sqrt{1 ~-~ \cos^2 \;\theta}\;` for all :math:`\theta`. Give an example of an angle :math:`\theta` such that :math:`\sin\;\theta ~=~ -\sqrt{1 ~-~ \cos^2 \;\theta}\;`.
+    2. We showed that :math:`\;\cos\;\theta ~=~ \pm\,\sqrt{1 ~-~ \sin^2 \;\theta}\;` for all :math:`\theta`. Give an example of an angle :math:`\theta` such that :math:`\cos\;\theta ~=~ -\sqrt{1 ~-~ \sin^2 \;\theta}\;`.
+    3. Suppose that you are given a system of two equations of the following form: [1]_
+    
+       .. math::
+     
+           \begin{align*}
+           A\,\cos\;\phi ~ &= ~ B\, \nu_1 ~-~ B\nu_2 \;\cos\;\theta\\
+           A\,\sin\;\phi ~ &= ~ B\, \nu_2 \;\sin\;\theta ~.
+           \end{align*}
+     
+       Show that :math:`\;A ^2 ~=~ B^2 \left( \nu_1^2 ~+~ \nu_2^2 ~-~ 2\nu_1 \nu_2 \;\cos\theta\ \right)`.
+     
+    
+    For Exercises 4-16, prove the given identity.
+    
+    4. :math:`\cos\;\theta ~ \tan\;\theta ~=~ \sin\;\theta`
+    5. :math:`\sin\;\theta ~ \cot\;\theta ~=~ \cos\;\theta`
+    6. :math:`\dfrac{\tan\;\theta}{\cot\;\theta} ~=~ \tan^2 \;\theta`
+    7. :math:`\dfrac{\csc\;\theta}{\sin\;\theta} ~=~ \csc^2 \;\theta`
+    8. :math:`\dfrac{\cos^2 \;\theta}{1 ~+~ \sin\;\theta} ~=~ 1 ~-~ \sin\;\theta`
+    9. :math:`\dfrac{1 ~-~ 2\;\cos^2 \;\theta}{\sin\;\theta ~ \cos\;\theta} ~=~ \tan\;\theta ~-~ \cot\;\theta`
+    10. :math:`\sin^4 \;\theta ~-~ \cos^4 \;\theta ~=~ \sin^2 \;\theta ~-~ \cos^2 \;\theta`
+    11. :math:`\cos^4 \;\theta ~-~ \sin^4 \;\theta ~=~ 1 ~-~ 2\;\sin^2 \;\theta`
+    12. :math:`\dfrac{1 ~-~ \tan\;\theta}{1 ~+~ \tan\;\theta} ~=~ \dfrac{\cot\;\theta ~-~ 1}{\cot\;\theta ~+~ 1}`
+    13. :math:`\dfrac{\tan\;\theta ~+~ \tan\;\phi}{\cot\;\theta ~+~ \cot\;\phi} ~=~ \tan\;\theta ~ \tan\;\phi`
+    
+    14. :math:`\dfrac{\sin^2 \;\theta}{1 ~-~ \sin^2 \;\theta} ~=~ \tan^2 \;\theta`
+    15. :math:`\dfrac{1 ~-~ \tan^2 \;\theta}{1 ~-~ \cot^2 \;\theta} ~=~  1 ~-~ \sec^2 \;\theta`
+    
+    16. :math:`\sin\;\theta ~=~ \pm\,\dfrac{\tan\;\theta}{\sqrt{1 ~+~ \tan^2 \;\theta}}\qquad` (*Hint: Solve for* :math:`\;\sin^2 \theta\;` *in Exercise* :ref:`14 <exer:sintan>`.})
+    
+    .. figure:: ./img/f3.1.2.png
+        :align: right
+        
+        **Figure 3.1.2**
+    
+    17. Sometimes identities can be proved by geometrical methods. For example, to prove the identity in Exercise :ref:`16 <exer:sintansq>`, draw an acute angle :math:`\theta` in QI and pick the point $(1,y)$ on its terminal side, as in Figure :ref:`3.1.2 <fig:exer2.1.21>`. What must $y$ equal? Use that to prove the identity for acute :math:`\theta`. Explain the adjustment(s) you would need to make in Figure :ref:`3.1.2 <fig:exer2.1.21>` to prove the identity for :math:`\theta` in the other quadrants. Does the identity hold if :math:`\theta` is on either axis?
+    
+    18. Similar to Exercise :ref:`16 <exer:sintansq>` , find an expression for :math:`\cos\;\theta` solely in terms of :math:`\tan\;\theta`.
+    19. Find an expression for :math:`\tan\;\theta` solely in terms of :math:`\sin\;\theta`, and one solely in terms of :math:`\cos\;\theta`
+    
+    20. Suppose that a point with coordinates :math:`(x,y)=(a\;(\cos\;\psi\;-\;\epsilon),a\sqrt{1 - \epsilon^2}~\sin\;\psi)` is a distance $r>0$ from the origin, where $a>0$ and :math:`0 < \epsilon < 1`. Use :math:`\;r^2 = x^2 + y^2` to show that :math:`\;r = a\;(1 \;-\; \epsilon\;\cos\;\psi)\;`. (Note: These coordinates arise in the study of elliptical orbits of planets.)
+    
+    21. Show that each trigonometric function can be put in terms of the sine function.
+
+.. _c3.2:
+
+2. 和差公式  
 -----------------------------
 Sum and Difference Formulas
 
@@ -845,7 +1130,7 @@ For Exercises \ref{exer:iden32start}-\ref{exer:iden32end}, prove the given ident
 .. figure:: ./img/85-1.png
     :align: center
 
-倍角与半角公式  
+3. 倍角与半角公式  
 --------------------------------------
 Double-Angle and Half-Angle Formulas
 
@@ -1169,7 +1454,7 @@ For Exercises :ref:`12 <exer:rt33start>`- :ref:`17 <exer:rt33end>`, prove the gi
 
     where :math:`\theta` and :math:`\psi` are always in the same quadrant. Show that :math:`\;\tan\;\tfrac{1}{2}\theta ~=~ \sqrt{\frac{1 \;+\; \epsilon}{1 \;-\; \epsilon}}~ \tan\;\tfrac{1}{2}\psi\;`.
 
-其他恒等式  
+4. 其他恒等式  
 ------------------
 Other Identities
 
