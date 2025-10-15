@@ -1,0 +1,765 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>附录 B &#8212; 三角学(trigonometry)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script>let toggleHintShow = '原文';</script>
+    <script>let toggleHintHide = '收起';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]]}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix_b';</script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="GNU Free Documentation License" href="license.html" />
+    <link rel="prev" title="附录 A" href="appendix_a.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">三角学(trigonometry)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="about_author.html">关于作者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c1.html">第 1 章 直角三角形</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c2.html">第 2 章 一般三角形</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c3.html">第 3 章 恒等式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c4.html">第 4 章 弧度量</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c5.html">第 5 章 图像与反函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c6.html">第 6 章 附加主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_a.html">附录 A</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">附录 B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">GNU Free Documentation License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/hellowac/trigonometry-zh-cn" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="源码库"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/appendix_b.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>附录 B</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目录 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gnuplot">使用 Gnuplot 绘图</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">安装</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">运行 Gnuplot</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">打印与保存</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="b">
+<span id="appendix-b"></span><h1>附录 B<a class="headerlink" href="#b" title="此标题的永久链接">#</a></h1>
+<p>Appendix B</p>
+<section id="gnuplot">
+<h2>使用 Gnuplot 绘图<a class="headerlink" href="#gnuplot" title="此标题的永久链接">#</a></h2>
+<p>Graphing with Gnuplot</p>
+<p>Gnuplot 是一个免费的开源软件包，用于生成各种图形。它有适用于多种操作系统的版本。下面是一个简要教程，介绍如何使用 Gnuplot 绘制三角函数图像。</p>
+<div class="toggle docutils container">
+<p>Gnuplot is a free, open-source software package for producing a variety of graphs. Versions are
+available for many operating systems. Below is a very brief tutorial on how to use Gnuplot to graph
+trigonometric functions.</p>
+</div>
+<section id="id1">
+<h3>安装<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h3>
+<p>INSTALLATION</p>
+<ol class="arabic simple">
+<li><p>访问 <a class="reference external" href="http://www.gnuplot.info/download.html">http://www.gnuplot.info/download.html</a>，按照链接下载适用于你的操作系统的最新版本。对于 Windows，你应下载名为类似 <code class="docutils literal notranslate"><span class="pre">gp460-win32-setup.exe</span></code> 的安装文件（即版本 4.6.0）。这里讨论的所有示例都假设至少是 4.6.0 版本，尽管它们在早期的 4.x 版本中通常也能运行。</p></li>
+<li><p>安装下载的文件。例如，在 Windows 中运行你在第 1 步下载的安装文件，默认将 Gnuplot 安装在 <code class="docutils literal notranslate"><span class="pre">C:\symbol{92}Program</span> <span class="pre">Files\gnuplot</span></code> 文件夹中。你可以接受默认设置，但应在 <strong>选择附加任务</strong> 界面中选择 “创建桌面图标” 选项。</p></li>
+<li><p>（可选）阅读 <a class="reference external" href="http://gnuplot.info/documentation.html">http://gnuplot.info/documentation.html</a> 上的文档。</p></li>
+</ol>
+<div class="toggle docutils container">
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="http://www.gnuplot.info/download.html">http://www.gnuplot.info/download.html</a> and follow the links to download the latest version for your operating system. For Windows, you should download the setup file with a name such as <code class="docutils literal notranslate"><span class="pre">gp460-win32-setup.exe</span></code>, which is version 4.6.0. All the examples discussed here will assume at least version 4.6.0, though they should work with earlier 4.x versions.</p></li>
+<li><p>Install the downloaded file. For example, in Windows you would run the setup file you downloaded in Step 1, which installs Gnuplot in the <code class="docutils literal notranslate"><span class="pre">C:\symbol{92}Program</span> <span class="pre">Files\gnuplot</span></code> folder by default. You can accept the defaults during installation, though you should select the  “Create a desktop icon” option in the <strong>Select Additional Tasks</strong> screen.</p></li>
+<li><p>(Optional) Read the documentation at <a class="reference external" href="http://gnuplot.info/documentation.html">http://gnuplot.info/documentation.html</a>.</p></li>
+</ol>
+</div>
+</section>
+<section id="id2">
+<h3>运行 Gnuplot<a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h3>
+<p>RUNNING GNUPLOT</p>
+<ol class="arabic simple">
+<li><p>在 Windows 中，从你安装 Gnuplot 的 <code class="docutils literal notranslate"><span class="pre">bin</span></code> 文件夹中运行 <code class="docutils literal notranslate"><span class="pre">wgnuplot.exe``（默认位置是</span> <span class="pre">``C:\Program</span> <span class="pre">Files\gnuplot\bin\wgnuplot.exe</span></code>），或者如果你在安装时选择了该选项，也可以双击桌面图标。在 Linux 中，只需在终端窗口中输入 <code class="docutils literal notranslate"><span class="pre">gnuplot</span></code>。</p></li>
+<li><p>你现在应该能看到一个带有 <code class="docutils literal notranslate"><span class="pre">gnuplot&gt;</span></code> 命令提示符的 Gnuplot 终端。在 Windows 中，它会出现在一个新窗口中，如下一页所示的图片。在 Linux 中，它会出现在运行 <code class="docutils literal notranslate"><span class="pre">gnuplot</span></code> 命令的终端窗口中。对于 Windows，如果字体难以辨认，可以通过右键点击 Gnuplot 窗口的文本区域并选择 “选择字体…” 选项进行更改。例如，字体选择 “Courier”，样式 “Regular”，字号 “12” 通常是一个不错的选择（可以通过再次右键点击 Gnuplot 窗口并选择更新 wgnuplot.ini 的选项来保存该设置，以便下次会话使用）。</p></li>
+<li><p>现在在 <code class="docutils literal notranslate"><span class="pre">gnuplot&gt;</span></code> 命令提示符下，你可以运行绘图命令，下面将对其进行说明。</p></li>
+</ol>
+<figure class="align-center">
+<img alt="_images/164-0.png" src="_images/164-0.png" />
+</figure>
+<p><strong>函数绘图</strong></p>
+<p>在 Gnuplot 中创建图像的常用方式是使用 <strong>plot</strong> 命令：</p>
+<div class="math notranslate nohighlight">
+\[\texttt{plot &lt;range&gt; &lt;comma-separated list of functions&gt;}\]</div>
+<p>对于一个函数 <span class="math notranslate nohighlight">\(y=f(x)\)</span>，<em>&lt;range&gt;</em> 是用于绘图的 <span class="math notranslate nohighlight">\(x\)</span> 值范围（可选地也包括 <span class="math notranslate nohighlight">\(y\)</span> 值范围）。若要指定一个 <span class="math notranslate nohighlight">\(x\)</span> 范围，使用形式为 <span class="math notranslate nohighlight">\([a:b]\)</span> 的表达式，其中 <span class="math notranslate nohighlight">\(a&lt;b\)</span>。这将使图像在 <span class="math notranslate nohighlight">\(a\le x\le b\)</span> 的区间内绘制。</p>
+<p>若要同时指定 <span class="math notranslate nohighlight">\(x\)</span> 范围和 <span class="math notranslate nohighlight">\(y\)</span> 范围，使用形式为 <span class="math notranslate nohighlight">\([a:b]\)</span> <span class="math notranslate nohighlight">\([c:d]\)</span> 的表达式，其中 <span class="math notranslate nohighlight">\(a&lt;b\)</span> 且 <span class="math notranslate nohighlight">\(c&lt;d\)</span>。这将使图像在 <span class="math notranslate nohighlight">\(a\le x\le b\)</span> 且 <span class="math notranslate nohighlight">\(c\le y \le d\)</span> 的区间内绘制。</p>
+<p>函数定义使用 <span class="math notranslate nohighlight">\(x\)</span> 变量与下列数学运算符组合：</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>符号</strong></p></td>
+<td><p><strong>操作</strong></p></td>
+<td><p><strong>示例</strong></p></td>
+<td><p><strong>结果</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td><p>加法</p></td>
+<td><p><span class="math notranslate nohighlight">\(2 + 3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(5\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td><p>减法</p></td>
+<td><p><span class="math notranslate nohighlight">\(3 - 2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>*</p></td>
+<td><p>乘法</p></td>
+<td><p><span class="math notranslate nohighlight">\(2`*`3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(6\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(/\)</span></p></td>
+<td><p>除法</p></td>
+<td><p><span class="math notranslate nohighlight">\(4/2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>**</p></td>
+<td><p>平方</p></td>
+<td><p><span class="math notranslate nohighlight">\(2\)</span> ** <span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2^3 = 8\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>exp(<span class="math notranslate nohighlight">\(x\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td><p>exp(<span class="math notranslate nohighlight">\(2\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(e^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>log(<span class="math notranslate nohighlight">\(x\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln x\)</span></p></td>
+<td><p>log(<span class="math notranslate nohighlight">\(2\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln 2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>sin(<span class="math notranslate nohighlight">\(x\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin x\)</span></p></td>
+<td><p>sin(pi/<span class="math notranslate nohighlight">\(2\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>cos(<span class="math notranslate nohighlight">\(x\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos x\)</span></p></td>
+<td><p>cos(pi)</p></td>
+<td><p><span class="math notranslate nohighlight">\(-1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>tan(<span class="math notranslate nohighlight">\(x\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tan x\)</span></p></td>
+<td><p>tan(pi/<span class="math notranslate nohighlight">\(4\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>注意我们使用特殊关键字 “pi” 来表示 <span class="math notranslate nohighlight">\(\pi\)</span> 的值。</p>
+<div class="admonition-b-1 admonition">
+<p class="admonition-title">示例 B.1.</p>
+<p>要绘制函数 <span class="math notranslate nohighlight">\(y=\sin\;x\)</span> 在区间 <span class="math notranslate nohighlight">\(x=0\)</span> 到 <span class="math notranslate nohighlight">\(x=2\pi\)</span> 上的图像，在 <strong>gnuplot</strong> 提示符下输入：</p>
+<div class="math notranslate nohighlight">
+\[\texttt{plot [0:2*pi] sin(x)}\]</div>
+<p>结果如下图所示：</p>
+<figure class="align-center">
+<img alt="_images/165-0.png" src="_images/165-0.png" />
+</figure>
+<p>注意 <span class="math notranslate nohighlight">\(x\)</span> 轴标注为整数。若要将 <span class="math notranslate nohighlight">\(x\)</span> 轴标注为 <span class="math notranslate nohighlight">\(\pi\)</span> 的分数形式，需要修改 <em>terminal</em> 设置。在 Windows 中，可以使用如下命令：</p>
+<div class="math notranslate nohighlight">
+\[\texttt{set terminal windows enhanced}\]</div>
+<p>在 Linux 中则使用：</p>
+<div class="math notranslate nohighlight">
+\[\texttt{set terminal wxt enhanced}\]</div>
+<p>然后（前提是系统已安装 Symbol 字体，通常已安装）可使用以下命令（需一行输入）将 <span class="math notranslate nohighlight">\(x\)</span> 轴标注为从 <span class="math notranslate nohighlight">\(0\)</span> 到 <span class="math notranslate nohighlight">\(2\pi\)</span> 的 <span class="math notranslate nohighlight">\(\pi/2\)</span> 的倍数：</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gather*}
+\texttt{set xtics ('0' 0,'\{/Symbol p\}/2' pi/2,'\{/Symbol p\}' pi,'3\{/Symbol p\}/2' 3*pi/2,}\\
+\texttt{'2\{/Symbol p\}' 2*pi)}
+\end{gather*}\end{split}\]</div>
+<p>在上面的示例中，若要在同一图像中绘制函数 <span class="math notranslate nohighlight">\(y=\cos\;2x + \sin\;3x\)</span>，可在第一个函数后加一个逗号并添加新函数：</p>
+<div class="math notranslate nohighlight">
+\[\texttt{plot [0:2*pi] sin(x), cos(2*x) + sin(3*x)}\]</div>
+<p>默认情况下，图像中不会显示 <cite>x</cite> 轴。若要显示它，请在 <strong>plot</strong> 命令 <em>之前</em> 输入以下命令：</p>
+<div class="math notranslate nohighlight">
+\[\texttt{set zeroaxis}\]</div>
+<p>此外，若要为坐标轴添加标签，请使用如下命令：</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gather*}
+\texttt{set xlabel &quot;x&quot;}\\\texttt{set ylabel &quot;y&quot;}
+\end{gather*}\end{split}\]</div>
+<p>绘图默认的采样数量为 <span class="math notranslate nohighlight">\(100\)</span>，对于复杂曲线可能会导致边缘不平滑。为了获得更平滑的曲线，可将采样数增加（例如到 <span class="math notranslate nohighlight">\(1000\)</span>），命令如下：</p>
+<div class="math notranslate nohighlight">
+\[\texttt{set samples 1000}\]</div>
+<p>将以上设置整合后，可得到如下图像：</p>
+<figure class="align-center">
+<img alt="_images/167-0.png" src="_images/167-0.png" />
+</figure>
+</div>
+<div class="toggle docutils container">
+<ol class="arabic simple">
+<li><p>In Windows, run <code class="docutils literal notranslate"><span class="pre">wgnuplot.exe</span></code> from the <code class="docutils literal notranslate"><span class="pre">bin</span></code> folder where you installed Gnuplot (the default location is <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\gnuplot\bin\wgnuplot.exe</span></code> ), or double-click the desktop icon if you selected that option during the installation. In Linux, just type <code class="docutils literal notranslate"><span class="pre">gnuplot</span></code> in a terminal window.</p></li>
+<li><p>You should now get a Gnuplot terminal with a <code class="docutils literal notranslate"><span class="pre">gnuplot&gt;</span></code> command prompt. In Windows this will appear in a new window, as shown in the picture on the next page. In Linux it will appear in the terminal window where the <code class="docutils literal notranslate"><span class="pre">gnuplot</span></code> command was run. For Windows, if the font is unreadable you can change it by right-clicking on the text part of the Gnuplot window and selecting the “Choose Font..” option. For example, the font “Courier”, style “Regular”, size “12” is usually a good choice (that choice can be saved for future sessions by right-clicking in the Gnuplot window again and selecting the option to update wgnuplot.ini).</p></li>
+<li><p>At the <code class="docutils literal notranslate"><span class="pre">gnuplot&gt;</span></code> command prompt you can now run graphing commands, which we will now describe.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="_images/164-0.png" src="_images/164-0.png" />
+</figure>
+<p><strong>GRAPHING FUNCTIONS</strong></p>
+<p>The usual way to create graphs in Gnuplot is with the <strong>plot</strong> command:</p>
+<div class="math notranslate nohighlight">
+\[\texttt{plot &lt;range&gt; &lt;comma-separated list of functions&gt;}\]</div>
+<p>For a function <span class="math notranslate nohighlight">\(y=f(x)\)</span>, <em>&lt;range&gt;</em> is the range of <span class="math notranslate nohighlight">\(x\)</span> values (and optionally the range of <span class="math notranslate nohighlight">\(y\)</span> values) over which to plot. To specify an <span class="math notranslate nohighlight">\(x\)</span> range, use an expression of the form <span class="math notranslate nohighlight">\([a:b]\)</span>, for some numbers <span class="math notranslate nohighlight">\(a&lt;b\)</span>. This will cause the graph to be plotted for <span class="math notranslate nohighlight">\(a\le x\le b\)</span>.</p>
+<p>To specify an <span class="math notranslate nohighlight">\(x\)</span> range and a <span class="math notranslate nohighlight">\(y\)</span> range, use an expression of the form <span class="math notranslate nohighlight">\([a:b]\)</span> <span class="math notranslate nohighlight">\([c:d]\)</span>, for some numbers <span class="math notranslate nohighlight">\(a&lt;b\)</span> and <span class="math notranslate nohighlight">\(c&lt;d\)</span>. This will cause the graph to be plotted for <span class="math notranslate nohighlight">\(a\le x\le b\)</span> and <span class="math notranslate nohighlight">\(c\le y \le d\)</span>.</p>
+<p>Function definitions use the <span class="math notranslate nohighlight">\(x\)</span> variable in combination with mathematical operators, listed below:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><strong>Symbol</strong></p></td>
+<td><p><strong>Operation</strong></p></td>
+<td><p><strong>Example</strong></p></td>
+<td><p><strong>Result</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(+\)</span></p></td>
+<td><p>Addition</p></td>
+<td><p><span class="math notranslate nohighlight">\(2 + 3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(5\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<td><p>Subtraction</p></td>
+<td><p><span class="math notranslate nohighlight">\(3 - 2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>*</p></td>
+<td><p>Multiplication</p></td>
+<td><p><span class="math notranslate nohighlight">\(2`*`3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(6\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(/\)</span></p></td>
+<td><p>Division</p></td>
+<td><p><span class="math notranslate nohighlight">\(4/2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>**</p></td>
+<td><p>Power</p></td>
+<td><p><span class="math notranslate nohighlight">\(2\)</span> ** <span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2^3 = 8\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>exp(<span class="math notranslate nohighlight">\(x\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(e^x\)</span></p></td>
+<td><p>exp(<span class="math notranslate nohighlight">\(2\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(e^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>log(<span class="math notranslate nohighlight">\(x\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln x\)</span></p></td>
+<td><p>log(<span class="math notranslate nohighlight">\(2\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\ln 2\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>sin(<span class="math notranslate nohighlight">\(x\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sin x\)</span></p></td>
+<td><p>sin(pi/<span class="math notranslate nohighlight">\(2\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>cos(<span class="math notranslate nohighlight">\(x\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos x\)</span></p></td>
+<td><p>cos(pi)</p></td>
+<td><p><span class="math notranslate nohighlight">\(-1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>tan(<span class="math notranslate nohighlight">\(x\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tan x\)</span></p></td>
+<td><p>tan(pi/<span class="math notranslate nohighlight">\(4\)</span>)</p></td>
+<td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Note that we use the special keyword “pi” to denote the value of <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<div class="admonition-example-b-1 admonition">
+<p class="admonition-title">Example B.1.</p>
+<p>To graph the function <span class="math notranslate nohighlight">\(y=\sin\;x\)</span> from <span class="math notranslate nohighlight">\(x=0\)</span> to <span class="math notranslate nohighlight">\(x=2\pi\)</span>, type this at the <strong>gnuplot</strong> prompt:</p>
+<div class="math notranslate nohighlight">
+\[\texttt{plot [0:2*pi] sin(x)}\]</div>
+<p>The result is shown below:</p>
+<figure class="align-center">
+<img alt="_images/165-0.png" src="_images/165-0.png" />
+</figure>
+<p>Notice that the <span class="math notranslate nohighlight">\(x\)</span>-axis is labeled with integers. To get the <span class="math notranslate nohighlight">\(x\)</span>-axis labels with fractions of <span class="math notranslate nohighlight">\(\pi\)</span>, you need to modify the <em>terminal</em> setting. In Windows, you would do this:</p>
+<div class="math notranslate nohighlight">
+\[\texttt{set terminal windows enhanced}\]</div>
+<p>In Linux you would do this:</p>
+<div class="math notranslate nohighlight">
+\[\texttt{set terminal wxt enhanced}\]</div>
+<p>You can then (provided the Symbol font is installed, which it usually is) set the <span class="math notranslate nohighlight">\(x\)</span>-axis to have multiples of <span class="math notranslate nohighlight">\(\pi/2\)</span> from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(2\pi\)</span> as labels with this command (all on one line):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gather*}
+\texttt{set xtics ('0' 0,'\{/Symbol p\}/2' pi/2,'\{/Symbol p\}' pi,'3\{/Symbol p\}/2' 3*pi/2,}\\
+\texttt{'2\{/Symbol p\}' 2*pi)}
+\end{gather*}\end{split}\]</div>
+<p>In the above example, to also plot the function <span class="math notranslate nohighlight">\(y=\cos\;2x + \sin\;3x\)</span> on the same graph, put a comma after the first function then append the new function:</p>
+<div class="math notranslate nohighlight">
+\[\texttt{plot [0:2*pi] sin(x), cos(2*x) + sin(3*x)}\]</div>
+<p>By default, the <cite>x</cite>-axis is not shown in the graph. To display it, use this command <em>before</em> the <strong>plot</strong> command:</p>
+<div class="math notranslate nohighlight">
+\[\texttt{set zeroaxis}\]</div>
+<p>Also, to label the axes, use these commands:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gather*}
+\texttt{set xlabel &quot;x&quot;}\\\texttt{set ylabel &quot;y&quot;}
+\end{gather*}\end{split}\]</div>
+<p>The default sample size for plots is <span class="math notranslate nohighlight">\(100\)</span> units, which can result in jagged edges if the curve is complicated. To get a smoother curve, increase the sample size (to, say, <span class="math notranslate nohighlight">\(1000\)</span>) like this:</p>
+<div class="math notranslate nohighlight">
+\[\texttt{set samples 1000}\]</div>
+<p>Putting all this together, we get the following graph:</p>
+<figure class="align-center">
+<img alt="_images/167-0.png" src="_images/167-0.png" />
+</figure>
+</div>
+</div>
+</section>
+</section>
+<section id="id3">
+<h2>打印与保存<a class="headerlink" href="#id3" title="此标题的永久链接">#</a></h2>
+<p>PRINTING AND SAVING</p>
+<p>在 Windows 中，如果你使用的是 <em>windows enhanced</em> 终端，那么要从 Gnuplot 中打印图像，只需点击图像窗口菜单栏中的打印图标。如果你使用的是默认的 <em>wxt</em> 终端，则需在 Gnuplot 主窗口上方选择 <strong>Print</strong>，在 <code class="docutils literal notranslate"><span class="pre">Terminal</span> <span class="pre">type?</span></code> 文本框中输入 <code class="docutils literal notranslate"><span class="pre">png</span></code>，然后点击 OK 打开打印设置对话框。</p>
+<p>在 Windows 中，若要将图像保存为 PNG 文件，可在 Gnuplot 主窗口的菜单栏中点击 File 菜单，选择 “Output Device …”，在 <em>Terminal type?</em> 文本框中输入 <code class="docutils literal notranslate"><span class="pre">png</span></code>，点击 OK。然后再次进入 File 菜单，选择 “Output …” 选项，在 <em>Output filename?</em> 文本框中输入文件名（如 graph.png），点击 OK。接着再次运行绘图命令，文件将会保存在当前目录中，通常为 <em>我的文档</em> 文件夹（也可以通过 File 菜单中的 “show Current Directory” 选项查看）。</p>
+<p>在 Linux 中，若要将图像保存为名为 graph.png 的文件，运行以下命令：</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+&amp;\texttt{set terminal png}\\
+&amp;\texttt{set output 'graph.png'}
+\end{align}\end{split}\]</div>
+<p>然后运行你的绘图命令。终端类型有很多种（它们决定了输出格式）。可运行命令 <cite>set terminal</cite> 查看所有可用类型。在 Linux 中， <strong>postscript</strong> 终端类型很常用，因为其打印质量高，且有许多 PostScript 查看器可用。</p>
+<p>若要退出 Gnuplot，请在 <code class="docutils literal notranslate"><span class="pre">gnuplot</span></code> 命令提示符下输入 <code class="docutils literal notranslate"><span class="pre">quit</span></code>。</p>
+<div class="toggle docutils container">
+<p>In Windows, if you are using the <em>windows enhanced</em> terminal then to print a graph from Gnuplot click on the printer icon in the menubar of the graph’s window. If you are using the default <em>wxt</em> terminal then select <strong>Print</strong> near the top of the main Gnuplot window and enter <code class="docutils literal notranslate"><span class="pre">png</span></code> in the <code class="docutils literal notranslate"><span class="pre">Terminal</span> <span class="pre">type?</span></code> textfield, then hit OK to get the Print Setup dialog.</p>
+<p>In Windows, to save a graph, say, as a PNG file, go to the File menu on the main Gnuplot menubar, select “Output Device …”, and enter <code class="docutils literal notranslate"><span class="pre">png</span></code> in the <em>Terminal type?</em> textfield, hit OK. Then, in the File menu again, select the “Output …” option and enter a filename (say, graph.png) in the <em>Output filename?</em> textfield, hit OK. Now run your plot command again and the file will be saved in the current directory, usually in your <em>My Documents</em> folder (it can also be found by selecting the “show Current Directory” option in the File menu).</p>
+<p>In Linux, to save the graph as a file called graph.png run the following commands:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+&amp;\texttt{set terminal png}\\
+&amp;\texttt{set output 'graph.png'}
+\end{align}\end{split}\]</div>
+<p>and then run your plot command. There are many terminal types (which determine the output format). Run
+the command <cite>set terminal</cite> to see all the possible types. In Linux, the <strong>postscript</strong> terminal type is
+popular, since the print quality is high and there are many PostScript viewers available.</p>
+<p>To quit Gnuplot, type <code class="docutils literal notranslate"><span class="pre">quit</span></code> at the <code class="docutils literal notranslate"><span class="pre">gnuplot</span></code> command prompt.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="appendix_a.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">附录 A</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="license.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">GNU Free Documentation License</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目录
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gnuplot">使用 Gnuplot 绘图</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">安装</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">运行 Gnuplot</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">打印与保存</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： Michael Corral
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2009, Michael Corral.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,893 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>附录 A &#8212; 三角学(trigonometry)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script>let toggleHintShow = '原文';</script>
+    <script>let toggleHintHide = '收起';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]]}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix_a';</script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="附录 B" href="appendix_b.html" />
+    <link rel="prev" title="第 6 章 附加主题" href="c6.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">三角学(trigonometry)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="about_author.html">关于作者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c1.html">第 1 章 直角三角形</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c2.html">第 2 章 一般三角形</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c3.html">第 3 章 恒等式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c4.html">第 4 章 弧度量</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c5.html">第 5 章 图像与反函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c6.html">第 6 章 附加主题</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">附录 A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_b.html">附录 B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">GNU Free Documentation License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/hellowac/trigonometry-zh-cn" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="源码库"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/appendix_a.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>附录 A</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目录 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-1">Chapter 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-1">Section 1.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-2">Section 1.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-3">Section 1.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-4">Section 1.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-5">Section 1.5</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-2">Chapter 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-1">Section 2.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-2">Section 2.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-3">Section 2.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-4">Section 2.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-5">Section 2.5</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-3">Chapter 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-1">Section 3.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-2">Section 3.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-3">Section 3.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-4">Section 3.4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-4">Chapter 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-1">Section 4.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-2">Section 4.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-3">Section 4.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-4">Section 4.4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-5">Chapter 5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-1">Section 5.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-2">Section 5.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-3">Section 5.3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-6">Chapter 6</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-1">Section 6.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-2">Section 6.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-3">Section 6.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-4">Section 6.4</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="a">
+<span id="appendix-a"></span><h1>附录 A<a class="headerlink" href="#a" title="此标题的永久链接">#</a></h1>
+<p>Appendix A</p>
+<p><strong>Answers and Hints to Selected Exercises</strong></p>
+<section id="chapter-1">
+<h2>Chapter 1<a class="headerlink" href="#chapter-1" title="此标题的永久链接">#</a></h2>
+<section id="section-1-1">
+<h3>Section 1.1<a class="headerlink" href="#section-1-1" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(115^\circ\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(A=52^\circ\)</span>, <span class="math notranslate nohighlight">\(B=104^\circ\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(45^\circ\)</span></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(A=9^\circ\)</span>, <span class="math notranslate nohighlight">\(B=81^\circ\)</span></p>
+<p><strong>8.</strong> <span class="math notranslate nohighlight">\(0.011^\circ\)</span> and <span class="math notranslate nohighlight">\(89.989^\circ\)</span></p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(25\)</span> miles</p>
+<p><strong>10.</strong> <span class="math notranslate nohighlight">\(111.8\)</span> ft</p>
+<p><strong>15.</strong> Hint: Are the opposite sides of the four-sided figure inside the circle parallel?</p>
+</section>
+<section id="section-1-2">
+<h3>Section 1.2<a class="headerlink" href="#section-1-2" title="此标题的永久链接">#</a></h3>
+<dl>
+<dt><strong>1.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;A = 5/13\)</span>, <span class="math notranslate nohighlight">\(\cos\;A = 12/13\)</span>, <span class="math notranslate nohighlight">\(\tan\;A = 5/12\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;A = 13/5\)</span>, <span class="math notranslate nohighlight">\(\sec\;A = 13/12\)</span>, <span class="math notranslate nohighlight">\(\cot\;A = 12/5\)</span>;</p>
+<p><span class="math notranslate nohighlight">\(\sin\;B = 12/13\)</span>, <span class="math notranslate nohighlight">\(\cos\;B = 5/13\)</span>, <span class="math notranslate nohighlight">\(\tan\;B = 12/5\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;B = 13/12\)</span>, <span class="math notranslate nohighlight">\(\sec\;B = 13/5\)</span>, <span class="math notranslate nohighlight">\(\cot\;B = 5/12\)</span></p>
+</dd>
+<dt><strong>3.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;A = 7/25\)</span>, <span class="math notranslate nohighlight">\(\cos\;A = 24/25\)</span>, <span class="math notranslate nohighlight">\(\tan\;A = 7/24\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;A = 25/7\)</span>, <span class="math notranslate nohighlight">\(\sec\;A = 25/24\)</span>, <span class="math notranslate nohighlight">\(\cot\;A = 24/7\)</span>;</p>
+<p><span class="math notranslate nohighlight">\(\sin\;B = 24/25\)</span>, <span class="math notranslate nohighlight">\(\cos\;B = 7/25\)</span>, <span class="math notranslate nohighlight">\(\tan\;B = 24/7\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;B = 25/24\)</span>, <span class="math notranslate nohighlight">\(\sec\;B = 25/7\)</span>, <span class="math notranslate nohighlight">\(\cot\;B = 7/24\)</span></p>
+</dd>
+<dt><strong>5.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;A = 9/41\)</span>, <span class="math notranslate nohighlight">\(\cos\;A = 40/41\)</span>, <span class="math notranslate nohighlight">\(\tan\;A = 9/40\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;A = 41/9\)</span>, <span class="math notranslate nohighlight">\(\sec\;A = 41/40\)</span>, <span class="math notranslate nohighlight">\(\cot\;A = 40/9\)</span>;</p>
+<p><span class="math notranslate nohighlight">\(\sin\;B = 40/41\)</span>, <span class="math notranslate nohighlight">\(\cos\;B = 9/41\)</span>, <span class="math notranslate nohighlight">\(\tan\;B = 40/9\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;B = 41/40\)</span>, <span class="math notranslate nohighlight">\(\sec\;B = 41/9\)</span>, <span class="math notranslate nohighlight">\(\cot\;B = 9/40\)</span></p>
+</dd>
+<dt><strong>7.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;A = 1/\sqrt{10}\)</span>, <span class="math notranslate nohighlight">\(\cos\;A = 3/\sqrt{10}\)</span>, <span class="math notranslate nohighlight">\(\tan\;A = 1/3\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;A = \sqrt{10}\)</span>, <span class="math notranslate nohighlight">\(\sec\;A = \sqrt{10}/3\)</span>, <span class="math notranslate nohighlight">\(\cot\;A = 3\)</span>;</p>
+<p><span class="math notranslate nohighlight">\(\sin\;B = 3/\sqrt{10}\)</span>, <span class="math notranslate nohighlight">\(\cos\;B = 1/\sqrt{10}\)</span>, <span class="math notranslate nohighlight">\(\tan\;B = 3\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;B = \sqrt{10}/3\)</span>, <span class="math notranslate nohighlight">\(\sec\;B = \sqrt{10}\)</span>, <span class="math notranslate nohighlight">\(\cot\;B = 1/3\)</span></p>
+</dd>
+<dt><strong>9.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;A = 5/6\)</span>, <span class="math notranslate nohighlight">\(\cos\;A = \sqrt{11}/6\)</span>, <span class="math notranslate nohighlight">\(\tan\;A = 5/\sqrt{11}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;A = 6/5\)</span>, <span class="math notranslate nohighlight">\(\sec\;A = 6/\sqrt{11}\)</span>, <span class="math notranslate nohighlight">\(\cot\;A = \sqrt{11}/5\)</span>;</p>
+<p><span class="math notranslate nohighlight">\(\sin\;B = \sqrt{11}/6\)</span>, <span class="math notranslate nohighlight">\(\cos\;B = 5/6\)</span>, <span class="math notranslate nohighlight">\(\tan\;B = \sqrt{11}/5\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;B = 6/\sqrt{11}\)</span>, <span class="math notranslate nohighlight">\(\sec\;B = 6/5\)</span>, <span class="math notranslate nohighlight">\(\cot\;B = 5/\sqrt{11}\)</span></p>
+</dd>
+<dt><strong>11.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\cos\;A = \sqrt{7}/4\)</span>, <span class="math notranslate nohighlight">\(\tan\;A = 3/\sqrt{7}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;A = 4/3\)</span>, <span class="math notranslate nohighlight">\(\sec\;A = 4/\sqrt{7}\)</span>, <span class="math notranslate nohighlight">\(\cot\;A = \sqrt{7}/3\)</span></p>
+</dd>
+<dt><strong>13.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;A = \sqrt{6}/\sqrt{10}\)</span>, <span class="math notranslate nohighlight">\(\tan\;A = \sqrt{6}/2\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;A = \sqrt{10}/\sqrt{6}\)</span>, <span class="math notranslate nohighlight">\(\sec\;A = \sqrt{10}/2\)</span>, <span class="math notranslate nohighlight">\(\cot\;A = 2/\sqrt{6}\)</span></p>
+</dd>
+<dt><strong>15.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;A = 5/\sqrt{106}\)</span>, <span class="math notranslate nohighlight">\(\cos\;A = 9/\sqrt{106}\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;A = \sqrt{106}/5\)</span>, <span class="math notranslate nohighlight">\(\sec\;A = \sqrt{106}/9\)</span>, <span class="math notranslate nohighlight">\(\cot\;A = 9/5\)</span></p>
+</dd>
+<dt><strong>17.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;A = \sqrt{40}/7\)</span>, <span class="math notranslate nohighlight">\(\cos\;A = 3/7\)</span>, <span class="math notranslate nohighlight">\(\tan\;A = \sqrt{40}/3\)</span>,</p>
+<p><span class="math notranslate nohighlight">\(\csc\;A = 7/\sqrt{40}\)</span>, <span class="math notranslate nohighlight">\(\cot\;A = 3/\sqrt{40}\)</span></p>
+</dd>
+</dl>
+<p><strong>19.</strong> <span class="math notranslate nohighlight">\(\cos\;3^\circ\)</span></p>
+<p><strong>21.</strong> <span class="math notranslate nohighlight">\(\sin\;44^\circ\)</span></p>
+<p><strong>23.</strong> <span class="math notranslate nohighlight">\(\csc\;13^\circ\)</span></p>
+<p><strong>25.</strong> <span class="math notranslate nohighlight">\(\sin\;77^\circ\)</span></p>
+<p><strong>27.</strong> <span class="math notranslate nohighlight">\(\tan\;80^\circ\)</span></p>
+<p><strong>30.</strong> Hint: Draw a right triangle with an acute angle <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p><strong>33.</strong> Hint: Draw two right triangles whose hypotenuses are the same length.</p>
+<dl>
+<dt><strong>37.</strong></dt><dd><p><strong>(a)</strong> <span class="math notranslate nohighlight">\(\sqrt{13}/4\)</span></p>
+<p><strong>(b)</strong> <span class="math notranslate nohighlight">\(4\sqrt{3}/\sqrt{13}\)</span></p>
+<p><strong>(c)</strong> <span class="math notranslate nohighlight">\(3/\sqrt{13}\)</span></p>
+</dd>
+</dl>
+</section>
+<section id="section-1-3">
+<h3>Section 1.3<a class="headerlink" href="#section-1-3" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(102.7\)</span> ft</p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(241.1\)</span> ft</p>
+<p><strong>4.</strong> <span class="math notranslate nohighlight">\(274\)</span> ft</p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(1062\)</span> mi</p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(0.476\)</span> in</p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(1.955\)</span> in</p>
+<p><strong>13.</strong> <span class="math notranslate nohighlight">\(0.4866\)</span> in</p>
+<p><strong>14.</strong> Partial answer: <span class="math notranslate nohighlight">\(DE=a\;\cot\;\theta\;\,\cos^2\,\theta\)</span></p>
+<p><strong>15.</strong> <span class="math notranslate nohighlight">\(c=13\)</span>, <span class="math notranslate nohighlight">\(A=22.6^\circ\)</span>, <span class="math notranslate nohighlight">\(B=67.4^\circ\)</span></p>
+<p><strong>17.</strong> <span class="math notranslate nohighlight">\(a=0.28\)</span>, <span class="math notranslate nohighlight">\(c=2.02\)</span>, <span class="math notranslate nohighlight">\(B=82^\circ\)</span></p>
+<p><strong>19.</strong> <span class="math notranslate nohighlight">\(b=6.15\)</span>, <span class="math notranslate nohighlight">\(c=6.84\)</span>, <span class="math notranslate nohighlight">\(B=64^\circ\)</span></p>
+<p><strong>21.</strong> <span class="math notranslate nohighlight">\(a=6.15\)</span>, <span class="math notranslate nohighlight">\(c=6.84\)</span>, <span class="math notranslate nohighlight">\(A=64^\circ\)</span></p>
+<p><strong>23.</strong> <span class="math notranslate nohighlight">\(a=\sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(b=\sqrt{2}\)</span>, <span class="math notranslate nohighlight">\(B=45^\circ\)</span></p>
+<p><strong>25.</strong> <strong>(a)</strong> <span class="math notranslate nohighlight">\(0.944\)</span> cm <strong>(b)</strong> <span class="math notranslate nohighlight">\(2.112\)</span> cm</p>
+<p><strong>27.</strong> <strong>(a)</strong> <span class="math notranslate nohighlight">\(\sqrt{3}\;a\)</span>  <strong>(b)</strong> <span class="math notranslate nohighlight">\(35.26^\circ\)</span></p>
+<p><strong>29.</strong> <span class="math notranslate nohighlight">\(1379.5\)</span> ft <span class="math notranslate nohighlight">\(= 0.2613\)</span> mi</p>
+</section>
+<section id="section-1-4">
+<h3>Section 1.4<a class="headerlink" href="#section-1-4" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> QII</p>
+<p><strong>3.</strong> QIV</p>
+<p><strong>5.</strong> negative <span class="math notranslate nohighlight">\(y\)</span>-axis</p>
+<p><strong>7.</strong> QIII</p>
+<p><strong>9.</strong> QIV</p>
+<p><strong>11.</strong> QI, QIII</p>
+<p><strong>13.</strong> QI, QIV</p>
+<p><strong>15.</strong> QI, QII</p>
+<p><strong>17.</strong> <span class="math notranslate nohighlight">\(43^\circ\)</span></p>
+<p><strong>19.</strong> <span class="math notranslate nohighlight">\(54^\circ\)</span></p>
+<p><strong>21.</strong> <span class="math notranslate nohighlight">\(85^\circ\)</span></p>
+<dl>
+<dt><strong>23.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;\theta = \sqrt{3}/2\)</span> and <span class="math notranslate nohighlight">\(\tan\;\theta = -\sqrt{3}\)</span>; <span class="math notranslate nohighlight">\(\sin\;\theta = -\sqrt{3}/2\)</span> and <span class="math notranslate nohighlight">\(\tan\;\theta = \sqrt{3}\)</span></p>
+</dd>
+<dt><strong>25.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;\theta = \sqrt{21}/5\)</span> and <span class="math notranslate nohighlight">\(\tan\;\theta = \sqrt{21}/2\)</span>;
+<span class="math notranslate nohighlight">\(\sin\;\theta = -\sqrt{21}/5\)</span> and
+<span class="math notranslate nohighlight">\(\tan\;\theta = -\sqrt{21}/2\)</span></p>
+</dd>
+<dt><strong>27.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\cos\;\theta = \sqrt{3}/2\)</span> and <span class="math notranslate nohighlight">\(\tan\;\theta = 1/\sqrt{3}\)</span>;</p>
+<p><span class="math notranslate nohighlight">\(\cos\;\theta = -\sqrt{3}/2\)</span> and <span class="math notranslate nohighlight">\(\tan\;\theta = -1/\sqrt{3}\)</span></p>
+</dd>
+</dl>
+<p><strong>29.</strong> <span class="math notranslate nohighlight">\(\cos\;\theta = \pm 1\)</span> and <span class="math notranslate nohighlight">\(\tan\;\theta = 0\)</span></p>
+<p><strong>31.</strong> <span class="math notranslate nohighlight">\(\cos\;\theta = 0\)</span> and <span class="math notranslate nohighlight">\(\tan\;\theta\)</span> is undefined</p>
+<dl>
+<dt><strong>33.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;\theta = 1/\sqrt{5}\)</span> and <span class="math notranslate nohighlight">\(\cos\;\theta = -2/\sqrt{5}\)</span>;</p>
+<p><span class="math notranslate nohighlight">\(\sin\;\theta = -1/\sqrt{5}\)</span> and <span class="math notranslate nohighlight">\(\cos\;\theta = 2/\sqrt{5}\)</span></p>
+</dd>
+<dt><strong>35.</strong></dt><dd><p><span class="math notranslate nohighlight">\(\sin\;\theta = 5/13\)</span> and <span class="math notranslate nohighlight">\(\cos\;\theta = 12/13\)</span>;
+<span class="math notranslate nohighlight">\(\sin\;\theta = -5/13\)</span> and <span class="math notranslate nohighlight">\(\cos\;\theta = -12/13\)</span></p>
+</dd>
+</dl>
+<p><strong>37.</strong> No</p>
+<p><strong>39.</strong> No</p>
+</section>
+<section id="section-1-5">
+<h3>Section 1.5<a class="headerlink" href="#section-1-5" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <strong>(a)</strong> <span class="math notranslate nohighlight">\(328^\circ\)</span> <strong>(b)</strong> <span class="math notranslate nohighlight">\(148^\circ\)</span> <strong>(c)</strong> <span class="math notranslate nohighlight">\(212^\circ\)</span></p>
+<p><strong>3.</strong> <strong>(a)</strong> <span class="math notranslate nohighlight">\(248^\circ\)</span> <strong>(b)</strong> <span class="math notranslate nohighlight">\(68^\circ\)</span> <strong>(c)</strong> <span class="math notranslate nohighlight">\(292^\circ\)</span></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(25^\circ\)</span>, <span class="math notranslate nohighlight">\(155^\circ\)</span></p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(65^\circ\)</span>, <span class="math notranslate nohighlight">\(295^\circ\)</span></p>
+<p><strong>11.</strong> <cite>38^circ</cite>, <span class="math notranslate nohighlight">\(218^\circ\)</span></p>
+<p><strong>13.</strong> <span class="math notranslate nohighlight">\(169^\circ\)</span>, <span class="math notranslate nohighlight">\(191^\circ\)</span></p>
+<p><strong>15.</strong> <span class="math notranslate nohighlight">\(D=\left( \frac{ab^2}{a^2 + b^2}, \frac{a^2 b}{a^2 + b^2} \right)\)</span></p>
+</section>
+</section>
+<section id="chapter-2">
+<h2>Chapter 2<a class="headerlink" href="#chapter-2" title="此标题的永久链接">#</a></h2>
+<section id="section-2-1">
+<h3>Section 2.1<a class="headerlink" href="#section-2-1" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(b = 7.4\)</span>, <span class="math notranslate nohighlight">\(c = 15.1\)</span>, <span class="math notranslate nohighlight">\(C = 120^\circ\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(a = 9.7\)</span>, <span class="math notranslate nohighlight">\(b = 10.7\)</span>, <span class="math notranslate nohighlight">\(C = 95^\circ\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(b = 65.1\)</span>, <span class="math notranslate nohighlight">\(B = 136.5^\circ\)</span>, <span class="math notranslate nohighlight">\(C = 18.5^\circ\)</span></p>
+<p><strong>7.</strong> No solution</p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(b = 24.9\)</span>, <span class="math notranslate nohighlight">\(B = 59.9^\circ\)</span>, <span class="math notranslate nohighlight">\(C = 70.1^\circ\)</span>; <span class="math notranslate nohighlight">\(b = 9.9\)</span>, <span class="math notranslate nohighlight">\(B = 20.1^\circ\)</span>, <span class="math notranslate nohighlight">\(C = 109.9^\circ\)</span></p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(422\)</span> mi/hr</p>
+<p><strong>15.</strong> <span class="math notranslate nohighlight">\(5.66\)</span> cm and <span class="math notranslate nohighlight">\(12.86\)</span> cm</p>
+<p><strong>16.</strong> Hint: Think geometrically.</p>
+</section>
+<section id="section-2-2">
+<h3>Section 2.2<a class="headerlink" href="#section-2-2" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(a = 10.6\)</span>, <span class="math notranslate nohighlight">\(B = 40.9^\circ\)</span>, <span class="math notranslate nohighlight">\(C = 79.1\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(A = 47.9^\circ\)</span>, <span class="math notranslate nohighlight">\(b = 8.2\)</span>, <span class="math notranslate nohighlight">\(C = 72.1^\circ\)</span></p>
+<p><strong>5.</strong> No solution</p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(4.13\)</span> and <span class="math notranslate nohighlight">\(8.91\)</span> cm</p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(50.5^\circ\)</span>, <span class="math notranslate nohighlight">\(59^\circ\)</span>, <span class="math notranslate nohighlight">\(70.5^\circ\)</span></p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(7\)</span> cm</p>
+<p><strong>15.</strong> Hints: One of the angles in the formulas is a right angle; also, use the definition of cosine.</p>
+</section>
+<section id="section-2-3">
+<h3>Section 2.3<a class="headerlink" href="#section-2-3" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(A = 79.1^\circ\)</span>, <span class="math notranslate nohighlight">\(B = 40.9^\circ\)</span>, <span class="math notranslate nohighlight">\(c = 10.6\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(A = 47.9^\circ\)</span>, <span class="math notranslate nohighlight">\(b = 8.2\)</span>, <span class="math notranslate nohighlight">\(C = 72.1^\circ\)</span></p>
+<p><strong>5.</strong> No</p>
+<p><strong>6.</strong> Yes</p>
+<p><strong>11.</strong> Hint: Think of Exercise 10.</p>
+</section>
+<section id="section-2-4">
+<h3>Section 2.4<a class="headerlink" href="#section-2-4" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(22.55\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(9.21\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(\frac{3}{4}\sqrt{15} \approx 2.905\)</span></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(12.21\)</span></p>
+<p><strong>9.</strong> Hints: The diagonals break the quadrilateral into four triangles; also, consider formulas <a class="reference internal" href="c2.html#equation-eqn-areacase1a">(45)</a>-<a class="reference internal" href="c2.html#equation-eqn-areacase1c">(48)</a>.</p>
+</section>
+<section id="section-2-5">
+<h3>Section 2.5<a class="headerlink" href="#section-2-5" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(R = 2.63\)</span>, <span class="math notranslate nohighlight">\(r = 0.69\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(R = 3.51\)</span>, <span class="math notranslate nohighlight">\(r = 1.36\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(R = 24.18\)</span>, <span class="math notranslate nohighlight">\(r = 1.12\)</span></p>
+<dl>
+<dt><strong>12.</strong></dt><dd><p><strong>(c)</strong> Twice as large</p>
+<p><strong>(d)</strong> Hint: Bisect each angle.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="chapter-3">
+<h2>Chapter 3<a class="headerlink" href="#chapter-3" title="此标题的永久链接">#</a></h2>
+<section id="section-3-1">
+<h3>Section 3.1<a class="headerlink" href="#section-3-1" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(\theta = 270^\circ\)</span></p>
+<p><strong>3.</strong> Hint: See Example <a class="reference internal" href="c3.html#exmp-elimtheta"><span class="std std-ref">3.7</span></a>.</p>
+<p><strong>19.</strong> <span class="math notranslate nohighlight">\(\tan\;\theta = \pm\,\sin\;\theta / \sqrt{1 - \sin^2 \;\theta} = \pm\,\sqrt{1 - \cos^2 \;\theta} / \cos\;\theta\)</span></p>
+</section>
+<section id="section-3-2">
+<h3>Section 3.2<a class="headerlink" href="#section-3-2" title="此标题的永久链接">#</a></h3>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(\sin\;(A+B) = \frac{1020}{1189}\)</span>, <span class="math notranslate nohighlight">\(\cos\;(A+B) = -\frac{611}{1189}\)</span>, <span class="math notranslate nohighlight">\(\tan\;(A+B) = -\frac{1020}{611}\)</span></p>
+<p><strong>4.</strong> <span class="math notranslate nohighlight">\((\sqrt{6} + \sqrt{2})/4\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(2 - \sqrt{3}\)</span></p>
+<p><strong>15.</strong> Hint: For <span class="math notranslate nohighlight">\(a \ne 0\)</span> and <span class="math notranslate nohighlight">\(b \ne 0\)</span>, draw a right triangle with legs of lengths <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.</p>
+</section>
+<section id="section-3-3">
+<h3>Section 3.3<a class="headerlink" href="#section-3-3" title="此标题的永久链接">#</a></h3>
+<p><strong>9.</strong> Hint: Is <span class="math notranslate nohighlight">\(\sin\;A + \cos\;A\)</span> always positive?</p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(1/2\)</span></p>
+</section>
+<section id="section-3-4">
+<h3>Section 3.4<a class="headerlink" href="#section-3-4" title="此标题的永久链接">#</a></h3>
+<p><strong>13.</strong> Hint: One way to do this is with the Law of Tangents. Another way is with the Law of Sines.</p>
+</section>
+</section>
+<section id="chapter-4">
+<h2>Chapter 4<a class="headerlink" href="#chapter-4" title="此标题的永久链接">#</a></h2>
+<section id="section-4-1">
+<h3>Section 4.1<a class="headerlink" href="#section-4-1" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(\pi/45\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(13\pi/18\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(-3\pi/5\)</span></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(36^\circ\)</span></p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(174^\circ\)</span></p>
+</section>
+<section id="section-4-2">
+<h3>Section 4.2<a class="headerlink" href="#section-4-2" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(9.6\)</span> cm</p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(11\pi\)</span> in</p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(54.94\)</span> in</p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(12.86\)</span> ft</p>
+<p><strong>8.</strong> <span class="math notranslate nohighlight">\(34.18\)</span></p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(38.26\)</span></p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(3.392\)</span> and <span class="math notranslate nohighlight">\(9.174\)</span></p>
+<p><strong>12.</strong> <span class="math notranslate nohighlight">\(3.105828541\)</span></p>
+</section>
+<section id="section-4-3">
+<h3>Section 4.3<a class="headerlink" href="#section-4-3" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(1.512~\text{cm}^2\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(24.5~\text{m}^2\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(269.1~\text{cm}^2\)</span></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(5~\text{cm}^2\)</span></p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(\pi/2~\text{cm}^2\)</span></p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(0.017~\text{cm}^2\)</span></p>
+<p><strong>13.</strong> <span class="math notranslate nohighlight">\(21.46\)</span></p>
+<p><strong>15.</strong> <span class="math notranslate nohighlight">\(48.17\)</span></p>
+<p><strong>17.</strong> <span class="math notranslate nohighlight">\(0.522~\text{m}^2\)</span></p>
+<p><strong>19.</strong> Sector area is quadrupled, arc length is doubled.</p>
+</section>
+<section id="section-4-4">
+<h3>Section 4.4<a class="headerlink" href="#section-4-4" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(\nu=6\)</span> m/sec, <span class="math notranslate nohighlight">\(\omega=1.5\)</span> rad/sec</p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(\nu=6.6\)</span> m/sec, <span class="math notranslate nohighlight">\(\omega=0.94\)</span> rad/sec</p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(\nu=3.75\)</span> m/sec, <span class="math notranslate nohighlight">\(\omega=1.875\)</span> rad/sec</p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(3.375\)</span> rad</p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(32\)</span> rpm and <span class="math notranslate nohighlight">\(21.33\)</span> rpm</p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(40.84\)</span> in/sec</p>
+</section>
+</section>
+<section id="chapter-5">
+<h2>Chapter 5<a class="headerlink" href="#chapter-5" title="此标题的永久链接">#</a></h2>
+<section id="section-5-1">
+<h3>Section 5.1<a class="headerlink" href="#section-5-1" title="此标题的永久链接">#</a></h3>
+<p><strong>13.</strong> Partial answer: <span class="math notranslate nohighlight">\(\sec\;\theta = OQ\)</span></p>
+</section>
+<section id="section-5-2">
+<h3>Section 5.2<a class="headerlink" href="#section-5-2" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> amplitude <span class="math notranslate nohighlight">\(= 3\)</span>, period <span class="math notranslate nohighlight">\(= 2\)</span>, phase shift = <span class="math notranslate nohighlight">\(0\)</span></p>
+<p><strong>3.</strong> amplitude <span class="math notranslate nohighlight">\(= 1\)</span>, period <span class="math notranslate nohighlight">\(= 2\pi/5\)</span>, phase shift = <span class="math notranslate nohighlight">\(-3/5\)</span></p>
+<p><strong>5.</strong> amplitude <span class="math notranslate nohighlight">\(= 1\)</span>, period <span class="math notranslate nohighlight">\(= 2\pi/5\)</span>, phase shift = <span class="math notranslate nohighlight">\(-\pi/5\)</span></p>
+<p><strong>7.</strong> amplitude <span class="math notranslate nohighlight">\(= 1\)</span>, period <span class="math notranslate nohighlight">\(= \pi\)</span>, phase shift = <span class="math notranslate nohighlight">\(3\pi/2\)</span></p>
+<p><strong>9.</strong> amplitude undefined, period <span class="math notranslate nohighlight">\(= \pi/2\)</span>, phase shift = <span class="math notranslate nohighlight">\(3\pi/2\)</span></p>
+<p><strong>11.</strong> amplitude undefined, period <span class="math notranslate nohighlight">\(= \pi\)</span>, phase shift = <span class="math notranslate nohighlight">\(1/2\)</span></p>
+<p><strong>13.</strong> max. at <span class="math notranslate nohighlight">\(x=\pm\,\sqrt{\pi/2}\)</span>, <span class="math notranslate nohighlight">\(\pm\,\sqrt{5\pi/2}\)</span>, <span class="math notranslate nohighlight">\(\pm\,\sqrt{9\pi/2}\)</span>, <span class="math notranslate nohighlight">\(...\)</span> min. at <span class="math notranslate nohighlight">\(x=\pm\,\sqrt{3\pi/2}\)</span>, <span class="math notranslate nohighlight">\(\pm\,\sqrt{7\pi/2}\)</span>, <span class="math notranslate nohighlight">\(\pm\,\sqrt{11\pi/2}\)</span>, <span class="math notranslate nohighlight">\(...\)</span></p>
+<p><strong>15.</strong> amplitude <span class="math notranslate nohighlight">\(= 0.5\)</span>, period <span class="math notranslate nohighlight">\(= \pi\)</span></p>
+<p><strong>17.</strong> out of phase</p>
+<p><strong>18.</strong> in phase</p>
+<p><strong>19.</strong> amplitude <span class="math notranslate nohighlight">\(= \sqrt{34}\)</span>, period <span class="math notranslate nohighlight">\(= 2\)</span></p>
+<p><strong>21.</strong> amplitude <span class="math notranslate nohighlight">\(= 2\,\sqrt{2}\)</span>, period <span class="math notranslate nohighlight">\(= 2\pi\)</span></p>
+<p><strong>23.</strong> <span class="math notranslate nohighlight">\(2\pi\)</span></p>
+<p><strong>25.</strong> <span class="math notranslate nohighlight">\(6\)</span></p>
+<p><strong>27.</strong> amplitude envelope: <span class="math notranslate nohighlight">\(y=\pm\,x^2\)</span></p>
+<p><strong>29.</strong> No</p>
+</section>
+<section id="section-5-3">
+<h3>Section 5.3<a class="headerlink" href="#section-5-3" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(\pi/4\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(0\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(\pi\)</span></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(\pi/2\)</span></p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(0\)</span></p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(-\pi/3\)</span></p>
+<p><strong>13.</strong> <span class="math notranslate nohighlight">\(\pi/7\)</span></p>
+<p><strong>15.</strong> <span class="math notranslate nohighlight">\(4\pi/5\)</span></p>
+<p><strong>17.</strong> <span class="math notranslate nohighlight">\(\pi/6\)</span></p>
+<p><strong>19.</strong> <span class="math notranslate nohighlight">\(-\pi/9\)</span></p>
+<p><strong>21.</strong> <span class="math notranslate nohighlight">\(12/13\)</span></p>
+<p><strong>23.</strong> <span class="math notranslate nohighlight">\(\pi/2\)</span></p>
+<p><strong>25.</strong> <span class="math notranslate nohighlight">\(\pi/2\)</span></p>
+</section>
+</section>
+<section id="chapter-6">
+<h2>Chapter 6<a class="headerlink" href="#chapter-6" title="此标题的永久链接">#</a></h2>
+<section id="section-6-1">
+<h3>Section 6.1<a class="headerlink" href="#section-6-1" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(\frac{3\pi}{4} + \pi k\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(\frac{3\pi}{10} + \frac{2\pi k}{5}\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(\pm\,\frac{\pi}{6} + \pi k\)</span></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(-0.821 + 2\pi k\)</span>, <span class="math notranslate nohighlight">\(3.963 + 2\pi k\)</span></p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(\frac{\pi}{4} + \pi k\)</span></p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(\frac{2\pi k}{3}\)</span></p>
+</section>
+<section id="section-6-2">
+<h3>Section 6.2<a class="headerlink" href="#section-6-2" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(x=1.89549426703398093962\)</span></p>
+</section>
+<section id="section-6-3">
+<h3>Section 6.3<a class="headerlink" href="#section-6-3" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\(-1+i\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\(-13i\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\(-1-i\)</span></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\(i\)</span></p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\(-i\)</span></p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(i\)</span></p>
+<p><strong>13.</strong> <span class="math notranslate nohighlight">\(-i\)</span></p>
+<p><strong>15.</strong> <span class="math notranslate nohighlight">\(i\)</span></p>
+<p><strong>17.</strong> Let <span class="math notranslate nohighlight">\(z=a+bi\)</span>. Then <span class="math notranslate nohighlight">\(\overline{z}=a-bi\)</span>, so <span class="math notranslate nohighlight">\(\overline{\left(\overline{z}\right)} = \overline{a-bi}=a+bi=z\)</span>.</p>
+<p><strong>23.</strong> Hint: Use Exercise 20.</p>
+<p><strong>25.</strong> <span class="math notranslate nohighlight">\(\sqrt{13}\,\text{cis}\;56.3^\circ\)</span></p>
+<p><strong>27.</strong> <span class="math notranslate nohighlight">\(\sqrt{2}\,\text{cis}\;315^\circ\)</span></p>
+<p><strong>29.</strong> <span class="math notranslate nohighlight">\(\text{cis}\;0^\circ\)</span></p>
+<p><strong>33.</strong> <span class="math notranslate nohighlight">\(81\,\text{cis}\;56^\circ\)</span></p>
+<p><strong>35.</strong> <span class="math notranslate nohighlight">\(1.5\,\text{cis}\;253^\circ\)</span></p>
+<p><strong>37.</strong> <span class="math notranslate nohighlight">\(\sqrt[6]{2}\,\text{cis}\;15^\circ\)</span>, <span class="math notranslate nohighlight">\(\sqrt[6]{2}\,\text{cis}\;135^\circ\)</span>, <span class="math notranslate nohighlight">\(\sqrt[6]{2}\,\text{cis}\;255^\circ\)</span></p>
+<p><strong>39.</strong> <span class="math notranslate nohighlight">\(\frac{1}{2} + \frac{\sqrt{3}}{2}\,i\)</span>, <span class="math notranslate nohighlight">\(-1\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{2} - \frac{\sqrt{3}}{2}\,i\)</span></p>
+<p><strong>41.</strong> <span class="math notranslate nohighlight">\(\text{cis}\;36^\circ\)</span>, <span class="math notranslate nohighlight">\(\text{cis}\;108^\circ\)</span>, <span class="math notranslate nohighlight">\(\text{cis}\;180^\circ\)</span>, <span class="math notranslate nohighlight">\(\text{cis}\;252^\circ\)</span>, <span class="math notranslate nohighlight">\(\text{cis}\;324^\circ\)</span></p>
+</section>
+<section id="section-6-4">
+<h3>Section 6.4<a class="headerlink" href="#section-6-4" title="此标题的永久链接">#</a></h3>
+<p><strong>1.</strong> <span class="math notranslate nohighlight">\((-3\sqrt{3},-3)\)</span></p>
+<p><strong>3.</strong> <span class="math notranslate nohighlight">\((\sqrt{3},-1)\)</span></p>
+<p><strong>5.</strong> <span class="math notranslate nohighlight">\((-1/\sqrt{2},-1/\sqrt{2})\)</span></p>
+<p><strong>7.</strong> <span class="math notranslate nohighlight">\((\sqrt{10},251.6^\circ)\)</span></p>
+<p><strong>9.</strong> <span class="math notranslate nohighlight">\((2\sqrt{5},333.4^\circ)\)</span></p>
+<p><strong>11.</strong> <span class="math notranslate nohighlight">\(r = 6\,\cos\;\theta\)</span></p>
+<p><strong>13.</strong> <span class="math notranslate nohighlight">\(r^2 \,\cos\;2\theta = 1\)</span></p>
+<p><strong>14.</strong> <span class="math notranslate nohighlight">\(r = 3/(2 - \cos\;\theta)\)</span></p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="c6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">第 6 章 附加主题</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="appendix_b.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">附录 B</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目录
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-1">Chapter 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-1">Section 1.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-2">Section 1.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-3">Section 1.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-4">Section 1.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-1-5">Section 1.5</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-2">Chapter 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-1">Section 2.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-2">Section 2.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-3">Section 2.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-4">Section 2.4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-2-5">Section 2.5</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-3">Chapter 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-1">Section 3.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-2">Section 3.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-3">Section 3.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-3-4">Section 3.4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-4">Chapter 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-1">Section 4.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-2">Section 4.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-3">Section 4.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-4">Section 4.4</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-5">Chapter 5</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-1">Section 5.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-2">Section 5.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-3">Section 5.3</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-6">Chapter 6</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-1">Section 6.1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-2">Section 6.2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-3">Section 6.3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-4">Section 6.4</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： Michael Corral
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2009, Michael Corral.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

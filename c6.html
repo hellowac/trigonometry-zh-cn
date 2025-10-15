@@ -1,0 +1,1366 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>第 6 章 附加主题 &#8212; 三角学(trigonometry)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script>let toggleHintShow = '原文';</script>
+    <script>let toggleHintHide = '收起';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]]}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'c6';</script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="附录 A" href="appendix_a.html" />
+    <link rel="prev" title="第 5 章 图像与反函数" href="c5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">三角学(trigonometry)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="about_author.html">关于作者</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c1.html">第 1 章 直角三角形</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c2.html">第 2 章 一般三角形</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c3.html">第 3 章 恒等式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c4.html">第 4 章 弧度量</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c5.html">第 5 章 图像与反函数</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">第 6 章 附加主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_a.html">附录 A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_b.html">附录 B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">GNU Free Documentation License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/hellowac/trigonometry-zh-cn" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="源码库"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/c6.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>第 6 章 附加主题</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> 目录 </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">三角方程的求解</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec6dot1">练习</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">三角学中的数值方法</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec6dot2">练习</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">复数</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec6dot3">练习</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">极坐标</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec6dot4">练习</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="c6">
+<span id="id1"></span><h1>第 6 章 附加主题<a class="headerlink" href="#c6" title="此标题的永久链接">#</a></h1>
+<p>Chapter 6 Additional Topics</p>
+<section id="id2">
+<h2>三角方程的求解<a class="headerlink" href="#id2" title="此标题的永久链接">#</a></h2>
+<p>Solving Trigonometric Equations</p>
+<p>An equation involving trigonometric functions is called a <em>trigonometric equation</em>. For example, an equation like</p>
+<div class="math notranslate nohighlight">
+\[\tan\;A ~=~ 0.75 ~,\]</div>
+<p>which we encountered in <a class="reference internal" href="c1.html#c1"><span class="std std-ref">Chapter 1</span></a>, is a trigonometric equation. In <a class="reference internal" href="c1.html#c1"><span class="std std-ref">Chapter 1</span></a> we were concerned only with finding a single solution (say, between <span class="math notranslate nohighlight">\(0^\circ\)</span> and <span class="math notranslate nohighlight">\(90^\circ\)</span>). In this section we will be concerned with finding the most general solution to such equations.</p>
+<p>To see what that means, take the above equation <span class="math notranslate nohighlight">\(\tan\;A = 0.75\)</span>. Using the <span class="math notranslate nohighlight">\(\boxed{\tan^{-1}}\)</span> calculator button in degree mode, we get <span class="math notranslate nohighlight">\(A=36.87^\circ\)</span>. However, we know that the tangent function has period <span class="math notranslate nohighlight">\(\pi\)</span> rad <span class="math notranslate nohighlight">\(= 180^\circ\)</span>, i.e. it repeats every <span class="math notranslate nohighlight">\(180^\circ\)</span>. Thus, there are many other possible answers for the value of <span class="math notranslate nohighlight">\(A\)</span>, namely <span class="math notranslate nohighlight">\(36.87^\circ + 180^\circ\)</span>, <span class="math notranslate nohighlight">\(36.87^\circ - 180^\circ\)</span>, <span class="math notranslate nohighlight">\(36.87^\circ + 360^\circ\)</span>, <span class="math notranslate nohighlight">\(36.87^\circ - 360^\circ\)</span>, <span class="math notranslate nohighlight">\(36.87^\circ + 540^\circ\)</span>, etc. We can write this in a more compact form:</p>
+<div class="math notranslate nohighlight">
+\[A ~=~ 36.87^\circ \;+\; 180^\circ k \quad\text{for }k=0, \pm\,1, \pm\,2, ...\]</div>
+<p>This is the most general solution to the equation.
+Often the part that says <span class="math notranslate nohighlight">\(\text{for }k=0, \pm\,1, \pm\,2, ...\)</span> is omitted since it is
+usually understood that <cite>k</cite> varies over all integers. The general solution in radians would be:</p>
+<div class="math notranslate nohighlight">
+\[A ~=~ 0.6435 \;+\; \pi k \quad\text{for }k=0, \pm\,1, \pm\,2, ...\]</div>
+<div class="admonition-example-6-1 admonition">
+<p class="admonition-title">Example 6.1</p>
+<p>Solve the equation <span class="math notranslate nohighlight">\(\;2\,\sin\;\theta \;+\;1 ~=~ 0\)</span>.</p>
+<p><strong>Solution:</strong> Isolating <span class="math notranslate nohighlight">\(\sin\;\theta\)</span> gives <span class="math notranslate nohighlight">\(\;\sin\;\theta ~=~ -\tfrac{1}{2}\)</span>. Using the <span class="math notranslate nohighlight">\(\boxed{\sin^{-1}}\)</span> calculator button in degree
+mode gives us <span class="math notranslate nohighlight">\(\theta = -30^\circ\)</span>, which is in QIV. Recall that the reflection of this angle
+around the <span class="math notranslate nohighlight">\(y\)</span>-axis into QIII also has the same sine. That is, <span class="math notranslate nohighlight">\(\sin\;210^\circ = -\tfrac{1}{2}\)</span>.
+Thus, since the sine function has period <span class="math notranslate nohighlight">\(2\pi\)</span> rad <span class="math notranslate nohighlight">\(= 360^\circ\)</span>, and since <span class="math notranslate nohighlight">\(-30^\circ\)</span> does
+not differ from <span class="math notranslate nohighlight">\(210^\circ\)</span> by an integer multiple of <span class="math notranslate nohighlight">\(360^\circ\)</span>, the general solution is:</p>
+<div class="math notranslate nohighlight">
+\[\boxed{\theta ~=~ -30^\circ \;+\; 360^\circ k \quad\text{and}\quad 210^\circ \;+\; 360^\circ k} \qquad\text{for }k=0, \pm\,1, \pm\,2, ...\]</div>
+<p>In radians, the solution is:</p>
+<div class="math notranslate nohighlight">
+\[\boxed{\theta ~=~ -\dfrac{\pi}{6} \;+\; 2\pi k \quad\text{and}\quad \dfrac{7\pi}{6} + 2\pi k} \qquad\text{for }k=0, \pm\,1, \pm\,2, ...\]</div>
+</div>
+<p>For the rest of this section we will write our solutions in radians.</p>
+<div class="admonition-example-6-2 admonition">
+<p class="admonition-title">Example 6.2</p>
+<p>Solve the equation <span class="math notranslate nohighlight">\(\;2\cos^2 \;\theta \;-\; 1 ~=~ 0\)</span>.</p>
+<p><strong>Solution:</strong> Isolating <span class="math notranslate nohighlight">\(\;\cos^2 \;\theta\)</span> gives us</p>
+<div class="math notranslate nohighlight">
+\[\cos^2 \;\theta ~=~ \frac{1}{2} \quad\Rightarrow\quad \cos\;\theta ~=~ \pm\,\frac{1}{\sqrt{2}}
+\quad\Rightarrow\quad \theta ~=~ \frac{\pi}{4}\;,~\frac{3\pi}{4}\;,~\frac{5\pi}{4}\;,~
+\frac{7\pi}{4}~,\]</div>
+<p>and since the period of cosine is <span class="math notranslate nohighlight">\(2\pi\)</span>, we would add <span class="math notranslate nohighlight">\(2\pi k\)</span> to each of those angles to get the general solution. But notice that the above angles differ by multiples of <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>. So since every multiple of <cite>2pi</cite> is also a multiple of <span class="math notranslate nohighlight">\(\frac{\pi}{2}\)</span>, we can combine those four separate answers into one:</p>
+<div class="math notranslate nohighlight">
+\[\boxed{\theta ~=~ \frac{\pi}{4} \;+\; \frac{\pi}{2}\,k}
+\qquad\text{for }k=0, \pm\,1, \pm\,2, ...\]</div>
+</div>
+<div class="admonition-example-6-3 admonition">
+<p class="admonition-title">Example 6.3</p>
+<p>Solve the equation <span class="math notranslate nohighlight">\(\;2\,\sec\;\theta ~=~ 1\)</span>.</p>
+<p><strong>Solution:</strong> Isolating <span class="math notranslate nohighlight">\(\;\sec\;\theta\)</span> gives us</p>
+<div class="math notranslate nohighlight">
+\[\sec\;\theta ~=~ \frac{1}{2} \quad\Rightarrow\quad \cos\;\theta ~=~ \frac{1}{\sec\;\theta} ~=~ 2~,\]</div>
+<p>which is impossible. Thus, there is fbox{no solution};.</p>
+</div>
+<div class="admonition-example-6-4 admonition">
+<p class="admonition-title">Example 6.4</p>
+<p>Solve the equation <span class="math notranslate nohighlight">\(\;\cos\;\theta ~=~ \tan\;\theta\)</span>.</p>
+<p><strong>Solution:</strong> The idea here is to use identities to put everything in terms of a single trigonometric function:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+  \cos\;\theta ~&amp;=~ \tan\;\theta\\
+  \cos\;\theta ~&amp;=~ \frac{\sin\;\theta}{\cos\;\theta}\\
+  \cos^2 \;\theta ~&amp;=~ \sin\;\theta\\
+  1 \;-\; \sin^2 \;\theta ~&amp;=~ \sin\;\theta\\
+  0 ~&amp;=~ \sin^2 \;\theta \;+\; \sin\;\theta \;-\; 1
+\end{align*}\end{split}\]</div>
+<p>The last equation looks more complicated than the original equation, but notice that it is actually a <em>quadratic</em> equation: making the substitution <span class="math notranslate nohighlight">\(x=\sin\;\theta\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[x^2 \;+\; x \;-\; 1 ~=~ 0 \quad\Rightarrow\quad x ~=~ \frac{-1 \;\pm\; \sqrt{1 - (4)\,(-1)}}{
+  2\,(1)} ~=~ \frac{-1 \;\pm\; \sqrt{5}}{2} ~=~ -1.618\;,~0.618\]</div>
+<p>by the quadratic formula from elementary algebra. But <span class="math notranslate nohighlight">\(-1.618 &lt; -1\)</span>, so it is impossible that <span class="math notranslate nohighlight">\(\;\sin\theta = x = -1.618\)</span>. Thus, we must have <span class="math notranslate nohighlight">\(\;\sin\;\theta = x = 0.618\)</span>. Hence, there are two possible solutions: <span class="math notranslate nohighlight">\(\theta = 0.666 ` rad in QI and its reflection :math:\)</span>pi - theta = 2.475` rad around the <span class="math notranslate nohighlight">\(y\)</span>-axis in QII. Adding multiples of <span class="math notranslate nohighlight">\(2\pi\)</span> to these gives us the general solution:</p>
+<div class="math notranslate nohighlight">
+\[\boxed{\theta ~=~ 0.666 \;+\; 2\pi k \quad\text{and}\quad 2.475 \;+\; 2\pi k}
+\qquad\text{for }k=0, \pm\,1, \pm\,2, ...\]</div>
+</div>
+<div class="admonition-example-6-5 admonition">
+<p class="admonition-title">Example 6.5</p>
+<p>Solve the equation <cite>;sin;theta ~=~ tan;theta</cite>.</p>
+<p><strong>Solution:</strong> Trying the same method as in the previous example, we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\sin\;\theta ~&amp;=~ \tan\;\theta\\
+\sin\;\theta ~&amp;=~ \frac{\sin\;\theta}{\cos\;\theta}\\
+\sin\;\theta~\cos\;\theta ~&amp;=~ \sin\;\theta\\
+\sin\;\theta~\cos\;\theta \;-\; \sin\;\theta ~&amp;=~ 0\\
+\sin\;\theta~(\cos\;\theta \;-\; 1) ~&amp;=~ 0\\
+&amp;\Rightarrow\quad \sin\;\theta ~=~ 0 \quad\text{or}\quad \cos\;\theta ~=~ 1\\
+&amp;\Rightarrow\quad \theta ~=~ 0\;,~\pi \quad\text{or}\quad \theta ~=~ 0\\
+&amp;\Rightarrow\quad \theta ~=~ 0\;,~\pi~,
+\end{align*}\end{split}\]</div>
+<p>plus multiples of <span class="math notranslate nohighlight">\(2\pi\)</span>. So since the above angles are multiples of <span class="math notranslate nohighlight">\(\pi\)</span>, and every multiple of <span class="math notranslate nohighlight">\(2\pi\)</span> is a multiple of <span class="math notranslate nohighlight">\(\pi\)</span>, we can combine the two answers into one for the general solution:</p>
+<div class="math notranslate nohighlight">
+\[\boxed{\theta ~=~ \pi k} \qquad\text{for }k=0, \pm\,1, \pm\,2, ...\]</div>
+</div>
+<div class="admonition-example-6-6 admonition">
+<p class="admonition-title">Example 6.6</p>
+<p>Solve the equation <span class="math notranslate nohighlight">\(\;\cos\;3\theta ~=~ \frac{1}{2}\)</span>.</p>
+<p><strong>Solution:</strong> The idea here is to solve for <span class="math notranslate nohighlight">\(3\theta\)</span> first, using the most general solution, and then divide that solution by <span class="math notranslate nohighlight">\(3\)</span>. So since <span class="math notranslate nohighlight">\(\;\cos^{-1} \frac{1}{2} = \frac{\pi}{3}\)</span>, there are two possible solutions for <span class="math notranslate nohighlight">\(3\theta\)</span>: <cite>3theta = frac{pi}{3}</cite> in QI and its reflection <span class="math notranslate nohighlight">\(-3\theta = -\frac{\pi}{3}\)</span> around the <span class="math notranslate nohighlight">\(x\)</span>-axis in QIV. Adding multiples of <span class="math notranslate nohighlight">\(2\pi\)</span> to these gives us:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}3\theta ~=~ \pm\,\frac{\pi}{3} \;+\; 2\pi k \qquad\text{for }k=0, \pm\,1, \pm\,2, ...\\So dividing everything by `3` we get the general solution for `\theta`:\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight">
+\[\boxed{\theta ~=~ \pm\,\frac{\pi}{9} \;+\; \frac{2\pi}{3} k}
+\qquad\text{for }k=0, \pm\,1, \pm\,2, ...\]</div>
+</div>
+<div class="admonition-example-6-7 admonition">
+<p class="admonition-title">Example 6.7</p>
+<p>Solve the equation <span class="math notranslate nohighlight">\(\;\sin\;2\theta ~=~ \sin\;\theta\)</span>.</p>
+<p><strong>Solution:</strong> Here we use the double-angle formula for sine:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\sin\;2\theta ~&amp;=~ \sin\;\theta\\
+2\,\sin\theta~\cos\;\theta ~&amp;=~ \sin\;\theta\\
+\sin\;\theta~(2\,\cos\;\theta \;-\; 1) ~&amp;=~ 0\\
+&amp;\Rightarrow\quad \sin\;\theta ~=~ 0 \quad\text{or}\quad \cos\;\theta ~=~ \frac{1}{2}\\
+&amp;\Rightarrow\quad \theta ~=~ 0\;,~\pi \quad\text{or}\quad \theta ~=~ \pm\,\frac{\pi}{3}\\
+&amp;\Rightarrow\quad \boxed{\theta ~=~ \pi k \quad\text{and}\quad \pm\,\frac{\pi}{3} \;+\; 2\pi k}
+\qquad\text{for }k=0, \pm\,1, \pm\,2, ...
+\end{align*}\end{split}\]</div>
+</div>
+<div class="admonition-example-6-8 admonition" id="exmp-trigeqncombo">
+<p class="admonition-title">Example 6.8</p>
+<figure class="align-right" id="id34">
+<span id="fig-trigeqn"></span><img alt="_images/f6.1.1.png" src="_images/f6.1.1.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 6.1.1</strong></span><a class="headerlink" href="#id34" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Solve the equation <span class="math notranslate nohighlight">\(\;2\,\sin\;\theta \;-\; 3\,\cos\;\theta ~=~ 1\)</span>.</p>
+<p><strong>Solution:</strong> We will use the technique which we discussed in <span class="math notranslate nohighlight">\(Chapter 5 &lt;c5&gt;\)</span> for finding the amplitude of a combination of sine and cosine functions. Take the coefficients <span class="math notranslate nohighlight">\(2\)</span> and <span class="math notranslate nohighlight">\(3\)</span> of <span class="math notranslate nohighlight">\(\;\sin\;\theta\)</span> and <span class="math notranslate nohighlight">\(\;-\cos\;\theta\)</span>, respectively, in the above equation and make them the legs of a right triangle, as in Figure <a class="reference internal" href="#fig-trigeqn"><span class="std std-ref">6.1.1</span></a>. Let <span class="math notranslate nohighlight">\(\phi\)</span> be the angle shown in the right triangle. The leg with length <span class="math notranslate nohighlight">\(3 &gt;0\)</span> means that the angle <span class="math notranslate nohighlight">\(\phi\)</span> is above the <span class="math notranslate nohighlight">\(x\)</span>-axis, and the leg with length <span class="math notranslate nohighlight">\(2&gt;0\)</span> means that <span class="math notranslate nohighlight">\(\phi\)</span> is to the right of the <span class="math notranslate nohighlight">\(y\)</span>-axis. Hence, <span class="math notranslate nohighlight">\(\phi\)</span> must be in QI. The hypotenuse has length <span class="math notranslate nohighlight">\(\sqrt{13}\)</span> by the Pythagorean Theorem, and hence <span class="math notranslate nohighlight">\(\;\cos\;\phi = \frac{2}{\sqrt{13}}\)</span> and <span class="math notranslate nohighlight">\(\;\sin\;\theta = \frac{3}{\sqrt{13}}\)</span>. We can use this to transform the equation to solve as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+2\,\sin\;\theta \;-\; 3\,\cos\;\theta ~&amp;=~ 1\\
+\sqrt{13}\,\left( \tfrac{2}{\sqrt{13}}\,\sin\;\theta \;-\; \tfrac{3}{\sqrt{13}}\,\cos\;\theta
+  \right) ~&amp;=~ 1\\
+\sqrt{13}\,( \cos\;\phi\;\sin\;\theta \;-\; \sin\;\phi\;\cos\;\theta ) ~&amp;=~ 1\\
+\sqrt{13}\,\sin\;(\theta - \phi) ~&amp;=~ 1\quad\text{(by the sine subtraction formula)}\\
+\sin\;(\theta - \phi) ~&amp;=~ \tfrac{1}{\sqrt{13}}\\
+&amp;\Rightarrow\quad \theta - \phi ~=~ 0.281 \quad\text{or}\quad \theta - \phi ~=~ \pi - 0.281 = 2.861\\
+&amp;\Rightarrow\quad \theta ~=~ \phi \;+\; 0.281 \quad\text{or}\quad \theta ~=~ \phi \;+\; 2.861
+\end{align*}\end{split}\]</div>
+<p>Now, since <span class="math notranslate nohighlight">\(\;\cos\;\phi = \frac{2}{\sqrt{13}}\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span> is in QI, the most general solution for <span class="math notranslate nohighlight">\(\phi\)</span> is <span class="math notranslate nohighlight">\(\phi = 0.983 + 2\pi k\)</span> for <span class="math notranslate nohighlight">\(k=0\)</span>, <span class="math notranslate nohighlight">\(\pm\,1\)</span>, <span class="math notranslate nohighlight">\(\pm\,2\)</span>, <span class="math notranslate nohighlight">\(...\)</span> . So since we needed to add multiples of <span class="math notranslate nohighlight">\(2\pi\)</span> to the solutions <span class="math notranslate nohighlight">\(0.281\)</span> and <span class="math notranslate nohighlight">\(2.861\)</span> anyway, the most general solution for <span class="math notranslate nohighlight">\(\theta\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\theta ~&amp;=~ 0.983 \;+\; 0.281 \;+\; 2\pi k\quad\text{and}\quad 0.983 \;+\; 2.861 \;+\; 2\pi k\\
+&amp;\Rightarrow\quad \boxed{\theta ~=~ 1.264 \;+\; 2\pi k\quad\text{and}\quad 3.844 \;+\; 2\pi k}
+\quad\text{for }k=0, \pm\,1, \pm\,2, ...
+\end{align*}\end{split}\]</div>
+</div>
+<p>Note: In Example <a class="reference internal" href="#exmp-trigeqncombo"><span class="std std-ref">6.8</span></a> if the equation had been <span class="math notranslate nohighlight">\(\;2\,\sin\;\theta \;+\; 3\,\cos\;\theta ~=~ 1\)</span> then we still would have used a right triangle with legs of lengths <cite>2</cite> and <cite>3</cite>, but we would have used the sine addition formula instead of the subtraction formula.</p>
+<section id="sec6dot1">
+<span id="id3"></span><h3>练习<a class="headerlink" href="#sec6dot1" title="此标题的永久链接">#</a></h3>
+<p>Exercises</p>
+<p>For Exercises 1-12, solve the given equation (in radians).</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\tan\;\theta \;+\; 1 ~=~ 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2\,\cos\;\theta \;+\; 1 ~=~ 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin\;5\theta \;+\; 1 ~=~ 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2\,\cos^2 \;\theta \;-\; \sin^2 \;\theta ~=~ 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2\,\sin^2 \;\theta \;-\; \cos\;2\theta ~=~ 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2\,\cos^2 \;\theta \;+\; 3\,\sin\;\theta ~=~ 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos^2 \;\theta \;+\; 2\,\sin\;\theta ~=~ -1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\tan\;\theta \;+\; \cot\;\theta ~=~ 2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin\;\theta ~=~ \cos\;\theta\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2\,\sin\;\theta \;-\; 3\,\cos\;\theta ~=~ 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos^2 \;3\theta \;-\; 5\,\cos\;3\theta \;+\; 4 ~=~ 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3\,\sin\;\theta \;-\; 4\,\cos\;\theta ~=~ 1\)</span></p></li>
+</ol>
+</section>
+</section>
+<section id="id4">
+<h2>三角学中的数值方法<a class="headerlink" href="#id4" title="此标题的永久链接">#</a></h2>
+<p>Numerical Methods in Trigonometry</p>
+<p>We were able to solve the trigonometric equations in the previous section fairly easily, which in general is not the case. For example, consider the equation</p>
+<div class="math notranslate nohighlight" id="equation-eqn-cosinefixed">
+<span id="equation-6-1"></span><span class="eqno">(1)<a class="headerlink" href="#equation-eqn-cosinefixed" title="此公式的永久链接">#</a></span>\[\cos\;x ~=~ x ~.\]</div>
+<p>There is a solution, as shown in Figure <a class="reference internal" href="#fig-cosineeqx"><span class="std std-ref">6.2.1</span></a> below. The graphs of <span class="math notranslate nohighlight">\(y=\cos\;x\)</span>
+and <span class="math notranslate nohighlight">\(y=x\)</span> intersect somewhere between <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(x=1\)</span>, which means that there is an <span class="math notranslate nohighlight">\(x\)</span> in the
+interval <span class="math notranslate nohighlight">\([0, 1]\)</span> such that <span class="math notranslate nohighlight">\(\cos\;x = x\)</span>.</p>
+<figure class="align-center" id="id35">
+<span id="fig-cosineeqx"></span><img alt="_images/f6.2.1.png" src="_images/f6.2.1.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 6.2.1</strong> <span class="math notranslate nohighlight">\(y=\cos\;x\)</span> and <span class="math notranslate nohighlight">\(y=x\)</span></span><a class="headerlink" href="#id35" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Unfortunately there is no trigonometric identity or simple method which will help us here. Instead, we have to resort to <em>numerical methods</em>, which provide ways of getting successively better approximations to the actual solution(s) to within any desired degree of accuracy. There is a large field of mathematics devoted to this subject called <em>numerical analysis</em>. Many of the methods require calculus, but luckily there is a method which we can use that requires just basic algebra. It is called the <em>secant method</em>, and it finds roots of a given function <span class="math notranslate nohighlight">\(f(x)\)</span>, i.e. values of <span class="math notranslate nohighlight">\(x\)</span> such that <span class="math notranslate nohighlight">\(f(x)=0\)</span>. A derivation of the secant method is beyond the scope of this book, <a class="footnote-reference brackets" href="#id6" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> but we can state the algorithm it uses to solve <span class="math notranslate nohighlight">\(f(x)=0\)</span>:</p>
+<ol class="arabic">
+<li><p>Pick initial points <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> such that <span class="math notranslate nohighlight">\(x_0 &lt; x_1\)</span> and <span class="math notranslate nohighlight">\(f(x_0)\,f(x_1) &lt; 0\)</span> (i.e. the solution is somewhere between <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span>).</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(n \ge 2\)</span>, define the number <span class="math notranslate nohighlight">\(x_n\)</span> by</p>
+<div class="math notranslate nohighlight" id="equation-eqn-secantmethod">
+<span id="equation-6-2"></span><span class="eqno">(2)<a class="headerlink" href="#equation-eqn-secantmethod" title="此公式的永久链接">#</a></span>\[x_n ~=~ x_{n-1} ~-~ \dfrac{(x_{n-1} \;-\; x_{n-2})\,f(x_{n-1})}{f(x_{n-1}) \;-\; f(x_{n-2})}\]</div>
+<p>as long as <span class="math notranslate nohighlight">\(|x_{n-1} \;-\; x_{n-2}| &gt; \epsilon_{error}\)</span>, where <span class="math notranslate nohighlight">\(\epsilon_{error} &gt; 0\)</span> is the maximum amount of error desired (usually a very small number).</p>
+</li>
+<li><p>The numbers <span class="math notranslate nohighlight">\(x_0\)</span>, <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span>, <span class="math notranslate nohighlight">\(x_3\)</span>, <span class="math notranslate nohighlight">\(...\)</span> will approach the solution <span class="math notranslate nohighlight">\(x\)</span> as we go through more iterations, getting as close as desired.</p></li>
+</ol>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id6" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">1</a><span class="fn-bracket">]</span></span>
+<p>For an explanation of why the secant method works, see pp. 338-344 in <em>A. Ralston and P. Rabinowitz</em>, <em>A First Course in Numerical Analysis</em>, 2nd ed., New York: McGraw-Hill Book Co., 1978.</p>
+</aside>
+</aside>
+<p>We will now show how to use this algorithm to solve the equation <span class="math notranslate nohighlight">\(\cos\;x = x\)</span>. The solution to that equation is the root of the function <span class="math notranslate nohighlight">\(f(x) =\cos\;x - x\)</span>. And we saw that the solution is somewhere in the interval <span class="math notranslate nohighlight">\([0, 1]\)</span> . So pick <span class="math notranslate nohighlight">\(x_0 = 0\)</span> and <span class="math notranslate nohighlight">\(x_1 = 1\)</span>. Then <span class="math notranslate nohighlight">\(f(0)=1\)</span> and <span class="math notranslate nohighlight">\(f(1)=-0.4597\)</span>, so that <span class="math notranslate nohighlight">\(f(x_0)\,f(x_1) &lt; 0\)</span> (we are using radians, of course). Then by definition,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+x_2 ~&amp;=~ x_1 ~-~ \dfrac{(x_1 \;-\; x_0)\,f(x_1)}{f(x_1) \;-\; f(x_0)}\\
+&amp;=~ 1 ~-~ \dfrac{(1 \;-\; 0)\,f(1)}{f(1) \;-\; f(0)}\\
+&amp;=~ 1 ~-~ \dfrac{(1 \;-\; 0)\,(-0.4597)}{-0.4597 \;-\; 1}\\
+&amp;=~ 0.6851~,\\
+x_3 ~&amp;=~ x_2 ~-~ \dfrac{(x_2 \;-\; x_1)\,f(x_2)}{f(x_2) \;-\; f(x_1)}\\
+&amp;=~ 0.6851 ~-~ \dfrac{(0.6851 \;-\; 1)\,f(0.6851)}{f(0.6851) \;-\; f(1)}\\
+&amp;=~ 0.6851 ~-~ \dfrac{(0.6851 \;-\; 1)\,(0.0893)}{0.0893 \;-\; (-0.4597)}\\
+&amp;=~ 0.7363 ~,
+\end{align*}\end{split}\]</div>
+<p>and so on. Using a calculator is not very efficient and will lead to rounding errors. A better way to implement the algorithm is with a computer. Listing <a class="reference internal" href="#lst-secant"><span class="std std-ref">6.1</span></a> below shows the code (secant.java) for solving <span class="math notranslate nohighlight">\(\cos\;x = x\)</span> with the secant method, using the Java programming language:</p>
+<p id="lst-secant"><strong>Listing 6.1 Program listing for secant.java</strong></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">java.math.*</span><span class="p">;</span>
+<span class="linenos"> 2</span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">secant</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 3</span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0E-50</span><span class="p">;</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Double</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">x0</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x1</span><span class="p">),</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">10</span><span class="w">          </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">x1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x0</span><span class="p">)</span><span class="o">*</span><span class="n">f</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">x0</span><span class="p">));</span>
+<span class="linenos">11</span><span class="w">          </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x1</span><span class="p">;</span>
+<span class="linenos">12</span><span class="w">          </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="linenos">13</span><span class="w">          </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+<span class="linenos">14</span><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">15</span><span class="w">          </span><span class="k">break</span><span class="p">;</span>
+<span class="linenos">16</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">17</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">18</span><span class="w">    </span><span class="n">MathContext</span><span class="w"> </span><span class="n">mc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MathContext</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+<span class="linenos">19</span><span class="w">    </span><span class="n">BigDecimal</span><span class="w"> </span><span class="n">answer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">mc</span><span class="p">);</span>
+<span class="linenos">20</span><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;x = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">answer</span><span class="p">);</span>
+<span class="linenos">21</span><span class="w">  </span><span class="p">}</span>
+<span class="linenos">22</span><span class="w">  </span><span class="c1">//Define the function f(x)</span>
+<span class="linenos">23</span><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">f</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">24</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<span class="linenos">25</span><span class="w">  </span><span class="p">}</span>
+<span class="linenos">26</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Lines 4-5 read in <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> as input parameters to the program.</p>
+<p>Line 6 initializes the variable that will eventually hold the solution.</p>
+<p>Line 7 sets the maximum error <span class="math notranslate nohighlight">\(\epsilon_{error}\)</span> to be <span class="math notranslate nohighlight">\(1.0 \,\times\, 10^{-50}\)</span>. That is, our final answer will be within that (tiny!) amount of the real solution.</p>
+<p>Line 8 starts a loop of 9 iterations of the algorithm, i.e. it will create the successive approximations <span class="math notranslate nohighlight">\(x_2\)</span>, <span class="math notranslate nohighlight">\(x_3\)</span>, <span class="math notranslate nohighlight">\(...\)</span>, <span class="math notranslate nohighlight">\(x_{10}\)</span> to the real solution, though in Line 9 we check to see if the two previous approximations differ by less than the maximum error. If they do, we stop (since this means we have an acceptable solution), otherwise we continue.</p>
+<p>Line 10 is the main step in the algorithm, creating <span class="math notranslate nohighlight">\(x_n\)</span> from <span class="math notranslate nohighlight">\(x_{n-1}\)</span> and <span class="math notranslate nohighlight">\(x_{n-2}\)</span>.</p>
+<p>Lines 11-12 set the new values of <span class="math notranslate nohighlight">\(x_{n-2}\)</span> and <span class="math notranslate nohighlight">\(x_{n-1}\)</span>, respectively.</p>
+<p>Lines 18-20 set the number of decimal places to show in the final answer to 50 (the default is 16) and then print the answer.</p>
+<p>Lines 23-24 give the definition of the function <span class="math notranslate nohighlight">\(f(x)=\cos\;x - x\)</span>.</p>
+<p>Below is the result of compiling and running the program using <span class="math notranslate nohighlight">\(x_0 = 0\)</span> and <span class="math notranslate nohighlight">\(x_1 = 1\)</span>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>javac<span class="w"> </span>secant.java
+java<span class="w"> </span>secant<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
+<span class="nv">x2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.6850733573260451
+<span class="nv">x3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.736298997613654
+<span class="nv">x4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.7391193619116293
+<span class="nv">x5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.7390851121274639
+<span class="nv">x6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.7390851332150012
+<span class="nv">x7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.7390851332151607
+<span class="nv">x8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.7390851332151607
+<span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.73908513321516067229310920083662495017051696777344
+</pre></div>
+</div>
+<p>Notice that the program only got up to <span class="math notranslate nohighlight">\(x_8\)</span>, not <span class="math notranslate nohighlight">\(x_{10}\)</span>. The reason is that the difference between <span class="math notranslate nohighlight">\(x_8\)</span> and <span class="math notranslate nohighlight">\(x_7\)</span> was small enough (less than <span class="math notranslate nohighlight">\(\epsilon_{error} = 1.0 \,\times\, 10^{-50}\)</span>) to stop at <span class="math notranslate nohighlight">\(x_8\)</span> and call that our solution. The last line shows that solution to 50 decimal places.</p>
+<p>Does that number look familiar? It should, since it is the answer to Exercise <a class="reference internal" href="c4.html#exer-cosxeqx"><span class="std std-ref">11</span></a> in Section 4.1. That is, when taking repeated cosines starting with any number (in radians), you eventually start getting the above number repeatedly after enough iterations. This turns out not to be a coincidence. Figure <a class="reference internal" href="#fig-cosinefixed"><span class="std std-ref">6.2.2</span></a> gives an idea of why.</p>
+<figure class="align-center" id="id36">
+<span id="figure-6-2-2"></span><span id="fig-cosinefixed"></span><img alt="_images/f6.2.2.png" src="_images/f6.2.2.png" />
+<figcaption>
+<p><span class="caption-text">Figure 6.2.2 Attractive fixed point for <span class="math notranslate nohighlight">\(\cos\;x\)</span></span><a class="headerlink" href="#id36" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Since <span class="math notranslate nohighlight">\(x=0.73908513321516...\)</span> is the solution of <span class="math notranslate nohighlight">\(\cos\;x = x\)</span>, you would get <span class="math notranslate nohighlight">\(\cos\;(\cos\;x) = \cos\;x = x\)</span>, so <span class="math notranslate nohighlight">\(\cos\;(\cos\;(\cos\;x)) = \cos\;x = x\)</span>, and so on. This number <span class="math notranslate nohighlight">\(x\)</span> is called an <em>attractive fixed point</em> of the function <span class="math notranslate nohighlight">\(\cos\;x\)</span>. No matter where you start, you end up getting “drawn” to it. Figure <a class="reference internal" href="#fig-cosinefixed"><span class="std std-ref">6.2.2</span></a> shows what happens when starting at <span class="math notranslate nohighlight">\(x=0\)</span>: taking the cosine of <code class="docutils literal notranslate"><span class="pre">0</span></code> takes you to <code class="docutils literal notranslate"><span class="pre">1</span></code>, and then successive cosines (indicated by the intersections of the vertical lines with the cosine curve) eventually “spiral” in a rectangular fashion to the fixed point (i.e. the solution), which is the intersection of <span class="math notranslate nohighlight">\(y=\cos\;x\)</span> and <span class="math notranslate nohighlight">\(y=x\)</span>.</p>
+<p>Recall in Example <a class="reference internal" href="c5.html#exmp-cos6xsin4x"><span class="std std-ref">5.10</span></a> in Section 5.2 that we claimed that the maximum and minimum of the function <span class="math notranslate nohighlight">\(y=\cos\;6x + \sin\;4x\)</span> were <span class="math notranslate nohighlight">\(\pm\,1.90596111871578\)</span>, respectively. We can show this by using the open-source program Octave. <a class="footnote-reference brackets" href="#id8" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> Octave uses a <em>successive quadratic programming</em> method to find the minimum of a function <span class="math notranslate nohighlight">\(f(x)\)</span>. Finding the maximum of <span class="math notranslate nohighlight">\(f(x)\)</span> is the same as finding the minimum of <span class="math notranslate nohighlight">\(-f(x)\)</span> then multiplying by <span class="math notranslate nohighlight">\(-1\)</span> (why?). Below we show the commands to run at the Octave command prompt (<code class="docutils literal notranslate"><span class="pre">octave:n&gt;</span></code>) to find the minimum of <span class="math notranslate nohighlight">\(f(x) = \cos\;6x + \sin\;4x\)</span>. The command <code class="docutils literal notranslate"><span class="pre">sqp(3,'f')</span></code> says to use <span class="math notranslate nohighlight">\(x=3\)</span> as a first approximation of the number <cite>x</cite> where <cite>f(x)</cite> is a minimum.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>octave:1&gt;<span class="w"> </span>format<span class="w"> </span>long
+octave:2&gt;<span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>f<span class="o">(</span>x<span class="o">)</span>
+&gt;<span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>cos<span class="o">(</span><span class="m">6</span>*x<span class="o">)</span><span class="w"> </span>+<span class="w"> </span>sin<span class="o">(</span><span class="m">4</span>*x<span class="o">)</span>
+&gt;<span class="w"> </span>endfunction
+octave:3&gt;<span class="w"> </span>sqp<span class="o">(</span><span class="m">3</span>,<span class="s1">&#39;f&#39;</span><span class="o">)</span>
+<span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-1.90596111871578
+<span class="nv">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>.65792064609274
+</pre></div>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">2</a><span class="fn-bracket">]</span></span>
+<p>Freely available at <a class="reference external" href="http://www.gnu.org/software/octave">http://www.gnu.org/software/octave</a></p>
+</aside>
+</aside>
+<p>The output says that the minimum occurs when <span class="math notranslate nohighlight">\(x=2.65792064609274\)</span> and that the minimum is <span class="math notranslate nohighlight">\(-1.90596111871578\)</span>. To find the maximum of <span class="math notranslate nohighlight">\(f(x)\)</span>, we find the minimum of <cite>-f(x)</cite> and then take its negative. The command <code class="docutils literal notranslate"><span class="pre">sqp(2,'f')</span></code> says to use <cite>x=2</cite> as a first approximation of the number <span class="math notranslate nohighlight">\(x\)</span> where <span class="math notranslate nohighlight">\(f(x)\)</span> is a maximum.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>octave:4&gt;<span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>f<span class="o">(</span>x<span class="o">)</span>
+&gt;<span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-cos<span class="o">(</span><span class="m">6</span>*x<span class="o">)</span><span class="w"> </span>-<span class="w"> </span>sin<span class="o">(</span><span class="m">4</span>*x<span class="o">)</span>
+&gt;<span class="w"> </span>endfunction
+octave:5&gt;<span class="w"> </span>sqp<span class="o">(</span><span class="m">2</span>,<span class="s1">&#39;f&#39;</span><span class="o">)</span>
+<span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-1.90596111871578
+<span class="nv">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>.05446832062993
+</pre></div>
+</div>
+<p>The output says that the maximum occurs when <code class="docutils literal notranslate"><span class="pre">x=2.05446832062993</span></code> and that the maximum is <code class="docutils literal notranslate"><span class="pre">-(-1.90596111871578)</span> <span class="pre">=</span> <span class="pre">1.90596111871578</span></code>.</p>
+<p>Recall from Section 2.4 that Heron’s formula is adequate for “typical” triangles, but will often have a problem when used in a calculator with, say, a triangle with two sides whose sum is barely larger than the third side. However, you can get around this problem by using computer software capable of handling numbers with a high degree of precision. Most modern computer programming languages have this capability. For example, in the Python programming language <a class="footnote-reference brackets" href="#id11" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> (chosen here for simplicity) the <em>decimal</em> module can be used to set any level of precision. <a class="footnote-reference brackets" href="#id12" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> Below we show how to get accuracy up to <code class="docutils literal notranslate"><span class="pre">50</span></code> decimal places using Heron’s formula for the triangle in Example <span class="xref std std-ref">2.16</span> from Section 2.4, by using the python interactive command shell:</p>
+<div class="highlight-python-console notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">decimal</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">getcontext</span><span class="p">()</span><span class="o">.</span><span class="n">prec</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;1000000&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;999999.9999979&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s2">&quot;0.0000029&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">K</span> <span class="o">=</span> <span class="n">s</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">s</span><span class="o">-</span><span class="n">c</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">Decimal</span><span class="p">(</span><span class="n">K</span><span class="p">)</span><span class="o">.</span><span class="n">sqrt</span><span class="p">()</span>
+<span class="go">0.99999999999894999999999894874999999889618749999829</span>
+</pre></div>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id11" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">3</a><span class="fn-bracket">]</span></span>
+<p>Available for free at <a class="reference external" href="http://www.python.org">http://www.python.org</a></p>
+</aside>
+<aside class="footnote brackets" id="id12" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">4</a><span class="fn-bracket">]</span></span>
+<p>Other languages have similar capability, e.g. the <em>BigDecimal</em> class in Java.</p>
+</aside>
+</aside>
+<p>(Note: The triple arrow <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> is just a command prompt, not part of the code.)</p>
+<p>Notice in this case that we do get the correct answer; the high level of precision eliminates the rounding errors shown by many calculators when using Heron’s formula.</p>
+<p>Another software option is Sage <a class="footnote-reference brackets" href="#id14" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>, a powerful and free open-source mathematics package based on Python. It can be run on your own computer, but it can also be run through a web interface: go to <a class="reference external" href="http://sagenb.org">http://sagenb.org</a> to create a free account, then once you register and sign in, click the <strong>New Worksheet</strong> link to start entering commands. For example, to find the solution to <span class="math notranslate nohighlight">\(\cos\;x = x\)</span> in the interval <span class="math notranslate nohighlight">\([0, 1]\)</span> , enter these commands in the worksheet textfield:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">var</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">find_root</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id14" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">5</a><span class="fn-bracket">]</span></span>
+<p>Visit the homepage at <a class="reference external" href="http://www.sagemath.org">http://www.sagemath.org</a> for more details.</p>
+</aside>
+</aside>
+<p>Click the <strong>evaluate</strong> link to display the answer: <cite>0.7390851332151559</cite></p>
+<section id="sec6dot2">
+<span id="id15"></span><h3>练习<a class="headerlink" href="#sec6dot2" title="此标题的永久链接">#</a></h3>
+<p>Exercises</p>
+<ol class="arabic simple">
+<li><p>One obvious solution to the equation <span class="math notranslate nohighlight">\(2\,\sin\;x = x\)</span> is <span class="math notranslate nohighlight">\(x=0\)</span>. Write a program to find the other solution(s), accurate to at least within <span class="math notranslate nohighlight">\(1.0 \,\times\, 10^{-20}\)</span>. You can use any programming language, though you may find it easier to just modify the code in Listing <a class="reference internal" href="#lst-secant"><span class="std std-ref">6.1</span></a> (only one line needs to be changed!). It may help to use Gnuplot to get an idea of where the graphs of <span class="math notranslate nohighlight">\(y=2\,\sin\;x\)</span> and <span class="math notranslate nohighlight">\(y=x\)</span> intersect.</p></li>
+<li><p>Repeat Exercise 1 for the equation <span class="math notranslate nohighlight">\(\sin\;x = x^2\)</span>.</p></li>
+<li><p>Use Octave or some other program to find the maximum and minimum of <span class="math notranslate nohighlight">\(y=\cos\;5x - \sin\;3x\)</span>.</p></li>
+</ol>
+</section>
+</section>
+<section id="id16">
+<h2>复数<a class="headerlink" href="#id16" title="此标题的永久链接">#</a></h2>
+<p>Complex Numbers</p>
+<p>There is no real number <code class="docutils literal notranslate"><span class="pre">x</span></code> such that <span class="math notranslate nohighlight">\(x^2 = -1\)</span>. However, it turns out to be useful <a class="footnote-reference brackets" href="#id18" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> to invent such a number, called the <strong>imaginary unit</strong> and denoted by the letter <code class="docutils literal notranslate"><span class="pre">i</span></code>. Thus, <span class="math notranslate nohighlight">\(i^2 = -1\)</span>, and hence <span class="math notranslate nohighlight">\(i = \sqrt{-1}\)</span>. If <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> are real numbers, then a number of the form <span class="math notranslate nohighlight">\(a + bi\)</span> is called a <strong>complex number</strong>, and if <span class="math notranslate nohighlight">\(b \ne 0\)</span> then it is called an <strong>imaginary number</strong> (and <strong>pure imaginary</strong> if <code class="docutils literal notranslate"><span class="pre">a=0</span></code> and <span class="math notranslate nohighlight">\(b \ne 0\)</span>). The real number <code class="docutils literal notranslate"><span class="pre">a</span></code> is called the <strong>real part</strong> of the complex number <code class="docutils literal notranslate"><span class="pre">a+bi</span></code>, and <code class="docutils literal notranslate"><span class="pre">bi</span></code> is called its <strong>imaginary part</strong>.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id18" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">6</a><span class="fn-bracket">]</span></span>
+<p>Especially in electrical engineering, physics, and various fields of mathematics.</p>
+</aside>
+</aside>
+<p>What does it mean to add <code class="docutils literal notranslate"><span class="pre">a</span></code> to <code class="docutils literal notranslate"><span class="pre">bi</span></code> in the definition <code class="docutils literal notranslate"><span class="pre">a+bi</span></code> of a complex number, i.e. adding a real number and an imaginary number? You can think of it as a way of <em>extending</em> the set of real numbers. If <code class="docutils literal notranslate"><span class="pre">b=0</span></code> then <span class="math notranslate nohighlight">\(a+bi = a+0i = a\)</span> (since <code class="docutils literal notranslate"><span class="pre">0i</span></code> is defined as <code class="docutils literal notranslate"><span class="pre">0</span></code>), so that every real number is a complex number.</p>
+<p>The imaginary part <code class="docutils literal notranslate"><span class="pre">bi</span></code> in <span class="math notranslate nohighlight">\(a+bi\)</span> can be thought of as a way of taking the <em>one-dimensional</em> set of all real numbers and extending it to a <em>two-dimensional</em> set: there is a natural correspondence between a complex number <span class="math notranslate nohighlight">\(a+bi\)</span> and a <em>point</em> <span class="math notranslate nohighlight">\((a,b)\)</span> in the (two-dimensional) <span class="math notranslate nohighlight">\(xy\)</span>-coordinate plane.</p>
+<p>Before exploring that correspondence further, we will first state some fundamental properties of and operations on complex numbers:</p>
+<div class="admonition-let-a-bi-and-c-di-be-complex-numbers-then admonition">
+<p class="admonition-title">Let <code class="docutils literal notranslate"><span class="pre">a+bi</span></code> and <code class="docutils literal notranslate"><span class="pre">c+di</span></code> be complex numbers. Then:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(a+bi ~=~ c+di\)</span> if and only if <code class="docutils literal notranslate"><span class="pre">a=c</span></code> and <code class="docutils literal notranslate"><span class="pre">b=d~</span></code> (i.e. the real parts are equal and the imaginary parts are equal)</p></li>
+<li><p><span class="math notranslate nohighlight">\((a+bi) \;+\; (c+di) ~=~ (a+c) \;+\; (b+d)i~\)</span> (i.e. add the real parts together and add the imaginary parts together)</p></li>
+<li><p><span class="math notranslate nohighlight">\((a+bi) \;-\; (c+di) ~=~ (a-c) \;+\; (b-d)i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((a+bi)\,(c+di) ~=~ (ac-bd) \;+\; (ad+bc)i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((a+bi)\,(a-bi) ~=~ a^2 \;+\; b^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\dfrac{a+bi}{c+di} ~=~ \dfrac{(ac+bd) \;+\; (bc-ad)i}{c^2 + d^2}\)</span></p></li>
+</ol>
+</div>
+<p>The first three items above are just definitions of equality, addition, and subtraction of complex numbers. The last three items can be derived by treating the multiplication and division of complex numbers as you would normally treat factors of real numbers:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+(a+bi)\,(c+di) ~&amp;=~ a\,(c+di) \;+\; bi\,(c+di)\\
+&amp;=~ ac \;+\; adi \;+\; bci \;+\; bdi^2 ~=~ ac \;+\; adi \;+\; bci \;+\; bd(-1)\\
+&amp;=~ (ac - bd) \;+\; (ad+bc)i
+\end{align*}\end{split}\]</div>
+<p>The fifth item is a special case of the multiplication formula:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+(a+bi)\,(a-bi) ~&amp;=~ ((a)(a) - (b)(-b)) \;+\; ((a)(-b) + (b)(a))i\\
+&amp;=~ ( a^2 + b^2 ) \;+\; (-ab + ba)i ~=~ ( a^2 + b^2 ) \;+\; 0i\\
+&amp;=~ a^2 \;+\; b^2
+\end{align*}\end{split}\]</div>
+<p>The sixth item comes from using the previous items:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\dfrac{a+bi}{c+di} ~&amp;=~ \dfrac{a+bi}{c+di} \,\cdot\, \dfrac{c-di}{c-di}\\
+&amp;=~ \dfrac{(ac - b(-d)) \;+\; (a(-d) + bc)i}{c^2 + d^2}\\
+&amp;=~ \dfrac{(ac+bd) \;+\; (bc-ad)i}{c^2 + d^2}
+\end{align*}\end{split}\]</div>
+<p>The <strong>conjugate</strong> <span class="math notranslate nohighlight">\(\overline{a+bi}\)</span> of a complex number <code class="docutils literal notranslate"><span class="pre">a+bi</span></code> is defined as <span class="math notranslate nohighlight">\(\overline{a+bi} = a-bi\)</span>. Notice that <span class="math notranslate nohighlight">\((a+bi) \;+\; \overline{(a+bi)} ~=~ 2a\)</span> is a real number, <span class="math notranslate nohighlight">\((a+bi) \;-\; \overline{(a+bi)} ~=~ 2bi\)</span> is an imaginary number if <span class="math notranslate nohighlight">\(b \ne 0\)</span>, and <span class="math notranslate nohighlight">\((a+bi) \overline{(a+bi)} ~=~ a^2 + b^2\)</span> is a real number. So for a complex number <span class="math notranslate nohighlight">\(z=a+bi\)</span>, <span class="math notranslate nohighlight">\(z\,\overline{z} = a^2 + b^2 \,\)</span> and thus we can define the <strong>modulus</strong> of <code class="docutils literal notranslate"><span class="pre">z</span></code> to be <span class="math notranslate nohighlight">\(\sqrt{z\,\overline{z}} = \sqrt{a^2 + b^2}\)</span>, which we denote by <span class="math notranslate nohighlight">\(|z|\)</span>.</p>
+<div class="admonition-example-6-9 admonition">
+<p class="admonition-title">Example 6.9</p>
+<p>Let <span class="math notranslate nohighlight">\(z_1 = -2+3i\)</span> and <span class="math notranslate nohighlight">\(z_2 = 3+4i\)</span>. Find <span class="math notranslate nohighlight">\(z_1 + z_2\)</span>, <span class="math notranslate nohighlight">\(z_1 - z_2\)</span>, <span class="math notranslate nohighlight">\(z_1 \, z_2\)</span>, <span class="math notranslate nohighlight">\(z_1 / z_2\)</span>, <span class="math notranslate nohighlight">\(|z_1|\)</span>, and <span class="math notranslate nohighlight">\(|z_2|\)</span>.</p>
+<p><strong>Solution:</strong> Using our rules and definitions, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+  z_1 \;+\; z_2 ~&amp;=~ (-2+3i) \;+\; (3+4i)\\
+  &amp;=~ 1 + 7i\\
+  z_1 \;-\; z_2 ~&amp;=~ (-2+3i) \;-\; (3+4i)\\
+  &amp;=~ -5 - i\\
+  z_1 \, z_2 ~&amp;=~ (-2+3i)\, (3+4i)\\
+  &amp;=~ ((-2)(3) - (3)(4)) \;+\; ((-2)(4) + (3)(3))i\\
+  &amp;=~ -18 + i\\
+  \dfrac{z_1}{z_2} ~&amp;=~ \dfrac{-2+3i}{3+4i}\\
+  &amp;=~ \dfrac{(-2)(3) + (3)(4) \;+\; ((3)(3) - (-2)(4))i}{3^2 + 4^2}\\
+  &amp;=~ \dfrac{6}{25} \;+\; \dfrac{17}{25}\,i\\
+  |z_1| ~&amp;=~ \sqrt{(-2)^2 + 3^2}\\
+  &amp;=~ \sqrt{13}\\
+  |z_2| ~&amp;=~ \sqrt{3^2 + 4^2}\\
+  &amp;=~ 5
+\end{align*}\end{split}\]</div>
+</div>
+<p>We know that any point <span class="math notranslate nohighlight">\((x,y)\)</span> in the <span class="math notranslate nohighlight">\(xy\)</span>-coordinate plane that is a distance <span class="math notranslate nohighlight">\(r &gt;0\)</span> from the
+origin has coordinates <span class="math notranslate nohighlight">\(x=r\,\cos\;\theta\)</span> and <span class="math notranslate nohighlight">\(y=r\,\sin\;\theta\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle in
+standard position as in Figure <a class="reference internal" href="#fig-complex"><span class="std std-ref">6.3.1</span></a> (a).</p>
+<figure class="align-center" id="id37">
+<span id="figure-6-3-1"></span><span id="fig-complex"></span><img alt="_images/f6.3.1.png" src="_images/f6.3.1.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 6.3.1</strong></span><a class="headerlink" href="#id37" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Let <span class="math notranslate nohighlight">\(z=x+yi\)</span> be a complex number. We can represent <code class="docutils literal notranslate"><span class="pre">z</span></code> as a point in the <strong>complex plane</strong>, where the horizontal <span class="math notranslate nohighlight">\(x\)</span>-axis represents the real part of <code class="docutils literal notranslate"><span class="pre">z</span></code>, and the vertical <span class="math notranslate nohighlight">\(y\)</span>-axis represents the pure imaginary part of <code class="docutils literal notranslate"><span class="pre">z</span></code>, as in Figure <a class="reference internal" href="#fig-complex"><span class="std std-ref">6.3.1</span></a> (b). The distance <code class="docutils literal notranslate"><span class="pre">r</span></code> from <code class="docutils literal notranslate"><span class="pre">z</span></code> to the origin is, by the Pythagorean Theorem, <span class="math notranslate nohighlight">\(r = \sqrt{x^2 + y^2}\)</span>, which is just the modulus of <code class="docutils literal notranslate"><span class="pre">z</span></code>. And we see from Figure <a class="reference internal" href="#fig-complex"><span class="std std-ref">6.3.1</span></a> (b) that <span class="math notranslate nohighlight">\(x=r\,\cos\;\theta\)</span> and <span class="math notranslate nohighlight">\(y=r\,\sin\;\theta\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle formed by the positive <span class="math notranslate nohighlight">\(x\)</span>-axis and the line segment from the origin to <code class="docutils literal notranslate"><span class="pre">z</span></code>. We call this angle <span class="math notranslate nohighlight">\(\theta\)</span> the <strong>argument</strong> of <code class="docutils literal notranslate"><span class="pre">z</span></code>. Thus, we get the <strong>trigonometric form</strong> (sometimes called the <em>polar form</em>) of the complex number <code class="docutils literal notranslate"><span class="pre">z</span></code>:</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>For any complex number <span class="math notranslate nohighlight">\(z=x+yi\)</span>, we can write</p>
+<div class="math notranslate nohighlight" id="equation-eqn-polar">
+<span id="equation-6-3"></span><span class="eqno">(3)<a class="headerlink" href="#equation-eqn-polar" title="此公式的永久链接">#</a></span>\[\begin{split}\begin{align}
+z ~&amp;=~ r\,(\cos\;\theta \;+\; i\,\sin\;\theta)~~,~\text{where}\\
+r ~&amp;=~ |z| ~=~ \sqrt{x^2 + y^2}~~\text{and}\notag\\
+\theta ~&amp;=~ \text{the argument of $z$}~.\notag\\
+\end{align}\end{split}\]</div>
+<p>The representation <span class="math notranslate nohighlight">\(z=r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\)</span> is often abbreviated as:</p>
+<div class="math notranslate nohighlight" id="equation-eqn-cis">
+<span id="equation-6-4"></span><span class="eqno">(4)<a class="headerlink" href="#equation-eqn-cis" title="此公式的永久链接">#</a></span>\[z ~=~ r\,\text{cis}\;\theta\]</div>
+</div>
+<p>In the special case <span class="math notranslate nohighlight">\(z=0 = 0+0i\)</span>, the argument <span class="math notranslate nohighlight">\(\theta\)</span> is undefined since <span class="math notranslate nohighlight">\(r=|z|=0\)</span>. Also, note
+that the argument <span class="math notranslate nohighlight">\(\theta\)</span> can be replaced by <span class="math notranslate nohighlight">\(\theta \;+\; 360^\circ k\)</span> or <span class="math notranslate nohighlight">\(\theta \;+\; \pi k\)</span>,
+depending on whether you are using degrees or radians, respectively, for <span class="math notranslate nohighlight">\(k=0\)</span>, <span class="math notranslate nohighlight">\(\pm\,1\)</span>, <span class="math notranslate nohighlight">\(\pm\,2\)</span>,
+<span class="math notranslate nohighlight">\(...\)</span> . Note also that for <span class="math notranslate nohighlight">\(z=x+yi\)</span> with <span class="math notranslate nohighlight">\(r=|z|\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span> must satisfy</p>
+<div class="math notranslate nohighlight">
+\[\tan\;\theta ~=~ \tfrac{y}{x}~~,~ \cos\;\theta ~=~ \tfrac{x}{r}~~,~ \sin\;\theta ~=~ \tfrac{y}{r}~.\]</div>
+<div class="admonition-example-6-10 admonition">
+<p class="admonition-title">Example 6.10</p>
+<figure class="align-right" id="id38">
+<span id="figure-6-3-2"></span><span id="fig-exmppolar"></span><img alt="_images/f6.3.2.png" src="_images/f6.3.2.png" />
+<figcaption>
+<p><span class="caption-text">Figure 6.3.2</span><a class="headerlink" href="#id38" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Represent the complex number <span class="math notranslate nohighlight">\(-2 - i\)</span> in trigonometric form.</p>
+<p><strong>Solution:</strong> Let <span class="math notranslate nohighlight">\(z=-2-i=x+yi\)</span>, so that <span class="math notranslate nohighlight">\(x=-2\)</span> and <span class="math notranslate nohighlight">\(y=-1\)</span>. Then <span class="math notranslate nohighlight">\(\theta\)</span> is in QIII, as we see in Figure <a class="reference internal" href="#fig-exmppolar"><span class="std std-ref">6.3.2</span></a>. So since <span class="math notranslate nohighlight">\(\tan\;\theta = \tfrac{y}{x} = \tfrac{-1}{-2} = \tfrac{1}{2}\)</span>, we have <span class="math notranslate nohighlight">\(\theta = 206.6^\circ\)</span>. Also,</p>
+<div class="math notranslate nohighlight">
+\[r ~=~ \sqrt{x^2 + y^2} ~=~ \sqrt{(-2)^2 + (-1)^2} ~=~ \sqrt{5} ~.\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(\boxed{-2 - i = \sqrt{5}\;(\cos\;206.6^\circ \;+\; i\,\sin\;206.6^\circ)}\;\)</span>, or <span class="math notranslate nohighlight">\(\sqrt{5}\;\text{cis}\;206.6^\circ\)</span>.</p>
+</div>
+<p>For complex numbers in trigonometric form, we have the following formulas for multiplication and division:</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>Let <span class="math notranslate nohighlight">\(z_1 = r_1 \,(\cos\;\theta_1 \;+\; i\,\sin\;\theta_1 )\)</span> and <span class="math notranslate nohighlight">\(z_2 = r_2 \,(\cos\;\theta_2 \;+\; i\,\sin\;\theta_2 )\)</span> be complex numbers. Then</p>
+<div class="math notranslate nohighlight" id="equation-eqn-complextrigmult">
+<span id="equation-6-5"></span><span class="eqno">(5)<a class="headerlink" href="#equation-eqn-complextrigmult" title="此公式的永久链接">#</a></span>\[z_1 \, z_2 ~=~ r_1 \, r_2 \,(\cos\;(\theta_1 + \theta_2 ) \;+\; i\,\sin\;(\theta_1 + \theta_2 ))~\text{, and}\]</div>
+<div class="math notranslate nohighlight" id="equation-eqn-complextrigdiv">
+<span id="equation-6-6"></span><span class="eqno">(6)<a class="headerlink" href="#equation-eqn-complextrigdiv" title="此公式的永久链接">#</a></span>\[\frac{z_1}{z_2} ~=~ \frac{r_1}{r_2} \,(\cos\;(\theta_1 - \theta_2 ) \;+\; i\,\sin\;(\theta_1 - \theta_2 ))\quad\text{if `z_2 \ne 0`.}\]</div>
+</div>
+<p>The proofs of these formulas are straightforward:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+z_1 \, z_2 ~&amp;=~ r_1 \,(\cos\;\theta_1 \;+\; i\,\sin\;\theta_1 ) \;\cdot\;
+  r_2 \,(\cos\;\theta_2 \;+\; i\,\sin\;\theta_2 )\\
+&amp;=~ r_1 \, r_2 \,\left[ (\cos\;\theta_1 ~ \cos\;\theta_2 \;-\; \sin\;\theta_1 ~ \sin\;\theta_2 )
+  \;+\; i\,(\sin\;\theta_1 ~ \cos\;\theta_2 \;+\; \cos\;\theta_1 ~ \sin\;\theta_2 ) \right]\\
+&amp;=~ r_1 \, r_2 \,(\cos\;(\theta_1 + \theta_2 ) \;+\; i\,\sin\;(\theta_1 + \theta_2 ))\\
+\end{align*}\end{split}\]</div>
+<p>by the addition formulas for sine and cosine. And</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\frac{z_1}{z_2} ~&amp;=~ \frac{r_1 \,(\cos\;\theta_1 \;+\; i\,\sin\;\theta_1 )}{
+  r_2 \,(\cos\;\theta_2 \;+\; i\,\sin\;\theta_2 )}\\
+&amp;=~ \frac{r_1}{r_2} \;\cdot\; \frac{\cos\;\theta_1 \;+\; i\,\sin\;\theta_1}{
+  \cos\;\theta_2 \;+\; i\,\sin\;\theta_2} \;\cdot\; \frac{\cos\;\theta_2 \;-\; i\,\sin\;\theta_2}{
+  \cos\;\theta_2 \;-\; i\,\sin\;\theta_2}\\
+&amp;=~ \frac{r_1}{r_2} \;\cdot\; \frac{(\cos\;\theta_1 ~ \cos\;\theta_2 \;+\; \sin\;\theta_1 ~
+  \sin\;\theta_2 ) \;+\; i\,(\sin\;\theta_1 ~ \cos\;\theta_2 \;-\; \cos\;\theta_1 ~
+  \sin\;\theta_2 )}{\cos^2 \,\theta_2 \;+\; \sin^2 \,\theta_2}\\
+&amp;=~ \frac{r_1}{r_2} \,(\cos\;(\theta_1 - \theta_2 ) \;+\; i\,\sin\;(\theta_1 - \theta_2 ))
+\end{align*}\end{split}\]</div>
+<p>by the subtraction formulas for sine and cosine, and since <span class="math notranslate nohighlight">\(\cos^2 \,\theta_2 \;+\;\sin^2 \,\theta_2 = 1\)</span>. [.qed]</p>
+<p>Note that formulas <a class="reference internal" href="#equation-eqn-complextrigmult">(5)</a> and <a class="reference internal" href="#equation-eqn-complextrigdiv">(6)</a> say that when multiplying complex numbers the moduli are multiplied and the arguments are added, while when dividing complex numbers the moduli are divided and the arguments are subtracted. This makes working with complex numbers in trigonometric form fairly simple.</p>
+<div class="admonition-example-6-11 admonition">
+<p class="admonition-title">Example 6.11</p>
+<p>Let <span class="math notranslate nohighlight">\(z_1 = 6\,(\cos\;70^\circ \;+\; i\,\sin\;70^\circ )\)</span> and <span class="math notranslate nohighlight">\(z_1 = 2\,(\cos\;31^\circ \;+\; i\,\sin\;31^\circ )\)</span>. Find <span class="math notranslate nohighlight">\(z_1 \, z_2\)</span> and <span class="math notranslate nohighlight">\(\frac{z_1}{z_2}\)</span>.</p>
+<p><strong>Solution:</strong> By formulas <a class="reference internal" href="#equation-eqn-complextrigmult">(5)</a> and <a class="reference internal" href="#equation-eqn-complextrigdiv">(6)</a> we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignat*}{3}
+z_1 \, z_2 ~&amp;=~ (6) \, (2) \, (\cos\;(70^\circ + 31^\circ ) \;+\; i\,\sin\;(70^\circ +
+  31^\circ )) \quad&amp;&amp;\Rightarrow\quad \boxed{z_1 \, z_2 ~=~ 12 \, (\cos\;101^\circ \;+\;
+  i\,\sin\;101^\circ )} ~\text{, and}\\
+\frac{z_1}{z_2} ~&amp;=~ \frac{6}{2} \, (\cos\;(70^\circ - 31^\circ ) \;+\; i\,\sin\;(70^\circ -
+  31^\circ )) \quad&amp;&amp;\Rightarrow\quad \boxed{\frac{z_1}{z_2} ~=~ 3 \, (\cos\;39^\circ \;+\;
+  i\,\sin\;39^\circ )} ~.
+\end{alignat*}\end{split}\]</div>
+</div>
+<p>For the special case when <span class="math notranslate nohighlight">\(z_1 = z_2 = z = r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\)</span> in formula <a class="reference internal" href="#equation-eqn-complextrigmult">(5)</a>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\left[ r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\right]^2 ~&amp;=~
+  r \cdot r \,(\cos\;(\theta + \theta ) \;+\; i\,\sin\;(\theta + \theta))\\
+&amp;=~ r^2 \,(\cos\;2\theta \;+\; i\,\sin\;2\theta) ~,\\
+\end{align*}\end{split}\]</div>
+<p>and so</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\left[ r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\right]^3 ~&amp;=~
+  \left[ r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\right]^2 \;\cdot\;
+  r\,(\cos\;\theta \;+\; i\,\sin\;\theta )\\
+&amp;=~ r^2 \,(\cos\;2\theta \;+\; i\,\sin\;2\theta) \;\cdot\;
+  r\,(\cos\;\theta \;+\; i\,\sin\;\theta )\\
+&amp;=~ r^3 \,(\cos\;(2\theta + \theta) \;+\; i\,\sin\;(2\theta + \theta) )\\
+&amp;=~ r^3 \,(\cos\;3\theta \;+\; i\,\sin\;3\theta) ~,
+\end{align*}\end{split}\]</div>
+<p>and continuing like this (i.e. by <em>mathematical induction</em>), we get:</p>
+<blockquote id="thm-demoivre">
+<div><p><strong>Theorem 6.1. De Moivre’s Theorem:</strong> <a class="footnote-reference brackets" href="#id20" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> For any integer <span class="math notranslate nohighlight">\(n \ge 1\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-eqn-demoivre">
+<span id="equation-6-7"></span><span class="eqno">(7)<a class="headerlink" href="#equation-eqn-demoivre" title="此公式的永久链接">#</a></span>\[\left[ r\,(\cos\;\theta \;+\; i\,\sin\;\theta )\right]^n ~=~
+r^n \,(\cos\;n\theta \;+\; i\,\sin\;n\theta ) ~.\]</div>
+</div></blockquote>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id20" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">7</a><span class="fn-bracket">]</span></span>
+<p>Named after the French statistician and mathematician Abraham de Moivre (1667-1754).</p>
+</aside>
+</aside>
+<p>We define <span class="math notranslate nohighlight">\(z^0 = 1\)</span> and <span class="math notranslate nohighlight">\(z^{-n} = 1/z^n\)</span> for all integers <span class="math notranslate nohighlight">\(n \ge 1\)</span>. So by De Moivre’s Theorem and formula <a class="reference internal" href="#equation-eqn-complextrigmult">(5)</a>, for any <span class="math notranslate nohighlight">\(z=r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\)</span> and integer <span class="math notranslate nohighlight">\(n \ge 1\)</span> we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+z^{-n} ~&amp;=~ \frac{1}{z^n}\\
+&amp;=~ \frac{1\,(\cos\;0^\circ \;+\; i\,\sin\;0^\circ )}{r^n \,(\cos\;n\theta \;+\;
+  i\,\sin\;n\theta )}\\
+&amp;=~ \frac{1}{r^n} \,(\cos\;(0^\circ - n\theta) \;+\; i\,\sin\;(0^\circ - n\theta))\\
+&amp;=~ r^{-n} \, (\cos\;(- n\theta) \;+\; i\,\sin\;(- n\theta)) ~,
+\end{align*}\end{split}\]</div>
+<p>and so De Moivre’s Theorem in fact holds for <em>all</em> integers. <a class="footnote-reference brackets" href="#id22" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id22" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id21">8</a><span class="fn-bracket">]</span></span>
+<p>There is a way of defining <span class="math notranslate nohighlight">\(z^n\)</span> when <code class="docutils literal notranslate"><span class="pre">n</span></code> is a real (or complex) number, so that De Moivre’s Theorem holds for any real number <code class="docutils literal notranslate"><span class="pre">n</span></code>. See pp. 59-60 in textsc{R.V. Churchill}, <em>Complex Variables and Applications</em>, 2nd ed., New York: McGraw-Hill Book Co., 1960.</p>
+</aside>
+</aside>
+<div class="admonition-example-6-12 admonition">
+<p class="admonition-title">Example 6.12</p>
+<p>Find <span class="math notranslate nohighlight">\((1+i)^{10}\)</span>.</p>
+<p><strong>Solution:</strong> Since <span class="math notranslate nohighlight">\(1+i = \sqrt{2}\;(\cos\;45^\circ \;+\; i\,\sin\;45^\circ )\)</span>  (why?), by De Moivre’s Theorem we have</p>
+<div class="math notranslate nohighlight">
+\[(1+i)^{10} ~=~ (\sqrt{2})^{10} \;(\cos\;450^\circ \;+\; i\,\sin\;450^\circ ) ~=~ 2^{10/2} \;(0 \;+\; i\,(1)) ~=~ 2^5 \,\cdot\, i ~=~ \boxed{32i} ~.\]</div>
+</div>
+<p>We can use De Moivre’s Theorem to find the <span class="math notranslate nohighlight">\(n^{th}\)</span> <em>roots</em> of a complex number. That is, given any complex number <code class="docutils literal notranslate"><span class="pre">z</span></code> and positive integer <code class="docutils literal notranslate"><span class="pre">n</span></code>, find all complex numbers <code class="docutils literal notranslate"><span class="pre">w</span></code> such that <span class="math notranslate nohighlight">\(w^n = z\)</span>. Let <span class="math notranslate nohighlight">\(z=r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\)</span>. Since the cosine and sine functions repeat every <span class="math notranslate nohighlight">\(360^\circ\)</span>, we know that <span class="math notranslate nohighlight">\(z=r\,(\cos\;(\theta + 360^\circ k)\;+\; i\,\sin\;(\theta + 360^\circ k))\)</span> for <span class="math notranslate nohighlight">\(k=0\)</span>, <span class="math notranslate nohighlight">\(\pm\,1\)</span>, <span class="math notranslate nohighlight">\(\pm\,2\)</span>, <span class="math notranslate nohighlight">\(...\)</span>. Now let <span class="math notranslate nohighlight">\(w=r_0 \,(\cos\;\theta_0 \;+\; i\,\sin\;\theta_0 )\)</span> be an <span class="math notranslate nohighlight">\(n^{th}\)</span> root of <code class="docutils literal notranslate"><span class="pre">z</span></code>. Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+w^n ~=~ z \quad&amp;\Rightarrow\quad \left[ r_0 \,(\cos\;\theta_0 \;+\; i\,\sin\;\theta_0 )\right]^n
+  ~=~ r\,(\cos\;(\theta + 360^\circ k)\;+\; i\,\sin\;(\theta + 360^\circ k))\\
+&amp;\Rightarrow\quad r_0^n \,(\cos\;n\theta_0 \;+\; i\,\sin\;n\theta_0 )
+  ~=~ r\,(\cos\;(\theta + 360^\circ k)\;+\; i\,\sin\;(\theta + 360^\circ k))\\
+&amp;\Rightarrow\quad r_0^n ~=~ r \quad\text{and}\quad n\theta_0 ~=~ \theta + 360^\circ k\\
+&amp;\Rightarrow\quad r_0 ~=~ r^{1/n} \quad\text{and}\quad \theta_0 ~=~
+  \frac{\theta + 360^\circ k}{n} ~.
+\end{align*}\end{split}\]</div>
+<p>Since the cosine and sine of <span class="math notranslate nohighlight">\(\frac{\theta + 360^\circ k}{n}\)</span> will repeat for <span class="math notranslate nohighlight">\(k \ge n\)</span>, we get the following formula for the <span class="math notranslate nohighlight">\(n^{th}\)</span> roots of <cite>z</cite>:</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>For any nonzero complex number <span class="math notranslate nohighlight">\(z=r\,(\cos\;\theta \;+\; i\,\sin\;\theta)\)</span> and positive integer <code class="docutils literal notranslate"><span class="pre">n</span></code>, the <code class="docutils literal notranslate"><span class="pre">n</span></code> distinct <span class="math notranslate nohighlight">\(n^{th}\)</span>
+roots of <code class="docutils literal notranslate"><span class="pre">z</span></code> are</p>
+<div class="math notranslate nohighlight" id="equation-eqn-nthroots">
+<span id="equation-6-8"></span><span class="eqno">(8)<a class="headerlink" href="#equation-eqn-nthroots" title="此公式的永久链接">#</a></span>\[r^{1/n} \, \left[ \cos\;\left(\frac{\theta + 360^\circ k}{n}\right) \;+\;
+i\,\sin\;\left(\frac{\theta + 360^\circ k}{n}\right) \right]\]</div>
+<p>for <span class="math notranslate nohighlight">\(k=0\)</span>, <cite>1</cite>, <cite>2</cite>, <cite>…</cite>, <cite>n-1</cite>.</p>
+</div>
+<p>Note: An <span class="math notranslate nohighlight">\(n^{th}\)</span> root of <code class="docutils literal notranslate"><span class="pre">z</span></code> is usually written as <span class="math notranslate nohighlight">\(z^{1/n}\)</span> or <span class="math notranslate nohighlight">\(\sqrt[n]{z}\)</span>. The number <span class="math notranslate nohighlight">\(r^{1/n}\)</span> in the above formula is the usual real <cite>n^{th}</cite> root of the real number <span class="math notranslate nohighlight">\(r=|z|\)</span>.</p>
+<div class="admonition-example-6-13 admonition" id="exmp-cuberooti">
+<p class="admonition-title">Example 6.13:</p>
+<p>Find the three cube roots of <cite>i</cite>.</p>
+<p><strong>Solution:</strong> Since <span class="math notranslate nohighlight">\(i = 1\,(\cos\;90^\circ \;+\; i\,\sin\;90^\circ)\)</span>, the three cube roots of <code class="docutils literal notranslate"><span class="pre">i</span></code> are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+  \sqrt[3]{1} \;\left[ \cos\;\left(\frac{90^\circ + 360^\circ (0)}{3}\right) \;+\;
+  i\,\sin\;\left(\frac{90^\circ + 360^\circ (0)}{3}\right) \right] ~&amp;=~
+  \cos\;30^\circ \;+\; i\,\sin\;30^\circ ~&amp;&amp;=~
+  \boxed{\frac{\sqrt{3}}{2} \;+\; \frac{1}{2}\,i}~,\\[3pt]
+  \sqrt[3]{1} \;\left[ \cos\;\left(\frac{90^\circ + 360^\circ (1)}{3}\right) \;+\;
+  i\,\sin\;\left(\frac{90^\circ + 360^\circ (1)}{3}\right) \right] ~&amp;=~
+  \cos\;150^\circ \;+\; i\,\sin\;150^\circ ~&amp;&amp;=~
+  \boxed{-\frac{\sqrt{3}}{2} \;+\; \frac{1}{2}\,i}~,\\[3pt]
+  \sqrt[3]{1} \;\left[ \cos\;\left(\frac{90^\circ + 360^\circ (2)}{3}\right) \;+\;
+  i\,\sin\;\left(\frac{90^\circ + 360^\circ (2)}{3}\right) \right] ~&amp;=~
+  \cos\;270^\circ \;+\; i\,\sin\;270^\circ ~&amp;&amp;=~ \boxed{-i}
+\end{align}\end{split}\]</div>
+</div>
+<figure class="align-right" id="id39">
+<span id="figure-6-3-3"></span><span id="fig-cuberooti"></span><img alt="_images/f6.3.3.png" src="_images/f6.3.3.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 6.3.3</strong></span><a class="headerlink" href="#id39" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Notice from Example <a class="reference internal" href="#exmp-cuberooti"><span class="std std-ref">6.13</span></a> that the three cube roots of <code class="docutils literal notranslate"><span class="pre">i</span></code> are equally spaced points along the unit circle <span class="math notranslate nohighlight">\(|z|=1\)</span> in the complex plane, as shown in Figure <a class="reference internal" href="#fig-cuberooti"><span class="std std-ref">6.3.3</span></a>. We see that consecutive cube roots are <span class="math notranslate nohighlight">\(120^\circ\)</span> apart.</p>
+<p>In general, the <span class="math notranslate nohighlight">\(n\)</span> <span class="math notranslate nohighlight">\(n^{th}\)</span> roots of a complex number <code class="docutils literal notranslate"><span class="pre">z</span></code> will be equally spaced points along the circle of radius <span class="math notranslate nohighlight">\(|z|^{1/n}\)</span> in the complex plane, with consecutive roots separated by <span class="math notranslate nohighlight">\(\tfrac{360^\circ}{n}\)</span>.</p>
+<p>In higher mathematics the <em>Fundamental Theorem of Algebra</em> states that every polynomial of degree <code class="docutils literal notranslate"><span class="pre">n</span></code> with complex coefficients has <cite>n</cite> complex roots (some of which may repeat). In particular, every real number <code class="docutils literal notranslate"><span class="pre">a</span></code> has <span class="math notranslate nohighlight">\(n\)</span> <cite>n^{th}</cite> roots (being the roots of <span class="math notranslate nohighlight">\(z^n - a\)</span>). For example, the square roots of <code class="docutils literal notranslate"><span class="pre">1</span></code> are <span class="math notranslate nohighlight">\(\pm\,1\)</span>, and the square roots of <code class="docutils literal notranslate"><span class="pre">-1</span></code> are <span class="math notranslate nohighlight">\(\pm\,i\)</span>.</p>
+<section id="sec6dot3">
+<span id="id23"></span><h3>练习<a class="headerlink" href="#sec6dot3" title="此标题的永久链接">#</a></h3>
+<p>Exercises</p>
+<p>For Exercises 1-16, calculate the given expression.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\((2+3i) \;+\; (-3-2i)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((2+3i) \;-\; (-3-2i)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((2+3i) \;\cdot\; (-3-2i)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((2+3i)/(-3-2i)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overline{(2+3i)} \;+\; \overline{(-3-2i)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overline{(2+3i)} \;-\; \overline{(-3-2i)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((1+i)/(1-i)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|-3+2i|\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(i^3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(i^4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(i^5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(i^6\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(i^7\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(i^8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(i^9\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(i^{2009}\)</span></p></li>
+</ol>
+<p>For Exercises 17-24, prove the given identity for all complex numbers.</p>
+<ol class="arabic simple" start="17">
+<li><p><span class="math notranslate nohighlight">\(\overline{\left( \overline{z} \right)} \;=\; z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overline{z_1 + z_2} \;=\; \overline{z_1} + \overline{z_2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overline{z_1 - z_2} \;=\; \overline{z_1} - \overline{z_2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overline{z_1 \, z_2} \;=\; \overline{z_1} ~ \overline{z_2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\overline{\left( \dfrac{z_1}{z_2} \right)} \;=\; \dfrac{\overline{z_1}}{\overline{z_2}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|z| \;=\; |\overline{z}|\phantom{\dfrac{|1_1|}{|1_2|}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|z_1 \, z_2| \;=\; |z_1|\,|z_2|\phantom{\dfrac{|1_1|}{|1_2|}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left| \dfrac{z_1}{z_2} \right| \;=\; \dfrac{|z_1|}{|z_2|}\)</span></p></li>
+</ol>
+<p>For Exercises 25-30, put the given number in trigonometric form.</p>
+<ol class="arabic simple" start="25">
+<li><p><span class="math notranslate nohighlight">\(2+3i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-3-2i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1-i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-1\)</span></p></li>
+<li><p>Verify that De Moivre’s Theorem holds for the power <span class="math notranslate nohighlight">\(n=0\)</span>.</p></li>
+</ol>
+<p>For Exercises 32-35, calculate the given number.</p>
+<ol class="arabic simple" start="32">
+<li><p><span class="math notranslate nohighlight">\(3\,(\cos\;14^\circ \;+\; i\,\sin\;14^\circ ) \;\cdot\; 2\,(\cos\;121^\circ \;+\; i\,\sin\;121^\circ )\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lbrack 3\,(\cos\;14^\circ \;+\; i\,\sin\;14^\circ )\rbrack^4\phantom{\dfrac{3}{4}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lbrack 3\,(\cos\;14^\circ \;+\; i\,\sin\;14^\circ )\rbrack^{-4}\phantom{\dfrac{3}{4}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\dfrac{3\,(\cos\;14^\circ \;+\; i\,\sin\;14^\circ )}{ 2\,(\cos\;121^\circ \;+\; i\,\sin\;121^\circ )}\)</span></p></li>
+<li><p>Find the three cube roots of <span class="math notranslate nohighlight">\(-i\)</span>.</p></li>
+<li><p>Find the three cube roots of <span class="math notranslate nohighlight">\(1+i\)</span>.</p></li>
+<li><p>Find the three cube roots of <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+<li><p>Find the three cube roots of <span class="math notranslate nohighlight">\(-1\)</span>.</p></li>
+<li><p>Find the five fifth roots of <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+<li><p>Find the five fifth roots of <span class="math notranslate nohighlight">\(-1\)</span>.</p></li>
+<li><p>Find the two square roots of <span class="math notranslate nohighlight">\(-2 + 2\sqrt{3}\,i\)</span>.</p></li>
+<li><p>Prove that if <span class="math notranslate nohighlight">\(z\)</span> is an <span class="math notranslate nohighlight">\(n^{th}\)</span> root of a real number <code class="docutils literal notranslate"><span class="pre">a</span></code>, then so is <span class="math notranslate nohighlight">\(\overline{z}\)</span>. (<em>Hint: Use Exercise 20.</em>)</p></li>
+</ol>
+</section>
+</section>
+<section id="id24">
+<h2>极坐标<a class="headerlink" href="#id24" title="此标题的永久链接">#</a></h2>
+<p>Polar Coordinates</p>
+<figure class="align-right" id="id40">
+<span id="fig-spiral"></span><span id="figure-6-4-1"></span><img alt="_images/f6.4.1.png" src="_images/f6.4.1.png" />
+<figcaption>
+<p><span class="caption-text">Figure 6.4.1</span><a class="headerlink" href="#id40" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Suppose that from the point <span class="math notranslate nohighlight">\((1,0)\)</span> in the <span class="math notranslate nohighlight">\(xy\)</span>-coordinate plane we draw a spiral around the origin, such that the distance between any two points separated by <span class="math notranslate nohighlight">\(360^\circ\)</span> along the spiral is always <code class="docutils literal notranslate"><span class="pre">1</span></code>, as in Figure <a class="reference internal" href="#fig-spiral"><span class="std std-ref">6.4.1</span></a>. We can not express this spiral as <span class="math notranslate nohighlight">\(y=f(x)\)</span> for some function <code class="docutils literal notranslate"><span class="pre">f</span></code> in Cartesian coordinates, since its graph violates the vertical rule.</p>
+<p>However, this spiral would be simple to describe using the <em>polar coordinate system</em>. Recall that any point <code class="docutils literal notranslate"><span class="pre">P</span></code> distinct from the origin (denoted by <code class="docutils literal notranslate"><span class="pre">O</span></code>) in the <span class="math notranslate nohighlight">\(xy\)</span>-coordinate plane is a distance <code class="docutils literal notranslate"><span class="pre">r&gt;0</span></code> from the origin, and the ray <span class="math notranslate nohighlight">\(\overrightarrow{OP}\)</span> makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the positive <span class="math notranslate nohighlight">\(x\)</span>-axis, as in Figure ref{fig:polar}. We call the pair <span class="math notranslate nohighlight">\((r,\theta)\)</span> the <strong>polar coordinates</strong> of <code class="docutils literal notranslate"><span class="pre">P</span></code>, and the positive <span class="math notranslate nohighlight">\(x\)</span>-axis is called the <strong>polar axis</strong> of this coordinate system. Note that <span class="math notranslate nohighlight">\((r,\theta) = (r,\theta + 360^\circ k)\)</span> for <span class="math notranslate nohighlight">\(k=0\)</span>, <span class="math notranslate nohighlight">\(\pm\,1\)</span>, <span class="math notranslate nohighlight">\(\pm\,2\)</span>, <span class="math notranslate nohighlight">\(...\)</span>, so (unlike for Cartesian coordinates) the polar coordinates of a point are not unique.</p>
+<figure class="align-left" id="id41">
+<span id="fig-polar"></span><span id="figure-6-4-2"></span><img alt="_images/f6.4.2.png" src="_images/f6.4.2.png" />
+<figcaption>
+<p><span class="caption-text">Figure 6.4.2 Polar coordinates <span class="math notranslate nohighlight">\((r,\theta)\)</span></span><a class="headerlink" href="#id41" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id42">
+<span id="fig-negpolar"></span><span id="figure-6-4-3"></span><img alt="_images/f6.4.3.png" src="_images/f6.4.3.png" />
+<figcaption>
+<p><span class="caption-text">Figure 6.4.3 Negative <code class="docutils literal notranslate"><span class="pre">r</span></code>: <span class="math notranslate nohighlight">\((-r,\theta)\)</span></span><a class="headerlink" href="#id42" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>In polar coordinates we adopt the convention that <code class="docutils literal notranslate"><span class="pre">r</span></code> can be negative, by defining <span class="math notranslate nohighlight">\((-r,\theta) = (r,\theta + 180^\circ)\)</span> for any angle <span class="math notranslate nohighlight">\(\theta\)</span>. That is, the ray <span class="math notranslate nohighlight">\(\overrightarrow{OP}\)</span> is drawn in the opposite direction from the angle <span class="math notranslate nohighlight">\(\theta\)</span>, as in Figure <a class="reference internal" href="#fig-negpolar"><span class="std std-ref">6.4.3</span></a>. When <span class="math notranslate nohighlight">\(r=0\)</span>, the point <span class="math notranslate nohighlight">\((r,\theta) = (0,\theta)\)</span> is the origin <code class="docutils literal notranslate"><span class="pre">O</span></code>, regardless of the value of <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
+<p>You may be familiar with graphing paper, for plotting points or functions given in Cartesian coordinates (sometimes also called <em>rectangular coordinates</em>). Such paper consists of a rectangular grid. Similar graphing paper exists for plotting points and functions in polar coordinates, similar to Figure <a class="reference internal" href="#fig-polargraph"><span class="std std-ref">6.4.4</span></a>.</p>
+<figure class="align-center" id="id43">
+<span id="fig-polargraph"></span><span id="figure-6-4-4"></span><img alt="_images/f6.4.4.png" src="_images/f6.4.4.png" />
+<figcaption>
+<p><span class="caption-text">Figure 6.4.4 Polar coordinate graph</span><a class="headerlink" href="#id43" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>The angle <span class="math notranslate nohighlight">\(\theta\)</span> can be given in either degrees or radians, whichever is more convenient. Radians are often preferred when graphing functions in polar coordinates. The reason is that,  unlike degrees, radians can be considered “unitless” (as we mentioned in Chapter 4). This is desirable when a function given in polar coordinates is expressed as <code class="docutils literal notranslate"><span class="pre">r</span></code> as a function of <span class="math notranslate nohighlight">\(\theta\)</span> (similar to how, in Cartesian coordinates <span class="math notranslate nohighlight">\((x,y)\)</span>, functions are usually expressed as <code class="docutils literal notranslate"><span class="pre">y</span></code> as a function of <code class="docutils literal notranslate"><span class="pre">x</span></code>). For example, if a function in polar coordinates is written as <span class="math notranslate nohighlight">\(r = 2\,\theta\)</span>, then <code class="docutils literal notranslate"><span class="pre">r</span></code> would have the same units as <span class="math notranslate nohighlight">\(\theta\)</span>. But <code class="docutils literal notranslate"><span class="pre">r</span></code> should be a unitless quantity, hence using radians for <span class="math notranslate nohighlight">\(\theta\)</span> makes more sense in this case.</p>
+<div class="admonition-example6-14 admonition">
+<p class="admonition-title">Example6.14</p>
+<p>Express the spiral from Figure <a class="reference internal" href="#fig-spiral"><span class="std std-ref">6.4.1</span></a> in polar coordinates.</p>
+<p><strong>Solution:</strong> We will use radians for <cite>theta</cite>. The goal is to find some equation involving <code class="docutils literal notranslate"><span class="pre">r</span></code> and <span class="math notranslate nohighlight">\(\theta\)</span> that describes the spiral. We see that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+  \theta ~=~ 0 \quad&amp;\Rightarrow\quad r ~=~ 1\\
+  \theta ~=~ 2\pi \quad&amp;\Rightarrow\quad r ~=~ 2\\
+  \theta ~=~ 4\pi \quad&amp;\Rightarrow\quad r ~=~ 3\\
+  &amp;\vdots\\
+  \theta ~=~ 2\pi\,k \quad&amp;\Rightarrow\quad r ~=~ 1+k\\
+\end{align*}\end{split}\]</div>
+<p>for <span class="math notranslate nohighlight">\(k=0,1,2,\ldots\)</span>. In fact, that last relation holds for any nonnegative real number <code class="docutils literal notranslate"><span class="pre">k</span></code> (why?). So for any <span class="math notranslate nohighlight">\(\theta \ge 0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\theta ~=~ 2\pi\,k \quad\Rightarrow\quad k ~=~ \frac{\theta}{2\pi} \quad\Rightarrow\quad r ~=~ 1 + k ~=~ 1 + \frac{\theta}{2\pi} ~.\]</div>
+<p>Hence, the spiral can be written as <span class="math notranslate nohighlight">\(\boxed{r ~=~ 1 + \frac{\theta}{2\pi}}\)</span> for <span class="math notranslate nohighlight">\(\theta \ge 0\)</span>. The graph is shown in Figure <a class="reference internal" href="#fig-spiralgnu"><span class="std std-ref">6.4.5</span></a>, along with the Gnuplot commands to create the graph.</p>
+<figure class="align-right" id="id44">
+<span id="fig-spiralgnu"></span><span id="figure-6-4-5"></span><img alt="_images/f6.4.5.png" src="_images/f6.4.5.png" />
+<figcaption>
+<p><span class="caption-text">Figure 6.4.5 <span class="math notranslate nohighlight">\(r = 1 + \frac{\theta}{2\pi}\)</span></span><a class="headerlink" href="#id44" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="w"> </span>polar
+<span class="nb">set</span><span class="w"> </span>size<span class="w"> </span>square
+<span class="nb">set</span><span class="w"> </span>samples<span class="w"> </span><span class="m">2000</span>
+<span class="nb">unset</span><span class="w"> </span>key
+<span class="nb">set</span><span class="w"> </span>zeroaxis
+<span class="nb">set</span><span class="w"> </span>xlabel<span class="w"> </span><span class="s2">&quot;x&quot;</span>
+<span class="nb">set</span><span class="w"> </span>ylabel<span class="w"> </span><span class="s2">&quot;y&quot;</span>
+plot<span class="w"> </span><span class="o">[</span><span class="m">0</span>:6*pi<span class="o">]</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>+<span class="w"> </span>t/<span class="o">(</span><span class="m">2</span>*pi<span class="o">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Note that when using the <em>set polar</em> command, Gnuplot will assume that the function being plotted is <code class="docutils literal notranslate"><span class="pre">r</span></code> as a function of <span class="math notranslate nohighlight">\(\theta\)</span> (represented by the variable <cite>t</cite> in Gnuplot).</p>
+</div>
+<figure class="align-right" id="id45">
+<span id="fig-polarconvert"></span><span id="figure-6-4-6"></span><img alt="_images/f6.4.6.png" src="_images/f6.4.6.png" />
+<figcaption>
+<p><span class="caption-text">Figure 6.4.6</span><a class="headerlink" href="#id45" title="此图像的永久链接">#</a></p>
+</figcaption>
+</figure>
+<p>Figure <a class="reference internal" href="#fig-polarconvert"><span class="std std-ref">6.4.6</span></a> shows how to convert between polar coordinates and Cartesian coordinates. For a point with polar coordinates <span class="math notranslate nohighlight">\((r,\theta)\)</span> and Cartesian coordinates <span class="math notranslate nohighlight">\((x,y)\)</span>:</p>
+<dl>
+<dt><strong>Polar to Cartesian:</strong></dt><dd><div class="math notranslate nohighlight" id="equation-eqn-polartorect">
+<span id="equation-6-9"></span><span class="eqno">(9)<a class="headerlink" href="#equation-eqn-polartorect" title="此公式的永久链接">#</a></span>\[\boxed{ x ~=~ r\,\cos\;\theta \qquad y ~=~ r\,\sin\;\theta }\]</div>
+</dd>
+<dt><strong>Cartesian to Polar:</strong></dt><dd><div class="math notranslate nohighlight" id="equation-eqn-recttopolar">
+<span id="equation-6-10"></span><span class="eqno">(10)<a class="headerlink" href="#equation-eqn-recttopolar" title="此公式的永久链接">#</a></span>\[\boxed{ r ~=~ \pm\;\sqrt{x^2 ~+~ y^2} \qquad \tan\;\theta ~=~ \frac{y}{x} ~~\text{if `x \ne 0`} }\]</div>
+</dd>
+</dl>
+<p>Note that in formula <span class="xref std std-ref">6.10</span>, if <span class="math notranslate nohighlight">\(x = 0\)</span> then <span class="math notranslate nohighlight">\(\theta = \pi/2\)</span> or <span class="math notranslate nohighlight">\(\theta = 3\pi/2\)</span>. Also, if <span class="math notranslate nohighlight">\(x \ne 0\)</span> and <span class="math notranslate nohighlight">\(y \ne 0\)</span> then the two possible solutions for <span class="math notranslate nohighlight">\(\theta\)</span> in the equation <span class="math notranslate nohighlight">\(\tan\;\theta ~=~ \frac{y}{x}\)</span> are in opposite quadrants (for <span class="math notranslate nohighlight">\(0 \le \theta &lt; 2\pi\)</span>). If the angle <span class="math notranslate nohighlight">\(\theta\)</span> is in the same quadrant as the point <span class="math notranslate nohighlight">\((x,y)\)</span>, then <span class="math notranslate nohighlight">\(r = \sqrt{x^2 ~+~ y^2}\)</span> (i.e. <code class="docutils literal notranslate"><span class="pre">r</span></code> is positive); otherwise <span class="math notranslate nohighlight">\(r = -\sqrt{x^2 ~+~ y^2}\)</span> (i.e. <code class="docutils literal notranslate"><span class="pre">r</span></code> is negative).</p>
+<div class="admonition-example-6-15 admonition">
+<p class="admonition-title">Example 6.15</p>
+<p>Convert the following points from polar coordinates to Cartesian coordinates:</p>
+<p><strong>(a)</strong> <span class="math notranslate nohighlight">\((2,30^\circ)\)</span>; <strong>(b)</strong> <span class="math notranslate nohighlight">\((3,3\pi/4)\)</span>; <strong>(c)</strong> <span class="math notranslate nohighlight">\((-1,5\pi/3)\)</span></p>
+<p><strong>Solution:</strong></p>
+<p><strong>(a)</strong> Using formula <span class="xref std std-ref">6.9</span> with <span class="math notranslate nohighlight">\(r=2\)</span> and <span class="math notranslate nohighlight">\(\theta = 30^\circ\)</span>, we get:</p>
+<div class="math notranslate nohighlight">
+\[(x,y) ~=~ ( r\,\cos\;\theta, r\,\sin\;\theta) ~=~ (2\,\cos\;30^\circ,2\,\sin\;30^\circ) ~=~
+\left(2 \;\cdot\; \tfrac{\sqrt{3}}{2}, 2 \;\cdot\; \tfrac{1}{2} \right) \quad\Rightarrow\quad
+\boxed{(x,y) ~=~ \left( \sqrt{3},1 \right)}\]</div>
+<p><strong>(b)</strong> Using formula <span class="xref std std-ref">6.9</span> with <span class="math notranslate nohighlight">\(r=3\)</span> and <span class="math notranslate nohighlight">\(\theta = 3\pi/4\)</span>, we get:</p>
+<div class="math notranslate nohighlight">
+\[(x,y) ~=~ ( r\,\cos\;\theta, r\,\sin\;\theta) ~=~ \left( 3\,\cos\;\tfrac{3\pi}{4},3\,\sin\;\tfrac{3\pi}{4}
+\right) ~=~ \left(3 \;\cdot\; \tfrac{-1}{\sqrt{2}}, 3 \;\cdot\; \tfrac{1}{\sqrt{2}} \right)
+\quad\Rightarrow\quad \boxed{(x,y) ~=~ \left( \tfrac{-3}{\sqrt{2}},\tfrac{3}{\sqrt{2}} \right)}\]</div>
+<p><strong>(c)</strong> Using formula <span class="xref std std-ref">6.9</span> with <span class="math notranslate nohighlight">\(r=-1\)</span> and <span class="math notranslate nohighlight">\(\theta = 5\pi/3\)</span>, we get:</p>
+<div class="math notranslate nohighlight">
+\[(x,y) ~=~ ( r\,\cos\;\theta, r\,\sin\;\theta) ~=~ \left( -1\,\cos\;\tfrac{5\pi}{3},-1\,\sin\;\tfrac{5\pi}{3}
+\right) ~=~ \left(-1 \;\cdot\; \tfrac{1}{2},-1 \;\cdot\; \tfrac{-\sqrt{3}}{2} \right)
+\quad\Rightarrow\quad \boxed{(x,y) ~=~ \left( -\tfrac{1}{2},\tfrac{\sqrt{3}}{2} \right)}\]</div>
+</div>
+<div class="admonition-example-6-16 admonition">
+<p class="admonition-title">Example 6.16</p>
+<p>Convert the following points from Cartesian coordinates to polar coordinates:</p>
+<p><strong>(a)</strong> <code class="docutils literal notranslate"><span class="pre">(3,4)</span></code>; <strong>(b)</strong> <code class="docutils literal notranslate"><span class="pre">(-5,-5)</span></code></p>
+<p><strong>Solution:</strong></p>
+<p><strong>(a)</strong> Using formula <span class="xref std std-ref">6.10</span> with <code class="docutils literal notranslate"><span class="pre">x=3</span></code> and <code class="docutils literal notranslate"><span class="pre">y=4</span></code>, we get:</p>
+<div class="math notranslate nohighlight">
+\[\tan\;\theta ~=~ \frac{y}{x} ~=~ \frac{4}{3} \quad\Rightarrow\quad \theta ~=~ 53.13^\circ \quad
+\text{or}\quad \theta ~=~ 233.13^\circ\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\theta = 53.13^\circ\)</span> is in the same quadrant (QI) as the point <span class="math notranslate nohighlight">\((x,y) = (3,4)\)</span>, we can take <span class="math notranslate nohighlight">\(r ~=~ \sqrt{x^2 + y^2} = \sqrt{3^2 + 4^2} = 5\)</span>. Thus, :math:<a href="#id25"><span class="problematic" id="id26">`</span></a>boxed{(r,theta) = (5,53.13^circ)}`~.</p>
+<p>Note that if we had used <span class="math notranslate nohighlight">\(\theta = 233.13^\circ\)</span>, then we would have <span class="math notranslate nohighlight">\((r,\theta) = (-5,233.13^\circ)\)</span>.</p>
+<p><strong>(b)</strong>  Using formula <span class="xref std std-ref">6.10</span> with <code class="docutils literal notranslate"><span class="pre">x=-5</span></code> and <code class="docutils literal notranslate"><span class="pre">y=-5</span></code>, we get:</p>
+<div class="math notranslate nohighlight">
+\[\tan\;\theta ~=~ \frac{y}{x} ~=~ \frac{-5}{-5} ~=~ 1 \quad\Rightarrow\quad \theta ~=~ 45^\circ \quad \text{or}\quad \theta ~=~ 225^\circ\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\theta = 225^\circ\)</span> is in the same quadrant (QIII) as the point <span class="math notranslate nohighlight">\((x,y) = (-5,-5)\)</span>, we can take <span class="math notranslate nohighlight">\(r ~=~ \sqrt{x^2 + y^2} = \sqrt{(-5)^2 + (-5)^2} = 5\,\sqrt{2}\)</span>. Thus, :math:<a href="#id27"><span class="problematic" id="id28">`</span></a>boxed{(r,theta) = (5,sqrt{2},225^circ)}`~.</p>
+<p>Note that if we had used <span class="math notranslate nohighlight">\(\theta = 45^\circ\)</span>, then we would have <span class="math notranslate nohighlight">\((r,\theta) = (-5\,\sqrt{2},45^\circ)\)</span>.</p>
+</div>
+<div class="admonition-example-6-17 admonition" id="exmp-polarcircle">
+<p class="admonition-title">Example 6.17</p>
+<p>Write the equation <span class="math notranslate nohighlight">\(x^2 + y^2 = 9\)</span> in polar coordinates.</p>
+<p><strong>Solution:</strong> This is just the equation of a circle of radius <code class="docutils literal notranslate"><span class="pre">3</span></code> centered at the origin. Since <span class="math notranslate nohighlight">\(r = \pm\sqrt{x^2 + y^2} = \pm\sqrt{9}\)</span>, in polar coordinates the equation can be written as simply :math:<a href="#id29"><span class="problematic" id="id30">`</span></a>boxed{r = 3}`~.</p>
+</div>
+<div class="admonition-example-6-18 admonition">
+<p class="admonition-title">Example 6.18</p>
+<p>Write the equation <cite>x^2 + (y-4)^2 = 16</cite> in polar coordinates.</p>
+<p><strong>Solution:</strong> This is the equation of a circle of radius <code class="docutils literal notranslate"><span class="pre">4</span></code> centered at the point <code class="docutils literal notranslate"><span class="pre">(0,4)</span></code>. Expanding the equation, we get:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+  x^2 ~+~ (y-4)^2 ~&amp;=~ 16\\
+  x^2 ~+~ y^2 ~-~ 8y ~+~ 16 ~&amp;=~ 16\\
+  x^2 ~+~ y^2 ~&amp;=~ 8y\\
+  r^2 ~&amp;=~ 8\,r\sin\;\theta\\
+  r ~&amp;=~ 8\,\sin\;\theta
+\end{align*}\end{split}\]</div>
+<p>Why could we cancel <code class="docutils literal notranslate"><span class="pre">r</span></code> from both sides in the last step? Because the point <code class="docutils literal notranslate"><span class="pre">(0,0)</span></code> is on the circle, canceling <cite>r</cite> does not eliminate <code class="docutils literal notranslate"><span class="pre">r=0</span></code> as a potential solution of the equation (since <span class="math notranslate nohighlight">\(\theta = 0^\circ\)</span> would make <span class="math notranslate nohighlight">\(r = 8\,\sin\;\theta = 8\,\sin\;0^\circ = 0\)</span>). Thus, the equation is :math:<a href="#id31"><span class="problematic" id="id32">`</span></a>boxed{r = 8,sin;theta}`~.</p>
+</div>
+<div class="admonition-example-6-19 admonition">
+<p class="admonition-title">Example 6.19</p>
+<p>Write the equation <span class="math notranslate nohighlight">\(y = x\)</span> in polar coordinates.</p>
+<p><strong>Solution:</strong> This is the equation of a line through the origin. So when <span class="math notranslate nohighlight">\(x=0\)</span>, we know that <span class="math notranslate nohighlight">\(y=0\)</span>. When <span class="math notranslate nohighlight">\(x \ne 0\)</span>, we get:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+  y ~&amp;=~ x\\
+  \frac{y}{x} ~&amp;=~ 1\\
+  \tan\;\theta ~&amp;=~ 1\\
+  \theta ~&amp;=~ 45^\circ
+\end{align*}\end{split}\]</div>
+<p>Since there is no restriction on <code class="docutils literal notranslate"><span class="pre">r</span></code>, we could have <code class="docutils literal notranslate"><span class="pre">r=0</span></code> and <span class="math notranslate nohighlight">\(\theta = 45^\circ\)</span>, which would take care of the case <span class="math notranslate nohighlight">\(x = 0\)</span> (since then <span class="math notranslate nohighlight">\((x,y) = (0,0)\)</span>, which is the same as <span class="math notranslate nohighlight">\((r,\theta) = (0,45^\circ))\)</span>. Thus, the equation is <span class="math notranslate nohighlight">\(\boxed{\theta = 45^\circ}~\)</span>.</p>
+</div>
+<div class="admonition-example-6-20 admonition">
+<p class="admonition-title">Example 6.20</p>
+<p>Prove that the distance <code class="docutils literal notranslate"><span class="pre">d</span></code> between two points <span class="math notranslate nohighlight">\((r_1 , \theta_1)\)</span> and <span class="math notranslate nohighlight">\((r_2 , \theta_2)\)</span> in polar coordinates is</p>
+<div class="math notranslate nohighlight" id="equation-eqn-polardist">
+<span id="equation-6-11"></span><span class="eqno">(11)<a class="headerlink" href="#equation-eqn-polardist" title="此公式的永久链接">#</a></span>\[d ~=~ \sqrt{r_1^2 ~+~ r_2^2 ~-~ 2r_1r_2\,\cos\;(\theta_1 - \theta_2)} ~~.\]</div>
+<p><strong>Solution:</strong> The idea here is to use the distance formula in Cartesian coordinates, then convert that to polar coordinates. So write</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+  x_1 ~&amp;=~ r_1 \,\cos\;\theta_1 \qquad&amp; y_1 ~&amp;=~ r_1 \,\sin\;\theta_1\\
+  x_2 ~&amp;=~ r_2 \,\cos\;\theta_2 \qquad&amp; y_2 ~&amp;=~ r_2 \,\sin\;\theta_2 ~.
+\end{align*}\end{split}\]</div>
+<p>Then <span class="math notranslate nohighlight">\((x_1,y_1)\)</span> and <span class="math notranslate nohighlight">\((x_2,y_2)\)</span> are the Cartesian equivalents of <span class="math notranslate nohighlight">\((r_1 , \theta_1)\)</span> and <span class="math notranslate nohighlight">\((r_2 , \theta_2)\)</span>,  respectively. Thus, by the Cartesian coordinate distance formula,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+  d^2 ~&amp;=~ (x_1 - x_2)^2 ~+~ (y_1 - y_2)^2\\
+  &amp;=~ (r_1 \,\cos\;\theta_1 - r_2 \,\cos\;\theta_2)^2 ~+~ (r_1 \,\sin\;\theta_1 - r_2 \,\sin\;\theta_2)^2\\
+  &amp;=~ r_1^2 \cos^2\;\theta_1 ~-~ 2r_1 r_2 \cos\;\theta_1~\cos\;\theta_2 ~+~ r_2^2 \cos^2\;\theta_2 ~+~
+  r_1^2 \sin^2\;\theta_1 ~-~ 2r_1 r_2 \sin\;\theta_1~\sin\;\theta_2 ~+~ r_2^2 \sin^2\;\theta_2\\
+  &amp;=~ r_1^2 (\cos^2\;\theta_1 ~+~ \sin^2\;\theta_1) ~+~ r_2^2 (\cos^2\;\theta_2 ~+~ \sin^2\;\theta_2) ~-~
+  2r_1 r_2 (\cos\;\theta_1~\cos\;\theta_2 ~+~ \sin\;\theta_1~\sin\;\theta_2)\\
+  d^2 ~&amp;=~ r_1^2 ~+~ r_2^2 ~-~ 2r_1r_2\,\cos\;(\theta_1 - \theta_2) ~,
+\end{align*}\end{split}\]</div>
+<p>so the result follows by taking square roots of both sides.</p>
+</div>
+<p>In Example <a class="reference internal" href="#exmp-polarcircle"><span class="std std-ref">6.17</span></a> we saw that the equation <span class="math notranslate nohighlight">\(x^2 + y^2 = 9\)</span> in Cartesian coordinates could be expressed as <span class="math notranslate nohighlight">\(r = 3\)</span> in polar coordinates. This equation describes a circle centered at the origin, so the circle is symmetric about the origin. In general, polar coordinates are useful in situations when there is symmetry about the origin (though there are other situations), which arise in many physical applications.</p>
+<section id="sec6dot4">
+<span id="id33"></span><h3>练习<a class="headerlink" href="#sec6dot4" title="此标题的永久链接">#</a></h3>
+<p>Exercises</p>
+<p>For Exercises 1-5, convert the given point from polar coordinates to Cartesian coordinates.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\((6,210^\circ)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((-4,3\pi)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((2,11\pi/6)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((6,90^\circ)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\((-1,405^\circ)\)</span></p></li>
+</ol>
+<p>For Exercises 6-10, convert the given point from Cartesian coordinates to polar coordinates.</p>
+<p>6. <span class="math notranslate nohighlight">\((3,1)\)</span>
+8. <span class="math notranslate nohighlight">\((-1,-3)\)</span>
+9. <span class="math notranslate nohighlight">\((0,2)\)</span>
+10. <span class="math notranslate nohighlight">\((4,-2)\)</span>
+11. <span class="math notranslate nohighlight">\((-2,0)\)</span></p>
+<p>For Exercises 11-18, write the given equation in polar coordinates.</p>
+<ol class="arabic simple" start="12">
+<li><p><span class="math notranslate nohighlight">\((x-3)^2 + y^2 = 9\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(y = -x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x^2 - y^2 = 1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3x^2 + 4y^2 - 6x = 9\)</span></p></li>
+<li><p>Graph the function <span class="math notranslate nohighlight">\(r = 1 + 2\,\cos\;\theta\)</span> in polar coordinates.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="c5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">第 5 章 图像与反函数</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="appendix_a.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">附录 A</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 目录
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">三角方程的求解</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec6dot1">练习</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">三角学中的数值方法</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec6dot2">练习</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">复数</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec6dot3">练习</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">极坐标</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sec6dot4">练习</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： Michael Corral
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2009, Michael Corral.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

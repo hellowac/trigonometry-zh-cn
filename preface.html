@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="zh-CN" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>前言 &#8212; 三角学(trigonometry)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script>let toggleHintShow = '原文';</script>
+    <script>let toggleHintHide = '收起';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'preface';</script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="第 1 章 直角三角形" href="c1.html" />
+    <link rel="prev" title="关于作者" href="about_author.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="zh-CN"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">三角学(trigonometry)</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">搜索</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="about_author.html">关于作者</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c1.html">第 1 章 直角三角形</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c2.html">第 2 章 一般三角形</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c3.html">第 3 章 恒等式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c4.html">第 4 章 弧度量</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c5.html">第 5 章 图像与反函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c6.html">第 6 章 附加主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_a.html">附录 A</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix_b.html">附录 B</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">GNU Free Documentation License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/hellowac/trigonometry-zh-cn" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="源码库"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="下载此页面">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/preface.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="下载源文件"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="列印成 PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="全屏模式"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="搜索" aria-label="搜索" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>前言</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>前言<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h1>
+<p>Preface</p>
+<p>本书涵盖了初等三角学的内容。它适用于大学阶段的一学期课程，当然也可以在高中中使用。其前置要求为高中代数和几何知识。</p>
+<p>本书主要由我在 Schoolcraft College 多年来教授三角学课程的讲义组成，并在此基础上添加了一些习题。每节的结尾都包含了习题。我尽量加入了一些更具挑战性的问题，并在我认为必要时提供了提示。一个普通的学生应当能够完成大多数习题。对于许多奇数题目以及部分偶数题目，解答和提示可参见 <a class="reference internal" href="appendix_a.html#appendix-a"><span class="std std-ref">附录 A</span></a>。</p>
+<p>本教材可能比当前大多数三角学教材更具几何感。这事实上也是我想写这本书的原因之一。我认为若从过于分析性的角度来介绍该学科，对学生来说反而是令人困惑的。这会让很多内容显得缺乏动机。本书以“老式”的直角三角形方法来介绍三角函数，这种方式对学生来说更直观易懂。</p>
+<p>根据我的经验，在介绍完三角函数的定义后立刻跳转到恒等式证明，这对于大多数学生而言，是从几何直接跳到分析的一个太大的转折。所以本书的内容顺序与大多数现今教材截然不同。例如，在从直角三角形定义及其部分应用开始之后，接下来便介绍一般（三角）形。与其像传统教材那样把一般三角形放到最后，不如这样安排更为自然。</p>
+<p>本书的目标也有所不同。与其采取那种注定失败的方式——让学生相信三角学“与他们的日常生活息息相关”（这最终只会显得做作），不如换一种思维方式：
+<strong>为学生在其他课程中使用三角学做好准备</strong>
+几乎没有学生会在“日常生活”中，用量角器测树高，或者计算摩天轮的角速度。学生在其他课程中（如工程、物理）更有可能需要用到三角学。我认为数学教师有责任为此做好准备。</p>
+<p>在 <a class="reference internal" href="c5.html#c5"><span class="std std-ref">第 5 章</span></a> 中，学生将被要求使用开源免费软件 Gnuplot 来绘图。然而，只要程序能够准确绘制图像，任何软件都可以完成这些练习。<a class="reference internal" href="appendix_b.html#appendix-b"><span class="std std-ref">附录 B</span></a> 包含了 Gnuplot 的简要教程。</p>
+<p>部分习题要求学生编写自己的计算机程序来解决一些数值计算问题。<a class="reference internal" href="c6.html#c6"><span class="std std-ref">第 6 章</span></a> 中提供了一些 Java 和 Python 编写的代码示例，希望这些示例足够清晰，即便读者不了解这些语言，也能理解其含义。此外，还提到了 Octave 和 Sage。本书可能比同类教材更注重数值问题（例如，使用海伦公式计算三角形面积时的数值不稳定性、用割线法求解三角函数方程等）。鉴于即便是中等复杂度的三角方程也极少能用初等方法求解，而且数学软件如此普及，教材对数值方法的强调可能还不够。</p>
+<p>我希望这本书尽可能简明。有人曾调侃说，三角学其实只有两周的内容，却被拉长成一整个学期的课程，我觉得这话也不无道理。不过，这就意味着必须对取舍有所决断。我本来打算加入关于向量、球面三角学（一个近几十年几乎在教材中消失的主题，为什么？）以及其他几个话题的章节，但最终决定舍弃。最困难的决定是排除了 Paul Rider 提出的、不使用和积恒等式的正切定理巧妙几何证明，尽管我在文中给出了相关参考。</p>
+<p>本书以 GNU 自由文档许可证（GFDL）发布，允许他人不仅复制、分发本书，还可以修改。有关详情请参阅所附的 GFDL 副本。为避免对此产生任何歧义，任何人均可无限量复制和分发本书，无需征得我的许可。PDF 版本将始终免费向公众开放（参见 <a class="reference external" href="http://www.mecmath.net/trig">http://www.mecmath.net/trig</a>）。如有任何关于本书的疑问（例如意见、建议、勘误等），欢迎通过 <a class="reference external" href="mailto:mcorral&#37;&#52;&#48;schoolcraft&#46;edu">mcorral<span>&#64;</span>schoolcraft<span>&#46;</span>edu</a> 与我联系。我期待您的反馈。</p>
+<p>2009 年 7 月 —— Michael Corral</p>
+<p>密歇根州 利沃尼亚市</p>
+<div class="toggle docutils container">
+<p>This book covers elementary trigonometry. It is suitable for a one-semester course at the college
+level, though it could also be used in high schools. The prerequisites are high school algebra and
+geometry.</p>
+<p>This book basically consists of my lecture notes from teaching trigonometry at Schoolcraft College
+over several years, expanded with some exercises. There are exercises at the end of each section.
+I have tried to include some
+more challenging problems, with hints when I felt those were needed. An average student should be
+able to do most of the exercises. Answers and hints to many of the odd-numbered and some of the
+even-numbered exercises are provided in <a class="reference internal" href="appendix_a.html#appendix-a"><span class="std std-ref">Appendix A</span></a>.</p>
+<p>This text probably has a more geometric feel to it than most current trigonometry texts.
+That was, in fact, one of the reasons I wanted to write this book. I think that approaching the
+subject with too much of an analytic emphasis is a bit confusing to students. It makes much of the
+material appear unmotivated. This book starts with the “old-fashioned” right triangle approach to
+the trigonometric functions, which is more intuitive for students to grasp.</p>
+<p>In my experience, presenting the definitions of the trigonometric
+functions and then immediately jumping into proving identities is too much of a detour from
+geometry to analysis for most students.
+So this book presents material in a very different order than most books today. For
+example, after starting with the right triangle definitions and some applications, general (oblique)
+triangles are presented. That seems like a more natural progression of topics, instead of leaving
+general triangles until the end as is usually the case.</p>
+<p>The goal of this book is a bit different, too. Instead of taking the (doomed) approach that students
+have to be shown that trigonometry is “relevant to their everyday lives” (which inevitably comes
+off as artificial), this book has a different mindset:
+<strong>preparing students to use trigonometry as it is used in other courses</strong>
+Virtually no students will ever in their “everyday life” figure out the height of a tree
+with a protractor or determine the angular speed of a Ferris wheel.
+Students are far more likely to need trigonometry in other courses (e.g. engineering, physics).
+I think that math instructors have a duty to prepare students for that.</p>
+<p>In <a class="reference internal" href="c5.html#c5"><span class="std std-ref">Chapter 5</span></a> students are asked to use the free open-source software Gnuplot to graph
+some functions. However, any program can be used for those exercises, as long as it produces
+accurate graphs. <a class="reference internal" href="appendix_b.html#appendix-b"><span class="std std-ref">Appendix B</span></a> contains a brief tutorial on Gnuplot.</p>
+<p>There are a few exercises that require the student to write his or her own computer program
+to solve some numerical computation problems. There
+are a few code samples in <a class="reference internal" href="c6.html#c6"><span class="std std-ref">Chapter 6</span></a>, written in the Java and Python programming languages, hopefully
+sufficiently clear so that the reader can figure out what is being done even without knowing those
+languages. Octave and Sage are also mentioned. This book probably discusses numerical issues more
+than most texts at this level (e.g. the numerical instability of Heron’s formula for the area of a
+triangle, the secant method for solving trigonometric equations). Numerical methods probably should
+have been emphasized even more in the text, since it is rare when even a moderately complicated
+trigonometric equation can be solved with elementary methods, and since mathematical software is
+so readily available.</p>
+<p>I wanted to keep this book as brief as possible. Someone once joked that trigonometry is two weeks
+of material spread out over a full semester, and I think that there is some truth to that.
+However, some decisions had to be made on what material to leave out. I had planned to include
+sections on vectors, spherical trigonometry - a subject which has basically vanished from
+trigonometry texts in the last few decades (why?) - and a few other topics, but decided against it.
+The hardest decision was to exclude Paul Rider’s clever geometric proof of the Law of Tangents
+without using any sum-to-product identities, though I do give a reference to it.</p>
+<p>This book is released under the GNU Free Documentation License (GFDL), which allows others to not
+only copy and distribute the book but also to modify it. For more details, see the included copy of
+the GFDL. So that there is no ambiguity on this matter, anyone can make as many copies of this book
+as desired and distribute it as desired, without needing my permission. The PDF version will always
+be freely available to the public at no cost (go to <a class="reference external" href="http://www.mecmath.net/trig">http://www.mecmath.net/trig</a> ). Feel free to
+contact me at <a class="reference external" href="mailto:mcorral&#37;&#52;&#48;schoolcraft&#46;edu">mcorral<span>&#64;</span>schoolcraft<span>&#46;</span>edu</a> for any
+questions on this or any other matter involving the book (e.g. comments, suggestions, corrections,
+etc). I welcome your input.</p>
+<p>July 2009 - Michael Corral</p>
+<p>Livonia, Michigan</p>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="about_author.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">上一页</p>
+        <p class="prev-next-title">关于作者</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="c1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">第 1 章 直角三角形</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+作者： Michael Corral
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2009, Michael Corral.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
